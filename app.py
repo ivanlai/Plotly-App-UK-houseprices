@@ -77,11 +77,15 @@ cfg['plotly_config'] = {
 """ ------------------------------------------
  House Price Data
 ------------------------------------------ """
-
-sector_df = pd.read_csv(os.path.join(cfg['data_dir'], 'sector_houseprice.csv'))
 price_df  = pd.read_csv(os.path.join(cfg['data_dir'], 'price_ts.csv'), index_col='Year')
 volume_df = pd.read_csv(os.path.join(cfg['data_dir'], 'volume_ts.csv'), index_col='Year')
 
+type_df = pd.read_csv(os.path.join(cfg['data_dir'], 'property_type.csv'))
+type_df = type_df.set_index(['Year', 'Property Type', 'Sector']).unstack(level=-1)
+type_df.columns = type_df.columns.get_level_values(1)
+type_df.fillna(value=0, inplace=True)
+
+sector_df = pd.read_csv(os.path.join(cfg['data_dir'], 'sector_houseprice.csv'))
 sector_by_year = dict()
 for year in cfg['Years']:
     sector_by_year[year] = sector_df[sector_df.Year==year].reset_index(drop=True)
@@ -260,6 +264,7 @@ app.layout = html.Div(
                     html.Div([html.H1(children='England and Wales House Prices')],
                               style={'display': 'inline-block',
                                      'width': '69%',
+                                     'fontColor': 'orange',
                                      'padding': '10px 0px 0px 20px'}), #padding: top, right, bottom, left
 
                     html.Div([html.Img(src=app.get_asset_url("dash-logo.png"),
@@ -275,7 +280,7 @@ app.layout = html.Div(
                         id="description",
                         children="Dash: A web application framework for Python.",
                     )
-                ], style={'padding': '0px 0px 0px 23px'})
+                ], style={'padding': '0px 0px 0px 25px'})
             ],
         ),
 
@@ -298,7 +303,9 @@ app.layout = html.Div(
                                     dcc.Dropdown(
                                         id='region',
                                         options=[{'label': r, 'value': r} for r in regions],
-                                        value='Greater London'
+                                        value='Greater London',
+                                        clearable=False,
+                                        style={'color': 'black'}
                                     )
                                 ], style={'display': 'inline-block',
                                           'width': '19%'}
@@ -306,9 +313,11 @@ app.layout = html.Div(
                             html.Div(
                                 id="slider-container",
                                 children=[
-                                    html.P(
-                                        id="slider-text",
-                                        children="Drag the slider to change the year:",
+                                    html.Div([
+                                        html.P(
+                                            id="slider-text",
+                                            children="Drag the slider to change the year:",
+                                        )], style={ 'padding': '0px 0px 0px 20px'}
                                     ),
                                     html.Div([
                                         dcc.Slider(
@@ -347,8 +356,8 @@ app.layout = html.Div(
                     ],
                     style={'display': 'inline-block',
                            "width": "64%",
-                           'padding': '0px 20px 0px 40px'},
-                    # className="seven columns"
+                           'padding': '0px 20px 0px 30px'},
+                    className="seven columns"
                 ),
 
                 # Right Column ------------------------------------#
@@ -359,12 +368,11 @@ app.layout = html.Div(
                         dcc.Graph(id='volume-time-series')
                     ],
                     style={'display': 'inline-block',
-                           'width': '34%',
-                           'padding': '0px 10px 0px 0px'},
-                    # className="five columns"
+                           'width': '34%'},
+                    className="five columns"
                 ),
             ],
-          # className="row"
+          className="row"
         ),
     ],
 )
@@ -384,16 +392,14 @@ def update_map_title(year):
     [Input('years-slider', 'value'),
      Input("region", "value")])
 def update_graph(year, region):
-    if region is None:
-        region = 'Greater London'
     return get_figure(regional_price_data[year][region],
                       regional_geo_data[region],
                       region)
 
 #----------------------------------------------------#
 
-def create_time_series(df, title):
-    fig = px.scatter(df)
+def create_time_series(df, title, ylabel):
+    fig = px.scatter(df, labels=dict(value=ylabel, variable="PostCode"))
     fig.update_traces(mode='lines+markers')
     fig.update_xaxes(showgrid=False)
     fig.update_layout(#height=225,
@@ -409,9 +415,17 @@ def create_time_series(df, title):
     Output('price-time-series', 'figure'),
     [Input('county-choropleth', 'clickData')])
 def update_price_timeseries(clickData):
-    sector = clickData['points'][0]['location']
-    title = f'{sector} Average price time-series'
-    return create_time_series(price_df[sector], title)
+    graph = None
+    count = 0
+    while count <= 3:
+        try:
+            sector = clickData['points'][0]['location']
+            title = f'{sector} Average price time-series'
+            graph = create_time_series(price_df[sector], title, "Average Price (£)")
+            break
+        except:
+            count += 1
+    return graph
 
 #----------------------------------------------------#
 
@@ -419,16 +433,23 @@ def update_price_timeseries(clickData):
     Output('volume-time-series', 'figure'),
     [Input('county-choropleth', 'clickData')])
 def update_price_timeseries(clickData):
-    sector = clickData['points'][0]['location']
-    title = f'{sector} Sales volume time-series'
-    return create_time_series(volume_df[sector], title)
+    graph = None
+    count = 0
+    while count <= 3:
+        try:
+            sector = clickData['points'][0]['location']
+            title = f'{sector} Sales volume time-series'
+            graph = create_time_series(volume_df[sector], title, "Sales Volume")
+            break
+        except:
+            count += 1
+    return graph
 
 #----------------------------------------------------#
 
-# app.css.append_css({
-#     'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
-# })
-
+app.css.append_css({
+    'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
+})
 
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
