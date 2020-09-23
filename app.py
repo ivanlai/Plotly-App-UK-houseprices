@@ -41,7 +41,8 @@ cfg['start_year']       = 1995
 cfg['end_year']         = 2020
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 
-cfg['figure years']     = [2000, 2010, 2015, 2018, 2019, 2020]
+# cfg['figure years']     = [2000, 2010, 2015, 2018, 2019, 2020]
+cfg['figure years']     = cfg['Years']
 
 cfg['in_dir']           = 'input'
 cfg['data_dir']         = 'data'
@@ -63,13 +64,13 @@ cfg['regions_lookup'] = {
 }
 
 cfg['plotly_config'] = {
-         'All':            {'centre': [53.2, -2.2], 'maxp': 95, 'zoom': 6},
-         'North England':  {'centre': [54.3, -2.0], 'maxp': 99, 'zoom': 7},
-         'Wales':          {'centre': [52.4, -3.3], 'maxp': 99, 'zoom': 7.3},
-         'Midlands':       {'centre': [52.8, -1.2], 'maxp': 99, 'zoom': 7.3},
-         'South West':     {'centre': [51.1, -3.7], 'maxp': 99, 'zoom': 7.2},
-         'South East':     {'centre': [51.5, -0.1], 'maxp': 90, 'zoom': 7.8},
-         'Greater London': {'centre': [51.5, -0.1], 'maxp': 80, 'zoom': 9.5},
+         # 'All':            {'centre': [53.2, -2.2], 'maxp': 95, 'zoom': 6},
+         'North England':  {'centre': [54.3, -2.0], 'maxp': 99, 'zoom': 6.5},
+         'Wales':          {'centre': [52.4, -3.3], 'maxp': 99, 'zoom': 6.9},
+         'Midlands':       {'centre': [52.8, -1.0], 'maxp': 99, 'zoom': 7},
+         'South West':     {'centre': [51.1, -3.7], 'maxp': 99, 'zoom': 7},
+         'South East':     {'centre': [51.5, -0.1], 'maxp': 90, 'zoom': 7.5},
+         'Greater London': {'centre': [51.5, -0.1], 'maxp': 80, 'zoom': 9},
 }
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
@@ -212,7 +213,7 @@ def get_figure(price_data, geo_data, region):
                       mapbox_zoom=_cfg['zoom'],
                       autosize=True,
 #                       width=1850,
-#                       height=800,
+                      height=595,
                       font=dict(color="#2cfec1"),
                       paper_bgcolor="#1f2630",
                       mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
@@ -308,7 +309,7 @@ app.layout = html.Div(
                                         style={'color': 'black'}
                                     )
                                 ], style={'display': 'inline-block',
-                                          'width': '19%'}
+                                          'width': '14%'}
                                 ),
                             html.Div(
                                 id="slider-container",
@@ -334,7 +335,7 @@ app.layout = html.Div(
                                             },
                                         ),
                                     ]),
-                                ], style={'display': 'inline-block', 'width': '79%'}
+                                ], style={'display': 'inline-block', 'width': '84%'}
                             ),
                         ]),
 
@@ -364,17 +365,20 @@ app.layout = html.Div(
                 html.Div(
                     id="graph-container",
                     children=[
-                        dcc.Graph(id='price-time-series'),
-                        dcc.Graph(id='volume-time-series')
+                        html.Div([dcc.Graph(id='price-time-series')],
+                                 style={'padding': '10px 0px 10px 0px'}),
+                        html.Div([dcc.Graph(id='volume-time-series')],
+                                 style={'padding': '10px 0px 10px 0px'}),
                     ],
                     style={'display': 'inline-block',
                            'width': '34%'},
                     className="five columns"
                 ),
             ],
-          className="row"
+            className="row"
         ),
     ],
+    style={'height': '100%'} #Add this to fit screen height
 )
 
 ################################################################
@@ -399,11 +403,11 @@ def update_graph(year, region):
 #----------------------------------------------------#
 
 def create_time_series(df, title, ylabel):
-    fig = px.scatter(df, labels=dict(value=ylabel, variable="PostCode"))
+    fig = px.scatter(df, labels=dict(value=ylabel, variable="PostCode"), title=title)
     fig.update_traces(mode='lines+markers')
     fig.update_xaxes(showgrid=False)
-    fig.update_layout(#height=225,
-                      margin={'l': 20, 'b': 30, 'r': 10, 't': 10},
+    fig.update_layout(height=350,
+                      margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
                       plot_bgcolor=colors['background'],
                       paper_bgcolor=colors['background'],
                       font_color=colors['text'])
@@ -420,7 +424,7 @@ def update_price_timeseries(clickData):
     while count <= 3:
         try:
             sector = clickData['points'][0]['location']
-            title = f'{sector} Average price time-series'
+            title = f'{sector} - Average price time-series'
             graph = create_time_series(price_df[sector], title, "Average Price (£)")
             break
         except:
@@ -429,17 +433,55 @@ def update_price_timeseries(clickData):
 
 #----------------------------------------------------#
 
+# def create_bar_series(df, title, ylabel):
+#     fig = px.bar(df, x='Year', y='Sales Volume', color="Property Type", title=title)
+#     fig.update_xaxes(showgrid=False)
+#     fig.update_layout(#height=225,
+#                       margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
+#                       plot_bgcolor=colors['background'],
+#                       paper_bgcolor=colors['background'],
+#                       font_color=colors['text'])
+#     return fig
+
+def create_bar_series(df, title):
+    # colorsDict = {'D':'#957DAD', 'S':'#AAC5E2', 'T':'#FDFD95', 'F':'#F4ADC6'}
+    colorsDict = {'D':'#4D4BA7', 'S':'#B156B8', 'T':'#E77B42', 'F':'#ECF560'}
+
+    fig = go.Figure()
+    for ptype in ['D', 'S', 'T', 'F']:
+        fig.add_trace(go.Bar(x=cfg['Years'],
+                             y=df['Sales Volume'][df['Property Type']==ptype],
+                             name=ptype,
+                             marker_color=colorsDict[ptype]
+                             ))
+    fig.update_xaxes(showgrid=False)
+    fig.update_layout(height=350,
+                      title=title,
+                      barmode='stack',
+                      margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
+                      plot_bgcolor=colors['background'],
+                      paper_bgcolor=colors['background'],
+                      yaxis=dict(title='Sales volume'),
+                      font=dict(color=colors['text'],
+                                size=11)
+                      )
+    return fig
+
+#----------------------------------------------------#
+
 @app.callback(
     Output('volume-time-series', 'figure'),
     [Input('county-choropleth', 'clickData')])
-def update_price_timeseries(clickData):
+def update_volume_timeseries(clickData):
     graph = None
     count = 0
     while count <= 3:
         try:
             sector = clickData['points'][0]['location']
-            title = f'{sector} Sales volume time-series'
-            graph = create_time_series(volume_df[sector], title, "Sales Volume")
+            title = f'{sector} (D: Detached, S: Semi-Detached, T: Terraced, F: Flats/Maisonettes)'
+            df = type_df[sector].reset_index()
+            df.rename(columns={sector: 'Sales Volume'}, inplace=True)
+            graph = create_bar_series(df, title)
             break
         except:
             count += 1
