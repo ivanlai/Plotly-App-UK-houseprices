@@ -44,9 +44,9 @@ cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 # cfg['figure years']     = [2000, 2010, 2015, 2018, 2019, 2020]
 cfg['figure years']     = cfg['Years']
 
-cfg['in_dir']           = 'input'
-cfg['data_dir']         = 'data'
-cfg['figures_out_dir']  = os.path.join(cfg['data_dir'], 'plotly_figures')
+cfg['geo_data_dir']     = 'input/geoData'
+cfg['app_data_dir']     = 'appData'
+cfg['figures_out_dir']  = os.path.join(cfg['app_data_dir'], 'plotly_figures')
 
 cfg['load figures']     = False
 
@@ -78,15 +78,15 @@ cfg['plotly_config'] = {
 """ ------------------------------------------
  House Price Data
 ------------------------------------------ """
-price_df  = pd.read_csv(os.path.join(cfg['data_dir'], 'price_ts.csv'), index_col='Year')
-volume_df = pd.read_csv(os.path.join(cfg['data_dir'], 'volume_ts.csv'), index_col='Year')
+price_df  = pd.read_csv(os.path.join(cfg['app_data_dir'], 'price_ts.csv'), index_col='Year')
+volume_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'volume_ts.csv'), index_col='Year')
 
-type_df = pd.read_csv(os.path.join(cfg['data_dir'], 'property_type.csv'))
+type_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'property_type.csv'))
 type_df = type_df.set_index(['Year', 'Property Type', 'Sector']).unstack(level=-1)
 type_df.columns = type_df.columns.get_level_values(1)
 type_df.fillna(value=0, inplace=True)
 
-sector_df = pd.read_csv(os.path.join(cfg['data_dir'], 'sector_houseprice.csv'))
+sector_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'sector_houseprice.csv'))
 sector_by_year = dict()
 for year in cfg['Years']:
     sector_by_year[year] = sector_df[sector_df.Year==year].reset_index(drop=True)
@@ -123,7 +123,7 @@ for year in cfg['Years']:
  Post Code Data
 ------------------------------------------ """
 
-postcode_region_df = pd.read_csv(os.path.join(cfg['in_dir'], 'PostCode Region.csv'))
+postcode_region_df = pd.read_csv(os.path.join(cfg['geo_data_dir'], 'PostCode Region.csv'))
 
 postcode_region = dict()
 for (prefix, region) in postcode_region_df[['Prefix', 'Region']].values:
@@ -141,7 +141,7 @@ def load_geo_data(infile):
 
 #---------------------------------------------#
 
-infile = os.path.join(cfg['in_dir'], 'ukpostcode_geojson.json')
+infile = os.path.join(cfg['geo_data_dir'], 'ukpostcode_geojson.json')
 geo_data = load_geo_data(infile)
 
 #---------------------------------------------#
