@@ -19,7 +19,6 @@ import geopandas as gpd
 from copy import copy, deepcopy
 from collections import OrderedDict
 
-import gdal
 import json
 from json import dumps
 
@@ -48,8 +47,6 @@ cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
 cfg['figures_out_dir']  = os.path.join(cfg['app_data_dir'], 'plotly_figures')
 
-cfg['load figures']     = False
-
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
         'North West'      : 'North England',
@@ -68,9 +65,9 @@ cfg['plotly_config'] = {
          'North England':  {'centre': [54.3, -2.0], 'maxp': 99, 'zoom': 6.5},
          'Wales':          {'centre': [52.4, -3.3], 'maxp': 99, 'zoom': 6.9},
          'Midlands':       {'centre': [52.8, -1.0], 'maxp': 99, 'zoom': 7},
-         'South West':     {'centre': [51.1, -3.7], 'maxp': 99, 'zoom': 7},
-         'South East':     {'centre': [51.5, -0.1], 'maxp': 90, 'zoom': 7.5},
-         'Greater London': {'centre': [51.5, -0.1], 'maxp': 80, 'zoom': 9},
+         'South West':     {'centre': [51.1, -3.7], 'maxp': 99, 'zoom': 6.9},
+         'South East':     {'centre': [51.5, -0.1], 'maxp': 90, 'zoom': 7.3},
+         'Greater London': {'centre': [51.5, -0.1], 'maxp': 80, 'zoom': 8.9},
 }
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
@@ -214,7 +211,7 @@ def get_figure(price_data, geo_data, region):
                       autosize=True,
 #                       width=1850,
                       height=595,
-                      font=dict(color="#2cfec1"),
+                      font=dict(color="#7FDBFF"),
                       paper_bgcolor="#1f2630",
                       mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
                       margin={'l': 20, 'r': 20, 't': 20, 'b': 20}
