@@ -1,5 +1,7 @@
 import os
 import re
+import time
+import random
 
 import dash
 import dash_core_components as dcc
@@ -47,6 +49,9 @@ cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
 cfg['figures_out_dir']  = os.path.join(cfg['app_data_dir'], 'plotly_figures')
 
+cfg['topN']             = 10
+cfg['fault tolerance']  = 3
+
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
         'North West'      : 'North England',
@@ -71,6 +76,7 @@ cfg['plotly_config'] = {
 }
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
+t0 = time.time()
 
 """ ------------------------------------------
  House Price Data
@@ -237,6 +243,13 @@ colors = {
     'text': '#7FDBFF'
 }
 
+sectors = regional_price_data[2000]['Greater London']['Sector'].values
+initial_sector = random.choice(sectors)
+
+state = dict()
+state['last_clickData']    = None
+state['last_selectedData'] = None
+
 """ ------------------------------------------
  Dash App
 ------------------------------------------ """
@@ -247,7 +260,6 @@ app = dash.Dash(
      ],
      external_stylesheets = [dbc.themes.DARKLY]
 )
-
 # app = dash.Dash()
 #--------------------------------------------------------#
 
@@ -344,7 +356,7 @@ app.layout = html.Div(
                                     id="choropleth-title",
                                 ),
                                 dcc.Graph(id="county-choropleth",
-                                          clickData={'points': [{'location': 'HA6 3'}]},
+                                          clickData={'points': [{'location': initial_sector}]},
                                           figure = get_figure(regional_price_data[2000]['Greater London'],
                                                               regional_geo_data['Greater London'],
                                                               'Greater London')
@@ -414,31 +426,37 @@ def create_time_series(df, title, ylabel):
 
 @app.callback(
     Output('price-time-series', 'figure'),
-    [Input('county-choropleth', 'clickData')])
-def update_price_timeseries(clickData):
+    [Input('county-choropleth', 'clickData'),
+     Input('county-choropleth', 'selectedData')])
+def update_price_timeseries(clickData, selectedData):
     graph = None
     count = 0
-    while count <= 3:
+    while count <= cfg['fault tolerance']:
         try:
-            sector = clickData['points'][0]['location']
-            title = f'{sector} - Average price time-series'
+            if selectedData != state['last_selectedData']:
+                sector =[_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
+                title = f"Average price for {len(sector)} (max. {cfg['topN']}) sectors"
+                state['last_selectedData'] = selectedData
+
+            if clickData != state['last_clickData']:
+                sector = clickData['points'][0]['location']
+                title = f'Average price for {sector}'
+                state['last_clickData'] = clickData
+
             graph = create_time_series(price_df[sector], title, "Average Price (£)")
             break
         except:
             count += 1
+            print(f"count: {count}")
+
+    if count > cfg['fault tolerance']:
+        sector = clickData['points'][0]['location']
+        title = f'Average price for {sector}'
+        graph = create_time_series(price_df[sector], title, "Average Price (£)")
+
     return graph
 
 #----------------------------------------------------#
-
-# def create_bar_series(df, title, ylabel):
-#     fig = px.bar(df, x='Year', y='Sales Volume', color="Property Type", title=title)
-#     fig.update_xaxes(showgrid=False)
-#     fig.update_layout(#height=225,
-#                       margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
-#                       plot_bgcolor=colors['background'],
-#                       paper_bgcolor=colors['background'],
-#                       font_color=colors['text'])
-#     return fig
 
 def create_bar_series(df, title):
     # colorsDict = {'D':'#957DAD', 'S':'#AAC5E2', 'T':'#FDFD95', 'F':'#F4ADC6'}
@@ -472,7 +490,7 @@ def create_bar_series(df, title):
 def update_volume_timeseries(clickData):
     graph = None
     count = 0
-    while count <= 3:
+    while count <= cfg['fault tolerance']:
         try:
             sector = clickData['points'][0]['location']
             title = f'{sector} (D: Detached, S: Semi-Detached, T: Terraced, F: Flats/Maisonettes)'
@@ -482,6 +500,8 @@ def update_volume_timeseries(clickData):
             break
         except:
             count += 1
+            print(f"count: {count}")
+
     return graph
 
 #----------------------------------------------------#
@@ -490,8 +510,10 @@ app.css.append_css({
     'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
 })
 
+print(f"Data Preparation completed in {time.time()-t0 :.1f} seconds")
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    while True:
+        app.run_server(debug=True)
