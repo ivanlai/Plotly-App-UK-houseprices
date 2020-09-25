@@ -49,7 +49,7 @@ cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
 cfg['figures_out_dir']  = os.path.join(cfg['app_data_dir'], 'plotly_figures')
 
-cfg['topN']             = 10
+cfg['topN']             = 12
 cfg['fault tolerance']  = 3
 
 cfg['regions_lookup'] = {
@@ -277,13 +277,16 @@ app.layout = html.Div(
                                      'fontColor': 'orange',
                                      'padding': '10px 0px 0px 20px'}), #padding: top, right, bottom, left
 
-                    html.Div([html.Img(src=app.get_asset_url("dash-logo.png"),
-                                       style={'height': '50%',
-                                              'width' : '50%'})],
-                              style={'display': 'inline-block',
-                                     'width': '29%',
-                                     'textAlign': 'right',
-                                     'padding': '0px 0px 0px 0px'}),
+                    html.Div([
+                        html.A([
+                            html.Img(src=app.get_asset_url("dash-logo.png"),
+                                           style={'height': '50%',
+                                                  'width' : '50%'})
+                        ], href='https://plotly.com/', target='_blank')
+                    ], style={'display': 'inline-block',
+                              'width': '29%',
+                              'textAlign': 'right',
+                              'padding': '0px 0px 0px 0px'}),
                 ]),
                 html.Div([
                     html.P(
@@ -435,7 +438,7 @@ def update_price_timeseries(clickData, selectedData):
         try:
             if selectedData != state['last_selectedData']:
                 sector =[_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
-                title = f"Average price for {len(sector)} (max. {cfg['topN']}) sectors"
+                title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
                 state['last_selectedData'] = selectedData
 
             if clickData != state['last_clickData']:
