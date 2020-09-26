@@ -219,6 +219,8 @@ app = dash.Dash(
 #                                   'CACHE_DIR': 'cache'})
 # app.config.suppress_callback_exceptions = True
 
+server = app.server #Needed for gunicorn
+
 #--------------------------------------------------------#
 
 app.layout = html.Div(
@@ -472,4 +474,11 @@ print(f"Data Preparation completed in {time.time()-t0 :.1f} seconds")
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
+    app.run_server(
+        port=8050,
+        host='0.0.0.0'
+    )
+
+    # Terminal cmd to run: 
+    # gunicorn app:server -b 0.0.0.0:8050
