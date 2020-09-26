@@ -480,5 +480,5 @@ if __name__ == "__main__":
         host='0.0.0.0'
     )
 
-    # Terminal cmd to run: 
+    # Terminal cmd to run:
     # gunicorn app:server -b 0.0.0.0:8050
