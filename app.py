@@ -14,7 +14,7 @@ import plotly
 import plotly.graph_objs as go
 import plotly.express as px
 from plotly.graph_objs import Scatter, Figure, Layout
-from flask_caching import Cache
+# from flask_caching import Cache
 
 import numpy as np
 import pandas as pd
@@ -51,7 +51,7 @@ cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
 
 cfg['topN']             = 12
-cfg['fault tolerance']  = 3
+cfg['timeout']          = 60*20
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
@@ -215,11 +215,9 @@ app = dash.Dash(
      ],
      external_stylesheets = [dbc.themes.DARKLY]
 )
-cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem',
-                                  'CACHE_DIR': 'cache'})
-app.config.suppress_callback_exceptions = True
-
-timeout = 60*20
+# cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem',
+#                                   'CACHE_DIR': 'cache'})
+# app.config.suppress_callback_exceptions = True
 
 #--------------------------------------------------------#
 
@@ -386,8 +384,7 @@ def update_map_title(year):
     Output("county-choropleth", 'figure'),
     [Input('years-slider', 'value'),
      Input("region", "value"),
-     Input("graph-type", "value")])
-@cache.memoize(timeout=timeout)
+     Input("graph-type", "value")])     # @cache.memoize(timeout=cfg['timeout'])
 def update_graph(year, region, gtype):
     if gtype == 'Price':
         df = regional_price_data
@@ -413,8 +410,7 @@ def create_time_series(df, title, ylabel):
 @app.callback(
     Output('price-time-series', 'figure'),
     [Input('county-choropleth', 'clickData'),
-     Input('county-choropleth', 'selectedData')])
-@cache.memoize(timeout=timeout)
+     Input('county-choropleth', 'selectedData')]) #@cache.memoize(timeout=cfg['timeout'])
 def update_price_timeseries(clickData, selectedData):
     if selectedData is not None and len(selectedData['points']) > 0 and \
        selectedData != state['last_selectedData']:
@@ -457,8 +453,7 @@ def create_bar_series(df, title):
 
 @app.callback(
     Output('volume-time-series', 'figure'),
-    [Input('county-choropleth', 'clickData')])
-@cache.memoize(timeout=timeout)
+    [Input('county-choropleth', 'clickData')]) #@cache.memoize(timeout=cfg['timeout'])
 def update_volume_timeseries(clickData):
     sector = clickData['points'][0]['location']
     title = f'{sector} (D: Detached, S: Semi-Detached, T: Terraced, F: Flats/Maisonettes)'
@@ -477,5 +472,4 @@ print(f"Data Preparation completed in {time.time()-t0 :.1f} seconds")
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
-    while True:
-        app.run_server(debug=True)
+    app.run_server(debug=True)
