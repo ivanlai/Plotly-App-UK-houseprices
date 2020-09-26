@@ -91,20 +91,29 @@ type_df.fillna(value=0, inplace=True)
 
 #-------------------------------------------------------#
 
-# Breaking price/volume data up by region:
-regional_price_data = dict()
-for year in cfg['Years']:
-    sector_df = pd.read_csv(os.path.join(cfg['app_data_dir'], f'sector_price_{year}.csv'))
+""" ------------------------------------------------
+ Regional Price, percentage delta and Volume Data
+-------------------------------------------------"""
 
-    tmp = dict()
-    for region in cfg['plotly_config']:
-        if region == 'South East': #Include Greater London in South East graph
-            mask = (sector_df.Region==region) | (sector_df.Region=='Greater London')
-        else:
-            mask = (sector_df.Region==region)
-        tmp[region] = sector_df[mask]
+def get_regional_data(fname):
+    regiona_data = dict()
+    for year in cfg['Years']:
+        df = pd.read_csv(os.path.join(cfg['app_data_dir'], f'{fname}_{year}.csv'))
 
-    regional_price_data[year] = deepcopy(tmp)
+        tmp = dict()
+        for region in cfg['plotly_config']:
+            if region == 'South East': #Include Greater London in South East graph
+                mask = (df.Region==region) | (df.Region=='Greater London')
+            else:
+                mask = (df.Region==region)
+            tmp[region] = df[mask]
+
+        regiona_data[year] = deepcopy(tmp)
+
+    return regiona_data
+
+regional_price_data = get_regional_data('sector_price')
+regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
 
 """ ------------------------------------------
  Geo Data
@@ -119,32 +128,48 @@ for region in cfg['plotly_config']:
  Making Graphs
 ------------------------------------------ """
 
-def get_figure(price_data, geo_data, region):
+def get_figure(df, geo_data, region, gtype):
 
     _cfg = cfg['plotly_config'][region]
-    min_price = np.percentile(np.array(price_data.Price), 5)
-    max_price = np.percentile(np.array(price_data.Price), _cfg['maxp'])
+
+    if gtype == 'Price':
+        min_value = np.percentile(np.array(df.Price), 5)
+        max_value = np.percentile(np.array(df.Price), _cfg['maxp'])
+        z_vec = df['Price']
+        text_vec = df['text']
+        colorscale = "YlOrRd"
+        title = "Average House Price (£)"
+    else:
+        min_value = np.percentile(np.array(df['Percentage Change']), 5)
+        max_value = np.percentile(np.array(df['Percentage Change']), 95)
+        z_vec = df['Percentage Change']
+        text_vec = ''
+        # colorscale = "Picnic"
+        colorscale = "Jet"
+        title = "Avg. Price %Change"
+
+    #-------------------------------------------#
 
     fig = go.Figure(
             go.Choroplethmapbox(
                 geojson = geo_data,
-                locations = price_data['Sector'],
+                locations = df['Sector'],
                 featureidkey = "properties.name",
-                colorscale = "YlOrRd",
-                z = price_data['Price'],
-                zmin = min_price,
-                zmax = max_price,
-                text = price_data['text'], # hover text
+                colorscale = colorscale,
+                z = z_vec,
+                zmin = min_value,
+                zmax = max_value,
+                text = text_vec,
                 marker_opacity = 0.4,
                 marker_line_width = 1,
-                colorbar_title = "Average House Price (£)",
+                colorbar_title = title,
           ))
 
     fig.update_layout(mapbox_style="open-street-map",
                       mapbox_zoom=_cfg['zoom'],
                       autosize=True,
 #                       width=1850,
-                      height=595,
+                      height=587,
                       font=dict(color="#7FDBFF"),
                       paper_bgcolor="#1f2630",
                       mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
@@ -171,7 +196,7 @@ colors = {
     'text': '#7FDBFF'
 }
 
-sectors = regional_price_data[2000]['Greater London']['Sector'].values
+sectors = regional_price_data[2020]['Greater London']['Sector'].values
 initial_sector = random.choice(sectors)
 
 state = dict()
@@ -204,7 +229,6 @@ app.layout = html.Div(
                                      'width': '69%',
                                      'fontColor': 'orange',
                                      'padding': '10px 0px 0px 20px'}), #padding: top, right, bottom, left
-
                     html.Div([
                         html.A([
                             html.Img(src=app.get_asset_url("dash-logo.png"),
@@ -249,8 +273,26 @@ app.layout = html.Div(
                                         style={'color': 'black'}
                                     )
                                 ], style={'display': 'inline-block',
-                                          'width': '14%'}
+                                          'padding': '0px 0px 0px 15px',
+                                          'width': '13%'},
+                                   className="one columns"
                                 ),
+
+                            html.Div(
+                                id="radioitems-container",
+                                children=[
+                                    dcc.RadioItems(
+                                        id='graph-type',
+                                        options=[{'label': i, 'value': i} for i in ['Price', 'Yr-to-Yr ±%']],
+                                        value='Price',
+                                        labelStyle={'display': 'block'}
+                                    )
+                                ], style={'display': 'inline-block',
+                                          'padding': '30px 0px 20px 20px',
+                                          'width': '10%'},
+                                  className="one columns"
+                            ),
+
                             html.Div(
                                 id="slider-container",
                                 children=[
@@ -275,9 +317,10 @@ app.layout = html.Div(
                                             },
                                         ),
                                     ]),
-                                ], style={'display': 'inline-block', 'width': '84%'}
+                                ], style={'display': 'inline-block', 'width': '76%'},
+                                   className="ten columns"
                             ),
-                        ]),
+                        ], className="row"),
 
                         html.Div(
                             id="choropleth-container",
@@ -288,16 +331,17 @@ app.layout = html.Div(
                                 ),
                                 dcc.Graph(id="county-choropleth",
                                           clickData={'points': [{'location': initial_sector}]},
-                                          figure = get_figure(regional_price_data[2000]['Greater London'],
+                                          figure = get_figure(regional_price_data[2020]['Greater London'],
                                                               regional_geo_data['Greater London'],
-                                                              'Greater London')
+                                                              'Greater London',
+                                                              gtype='Price')
                                 ),
-                            ], style={'padding': '20px 0px 0px 0px'},
+                            ],
                         ),
                     ],
                     style={'display': 'inline-block',
                            "width": "64%",
-                           'padding': '0px 20px 0px 30px'},
+                           'padding': '0px 20px 10px 40px'},
                     className="seven columns"
                 ),
 
@@ -334,11 +378,14 @@ def update_map_title(year):
 @app.callback(
     Output("county-choropleth", 'figure'),
     [Input('years-slider', 'value'),
-     Input("region", "value")])
-def update_graph(year, region):
-    return get_figure(regional_price_data[year][region],
-                      regional_geo_data[region],
-                      region)
+     Input("region", "value"),
+     Input("graph-type", "value")])
+def update_graph(year, region, gtype):
+    if gtype == 'Price':
+        df = regional_price_data
+    else:
+        df = regional_percentage_delta_data
+    return get_figure(df[year][region], regional_geo_data[region], region, gtype)
 
 #----------------------------------------------------#
 
@@ -346,7 +393,7 @@ def create_time_series(df, title, ylabel):
     fig = px.scatter(df, labels=dict(value=ylabel, variable="PostCode"), title=title)
     fig.update_traces(mode='lines+markers')
     fig.update_xaxes(showgrid=False)
-    fig.update_layout(height=350,
+    fig.update_layout(height=356,
                       margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
                       plot_bgcolor=colors['background'],
                       paper_bgcolor=colors['background'],
@@ -360,32 +407,16 @@ def create_time_series(df, title, ylabel):
     [Input('county-choropleth', 'clickData'),
      Input('county-choropleth', 'selectedData')])
 def update_price_timeseries(clickData, selectedData):
-    graph = None
-    count = 0
-    while count <= cfg['fault tolerance']:
-        try:
-            if selectedData is not None and len(selectedData['points']) > 0 and \
-               selectedData != state['last_selectedData']:
-                sector =[_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
-                title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
-                state['last_selectedData'] = selectedData
-
-            else:
-                sector = clickData['points'][0]['location']
-                title = f'Average price for {sector}'
-                state['last_clickData'] = clickData
-
-            graph = create_time_series(price_df[sector], title, "Average Price (£)")
-            break
-        except:
-            count += 1
-
-    if count > cfg['fault tolerance']:
+    if selectedData is not None and len(selectedData['points']) > 0 and \
+       selectedData != state['last_selectedData']:
+        sector =[_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
+        title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
+        state['last_selectedData'] = selectedData
+    else:
         sector = clickData['points'][0]['location']
         title = f'Average price for {sector}'
-        graph = create_time_series(price_df[sector], title, "Average Price (£)")
-
-    return graph
+        state['last_clickData'] = clickData
+    return create_time_series(price_df[sector], title, "Average Price (£)")
 
 #----------------------------------------------------#
 
@@ -401,7 +432,7 @@ def create_bar_series(df, title):
                              marker_color=colorsDict[ptype]
                              ))
     fig.update_xaxes(showgrid=False)
-    fig.update_layout(height=350,
+    fig.update_layout(height=356,
                       title=title,
                       barmode='stack',
                       margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
@@ -419,21 +450,11 @@ def create_bar_series(df, title):
     Output('volume-time-series', 'figure'),
     [Input('county-choropleth', 'clickData')])
 def update_volume_timeseries(clickData):
-    graph = None
-    count = 0
-    while count <= cfg['fault tolerance']:
-        try:
-            sector = clickData['points'][0]['location']
-            title = f'{sector} (D: Detached, S: Semi-Detached, T: Terraced, F: Flats/Maisonettes)'
-            df = type_df[sector].reset_index()
-            df.rename(columns={sector: 'Sales Volume'}, inplace=True)
-            graph = create_bar_series(df, title)
-            break
-        except:
-            count += 1
-            print(f"bar count: {count}")
-
-    return graph
+    sector = clickData['points'][0]['location']
+    title = f'{sector} (D: Detached, S: Semi-Detached, T: Terraced, F: Flats/Maisonettes)'
+    df = type_df[sector].reset_index()
+    df.rename(columns={sector: 'Sales Volume'}, inplace=True)
+    return create_bar_series(df, title)
 
 #----------------------------------------------------#
 
