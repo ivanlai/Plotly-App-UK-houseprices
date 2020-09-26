@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import time
 import random
 
@@ -47,7 +48,6 @@ cfg['figure years']     = cfg['Years']
 
 cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
-cfg['figures_out_dir']  = os.path.join(cfg['app_data_dir'], 'plotly_figures')
 
 cfg['topN']             = 12
 cfg['fault tolerance']  = 3
@@ -89,103 +89,31 @@ type_df = type_df.set_index(['Year', 'Property Type', 'Sector']).unstack(level=-
 type_df.columns = type_df.columns.get_level_values(1)
 type_df.fillna(value=0, inplace=True)
 
-sector_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'sector_houseprice.csv'))
-sector_by_year = dict()
-for year in cfg['Years']:
-    sector_by_year[year] = sector_df[sector_df.Year==year].reset_index(drop=True)
-
 #-------------------------------------------------------#
 
-def get_regional_price_data(sector_df, regions):
+# Breaking price/volume data up by region:
+regional_price_data = dict()
+for year in cfg['Years']:
+    sector_df = pd.read_csv(os.path.join(cfg['app_data_dir'], f'sector_price_{year}.csv'))
 
-    regional_price_data = dict()
-    regional_price_data['All'] = deepcopy(sector_df)
-
-    for region in regions:
+    tmp = dict()
+    for region in cfg['plotly_config']:
         if region == 'South East': #Include Greater London in South East graph
             mask = (sector_df.Region==region) | (sector_df.Region=='Greater London')
         else:
             mask = (sector_df.Region==region)
+        tmp[region] = sector_df[mask]
 
-        regional_price_data[region] = sector_df[mask]
-
-    return regional_price_data
-
-#-------------------------------------------------------#
-
-# Breaking price/volume data up by region:
-regions = [r for r in sector_df.Region.unique() if isinstance(r, str)]
-
-regional_price_data = dict()
-for year in cfg['Years']:
-    regional_price_data[year] = get_regional_price_data(sector_by_year[year], regions)
-
-#-------------------------------------------------------#
-
-""" ------------------------------------------
- Post Code Data
------------------------------------------- """
-
-postcode_region_df = pd.read_csv(os.path.join(cfg['geo_data_dir'], 'PostCode Region.csv'))
-
-postcode_region = dict()
-for (prefix, region) in postcode_region_df[['Prefix', 'Region']].values:
-    postcode_region[prefix] = cfg['regions_lookup'][region]
-
+    regional_price_data[year] = deepcopy(tmp)
 
 """ ------------------------------------------
  Geo Data
 ------------------------------------------ """
-
-def load_geo_data(infile):
+regional_geo_data = dict()
+for region in cfg['plotly_config']:
+    infile = os.path.join(cfg['app_data_dir'], f'geodata_{region}.csv')
     with open(infile, "r") as read_file:
-        geo_data = json.load(read_file)
-    return geo_data
-
-#---------------------------------------------#
-
-infile = os.path.join(cfg['geo_data_dir'], 'ukpostcode_geojson.json')
-geo_data = load_geo_data(infile)
-
-#---------------------------------------------#
-
-def get_regional_geo_data(geo_data, postcode_region, regions):
-
-    pattern = re.compile(r"\d")
-    #......................................
-    def inner(region):
-        Y = dict()
-        Y['features'] = []
-        for k in geo_data.keys():
-            if k != 'features':
-                Y[k] = geo_data[k]
-            else:
-                for i, d in enumerate(geo_data['features']):
-                    for k, v in d.items():
-                        if k == 'properties':
-                            sector = v['name']
-                            m = pattern.search(sector)
-                            district = sector[:m.start()]
-
-                            if region == 'South East':
-                                if postcode_region[district] in [region, 'Greater London']:
-                                    Y['features'].append(geo_data['features'][i])
-                            else:
-                                if postcode_region[district] == region:
-                                    Y['features'].append(geo_data['features'][i])
-        return Y
-
-    #......................................
-    regional_geo_data = dict()
-    for r in regions:
-        regional_geo_data[r] = inner(r)
-
-    return regional_geo_data
-
-#---------------------------------------------#
-
-regional_geo_data = get_regional_geo_data(geo_data, postcode_region, regions)
-
+        regional_geo_data[region] = json.load(read_file)
 
 """ ------------------------------------------
  Making Graphs
@@ -436,12 +364,13 @@ def update_price_timeseries(clickData, selectedData):
     count = 0
     while count <= cfg['fault tolerance']:
         try:
-            if selectedData != state['last_selectedData']:
+            if selectedData is not None and len(selectedData['points']) > 0 and \
+               selectedData != state['last_selectedData']:
                 sector =[_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
                 title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
                 state['last_selectedData'] = selectedData
 
-            if clickData != state['last_clickData']:
+            else:
                 sector = clickData['points'][0]['location']
                 title = f'Average price for {sector}'
                 state['last_clickData'] = clickData
@@ -450,7 +379,6 @@ def update_price_timeseries(clickData, selectedData):
             break
         except:
             count += 1
-            print(f"count: {count}")
 
     if count > cfg['fault tolerance']:
         sector = clickData['points'][0]['location']
@@ -503,7 +431,7 @@ def update_volume_timeseries(clickData):
             break
         except:
             count += 1
-            print(f"count: {count}")
+            print(f"bar count: {count}")
 
     return graph
 
