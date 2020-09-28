@@ -271,7 +271,7 @@ app.layout = html.Div(
                 ),
             ], style={'display': 'inline-block',
                       'padding': '0px 5px 10px 0px',
-                      'width': '7%'},
+                      'width': '10%'},
                className="one columns"
             ),
             html.Div([
@@ -284,7 +284,7 @@ app.layout = html.Div(
                 ], style={'display': 'inline-block',
                           'float': 'right',
                           'padding': '5px 0px 10px 10px',
-                          'width': '76%'},
+                          'width': '73%'},
                   className="nine columns"
             ),
         ],  style={'padding': '5px 0px 10px 20px'},
@@ -397,7 +397,7 @@ def price_volume_ts(price, volume, sector):
     #- Price time series ------------------------#
     fig.add_trace(
         go.Scatter(x=price.index, y=price.values, marker_color='cyan',
-                   mode='lines+markers', name=f"'{sector}' Avg. Price"),
+                   mode='lines+markers', name=f"Avg. Price"),
         secondary_y=True,
     )
 
