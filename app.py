@@ -14,6 +14,7 @@ import plotly
 import plotly.graph_objs as go
 import plotly.express as px
 from plotly.graph_objs import Scatter, Figure, Layout
+from plotly.subplots import make_subplots
 # from flask_caching import Cache
 
 import numpy as np
@@ -43,9 +44,6 @@ cfg = dict()
 cfg['start_year']       = 1995
 cfg['end_year']         = 2020
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
-
-# cfg['figure years']     = [2000, 2010, 2015, 2018, 2019, 2020]
-cfg['figure years']     = cfg['Years']
 
 cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
@@ -129,7 +127,7 @@ for region in cfg['plotly_config']:
  Making Graphs
 ------------------------------------------ """
 
-def get_figure(df, geo_data, region, gtype):
+def get_figure(df, geo_data, region, gtype, year):
 
     _cfg = cfg['plotly_config'][region]
 
@@ -139,7 +137,7 @@ def get_figure(df, geo_data, region, gtype):
         z_vec = df['Price']
         text_vec = df['text']
         colorscale = "YlOrRd"
-        title = "Average House Price (£)"
+        title = f"{year} Avg Price (£)"
     else:
         min_value = np.percentile(np.array(df['Percentage Change']), 5)
         max_value = np.percentile(np.array(df['Percentage Change']), 95)
@@ -169,8 +167,6 @@ def get_figure(df, geo_data, region, gtype):
     fig.update_layout(mapbox_style="open-street-map",
                       mapbox_zoom=_cfg['zoom'],
                       autosize=True,
-#                       width=1850,
-                      height=587,
                       font=dict(color="#7FDBFF"),
                       paper_bgcolor="#1f2630",
                       mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
@@ -197,7 +193,7 @@ colors = {
     'text': '#7FDBFF'
 }
 
-sectors = regional_price_data[2020]['Greater London']['Sector'].values
+sectors = regional_price_data[max(cfg['Years'])]['Greater London']['Sector'].values
 initial_sector = random.choice(sectors)
 
 state = dict()
@@ -247,13 +243,52 @@ app.layout = html.Div(
                               'textAlign': 'right',
                               'padding': '0px 0px 0px 0px'}),
                 ]),
-                html.Div([
-                    html.P(
-                        id="description",
-                        children="Dash: A web application framework for Python.",
-                    )
-                ], style={'padding': '0px 0px 0px 25px'})
             ],
+        ),
+
+        # Selection control -------------------------------------#
+        html.Div([
+            html.Div([
+                dcc.Dropdown(
+                    id='region',
+                    options=[{'label': r, 'value': r} for r in regions],
+                    value='Greater London',
+                    clearable=False,
+                    style={'color': 'black'}
+                )
+                ], style={'display': 'inline-block',
+                          'padding': '0px 5px 10px 15px',
+                          'width': '15%'},
+                   className="two columns"
+                ),
+            html.Div([
+                dcc.Dropdown(
+                    id="years",
+                    options=[{'label': y, 'value': y} for y in cfg['Years']],
+                    value=max(cfg['Years']),
+                    clearable=False,
+                    style={'color': 'black'}
+                ),
+            ], style={'display': 'inline-block',
+                      'padding': '0px 5px 10px 0px',
+                      'width': '7%'},
+               className="one columns"
+            ),
+            html.Div([
+                dbc.RadioItems(
+                    id='graph-type',
+                    options=[{'label': i, 'value': i} for i in ['Price', 'Yr-to-Yr ±%']],
+                    value='Price',
+                    inline=True,
+                )
+                ], style={'display': 'inline-block',
+                          'float': 'right',
+                          'padding': '5px 0px 10px 10px',
+                          'width': '76%'},
+                  className="nine columns"
+            ),
+        ],  style={'padding': '5px 0px 10px 20px'},
+            className="row"
         ),
 
         # App Container ------------------------------------------#
@@ -264,91 +299,26 @@ app.layout = html.Div(
                 html.Div(
                     id="left-column",
                     children=[
-                        html.Div([
-                            html.Div(
-                                id="dropdown-container",
-                                children=[
-                                    html.P(
-                                        id="dropdown-text",
-                                        children="Select region:",
-                                    ),
-                                    dcc.Dropdown(
-                                        id='region',
-                                        options=[{'label': r, 'value': r} for r in regions],
-                                        value='Greater London',
-                                        clearable=False,
-                                        style={'color': 'black'}
-                                    )
-                                ], style={'display': 'inline-block',
-                                          'padding': '0px 0px 0px 15px',
-                                          'width': '13%'},
-                                   className="one columns"
-                                ),
-
-                            html.Div(
-                                id="radioitems-container",
-                                children=[
-                                    dcc.RadioItems(
-                                        id='graph-type',
-                                        options=[{'label': i, 'value': i} for i in ['Price', 'Yr-to-Yr ±%']],
-                                        value='Price',
-                                        labelStyle={'display': 'block'}
-                                    )
-                                ], style={'display': 'inline-block',
-                                          'padding': '30px 0px 20px 20px',
-                                          'width': '10%'},
-                                  className="one columns"
-                            ),
-
-                            html.Div(
-                                id="slider-container",
-                                children=[
-                                    html.Div([
-                                        html.P(
-                                            id="slider-text",
-                                            children="Drag the slider to change the year:",
-                                        )], style={ 'padding': '0px 0px 0px 20px'}
-                                    ),
-                                    html.Div([
-                                        dcc.Slider(
-                                            id="years-slider",
-                                            min=min(cfg['figure years']),
-                                            max=max(cfg['figure years']),
-                                            value=max(cfg['figure years']),
-                                            marks={
-                                                str(year): {
-                                                    "label": str(year),
-                                                    "style": {"color": "#7fafdf"},
-                                                }
-                                                for year in cfg['figure years']
-                                            },
-                                        ),
-                                    ]),
-                                ], style={'display': 'inline-block', 'width': '76%'},
-                                   className="ten columns"
-                            ),
-                        ], className="row"),
-
                         html.Div(
                             id="choropleth-container",
                             children=[
-                                html.P(
-                                    children=f"Average house price by postcode sector in {max(cfg['figure years'])}",
+                                html.H6(
+                                    children=f"Average house price by postcode sector in {max(cfg['Years'])}",
                                     id="choropleth-title",
                                 ),
                                 dcc.Graph(id="county-choropleth",
                                           clickData={'points': [{'location': initial_sector}]},
-                                          figure = get_figure(regional_price_data[2020]['Greater London'],
+                                          figure = get_figure(regional_price_data[max(cfg['Years'])]['Greater London'],
                                                               regional_geo_data['Greater London'],
                                                               'Greater London',
-                                                              gtype='Price')
+                                                              gtype='Price',year=max(cfg['Years']))
                                 ),
                             ],
                         ),
                     ],
                     style={'display': 'inline-block',
-                           "width": "64%",
-                           'padding': '0px 20px 10px 40px'},
+                           'padding': '20px 10px 10px 40px',
+                           "width": "64%"},
                     className="seven columns"
                 ),
 
@@ -356,35 +326,43 @@ app.layout = html.Div(
                 html.Div(
                     id="graph-container",
                     children=[
-                        html.Div([dcc.Graph(id='price-time-series')],
-                                 style={'padding': '10px 0px 10px 0px'}),
-                        html.Div([dcc.Graph(id='volume-time-series')],
-                                 style={'padding': '10px 0px 10px 0px'}),
+                        html.H6(
+                            children="Legends - F: Flats/Maisonettes; T: Terraced; S: Semi-Detached; D: Detached",
+                            id="legend-keys",
+                        ),
+                        html.Div([dcc.Graph(id='price-time-series')]),
                     ],
                     style={'display': 'inline-block',
+                           'padding': '20px 10px 10px 10px',
                            'width': '34%'},
                     className="five columns"
                 ),
             ],
             className="row"
-        ),
+        )
     ],
-    style={'height': '100%'} #Add this to fit screen height
 )
 
 ################################################################
 
 @app.callback(
     Output("choropleth-title", "children"),
-    [Input("years-slider", "value")])
-def update_map_title(year):
-    return f"Average house price by postcode sector in {year}"
+    [Input("years", "value"),
+     Input("graph-type", "value")])
+def update_map_title(year, gtype):
+    if gtype == 'Price':
+        return f"Average house price by postcode sector in {year}"
+    else:
+        if year == 1995:
+            return f"Data from {year-1} to {year} not available"
+        else:
+            return f"Year-to-year price % change by postcode sector, from {year-1} to {year}"
 
 #----------------------------------------------------#
 
 @app.callback(
     Output("county-choropleth", 'figure'),
-    [Input('years-slider', 'value'),
+    [Input('years', 'value'),
      Input("region", "value"),
      Input("graph-type", "value")])     # @cache.memoize(timeout=cfg['timeout'])
 def update_graph(year, region, gtype):
@@ -392,18 +370,71 @@ def update_graph(year, region, gtype):
         df = regional_price_data
     else:
         df = regional_percentage_delta_data
-    return get_figure(df[year][region], regional_geo_data[region], region, gtype)
+    return get_figure(df[year][region], regional_geo_data[region],
+                      region, gtype, year)
 
 #----------------------------------------------------#
 
-def create_time_series(df, title, ylabel):
-    fig = px.scatter(df, labels=dict(value=ylabel, variable="PostCode"), title=title)
-    fig.update_traces(mode='lines+markers')
+def price_volume_ts(price, volume, sector):
+
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
+
+    #- Volume bar graph -------------------------#
+    colorsDict = {'D':'#957DAD', 'S':'#AAC5E2', 'T':'#FDFD95', 'F':'#F4ADC6'}
+    #colorsDict = {'D':'#4D4BA7', 'S':'#B156B8', 'T':'#E77B42', 'F':'#ECF560'}
+
+    #legend_dict = {'D':'Detached', 'S':'Semi-Detached', 'T':'Terraced', 'F':'Flats/Maosonettes'}
+    for ptype in ['D', 'S', 'T', 'F']:
+        fig.add_trace(
+            go.Bar(x=cfg['Years'],
+                   y=volume['Sales Volume'][volume['Property Type']==ptype],
+                   marker_color=colorsDict[ptype],
+                   name=ptype
+                  ),
+            secondary_y=False
+        )
+
+    #- Price time series ------------------------#
+    fig.add_trace(
+        go.Scatter(x=price.index, y=price.values, marker_color='cyan',
+                   mode='lines+markers', name=f"'{sector}' Avg. Price"),
+        secondary_y=True,
+    )
+
+    #- Set Axes ---------------------------------#
     fig.update_xaxes(showgrid=False)
-    fig.update_layout(height=356,
-                      margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
+    fig.update_yaxes(title_text="Sale Volume", secondary_y=False, showgrid=False)
+    fig.update_yaxes(title_text="Avg. Price (£)", secondary_y=True)
+
+    #- Layout------------------------------------#
+    fig.update_layout(title=f'{sector}',
                       plot_bgcolor=colors['background'],
                       paper_bgcolor=colors['background'],
+                      autosize=True,
+                      barmode='stack',
+                      margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
+                      legend=dict(
+                                orientation="h",
+                                yanchor="bottom",
+                                y=1,
+                                xanchor="right",
+                                x=1
+                            ),
+                      font_color=colors['text'])
+
+    return fig
+
+#----------------------------------------------------#
+
+def price_ts(df, title):
+    fig = px.scatter(df, labels=dict(value="Average Price (£)", variable="PostCode"),
+                     title=title)
+    fig.update_traces(mode='lines+markers')
+    fig.update_xaxes(showgrid=False)
+    fig.update_layout(margin={'l': 20, 'b': 30, 'r': 10, 't': 60},
+                      plot_bgcolor=colors['background'],
+                      paper_bgcolor=colors['background'],
+                      autosize=True,
                       font_color=colors['text'])
     return fig
 
@@ -414,54 +445,22 @@ def create_time_series(df, title, ylabel):
     [Input('county-choropleth', 'clickData'),
      Input('county-choropleth', 'selectedData')]) #@cache.memoize(timeout=cfg['timeout'])
 def update_price_timeseries(clickData, selectedData):
+    # If selectedData:
     if selectedData is not None and len(selectedData['points']) > 0 and \
        selectedData != state['last_selectedData']:
         sector =[_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
         title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
         state['last_selectedData'] = selectedData
+        return price_ts(price_df[sector], title)
+
+    # clickData:
     else:
         sector = clickData['points'][0]['location']
-        title = f'Average price for {sector}'
         state['last_clickData'] = clickData
-    return create_time_series(price_df[sector], title, "Average Price (£)")
+        df = type_df[sector].reset_index()
+        df.rename(columns={sector: 'Sales Volume'}, inplace=True)
 
-#----------------------------------------------------#
-
-def create_bar_series(df, title):
-    # colorsDict = {'D':'#957DAD', 'S':'#AAC5E2', 'T':'#FDFD95', 'F':'#F4ADC6'}
-    colorsDict = {'D':'#4D4BA7', 'S':'#B156B8', 'T':'#E77B42', 'F':'#ECF560'}
-
-    fig = go.Figure()
-    for ptype in ['D', 'S', 'T', 'F']:
-        fig.add_trace(go.Bar(x=cfg['Years'],
-                             y=df['Sales Volume'][df['Property Type']==ptype],
-                             name=ptype,
-                             marker_color=colorsDict[ptype]
-                             ))
-    fig.update_xaxes(showgrid=False)
-    fig.update_layout(height=356,
-                      title=title,
-                      barmode='stack',
-                      margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
-                      plot_bgcolor=colors['background'],
-                      paper_bgcolor=colors['background'],
-                      yaxis=dict(title='Sales volume'),
-                      font=dict(color=colors['text'],
-                                size=11)
-                      )
-    return fig
-
-#----------------------------------------------------#
-
-@app.callback(
-    Output('volume-time-series', 'figure'),
-    [Input('county-choropleth', 'clickData')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_volume_timeseries(clickData):
-    sector = clickData['points'][0]['location']
-    title = f'{sector} (D: Detached, S: Semi-Detached, T: Terraced, F: Flats/Maisonettes)'
-    df = type_df[sector].reset_index()
-    df.rename(columns={sector: 'Sales Volume'}, inplace=True)
-    return create_bar_series(df, title)
+        return price_volume_ts(price_df[sector], df, sector)
 
 #----------------------------------------------------#
 
@@ -474,11 +473,11 @@ print(f"Data Preparation completed in {time.time()-t0 :.1f} seconds")
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
-    # app.run_server(debug=True)
-    app.run_server(
-        port=8050,
-        host='0.0.0.0'
-    )
+    app.run_server(debug=True)
+    # app.run_server(
+    #     port=8050,
+    #     host='0.0.0.0'
+    # )
 
     # Terminal cmd to run:
     # gunicorn app:server -b 0.0.0.0:8050
