@@ -45,11 +45,13 @@ cfg['start_year']       = 1995
 cfg['end_year']         = 2020
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 
+cfg['latest date']     = "31 July 2020"
+
 cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
 
 cfg['topN']             = 12
-cfg['timeout']          = 60*20
+# cfg['timeout']          = 60*20 #Used in flask_caching
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
@@ -133,6 +135,8 @@ def get_figure(df, geo_data, region, gtype, year):
 
     _cfg = cfg['plotly_config'][region]
 
+    config = {'doubleClickDelay': 600}
+
     if gtype == 'Price':
         min_value = np.percentile(np.array(df.Price), 5)
         max_value = np.percentile(np.array(df.Price), _cfg['maxp'])
@@ -140,7 +144,7 @@ def get_figure(df, geo_data, region, gtype, year):
         text_vec = df['text']
         colorscale = "YlOrRd"
         # colorscale = "Sunsetdark"
-        title = f"{year} Avg Price (£)"
+        title = "Avg Price (£)"
     else:
         min_value = np.percentile(np.array(df['Percentage Change']), 5)
         max_value = np.percentile(np.array(df['Percentage Change']), 95)
@@ -196,6 +200,7 @@ colors = {
     'text': '#7FDBFF'
 }
 
+extra_space = ' '
 #---------------------------------------------
 
 state = dict()
@@ -257,6 +262,14 @@ app.layout = html.Div(
             ],
         ),
 
+        html.Div([
+            dcc.Link(f"Data Source: HM Land Reigstry Price Paid Data from 01 Jan 1995 to {cfg['latest date']}",
+                     href='https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads',
+                     target='_blank',
+                     style={'color': colors['text']}
+            )
+        ], style={'padding': '5px 0px 5px 20px'}),
+
         # Selection control -------------------------------------#
         html.Div([
             html.Div([
@@ -297,7 +310,7 @@ app.layout = html.Div(
                 ),
             ], style={'display': 'inline-block',
                       'padding': '0px 5px 10px 0px',
-                      'width': '65%'},
+                      'width': '70%'},
                className="one columns"
             ),
             html.Div([
@@ -310,7 +323,7 @@ app.layout = html.Div(
                 ], style={'display': 'inline-block',
                           'float': 'right',
                           'padding': '5px 0px 10px 10px',
-                          'width': '15%'},
+                          'width': '12%'},
                   className="eight columns"
             ),
         ],  style={'padding': '5px 0px 10px 20px'},
@@ -352,10 +365,11 @@ app.layout = html.Div(
                 html.Div(
                     id="graph-container",
                     children=[
-                        html.H6(
-                            children="Legends - F: Flats/Maisonettes; T: Terraced; S: Semi-Detached; D: Detached",
-                            id="legend-keys",
-                        ),
+                        html.Div([
+                            html.H6(
+                                dcc.Markdown('**F**: Flats/Maisonettes; | **T**: Terraced; | \
+                                              **S**: Semi-Detached; | **D**: Detached'))
+                        ], style={'textAlign': 'right'}),
                         html.Div([dcc.Graph(id='price-time-series')]),
                     ],
                     style={'display': 'inline-block',
@@ -371,6 +385,8 @@ app.layout = html.Div(
 
 ################################################################
 
+""" Update choropleth-title with year and graph-type update
+"""
 @app.callback(
     Output("choropleth-title", "children"),
     [Input("year", "value"),
@@ -386,6 +402,8 @@ def update_map_title(year, gtype):
 
 #----------------------------------------------------#
 
+""" Update postcode dropdown options with region selection
+"""
 @app.callback(
     Output("postcode", 'options'),
     [Input("region", "value")])     # @cache.memoize(timeout=cfg['timeout'])
@@ -396,6 +414,8 @@ def update_region_postcode(region):
 
 #----------------------------------------------------#
 
+""" Update choropleth-graph with year, region and graph-type update
+"""
 @app.callback(
     Output("county-choropleth", 'figure'),
     [Input('year', 'value'),
@@ -420,7 +440,6 @@ def price_volume_ts(price, volume, sector):
     colorsDict = {'D':'#957DAD', 'S':'#AAC5E2', 'T':'#FDFD95', 'F':'#F4ADC6'}
     #colorsDict = {'D':'#4D4BA7', 'S':'#B156B8', 'T':'#E77B42', 'F':'#ECF560'}
 
-    #legend_dict = {'D':'Detached', 'S':'Semi-Detached', 'T':'Terraced', 'F':'Flats/Maosonettes'}
     for ptype in ['D', 'S', 'T', 'F']:
         fig.add_trace(
             go.Bar(x=cfg['Years'],
@@ -440,7 +459,7 @@ def price_volume_ts(price, volume, sector):
 
     #- Set Axes ---------------------------------#
     fig.update_xaxes(showgrid=False)
-    fig.update_yaxes(title_text="Sales Volume", secondary_y=False, showgrid=False)
+    fig.update_yaxes(title_text="Sales Volume (Bar Chart)", secondary_y=False, showgrid=False)
     fig.update_yaxes(title_text="Avg. Price (£)", secondary_y=True)
 
     #- Layout------------------------------------#
@@ -477,12 +496,14 @@ def price_ts(df, title):
 
 #----------------------------------------------------#
 
+""" Update price-time-series with clickData, selectedData or psotcode updates
+"""
 @app.callback(
     Output('price-time-series', 'figure'),
     [Input('county-choropleth', 'clickData'),
-     Input('postcode', 'value'),
-     Input('county-choropleth', 'selectedData')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_price_timeseries(clickData, postcode, selectedData):
+     Input('county-choropleth', 'selectedData'),
+     Input('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
+def update_price_timeseries(clickData, selectedData, postcode):
     # If selectedData:
     if selectedData is not None and len(selectedData['points']) > 0 and \
        selectedData != state['last_selectedData']:
@@ -491,7 +512,7 @@ def update_price_timeseries(clickData, postcode, selectedData):
         state['last_selectedData'] = selectedData
         return price_ts(price_df[sector], title)
 
-    # clickData:
+    # If clickData:
     elif clickData != state['last_clickData']:
         sector = clickData['points'][0]['location']
         state['last_clickData'] = clickData
@@ -502,24 +523,25 @@ def update_price_timeseries(clickData, postcode, selectedData):
 
     # postcode selection:
     else:
-        if len(postcode) == 0:
+        if len(postcode) == 0 or isinstance(postcode, str):
             return price_ts(empty_series, 'Please select postcode.')
 
-        elif len(postcode) > 1:
-            sector = postcode
-            title = f"Average price for {len(sector)} sectors"
-            state['last_selectedData'] = selectedData
-            return price_ts(price_df[sector], title)
-        else:
-            # sector = postcode if isinstance(postcode, str) else postcode[0]
+        elif len(postcode) == 1:
             sector = postcode[0]
-            print(f"postcode: {postcode}")
             df = type_df[sector].reset_index()
             df.rename(columns={sector: 'Sales Volume'}, inplace=True)
             return price_volume_ts(price_df[sector], df, sector)
 
+        else:
+            sector = postcode
+            title = f"Average price for {len(sector)} sectors"
+            state['last_selectedData'] = selectedData
+            return price_ts(price_df[sector], title)
+
 #----------------------------------------------------#
 
+""" Update postcode dropdown values with clickData
+"""
 @app.callback(
     Output('postcode', 'value'),
     [Input('county-choropleth', 'clickData')]) #@cache.memoize(timeout=cfg['timeout'])
@@ -528,6 +550,8 @@ def update_postcode_dropdown(clickData):
 
 #----------------------------------------------------#
 
+""" Update selectedData with clickData
+"""
 @app.callback(
     Output('county-choropleth', 'selectedData'),
     [Input('county-choropleth', 'clickData'),
@@ -546,11 +570,11 @@ print(f"Data Preparation completed in {time.time()-t0 :.1f} seconds")
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
-    # app.run_server(debug=True)
-    app.run_server(
-        port=8050,
-        host='0.0.0.0'
-    )
+    app.run_server(debug=True)
+    # app.run_server(
+    #     port=8050,
+    #     host='0.0.0.0'
+    # )
 
 """
 Terminal cmd to run:
