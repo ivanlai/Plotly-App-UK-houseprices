@@ -128,6 +128,8 @@ for region in cfg['plotly_config']:
 ------------------------------------------ """
 
 def get_figure(df, geo_data, region, gtype, year):
+    """ ref: https://plotly.com/python/builtin-colorscales/
+    """
 
     _cfg = cfg['plotly_config'][region]
 
@@ -137,6 +139,7 @@ def get_figure(df, geo_data, region, gtype, year):
         z_vec = df['Price']
         text_vec = df['text']
         colorscale = "YlOrRd"
+        # colorscale = "Sunsetdark"
         title = f"{year} Avg Price (£)"
     else:
         min_value = np.percentile(np.array(df['Percentage Change']), 5)
@@ -193,12 +196,20 @@ colors = {
     'text': '#7FDBFF'
 }
 
-sectors = regional_price_data[max(cfg['Years'])]['Greater London']['Sector'].values
-initial_sector = random.choice(sectors)
+#---------------------------------------------
 
 state = dict()
 state['last_clickData']    = None
 state['last_selectedData'] = None
+state['year']              = max(cfg['Years'])
+state['region']            = 'Greater London'
+
+#---------------------------------------------
+
+sectors = regional_price_data[state['year']][state['region']]['Sector'].values
+initial_sector = random.choice(sectors)
+empty_series = pd.Series(np.zeros(len(cfg['Years'])), index=cfg['Years'])
+
 
 """ ------------------------------------------
  Dash App
@@ -252,26 +263,41 @@ app.layout = html.Div(
                 dcc.Dropdown(
                     id='region',
                     options=[{'label': r, 'value': r} for r in regions],
-                    value='Greater London',
+                    value=state['region'],
                     clearable=False,
                     style={'color': 'black'}
                 )
                 ], style={'display': 'inline-block',
                           'padding': '0px 5px 10px 15px',
-                          'width': '15%'},
+                          'width': '10%'},
                    className="two columns"
                 ),
             html.Div([
                 dcc.Dropdown(
-                    id="years",
+                    id="year",
                     options=[{'label': y, 'value': y} for y in cfg['Years']],
-                    value=max(cfg['Years']),
+                    value=state['year'],
                     clearable=False,
                     style={'color': 'black'}
                 ),
             ], style={'display': 'inline-block',
                       'padding': '0px 5px 10px 0px',
-                      'width': '10%'},
+                      'width': '7%'},
+               className="one columns"
+            ),
+            html.Div([
+                dcc.Dropdown(
+                    id="postcode",
+                    options=[{'label': s, 'value': s} for s in
+                             regional_price_data[state['year']][state['region']].Sector.values],
+                    value=initial_sector,
+                    clearable=False,
+                    multi=True,
+                    style={'color': 'black'}
+                ),
+            ], style={'display': 'inline-block',
+                      'padding': '0px 5px 10px 0px',
+                      'width': '65%'},
                className="one columns"
             ),
             html.Div([
@@ -284,8 +310,8 @@ app.layout = html.Div(
                 ], style={'display': 'inline-block',
                           'float': 'right',
                           'padding': '5px 0px 10px 10px',
-                          'width': '73%'},
-                  className="nine columns"
+                          'width': '15%'},
+                  className="eight columns"
             ),
         ],  style={'padding': '5px 0px 10px 20px'},
             className="row"
@@ -303,15 +329,15 @@ app.layout = html.Div(
                             id="choropleth-container",
                             children=[
                                 html.H6(
-                                    children=f"Average house price by postcode sector in {max(cfg['Years'])}",
+                                    children=f"Average house price by postcode sector in {state['year']}",
                                     id="choropleth-title",
                                 ),
                                 dcc.Graph(id="county-choropleth",
                                           clickData={'points': [{'location': initial_sector}]},
-                                          figure = get_figure(regional_price_data[max(cfg['Years'])]['Greater London'],
-                                                              regional_geo_data['Greater London'],
-                                                              'Greater London',
-                                                              gtype='Price',year=max(cfg['Years']))
+                                          figure = get_figure(regional_price_data[state['year']][state['region']],
+                                                              regional_geo_data[state['region']],
+                                                              state['region'],
+                                                              gtype='Price',year=state['year'])
                                 ),
                             ],
                         ),
@@ -347,7 +373,7 @@ app.layout = html.Div(
 
 @app.callback(
     Output("choropleth-title", "children"),
-    [Input("years", "value"),
+    [Input("year", "value"),
      Input("graph-type", "value")])
 def update_map_title(year, gtype):
     if gtype == 'Price':
@@ -361,11 +387,22 @@ def update_map_title(year, gtype):
 #----------------------------------------------------#
 
 @app.callback(
+    Output("postcode", 'options'),
+    [Input("region", "value")])     # @cache.memoize(timeout=cfg['timeout'])
+def update_region_postcode(region):
+    state['region'] = region
+    return [{'label': s, 'value': s} for s in
+             regional_price_data[state['year']][region].Sector.values]
+
+#----------------------------------------------------#
+
+@app.callback(
     Output("county-choropleth", 'figure'),
-    [Input('years', 'value'),
+    [Input('year', 'value'),
      Input("region", "value"),
      Input("graph-type", "value")])     # @cache.memoize(timeout=cfg['timeout'])
 def update_graph(year, region, gtype):
+    state['year'] = year
     if gtype == 'Price':
         df = regional_price_data
     else:
@@ -403,7 +440,7 @@ def price_volume_ts(price, volume, sector):
 
     #- Set Axes ---------------------------------#
     fig.update_xaxes(showgrid=False)
-    fig.update_yaxes(title_text="Sale Volume", secondary_y=False, showgrid=False)
+    fig.update_yaxes(title_text="Sales Volume", secondary_y=False, showgrid=False)
     fig.update_yaxes(title_text="Avg. Price (£)", secondary_y=True)
 
     #- Layout------------------------------------#
@@ -443,24 +480,60 @@ def price_ts(df, title):
 @app.callback(
     Output('price-time-series', 'figure'),
     [Input('county-choropleth', 'clickData'),
+     Input('postcode', 'value'),
      Input('county-choropleth', 'selectedData')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_price_timeseries(clickData, selectedData):
+def update_price_timeseries(clickData, postcode, selectedData):
     # If selectedData:
     if selectedData is not None and len(selectedData['points']) > 0 and \
        selectedData != state['last_selectedData']:
-        sector =[_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
+        sector = [_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
         title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
         state['last_selectedData'] = selectedData
         return price_ts(price_df[sector], title)
 
     # clickData:
-    else:
+    elif clickData != state['last_clickData']:
         sector = clickData['points'][0]['location']
         state['last_clickData'] = clickData
         df = type_df[sector].reset_index()
         df.rename(columns={sector: 'Sales Volume'}, inplace=True)
 
         return price_volume_ts(price_df[sector], df, sector)
+
+    # postcode selection:
+    else:
+        if len(postcode) == 0:
+            return price_ts(empty_series, 'Please select postcode.')
+
+        elif len(postcode) > 1:
+            sector = postcode
+            title = f"Average price for {len(sector)} sectors"
+            state['last_selectedData'] = selectedData
+            return price_ts(price_df[sector], title)
+        else:
+            # sector = postcode if isinstance(postcode, str) else postcode[0]
+            sector = postcode[0]
+            print(f"postcode: {postcode}")
+            df = type_df[sector].reset_index()
+            df.rename(columns={sector: 'Sales Volume'}, inplace=True)
+            return price_volume_ts(price_df[sector], df, sector)
+
+#----------------------------------------------------#
+
+@app.callback(
+    Output('postcode', 'value'),
+    [Input('county-choropleth', 'clickData')]) #@cache.memoize(timeout=cfg['timeout'])
+def update_postcode_dropdown(clickData):
+    return clickData['points'][0]['location']
+
+#----------------------------------------------------#
+
+@app.callback(
+    Output('county-choropleth', 'selectedData'),
+    [Input('county-choropleth', 'clickData'),
+     Input('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
+def update_choropleth_selectedData(clickData, postcode):
+    return None
 
 #----------------------------------------------------#
 
@@ -479,5 +552,7 @@ if __name__ == "__main__":
         host='0.0.0.0'
     )
 
-    # Terminal cmd to run:
-    # gunicorn app:server -b 0.0.0.0:8050
+"""
+Terminal cmd to run:
+gunicorn app:server -b 0.0.0.0:8050
+"""
