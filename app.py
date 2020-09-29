@@ -209,9 +209,6 @@ sectors = regional_price_data[initial_year][initial_region]['Sector'].values
 initial_sector = random.choice(sectors)
 empty_series = pd.Series(np.zeros(len(cfg['Years'])), index=cfg['Years'])
 
-#---------------------------------------------
-
-state = {'last_region': initial_region}
 
 """ ------------------------------------------
  Dash App
@@ -307,8 +304,15 @@ app.layout = html.Div(
                 ),
             ], style={'display': 'inline-block',
                       'padding': '0px 5px 10px 0px',
-                      'width': '55%'},
-               className="eight columns"
+                      'width': '45%'},
+               className="seven columns"
+            ),
+            html.Div([
+                html.Button('Clear', id='clear-button', n_clicks=0)
+            ], style={'display': 'inline-block',
+                      'padding': '5px 5px 10px 0px',
+                      'width': '10%'},
+               className="one columns"
             ),
             html.Div([
                 dbc.RadioItems(
@@ -517,16 +521,18 @@ def update_price_timeseries(selectedData, postcode):
 
 #----------------------------------------------------#
 
-""" Update postcode dropdown values with clickData
+""" Update postcode dropdown values with clickData, region and clear button
 """
 @app.callback(
     Output('postcode', 'value'),
     [Input('county-choropleth', 'clickData'),
      Input('region', 'value'),
+     Input('clear-button', 'n_clicks'),
      State('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_postcode_dropdown(clickData, region, postcode):
-    if region != state['last_region']:
-        state['last_region'] = region
+def update_postcode_dropdown(clickData, region, clear_button, postcode):
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+
+    if 'clear-button' in changed_id or 'region' in changed_id:
         return []
     else:
         sector = clickData['points'][0]['location']
@@ -556,11 +562,12 @@ print(f'Data Preparation completed in {time.time()-t0 :.1f} seconds')
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
-    # app.run_server(debug=True)
-    app.run_server(
-        port=8050,
-        host='0.0.0.0'
-    )
+    app.run_server(debug=True)
+
+    # app.run_server(
+    #     port=8050,
+    #     host='0.0.0.0'
+    # )
 
 """
 Terminal cmd to run:
