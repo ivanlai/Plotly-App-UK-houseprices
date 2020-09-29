@@ -282,8 +282,8 @@ app.layout = html.Div(
                 )
                 ], style={'display': 'inline-block',
                           'padding': '0px 5px 10px 15px',
-                          'width': '10%'},
-                   className="two columns"
+                          'width': '15%'},
+                   className="one columns"
                 ),
             html.Div([
                 dcc.Dropdown(
@@ -295,7 +295,7 @@ app.layout = html.Div(
                 ),
             ], style={'display': 'inline-block',
                       'padding': '0px 5px 10px 0px',
-                      'width': '7%'},
+                      'width': '10%'},
                className="one columns"
             ),
             html.Div([
@@ -310,8 +310,8 @@ app.layout = html.Div(
                 ),
             ], style={'display': 'inline-block',
                       'padding': '0px 5px 10px 0px',
-                      'width': '70%'},
-               className="one columns"
+                      'width': '55%'},
+               className="eight columns"
             ),
             html.Div([
                 dbc.RadioItems(
@@ -321,10 +321,10 @@ app.layout = html.Div(
                     inline=True,
                 )
                 ], style={'display': 'inline-block',
-                          'float': 'right',
+                          'textAlign': 'center',
                           'padding': '5px 0px 10px 10px',
-                          'width': '12%'},
-                  className="eight columns"
+                          'width': '20%'},
+                  className="two columns"
             ),
         ],  style={'padding': '5px 0px 10px 20px'},
             className="row"
