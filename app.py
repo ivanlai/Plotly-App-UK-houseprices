@@ -218,8 +218,8 @@ initial_region = 'Greater London'
 
 sectors = regional_price_data[initial_year][initial_region]['Sector'].values
 initial_sector = random.choice(sectors)
-empty_series = pd.Series(np.zeros(len(cfg['Years'])), index=cfg['Years'])
-
+empty_series = pd.DataFrame(np.full(len(cfg['Years']), np.nan), index=cfg['Years'])
+empty_series.rename(columns={0: ''}, inplace=True)
 
 """ ------------------------------------------
  Dash App
@@ -267,7 +267,7 @@ app.layout = html.Div(
         ),
 
         html.Div([
-            dcc.Link(f"Data Source: HM Land Reigstry Price Paid Data from 01 Jan 1995 to {cfg['latest date']}",
+            dcc.Link(f"HM Land Reigstry Price Paid Data from 01 Jan 1995 to {cfg['latest date']}",
                      href='https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads',
                      target='_blank',
                      style={'color': colors['text']}
@@ -397,12 +397,13 @@ app.layout = html.Div(
                          - Contains Royal Mail data © Royal Mail copyright and database right 2015
                          - Contains National Statistics data © Crown copyright and database right 2015
                          - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
-
                          '''
                         )
         ], style={'textAlign': 'left',
-                  'color': colors['text'],
+                  # 'color': colors['text'],
                   'padding': '20px 0px 10px 20px'}),
+
+        html.Footer(['© 2020 Ivan Lai'], style={'padding': '20px 0px 10px 20px'})
     ]
 )
 
@@ -533,7 +534,7 @@ def update_price_timeseries(selectedData, postcode):
         return price_ts(price_df[sector], title)
     else:
         if len(postcode) == 0 or isinstance(postcode, str):
-            return price_ts(empty_series, 'Please select postcode.')
+            return price_ts(empty_series, 'Please select postcodes')
 
         elif len(postcode) == 1:
             sector = postcode[0]
