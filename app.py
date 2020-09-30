@@ -392,8 +392,9 @@ app.layout = html.Div(
                          **Note:** Property type "Other" have been filtered from the house price data.
 
                          **Other data sources:**
+                         - [OpenStreetMap](https://www.openstreetmap.org)
                          - [Postcode boundary data](https://www.opendoorlogistics.com/data/)
-                         sourced from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
+                         from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
                          - Contains Royal Mail data © Royal Mail copyright and database right 2015
                          - Contains National Statistics data © Crown copyright and database right 2015
                          - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
@@ -401,9 +402,9 @@ app.layout = html.Div(
                         )
         ], style={'textAlign': 'left',
                   # 'color': colors['text'],
-                  'padding': '20px 0px 10px 20px'}),
+                  'padding': '20px 0px 5px 20px'}),
 
-        html.Footer(['© 2020 Ivan Lai'], style={'padding': '20px 0px 10px 20px'})
+        html.H6(['© 2020 Ivan Lai'], style={'padding': '5px 0px 10px 20px'})
     ]
 )
 
