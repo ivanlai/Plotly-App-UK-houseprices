@@ -384,7 +384,25 @@ app.layout = html.Div(
                 ),
             ],
             className="row"
-        )
+        ),
+
+        # Notes and credits --------------------------#
+        html.Div([
+            dcc.Markdown('''
+                         **Note:** Property type "Others" have been filtered from the house price data.
+
+                         **Other data sources:**
+                         - [Postcode boundary data](https://www.opendoorlogistics.com/data/)
+                         sourced from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
+                         - Contains Royal Mail data © Royal Mail copyright and database right 2015
+                         - Contains National Statistics data © Crown copyright and database right 2015
+                         - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
+
+                         '''
+                        )
+        ], style={'textAlign': 'left',
+                  'color': colors['text'],
+                  'padding': '20px 0px 10px 20px'}),
     ]
 )
 
@@ -561,8 +579,11 @@ logging.info(f'Data Preparation completed in {time.time()-t0 :.1f} seconds')
 if __name__ == "__main__":
     logging.info(sys.version)
 
+    # If running locally in Anaconda env:
     if 'conda-forge' in sys.version:
         app.run_server(debug=True)
+
+    # If running on AWS production
     else:
         app.run_server(
             port=8050,
