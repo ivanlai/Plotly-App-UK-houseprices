@@ -3,6 +3,7 @@ import re
 import sys
 import time
 import random
+import logging
 
 import dash
 import dash_core_components as dcc
@@ -37,8 +38,10 @@ warnings.filterwarnings("ignore")
 
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
-""" Configurations
-"""
+
+""" ------------------------------------------
+ Configurations
+------------------------------------------ """
 cfg = dict()
 
 cfg['start_year']       = 1995
@@ -75,8 +78,13 @@ cfg['plotly_config'] = {
          'South East':     {'centre': [51.5, -0.1], 'maxp': 90, 'zoom': 7.3},
          'Greater London': {'centre': [51.5, -0.1], 'maxp': 80, 'zoom': 8.9},
 }
+
+cfg['logging format'] = 'pid %(process)5s [%(asctime)s] ' + \
+                        '%(levelname)8s: %(message)s'
+
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
+logging.basicConfig(format=cfg['logging format'], level=logging.INFO)
 t0 = time.time()
 
 """ ------------------------------------------
@@ -201,6 +209,7 @@ colors = {
 }
 
 #---------------------------------------------
+# initial values:
 
 initial_year   = max(cfg['Years'])
 initial_region = 'Greater London'
@@ -240,7 +249,6 @@ app.layout = html.Div(
                     html.Div([html.H1(children='England and Wales House Prices')],
                               style={'display': 'inline-block',
                                      'width': '69%',
-                                     'fontColor': 'orange',
                                      'padding': '10px 0px 0px 20px'}), #padding: top, right, bottom, left
                     html.Div([
                         html.A([
@@ -336,7 +344,8 @@ app.layout = html.Div(
                             id="choropleth-container",
                             children=[
                                 html.H6(
-                                    children=f"Average house price by postcode sector in {initial_region}, {initial_year}",
+                                    children=f"Average house prices by postcode sector in \
+                                               {initial_region}, {initial_year}",
                                     id="choropleth-title",
                                 ),
                                 dcc.Graph(id="county-choropleth",
@@ -388,7 +397,7 @@ app.layout = html.Div(
      Input('graph-type', 'value')])
 def update_map_title(region, year, gtype):
     if gtype == 'Price':
-        return f'Average house price by postcode sector in {region}, {year}'
+        return f'Average house prices by postcode sector in {region}, {year}'
     else:
         if year == 1995:
             return f'Data from {year-1} to {year} not available'
@@ -500,7 +509,7 @@ def update_price_timeseries(selectedData, postcode):
 
     if 'selectedData' in changed_id and selectedData is not None:
         sector = [_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
-        title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
+        title = f"Average prices for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
         return price_ts(price_df[sector], title)
     else:
         if len(postcode) == 0 or isinstance(postcode, str):
@@ -512,7 +521,7 @@ def update_price_timeseries(selectedData, postcode):
             df.rename(columns={sector: 'Sales Volume'}, inplace=True)
             return price_volume_ts(price_df[sector], df, sector)
         else:
-            title = f"Average price for {len(postcode)} sectors"
+            title = f"Average prices for {len(postcode)} sectors"
             return price_ts(price_df[postcode], title)
 
 #----------------------------------------------------#
@@ -542,7 +551,7 @@ app.css.append_css({
     'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
 })
 
-print(f'Data Preparation completed in {time.time()-t0 :.1f} seconds')
+logging.info(f'Data Preparation completed in {time.time()-t0 :.1f} seconds')
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 
