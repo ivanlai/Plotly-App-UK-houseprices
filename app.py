@@ -156,12 +156,12 @@ def get_figure(df, geo_data, region, gtype, year):
         # colorscale = "Sunsetdark"
         title = "Avg Price (£)"
     else:
-        min_value = np.percentile(np.array(df['Percentage Change']), 5)
-        max_value = np.percentile(np.array(df['Percentage Change']), 95)
+        min_value = np.percentile(np.array(df['Percentage Change']), 10)
+        max_value = np.percentile(np.array(df['Percentage Change']), 90)
         z_vec = df['Percentage Change']
         text_vec = ''
-        # colorscale = "Picnic"
-        colorscale = "Jet"
+        colorscale = "Picnic"
+        # colorscale = "Jet"
         title = "Avg. Price %Change"
 
     #-------------------------------------------#
@@ -402,7 +402,7 @@ app.layout = html.Div(
                         )
         ], style={'textAlign': 'left',
                   # 'color': colors['text'],
-                  'padding': '20px 0px 5px 20px'}),
+                  'padding': '10px 0px 5px 20px'}),
 
         html.H6(['© 2020 Ivan Lai'], style={'padding': '5px 0px 10px 20px'})
     ]
