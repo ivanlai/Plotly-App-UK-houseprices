@@ -336,7 +336,7 @@ app.layout = html.Div(
                             id="choropleth-container",
                             children=[
                                 html.H6(
-                                    children=f"Average house price by postcode sector in {initial_year}",
+                                    children=f"Average house price by postcode sector in {initial_region}, {initial_year}",
                                     id="choropleth-title",
                                 ),
                                 dcc.Graph(id="county-choropleth",
@@ -383,16 +383,17 @@ app.layout = html.Div(
 """
 @app.callback(
     Output('choropleth-title', 'children'),
-    [Input('year', 'value'),
+    [Input('region', 'value'),
+     Input('year', 'value'),
      Input('graph-type', 'value')])
-def update_map_title(year, gtype):
+def update_map_title(region, year, gtype):
     if gtype == 'Price':
-        return f'Average house price by postcode sector in {year}'
+        return f'Average house price by postcode sector in {region}, {year}'
     else:
         if year == 1995:
             return f'Data from {year-1} to {year} not available'
         else:
-            return f'Year-to-year price % change by postcode sector, from {year-1} to {year}'
+            return f'Year-to-year price % change by postcode sector in {region}, from {year-1} to {year}'
 
 #----------------------------------------------------#
 
