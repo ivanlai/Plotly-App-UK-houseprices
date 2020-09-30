@@ -389,7 +389,7 @@ app.layout = html.Div(
         # Notes and credits --------------------------#
         html.Div([
             dcc.Markdown('''
-                         **Note:** Property type "Others" have been filtered from the house price data.
+                         **Note:** Property type "Other" have been filtered from the house price data.
 
                          **Other data sources:**
                          - [Postcode boundary data](https://www.opendoorlogistics.com/data/)
