@@ -85,6 +85,8 @@ cfg['logging format'] = 'pid %(process)5s [%(asctime)s] ' + \
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 logging.basicConfig(format=cfg['logging format'], level=logging.INFO)
+logging.info(f"System: {sys.version}")
+
 t0 = time.time()
 
 """ ------------------------------------------
@@ -552,16 +554,20 @@ app.css.append_css({
 })
 
 logging.info(f'Data Preparation completed in {time.time()-t0 :.1f} seconds')
+
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    logging.info(sys.version)
 
-    # app.run_server(
-    #     port=8050,
-    #     host='0.0.0.0'
-    # )
+    if 'conda-forge' in sys.version:
+        app.run_server(debug=True)
+    else:
+        app.run_server(
+            port=8050,
+            host='0.0.0.0'
+        )
 
 """
 Terminal cmd to run:
