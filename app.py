@@ -298,21 +298,14 @@ app.layout = html.Div(
                     options=[{'label': s, 'value': s} for s in
                              regional_price_data[initial_year][initial_region].Sector.values],
                     value=[initial_sector],
-                    clearable=False,
+                    clearable=True,
                     multi=True,
                     style={'color': 'black'}
                 ),
             ], style={'display': 'inline-block',
                       'padding': '0px 5px 10px 0px',
-                      'width': '45%'},
+                      'width': '55%'},
                className="seven columns"
-            ),
-            html.Div([
-                html.Button('Clear', id='clear-button', n_clicks=0)
-            ], style={'display': 'inline-block',
-                      'padding': '5px 5px 10px 0px',
-                      'width': '10%'},
-               className="one columns"
             ),
             html.Div([
                 dbc.RadioItems(
@@ -502,7 +495,9 @@ def price_ts(df, title):
     [Input('county-choropleth', 'selectedData'),
      Input('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
 def update_price_timeseries(selectedData, postcode):
-    if selectedData is not None and len(selectedData['points']) > 0:
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+
+    if 'selectedData' in changed_id and selectedData is not None:
         sector = [_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
         title = f"Average price for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
         return price_ts(price_df[sector], title)
@@ -521,35 +516,24 @@ def update_price_timeseries(selectedData, postcode):
 
 #----------------------------------------------------#
 
-""" Update postcode dropdown values with clickData, region and clear button
+""" Update postcode dropdown values with clickData, selectedData and region
 """
 @app.callback(
     Output('postcode', 'value'),
     [Input('county-choropleth', 'clickData'),
+     Input('county-choropleth', 'selectedData'),
      Input('region', 'value'),
-     Input('clear-button', 'n_clicks'),
      State('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_postcode_dropdown(clickData, region, clear_button, postcode):
+def update_postcode_dropdown(clickData, selectedData, region, postcode):
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
 
-    if 'clear-button' in changed_id or 'region' in changed_id:
+    if 'region' in changed_id or 'selectedData' in changed_id:
         return []
     else:
         sector = clickData['points'][0]['location']
         postcode = set(postcode)
         postcode.add(sector)
         return list(postcode)
-
-#----------------------------------------------------#
-
-""" Update selectedData with clickData
-"""
-@app.callback(
-    Output('county-choropleth', 'selectedData'),
-    [Input('county-choropleth', 'clickData'),
-     Input('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_choropleth_selectedData(clickData, postcode):
-    return None
 
 #----------------------------------------------------#
 
