@@ -236,6 +236,7 @@ server = app.server #Needed for gunicorn
 
 app.layout = html.Div(
     id="root",
+
     children=[
         # Header -------------------------------------------------#
         html.Div(
@@ -244,18 +245,23 @@ app.layout = html.Div(
                 html.Div([
                     html.Div([html.H1(children='England and Wales House Prices')],
                               style={'display': 'inline-block',
-                                     'width': '69%',
+                                     'width': '75%',
                                      'padding': '10px 0px 0px 20px'}), #padding: top, right, bottom, left
+                    html.Div([html.H6(children='Powered by')],
+                              style={'display': 'inline-block',
+                                     'width': '10%',
+                                     'textAlign': 'right',
+                                     'padding': '0px 20px 0px 0px'}), #padding: top, right, bottom, left
                     html.Div([
                         html.A([
                             html.Img(src=app.get_asset_url("dash-logo.png"),
-                                           style={'height': '50%',
-                                                  'width' : '50%'})
+                                           style={'height': '100%',
+                                                  'width' : '100%'})
                         ], href='https://plotly.com/', target='_blank')
-                    ], style={'display': 'inline-block',
-                              'width': '29%',
-                              'textAlign': 'right',
-                              'padding': '0px 0px 0px 0px'}),
+                        ], style={'display': 'inline-block',
+                                  'width': '15%',
+                                  'textAlign': 'right',
+                                  'padding': '0px 25px 0px 0px'}),
                 ]),
             ],
         ),
@@ -276,8 +282,7 @@ app.layout = html.Div(
                     options=[{'label': r, 'value': r} for r in regions],
                     value=initial_region,
                     clearable=False,
-                    style={'color': 'black'}
-                )
+                    style={'color': 'black'})
                 ], style={'display': 'inline-block',
                           'padding': '0px 5px 10px 15px',
                           'width': '15%'},
@@ -289,41 +294,39 @@ app.layout = html.Div(
                     options=[{'label': y, 'value': y} for y in cfg['Years']],
                     value=initial_year,
                     clearable=False,
-                    style={'color': 'black'}
-                ),
-            ], style={'display': 'inline-block',
-                      'padding': '0px 5px 10px 0px',
-                      'width': '10%'},
-               className="one columns"
+                    style={'color': 'black'}),
+                ], style={'display': 'inline-block',
+                          'padding': '0px 5px 10px 0px',
+                          'width': '10%'},
+                   className="one columns"
             ),
             html.Div([
                 dcc.Dropdown(
-                    id="postcode",
+                    id='postcode-sector',
                     options=[{'label': s, 'value': s} for s in
                              regional_price_data[initial_year][initial_region].Sector.values],
                     value=[initial_sector],
                     clearable=True,
                     multi=True,
-                    style={'color': 'black'}
-                ),
-            ], style={'display': 'inline-block',
-                      'padding': '0px 5px 10px 0px',
-                      'width': '55%'},
-               className="seven columns"
+                    style={'color': 'black'}),
+                ], style={'display': 'inline-block',
+                          'padding': '0px 5px 10px 0px',
+                          'width': '55%'},
+                   className="seven columns"
             ),
             html.Div([
                 dbc.RadioItems(
                     id='graph-type',
                     options=[{'label': i, 'value': i} for i in ['Price', 'Yr-to-Yr ±%']],
                     value='Price',
-                    inline=True,
-                )
+                    inline=True)
                 ], style={'display': 'inline-block',
                           'textAlign': 'center',
                           'padding': '5px 0px 10px 10px',
                           'width': '20%'},
                   className="two columns"
             ),
+
         ],  style={'padding': '5px 0px 10px 20px'},
             className="row"
         ),
@@ -340,11 +343,11 @@ app.layout = html.Div(
                             id="choropleth-container",
                             children=[
                                 html.H6(
+                                    id="choropleth-title",
                                     children=f"Average house prices (all property types) \
                                                by postcode sector in \
-                                               {initial_region}, {initial_year}",
-                                    id="choropleth-title",
-                                ),
+                                               {initial_region}, {initial_year}"),
+
                                 dcc.Graph(id="county-choropleth",
                                           clickData={'points': [{'location': initial_sector}]},
                                           figure = get_figure(regional_price_data[initial_year][initial_region],
@@ -354,11 +357,10 @@ app.layout = html.Div(
                                 ),
                             ],
                         ),
-                    ],
-                    style={'display': 'inline-block',
-                           'padding': '20px 10px 10px 40px',
-                           "width": "64%"},
-                    className="seven columns"
+                    ], style={'display': 'inline-block',
+                              'padding': '20px 10px 10px 40px',
+                              'width': "64%"},
+                       className="seven columns"
                 ),
 
                 # Right Column ------------------------------------#
@@ -367,8 +369,6 @@ app.layout = html.Div(
                     children=[
                         html.Div([
                             html.H6(
-                                # dcc.Markdown('**F**: Flats/Maisonettes; | **T**: Terraced; | \
-                                #               **S**: Semi-Detached; | **D**: Detached')
                                 dcc.Checklist(
                                     id='type-checklist',
                                     options=[
@@ -383,12 +383,13 @@ app.layout = html.Div(
                                 ),
                             )
                         ], style={'textAlign': 'right'}),
+
                         html.Div([dcc.Graph(id='price-time-series')]),
-                    ],
-                    style={'display': 'inline-block',
-                           'padding': '20px 10px 10px 10px',
-                           'width': '34%'},
-                    className="five columns"
+
+                    ], style={'display': 'inline-block',
+                              'padding': '20px 10px 10px 10px',
+                              'width': '34%'},
+                       className="five columns"
                 ),
             ],
             className="row"
@@ -408,11 +409,14 @@ app.layout = html.Div(
                          - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
                          '''
                         )
-        ], style={'textAlign': 'left',
-                  # 'color': colors['text'],
-                  'padding': '10px 0px 5px 20px'}),
+            ], style={'textAlign': 'left',
+                      'padding': '10px 0px 5px 20px'}
+        ),
 
-        html.H6(['© 2020 Ivan Lai'], style={'padding': '5px 0px 10px 20px'})
+        html.H6([
+            dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.me@gmail.com)")
+            ], style={'padding': '5px 0px 10px 20px'}
+        )
     ]
 )
 
@@ -439,9 +443,9 @@ def update_map_title(region, year, gtype):
 """ Update postcode dropdown options with region selection
 """
 @app.callback(
-    Output('postcode', 'options'),
+    Output('postcode-sector', 'options'),
     [Input('region', 'value'),
-     Input('year', 'value')])     # @cache.memoize(timeout=cfg['timeout'])
+     Input('year', 'value')])
 def update_region_postcode(region, year):
     return [{'label': s, 'value': s} for s in
              regional_price_data[year][region].Sector.values]
@@ -454,7 +458,7 @@ def update_region_postcode(region, year):
     Output('county-choropleth', 'figure'),
     [Input('year', 'value'),
      Input('region', 'value'),
-     Input('graph-type', 'value')])     # @cache.memoize(timeout=cfg['timeout'])
+     Input('graph-type', 'value')])
 def update_graph(year, region, gtype):
     if gtype == 'Price':
         df = regional_price_data
@@ -515,7 +519,7 @@ def price_volume_ts(price, volume, sector):
 #----------------------------------------------------#
 
 def price_ts(df, title):
-    fig = px.scatter(df, labels=dict(value="Average Price (£)", variable="PostCode"),
+    fig = px.scatter(df, labels=dict(value="Average Price (£)", variable="PostCodes"),
                      title=title)
     fig.update_traces(mode='lines+markers')
     fig.update_xaxes(showgrid=False)
@@ -544,7 +548,7 @@ def get_average_price_by_year(df, sectors):
 @app.callback(
     Output('price-time-series', 'figure'),
     [Input('county-choropleth', 'selectedData'),
-     Input('postcode', 'value'),
+     Input('postcode-sector', 'value'),
      Input('type-checklist', 'value')])
 @cache.memoize(timeout=cfg['timeout'])
 def update_price_timeseries(selectedData, sectors, ptypes):
@@ -583,11 +587,11 @@ def update_price_timeseries(selectedData, sectors, ptypes):
 """ Update postcode dropdown values with clickData, selectedData and region
 """
 @app.callback(
-    Output('postcode', 'value'),
+    Output('postcode-sector', 'value'),
     [Input('county-choropleth', 'clickData'),
      Input('county-choropleth', 'selectedData'),
      Input('region', 'value'),
-     State('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
+     State('postcode-sector', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
 def update_postcode_dropdown(clickData, selectedData, region, postcode):
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
 
@@ -601,9 +605,9 @@ def update_postcode_dropdown(clickData, selectedData, region, postcode):
 
 #----------------------------------------------------#
 
-app.css.append_css({
-    'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
-})
+# app.css.append_css({
+#     'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
+# })
 
 logging.info(f'Data Preparation completed in {time.time()-t0 :.1f} seconds')
 
