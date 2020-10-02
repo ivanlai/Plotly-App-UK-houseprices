@@ -16,7 +16,7 @@ import plotly.graph_objs as go
 import plotly.express as px
 from plotly.graph_objs import Scatter, Figure, Layout
 from plotly.subplots import make_subplots
-# from flask_caching import Cache
+from flask_caching import Cache
 
 import numpy as np
 import pandas as pd
@@ -54,7 +54,7 @@ cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
 
 cfg['topN']             = 12
-# cfg['timeout']          = 60*20 #Used in flask_caching
+cfg['timeout']          = 2*60 #Used in flask_caching
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
@@ -92,15 +92,9 @@ t0 = time.time()
 """ ------------------------------------------
  House Price Data
 ------------------------------------------ """
-price_df  = pd.read_csv(os.path.join(cfg['app_data_dir'], 'price_ts.csv'), index_col='Year')
-volume_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'volume_ts.csv'), index_col='Year')
-
-type_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'property_type.csv'))
-type_df = type_df.set_index(['Year', 'Property Type', 'Sector']).unstack(level=-1)
-type_df.columns = type_df.columns.get_level_values(1)
-type_df.fillna(value=0, inplace=True)
-
-#-------------------------------------------------------#
+price_volume_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'price_volume.csv'))
+price_volume_df = price_volume_df.set_index(['Year', 'Property Type', 'Sector']).unstack(level=-1)
+price_volume_df.fillna(value=0, inplace=True)
 
 """ ------------------------------------------------
  Regional Price, percentage delta and Volume Data
@@ -232,9 +226,9 @@ app = dash.Dash(
      ],
      external_stylesheets = [dbc.themes.DARKLY]
 )
-# cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem',
-#                                   'CACHE_DIR': 'cache'})
-# app.config.suppress_callback_exceptions = True
+cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem',
+                                  'CACHE_DIR': 'cache'})
+app.config.suppress_callback_exceptions = True
 
 server = app.server #Needed for gunicorn
 
@@ -270,7 +264,7 @@ app.layout = html.Div(
             dcc.Link(f"HM Land Reigstry Price Paid Data from 01 Jan 1995 to {cfg['latest date']}",
                      href='https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads',
                      target='_blank',
-                     style={'color': colors['text']}
+                     #style={'color': colors['text']}
             )
         ], style={'padding': '5px 0px 5px 20px'}),
 
@@ -346,7 +340,8 @@ app.layout = html.Div(
                             id="choropleth-container",
                             children=[
                                 html.H6(
-                                    children=f"Average house prices by postcode sector in \
+                                    children=f"Average house prices (all property types) \
+                                               by postcode sector in \
                                                {initial_region}, {initial_year}",
                                     id="choropleth-title",
                                 ),
@@ -372,8 +367,21 @@ app.layout = html.Div(
                     children=[
                         html.Div([
                             html.H6(
-                                dcc.Markdown('**F**: Flats/Maisonettes; | **T**: Terraced; | \
-                                              **S**: Semi-Detached; | **D**: Detached'))
+                                # dcc.Markdown('**F**: Flats/Maisonettes; | **T**: Terraced; | \
+                                #               **S**: Semi-Detached; | **D**: Detached')
+                                dcc.Checklist(
+                                    id='type-checklist',
+                                    options=[
+                                        {'label': 'F: Flats/Maisonettes', 'value': 'F'},
+                                        {'label': 'T: Terraced', 'value': 'T'},
+                                        {'label': 'S: Semi-Detached', 'value': 'S'},
+                                        {'label': 'D: Detached', 'value': 'D'}
+                                    ],
+                                    value=['F', 'T', 'S', 'D'],
+                                    labelStyle={'display': 'inline-block'},
+                                    inputStyle={"margin-left": "20px"}
+                                ),
+                            )
                         ], style={'textAlign': 'right'}),
                         html.Div([dcc.Graph(id='price-time-series')]),
                     ],
@@ -419,7 +427,7 @@ app.layout = html.Div(
      Input('graph-type', 'value')])
 def update_map_title(region, year, gtype):
     if gtype == 'Price':
-        return f'Average house prices by postcode sector in {region}, {year}'
+        return f'Average house prices (all property types) by postcode sector in {region}, {year}'
     else:
         if year == 1995:
             return f'Data from {year-1} to {year} not available'
@@ -468,7 +476,7 @@ def price_volume_ts(price, volume, sector):
     for ptype in ['D', 'S', 'T', 'F']:
         fig.add_trace(
             go.Bar(x=cfg['Years'],
-                   y=volume['Sales Volume'][volume['Property Type']==ptype],
+                   y=volume.loc[volume['Property Type']==ptype, 'Count'],
                    marker_color=colorsDict[ptype],
                    name=ptype
                   ),
@@ -477,8 +485,8 @@ def price_volume_ts(price, volume, sector):
 
     #- Price time series ------------------------#
     fig.add_trace(
-        go.Scatter(x=price.index, y=price.values, marker_color='cyan',
-                   mode='lines+markers', name=f"Avg. Price"),
+        go.Scatter(x=price.index, y=[p[0] for p in price[sector].values],
+                   marker_color='cyan', mode='lines+markers', name=f"Avg. Price"),
         secondary_y=True,
     )
 
@@ -488,7 +496,7 @@ def price_volume_ts(price, volume, sector):
     fig.update_yaxes(title_text="Avg. Price (£)", secondary_y=True)
 
     #- Layout------------------------------------#
-    fig.update_layout(title=f'{sector}',
+    fig.update_layout(title=f'{sector[0]}',
                       plot_bgcolor=colors['background'],
                       paper_bgcolor=colors['background'],
                       autosize=True,
@@ -520,31 +528,55 @@ def price_ts(df, title):
 
 #----------------------------------------------------#
 
+def get_average_price_by_year(df, sectors):
+    avg_price_df = pd.DataFrame()
+    for sector in sectors:
+        dot_product = (df[('Count', sector)]*df[('Average Price', sector)]).groupby(df.Year).sum()
+        _sum = df[('Count', sector)].groupby(df.Year).sum()
+        avg_price_df[sector] =  np.round((dot_product / _sum)/1000) * 1000
+
+    return avg_price_df
+
+#----------------------------------------------------#
+
 """ Update price-time-series with clickData, selectedData or psotcode updates
 """
 @app.callback(
     Output('price-time-series', 'figure'),
     [Input('county-choropleth', 'selectedData'),
-     Input('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_price_timeseries(selectedData, postcode):
+     Input('postcode', 'value'),
+     Input('type-checklist', 'value')])
+@cache.memoize(timeout=cfg['timeout'])
+def update_price_timeseries(selectedData, sectors, ptypes):
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
 
-    if 'selectedData' in changed_id and selectedData is not None:
-        sector = [_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
-        title = f"Average prices for {len(sector)} sectors (Up to a maximum of {cfg['topN']} is shown)"
-        return price_ts(price_df[sector], title)
+    if ('selectedData' in changed_id and selectedData is not None) or \
+       ('type-checklist' in changed_id and len(sectors) == 0):
+        sectors = [_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
+        title = f"Average prices for {len(sectors)} sectors (Up to a maximum of {cfg['topN']} is shown)"
     else:
-        if len(postcode) == 0 or isinstance(postcode, str):
-            return price_ts(empty_series, 'Please select postcodes')
+        title = f"Average prices for {len(sectors)} sectors"
 
-        elif len(postcode) == 1:
-            sector = postcode[0]
-            df = type_df[sector].reset_index()
-            df.rename(columns={sector: 'Sales Volume'}, inplace=True)
-            return price_volume_ts(price_df[sector], df, sector)
-        else:
-            title = f"Average prices for {len(postcode)} sectors"
-            return price_ts(price_df[postcode], title)
+    #--------------------------------------------------#
+    if ('type-checklist' not in changed_id) and (len(sectors) == 0 or isinstance(sectors, str)):
+        return price_ts(empty_series, 'Please select postcodes')
+
+    if len(ptypes)==0:
+        return price_ts(empty_series, 'Please select at least one property type')
+
+    #--------------------------------------------------#
+    df = price_volume_df.iloc[np.isin(price_volume_df.index.get_level_values('Property Type'), ptypes),
+                              np.isin(price_volume_df.columns.get_level_values('Sector'), sectors)]
+    df.reset_index(inplace=True)
+    avg_price_df = get_average_price_by_year(df, sectors)
+
+    if len(sectors) == 1:
+        index = [(a, b) for (a, b) in df.columns if a != 'Average Price']
+        volume_df = df[index]
+        volume_df.columns = volume_df.columns.get_level_values(0)
+        return price_volume_ts(avg_price_df, volume_df, sectors)
+    else:
+        return price_ts(avg_price_df, title)
 
 #----------------------------------------------------#
 
