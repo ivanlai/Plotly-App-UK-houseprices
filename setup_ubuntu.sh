@@ -8,3 +8,4 @@ sudo pip3 install gunicorn
 sudo pip3 install -r requirements.txt
 
 git clone https://github.com/ivanlai/apps-UK_houseprice.git
+
