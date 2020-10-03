@@ -227,7 +227,8 @@ app = dash.Dash(
      external_stylesheets = [dbc.themes.DARKLY]
 )
 cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem',
-                                  'CACHE_DIR': 'cache'})
+                                  'CACHE_DIR': 'cache',
+                                  'CACHE_THRESHOLD': 30_000})
 app.config.suppress_callback_exceptions = True
 
 server = app.server #Needed for gunicorn
