@@ -50,11 +50,12 @@ cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 
 cfg['latest date']     = "31 July 2020"
 
-cfg['geo_data_dir']     = 'input/geoData'
 cfg['app_data_dir']     = 'appData'
+# cfg['app_data_dir']     = '/home/ivanlai/apps-UK_houseprice/appData' #Pythonanywhere
 
 cfg['topN']             = 12
 cfg['timeout']          = 2*60 #Used in flask_caching
+cfg['cache threshold']  = 30_000 # ~250MB
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
@@ -228,7 +229,7 @@ app = dash.Dash(
 )
 cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem',
                                   'CACHE_DIR': 'cache',
-                                  'CACHE_THRESHOLD': 30_000})
+                                  'CACHE_THRESHOLD': cfg['cache threshold']})
 app.config.suppress_callback_exceptions = True
 
 server = app.server #Needed for gunicorn
