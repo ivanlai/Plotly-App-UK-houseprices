@@ -1,0 +1,9 @@
+Flask_Caching==1.7.1
+dash==1.16.0
+pandas==1.1.1
+plotly==4.10.0
+dash_html_components==1.1.1
+numpy==1.19.1
+geopandas==0.8.1
+dash_core_components==1.12.0
+dash_bootstrap_components==0.10.6
