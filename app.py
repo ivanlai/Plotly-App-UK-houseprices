@@ -50,12 +50,15 @@ cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 
 cfg['latest date']     = "31 July 2020"
 
-cfg['app_data_dir']     = 'appData'
-# cfg['app_data_dir']     = '/home/ivanlai/apps-UK_houseprice/appData' #Pythonanywhere
+appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
+if os.path.isdir(appDataPath):
+    cfg['app_data_dir'] = appDataPath #For Pythonanywhere
+else:
+    cfg['app_data_dir'] = 'appData'
 
 cfg['topN']             = 12
-cfg['timeout']          = 2*60 #Used in flask_caching
-cfg['cache threshold']  = 30_000 # ~250MB
+cfg['timeout']          = 2*60     # Used in flask_caching
+cfg['cache threshold']  = 30000    # corresponds to ~250MB
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
@@ -344,7 +347,7 @@ app.layout = html.Div(
                         html.Div(
                             id="choropleth-container",
                             children=[
-                                html.H6(
+                                html.H5(
                                     id="choropleth-title",
                                     children=f"Average house prices (all property types) \
                                                by postcode sector in \
@@ -361,7 +364,7 @@ app.layout = html.Div(
                         ),
                     ], style={'display': 'inline-block',
                               'padding': '20px 10px 10px 40px',
-                              'width': "64%"},
+                              'width': "59%"},
                        className="seven columns"
                 ),
 
@@ -381,7 +384,7 @@ app.layout = html.Div(
                                     ],
                                     value=['F', 'T', 'S', 'D'],
                                     labelStyle={'display': 'inline-block'},
-                                    inputStyle={"margin-left": "20px"}
+                                    inputStyle={"margin-left": "10px"}
                                 ),
                             )
                         ], style={'textAlign': 'right'}),
@@ -390,7 +393,7 @@ app.layout = html.Div(
 
                     ], style={'display': 'inline-block',
                               'padding': '20px 10px 10px 10px',
-                              'width': '34%'},
+                              'width': '39%'},
                        className="five columns"
                 ),
             ],
@@ -607,9 +610,9 @@ def update_postcode_dropdown(clickData, selectedData, region, postcode):
 
 #----------------------------------------------------#
 
-# app.css.append_css({
-#     'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
-# })
+app.css.append_css({
+    'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
+})
 
 logging.info(f'Data Preparation completed in {time.time()-t0 :.1f} seconds')
 
