@@ -57,7 +57,9 @@ else:
     cfg['app_data_dir'] = 'appData'
 
 cfg['topN']             = 12
-cfg['timeout']          = 2*60     # Used in flask_caching
+
+cfg['timeout']          = 10*60     # Used in flask_caching
+cfg['cache dir']        = 'cache'
 cfg['cache threshold']  = 30000    # corresponds to ~250MB
 
 cfg['regions_lookup'] = {
@@ -151,7 +153,6 @@ def get_figure(df, geo_data, region, gtype, year):
         z_vec = df['Price']
         text_vec = df['text']
         colorscale = "YlOrRd"
-        # colorscale = "Sunsetdark"
         title = "Avg Price (£)"
     else:
         min_value = np.percentile(np.array(df['Percentage Change']), 10)
@@ -163,8 +164,9 @@ def get_figure(df, geo_data, region, gtype, year):
         title = "Avg. Price %Change"
 
     #-------------------------------------------#
+    fig = go.Figure()
 
-    fig = go.Figure(
+    fig.add_trace(
             go.Choroplethmapbox(
                 geojson = geo_data,
                 locations = df['Sector'],
@@ -179,6 +181,11 @@ def get_figure(df, geo_data, region, gtype, year):
                 colorbar_title = title,
           ))
 
+    """
+    mapbox_style options:
+    'open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter',
+    'stamen-terrain', 'stamen-toner', 'stamen-watercolor'
+    """
     fig.update_layout(mapbox_style="open-street-map",
                       mapbox_zoom=_cfg['zoom'],
                       autosize=True,
@@ -224,18 +231,20 @@ empty_series.rename(columns={0: ''}, inplace=True)
 ------------------------------------------ """
 
 app = dash.Dash(
-    __name__,
-     meta_tags=[
-        {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
-     ],
-     external_stylesheets = [dbc.themes.DARKLY]
-)
-cache = Cache(app.server, config={'CACHE_TYPE': 'filesystem',
-                                  'CACHE_DIR': 'cache',
-                                  'CACHE_THRESHOLD': cfg['cache threshold']})
-app.config.suppress_callback_exceptions = True
+            __name__,
+             meta_tags=[
+                {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
+             ],
+             external_stylesheets = [dbc.themes.DARKLY]
+        )
 
 server = app.server #Needed for gunicorn
+cache = Cache(server, config={
+            'CACHE_TYPE': 'filesystem',
+            'CACHE_DIR': cfg['cache dir'],
+            'CACHE_THRESHOLD': cfg['cache threshold']
+            })
+app.config.suppress_callback_exceptions = True
 
 #--------------------------------------------------------#
 
