@@ -428,7 +428,7 @@ app.layout = html.Div(
         ),
 
         html.H6([
-            dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.me@gmail.com)")
+            dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.uk.2020@gmail.com)")
             ], style={'padding': '5px 0px 10px 20px'}
         )
     ]
