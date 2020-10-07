@@ -48,7 +48,7 @@ cfg['start_year']       = 1995
 cfg['end_year']         = 2020
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 
-cfg['latest date']     = "31 July 2020"
+cfg['latest date']     = "31 August 2020"
 
 appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
 if os.path.isdir(appDataPath):
