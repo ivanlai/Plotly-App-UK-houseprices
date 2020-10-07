@@ -195,6 +195,16 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, fig=None):
         arg['text_vec'] = df['text']
         arg['colorscale'] = "YlOrRd"
         arg['title'] = "Avg Price (£)"
+
+    elif gtype == 'Volume':
+        arg['min_value'] = np.percentile(np.array(df.Volume), 5)
+        arg['max_value'] = np.percentile(np.array(df.Volume), 95)
+        arg['z_vec'] = df['Volume']
+        arg['text_vec'] = df['text']
+        arg['colorscale'] = "Plasma"
+        # arg['colorscale'] = "Jet"
+        arg['title'] = "Sales Volume"
+
     else:
         arg['min_value'] = np.percentile(np.array(df['Percentage Change']), 10)
         arg['max_value'] = np.percentile(np.array(df['Percentage Change']), 90)
@@ -363,19 +373,19 @@ app.layout = html.Div(
                     style={'color': 'black'}),
                 ], style={'display': 'inline-block',
                           'padding': '0px 5px 10px 0px',
-                          'width': '55%'},
+                          'width': '40%'},
                    className="seven columns"
             ),
             html.Div([
                 dbc.RadioItems(
                     id='graph-type',
-                    options=[{'label': i, 'value': i} for i in ['Price', 'Yr-to-Yr ±%']],
+                    options=[{'label': i, 'value': i} for i in ['Price', 'Volume', 'Yr-to-Yr price ±%']],
                     value='Price',
                     inline=True)
                 ], style={'display': 'inline-block',
                           'textAlign': 'center',
                           'padding': '5px 0px 10px 10px',
-                          'width': '20%'},
+                          'width': '35%'},
                   className="two columns"
             ),
 
@@ -477,6 +487,8 @@ app.layout = html.Div(
 def update_map_title(region, year, gtype):
     if gtype == 'Price':
         return f'Average house prices (all property types) by postcode sector in {region}, {year}'
+    elif gtype == 'Volume':
+        return f'Sales Volume (all property types) by postcode sector in {region}, {year}'
     else:
         if year == 1995:
             return f'Data from {year-1} to {year} not available'
@@ -509,10 +521,11 @@ def update_region_postcode(region, year):
 def update_Choropleth(year, region, gtype, sectors):
 
     # Graph type selection------------------------------#
-    if gtype == 'Price':
-        df = regional_price_data
+    if gtype in ['Price', 'Volume']:
+        df = regional_price_data[year][region]
     else:
-        df = regional_percentage_delta_data
+        df = regional_percentage_delta_data[year][region]
+
 
     # For high-lighting mechanism ----------------------#
     geo_sectors = dict()
@@ -526,10 +539,10 @@ def update_Choropleth(year, region, gtype, sectors):
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
 
     if 'postcode-sector' in changed_id and len(sectors) > 0:
-        fig = get_figure(df[year][region], regional_geo_data[region],
+        fig = get_figure(df, regional_geo_data[region],
                           region, gtype, year, geo_sectors, state['figure state'])
     else:
-        fig = get_figure(df[year][region], regional_geo_data[region],
+        fig = get_figure(df, regional_geo_data[region],
                           region, gtype, year, geo_sectors)
         state['figure state'] = fig
 
