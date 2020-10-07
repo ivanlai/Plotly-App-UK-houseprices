@@ -60,7 +60,7 @@ cfg['topN']             = 50
 
 cfg['timeout']          = 5*60     # Used in flask_caching
 cfg['cache dir']        = 'cache'
-cfg['cache threshold']  = 300      # corresponds to ~250MB
+cfg['cache threshold']  = 100      # corresponds to ~350MB max
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
