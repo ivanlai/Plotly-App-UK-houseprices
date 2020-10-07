@@ -56,7 +56,7 @@ if os.path.isdir(appDataPath):
 else:
     cfg['app_data_dir'] = 'appData'
 
-cfg['topN']             = 12
+cfg['topN']             = 50
 
 cfg['timeout']          = 10*60     # Used in flask_caching
 cfg['cache dir']        = 'cache'
@@ -135,67 +135,98 @@ for region in cfg['plotly_config']:
     with open(infile, "r") as read_file:
         regional_geo_data[region] = json.load(read_file)
 
+#------------------------------------------------#
+
+def get_geo_sector(geo_data):
+    Y = dict()
+    for feature in geo_data['features']:
+        sector = feature['properties']['name']
+        Y[sector] = feature
+    return Y
+
+regional_geo_sector = dict()
+for k, v in regional_geo_data.items():
+    regional_geo_sector[k] = get_geo_sector(v)
+
+
 """ ------------------------------------------
  Making Graphs
 ------------------------------------------ """
 
-def get_figure(df, geo_data, region, gtype, year):
-    """ ref: https://plotly.com/python/builtin-colorscales/
-    """
+def get_Choropleth(df, geo_data, arg, marker_opacity,
+                   marker_line_width, marker_line_color, fig=None):
 
-    _cfg = cfg['plotly_config'][region]
-
-    config = {'doubleClickDelay': 1000} #Set a high delay to make double click easier
-
-    if gtype == 'Price':
-        min_value = np.percentile(np.array(df.Price), 5)
-        max_value = np.percentile(np.array(df.Price), _cfg['maxp'])
-        z_vec = df['Price']
-        text_vec = df['text']
-        colorscale = "YlOrRd"
-        title = "Avg Price (£)"
-    else:
-        min_value = np.percentile(np.array(df['Percentage Change']), 10)
-        max_value = np.percentile(np.array(df['Percentage Change']), 90)
-        z_vec = df['Percentage Change']
-        text_vec = ''
-        colorscale = "Picnic"
-        # colorscale = "Jet"
-        title = "Avg. Price %Change"
-
-    #-------------------------------------------#
-    fig = go.Figure()
+    if fig is None:
+        fig = go.Figure()
 
     fig.add_trace(
             go.Choroplethmapbox(
                 geojson = geo_data,
                 locations = df['Sector'],
                 featureidkey = "properties.name",
-                colorscale = colorscale,
-                z = z_vec,
-                zmin = min_value,
-                zmax = max_value,
-                text = text_vec,
-                marker_opacity = 0.4,
-                marker_line_width = 1,
-                colorbar_title = title,
+                colorscale = arg['colorscale'],
+                z = arg['z_vec'],
+                zmin = arg['min_value'],
+                zmax = arg['max_value'],
+                text = arg['text_vec'],
+                marker_opacity = marker_opacity,
+                marker_line_width = marker_line_width,
+                marker_line_color = marker_line_color,
+                colorbar_title = arg['title'],
+                hoverinfo="text",
           ))
 
-    """
-    mapbox_style options:
-    'open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter',
-    'stamen-terrain', 'stamen-toner', 'stamen-watercolor'
-    """
-    fig.update_layout(mapbox_style="open-street-map",
-                      mapbox_zoom=_cfg['zoom'],
-                      autosize=True,
-                      font=dict(color="#7FDBFF"),
-                      paper_bgcolor="#1f2630",
-                      mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
-                      margin={'l': 20, 'r': 20, 't': 20, 'b': 20}
-                     )
+    return fig
 
-    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+#--------------------------------------------#
+
+def get_figure(df, geo_data, region, gtype, year, geo_sectors, fig=None):
+    """ ref: https://plotly.com/python/builtin-colorscales/
+    """
+    config = {'doubleClickDelay': 1000} #Set a high delay to make double click easier
+
+    _cfg = cfg['plotly_config'][region]
+
+    arg = dict()
+    if gtype == 'Price':
+        arg['min_value'] = np.percentile(np.array(df.Price), 5)
+        arg['max_value'] = np.percentile(np.array(df.Price), _cfg['maxp'])
+        arg['z_vec'] = df['Price']
+        arg['text_vec'] = df['text']
+        arg['colorscale'] = "YlOrRd"
+        arg['title'] = "Avg Price (£)"
+    else:
+        arg['min_value'] = np.percentile(np.array(df['Percentage Change']), 10)
+        arg['max_value'] = np.percentile(np.array(df['Percentage Change']), 90)
+        arg['z_vec'] = df['Percentage Change']
+        arg['text_vec'] = df['text']
+        arg['colorscale'] = "Picnic"
+        arg['title'] = "Avg. Price %Change"
+
+    #-------------------------------------------#
+    if fig is None:
+        fig = get_Choropleth(df, geo_data, arg, marker_opacity=0.4,
+                             marker_line_width=1, marker_line_color='#6666cc', fig=None)
+
+    #------------------------------------------#
+        """
+        mapbox_style options:
+        'open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter',
+        'stamen-terrain', 'stamen-toner', 'stamen-watercolor'
+        """
+        fig.update_layout(mapbox_style="open-street-map",
+                          mapbox_zoom=_cfg['zoom'],
+                          autosize=True,
+                          font=dict(color="#7FDBFF"),
+                          paper_bgcolor="#1f2630",
+                          mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
+                          uirevision=region,
+                          margin={"r":0,"t":0,"l":0,"b":0}
+                         )
+
+    if geo_sectors is not None:
+        fig = get_Choropleth(df, geo_sectors, arg, marker_opacity=1.0,
+                             marker_line_width=3, marker_line_color='aqua', fig=fig)
 
     return fig
 
@@ -223,8 +254,15 @@ initial_region = 'Greater London'
 
 sectors = regional_price_data[initial_year][initial_region]['Sector'].values
 initial_sector = random.choice(sectors)
+initial_geo_sector = [regional_geo_sector[initial_region][initial_sector]]
+
 empty_series = pd.DataFrame(np.full(len(cfg['Years']), np.nan), index=cfg['Years'])
 empty_series.rename(columns={0: ''}, inplace=True)
+
+#---------------------------------------------
+
+state = dict()
+state['figure state'] = None
 
 """ ------------------------------------------
  Dash App
@@ -361,14 +399,7 @@ app.layout = html.Div(
                                     children=f"Average house prices (all property types) \
                                                by postcode sector in \
                                                {initial_region}, {initial_year}"),
-
-                                dcc.Graph(id="county-choropleth",
-                                          clickData={'points': [{'location': initial_sector}]},
-                                          figure = get_figure(regional_price_data[initial_year][initial_region],
-                                                              regional_geo_data[initial_region],
-                                                              initial_region,
-                                                              gtype='Price',year=initial_year)
-                                ),
+                                dcc.Graph(id="county-choropleth"),
                             ],
                         ),
                     ], style={'display': 'inline-block',
@@ -466,20 +497,46 @@ def update_region_postcode(region, year):
 
 #----------------------------------------------------#
 
-""" Update choropleth-graph with year, region and graph-type update
+""" Update choropleth-graph with year, region, graph-type update & sectors
 """
 @app.callback(
     Output('county-choropleth', 'figure'),
     [Input('year', 'value'),
      Input('region', 'value'),
-     Input('graph-type', 'value')])
-def update_graph(year, region, gtype):
+     Input('graph-type', 'value'),
+     Input('postcode-sector', 'value')])
+def update_Choropleth(year, region, gtype, sectors):
+
+    # Graph type selection------------------------------#
     if gtype == 'Price':
         df = regional_price_data
     else:
         df = regional_percentage_delta_data
-    return get_figure(df[year][region], regional_geo_data[region],
-                      region, gtype, year)
+
+    # For high-lighting mechanism ----------------------#
+    geo_sectors = dict()
+    for k in regional_geo_data[region].keys():
+        if k != 'features':
+            geo_sectors[k] = regional_geo_data[region][k]
+        else:
+            geo_sectors[k] = [regional_geo_sector[region][sector] for sector in sectors]
+
+    # Updating figure ----------------------------------#
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+
+    if 'postcode-sector' in changed_id and len(sectors) > 0:
+        fig = get_figure(df[year][region], regional_geo_data[region],
+                          region, gtype, year, geo_sectors, state['figure state'])
+    else:
+        fig = get_figure(df[year][region], regional_geo_data[region],
+                          region, gtype, year, geo_sectors)
+        state['figure state'] = fig
+
+    # Make sure to reset state - otherwise traace number increase beyond 1 and cannot unlightlight sectors
+    if len(sectors) == 0 or 'postcode-sector' not in changed_id:
+        state['figure state'] = None
+
+    return fig
 
 #----------------------------------------------------#
 
@@ -557,26 +614,16 @@ def get_average_price_by_year(df, sectors):
 
 #----------------------------------------------------#
 
-""" Update price-time-series with clickData, selectedData or psotcode updates
+""" Update price-time-series with clickData, selectedData or postcode updates
 """
 @app.callback(
     Output('price-time-series', 'figure'),
-    [Input('county-choropleth', 'selectedData'),
-     Input('postcode-sector', 'value'),
+    [Input('postcode-sector', 'value'),
      Input('type-checklist', 'value')])
 @cache.memoize(timeout=cfg['timeout'])
-def update_price_timeseries(selectedData, sectors, ptypes):
-    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+def update_price_timeseries(sectors, ptypes):
 
-    if ('selectedData' in changed_id and selectedData is not None) or \
-       ('type-checklist' in changed_id and len(sectors) == 0):
-        sectors = [_dict['location'] for _dict in selectedData['points']][:cfg['topN']]
-        title = f"Average prices for {len(sectors)} sectors (Up to a maximum of {cfg['topN']} is shown)"
-    else:
-        title = f"Average prices for {len(sectors)} sectors"
-
-    #--------------------------------------------------#
-    if ('type-checklist' not in changed_id) and (len(sectors) == 0 or isinstance(sectors, str)):
+    if len(sectors) == 0:
         return price_ts(empty_series, 'Please select postcodes')
 
     if len(ptypes)==0:
@@ -594,6 +641,7 @@ def update_price_timeseries(selectedData, sectors, ptypes):
         volume_df.columns = volume_df.columns.get_level_values(0)
         return price_volume_ts(avg_price_df, volume_df, sectors)
     else:
+        title = f"Average prices for {len(sectors)} sectors"
         return price_ts(avg_price_df, title)
 
 #----------------------------------------------------#
@@ -605,17 +653,30 @@ def update_price_timeseries(selectedData, sectors, ptypes):
     [Input('county-choropleth', 'clickData'),
      Input('county-choropleth', 'selectedData'),
      Input('region', 'value'),
-     State('postcode-sector', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_postcode_dropdown(clickData, selectedData, region, postcode):
-    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+     State('postcode-sector', 'value')])
+def update_postcode_dropdown(clickData, selectedData, region, postcodes):
 
-    if 'region' in changed_id or 'selectedData' in changed_id:
+    # Logic for initialisation
+    if dash.callback_context.triggered[0]['value'] is None:
+        return postcodes
+
+    #--------------------------------------------#
+
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+    if 'region' in changed_id:
         return []
+
+    elif 'selectedData' in changed_id:
+        postcodes = [D['location'] for D in selectedData['points']]
+        return postcodes[:cfg['topN']]
+
     else:
         sector = clickData['points'][0]['location']
-        postcode = set(postcode)
-        postcode.add(sector)
-        return list(postcode)
+        if sector in postcodes:
+            postcodes.remove(sector)
+        elif len(postcodes) < cfg['topN']:
+            postcodes.append(sector)
+        return postcodes
 
 #----------------------------------------------------#
 
@@ -635,7 +696,7 @@ if __name__ == "__main__":
     if 'conda-forge' in sys.version:
         app.run_server(debug=True)
 
-    # If running on AWS production
+    # If running on AWS/Pythonanywhere production
     else:
         app.run_server(
             port=8050,
