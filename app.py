@@ -58,9 +58,9 @@ else:
 
 cfg['topN']             = 50
 
-cfg['timeout']          = 10*60     # Used in flask_caching
+cfg['timeout']          = 5*60     # Used in flask_caching
 cfg['cache dir']        = 'cache'
-cfg['cache threshold']  = 30000    # corresponds to ~250MB
+cfg['cache threshold']  = 300      # corresponds to ~250MB
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
@@ -505,6 +505,7 @@ def update_region_postcode(region, year):
      Input('region', 'value'),
      Input('graph-type', 'value'),
      Input('postcode-sector', 'value')])
+@cache.memoize(timeout=cfg['timeout'])
 def update_Choropleth(year, region, gtype, sectors):
 
     # Graph type selection------------------------------#
