@@ -1,9 +1,10 @@
 import os
-import re
 import sys
 import time
+import json
 import random
 import logging
+from copy import copy, deepcopy
 
 import dash
 import dash_core_components as dcc
@@ -20,18 +21,6 @@ from flask_caching import Cache
 
 import numpy as np
 import pandas as pd
-import geopandas as gpd
-
-from copy import copy, deepcopy
-from collections import OrderedDict
-
-import json
-from json import dumps
-
-import pickle
-import gc
-
-from multiprocessing import Pool, cpu_count
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -44,9 +33,9 @@ cfg = dict()
 
 cfg['start_year']       = 1995
 cfg['end_year']         = 2020
-cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 
-cfg['latest date']     = "31 August 2020"
+cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
+cfg['latest date']      = "31 August 2020"
 
 appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
 if os.path.isdir(appDataPath):
@@ -74,7 +63,6 @@ cfg['regions_lookup'] = {
 }
 
 cfg['plotly_config'] = {
-         # 'All':            {'centre': [53.2, -2.2], 'maxp': 95, 'zoom': 6},
          'North England':  {'centre': [54.3, -2.0], 'maxp': 99, 'zoom': 6.5},
          'Wales':          {'centre': [52.4, -3.3], 'maxp': 99, 'zoom': 6.9},
          'Midlands':       {'centre': [52.8, -1.0], 'maxp': 99, 'zoom': 7},
@@ -261,8 +249,8 @@ colors = {
 }
 
 #---------------------------------------------
-# initial values:
 
+# initial values:
 initial_year   = max(cfg['Years'])
 initial_region = 'Greater London'
 
