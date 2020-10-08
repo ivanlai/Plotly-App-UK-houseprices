@@ -1,4 +1,4 @@
-# apps-UK_houseprice
+# Plotly App: UK houseprices
 
 Souce code for Plotly web app ([https://ukhouseprice.project-ds.net/](https://ukhouseprice.project-ds.net/))
 
