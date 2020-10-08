@@ -36,12 +36,10 @@ from multiprocessing import Pool, cpu_count
 import warnings
 warnings.filterwarnings("ignore")
 
-#------------------------------------------------------------------------------#
-#------------------------------------------------------------------------------#
 
-""" ------------------------------------------
+""" ----------------------------------------------------------------------------
  Configurations
------------------------------------------- """
+---------------------------------------------------------------------------- """
 cfg = dict()
 
 cfg['start_year']       = 1995
@@ -60,7 +58,7 @@ cfg['topN']             = 50
 
 cfg['timeout']          = 5*60     # Used in flask_caching
 cfg['cache dir']        = 'cache'
-cfg['cache threshold']  = 100      # corresponds to ~350MB max
+cfg['cache threshold']  = 10000    # corresponds to ~350MB max
 
 cfg['regions_lookup'] = {
         'North East'      : 'North England',
@@ -95,16 +93,18 @@ logging.info(f"System: {sys.version}")
 
 t0 = time.time()
 
-""" ------------------------------------------
+
+""" ----------------------------------------------------------------------------
  House Price Data
------------------------------------------- """
+---------------------------------------------------------------------------- """
 price_volume_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'price_volume.csv'))
 price_volume_df = price_volume_df.set_index(['Year', 'Property Type', 'Sector']).unstack(level=-1)
 price_volume_df.fillna(value=0, inplace=True)
 
-""" ------------------------------------------------
+
+""" ----------------------------------------------------------------------------
  Regional Price, percentage delta and Volume Data
--------------------------------------------------"""
+---------------------------------------------------------------------------- """
 
 def get_regional_data(fname):
     regiona_data = dict()
@@ -126,9 +126,10 @@ def get_regional_data(fname):
 regional_price_data = get_regional_data('sector_price')
 regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
 
-""" ------------------------------------------
+
+""" ----------------------------------------------------------------------------
  Geo Data
------------------------------------------- """
+---------------------------------------------------------------------------- """
 regional_geo_data = dict()
 for region in cfg['plotly_config']:
     infile = os.path.join(cfg['app_data_dir'], f'geodata_{region}.csv')
@@ -149,9 +150,9 @@ for k, v in regional_geo_data.items():
     regional_geo_sector[k] = get_geo_sector(v)
 
 
-""" ------------------------------------------
+""" ----------------------------------------------------------------------------
  Making Graphs
------------------------------------------- """
+---------------------------------------------------------------------------- """
 
 def get_Choropleth(df, geo_data, arg, marker_opacity,
                    marker_line_width, marker_line_color, fig=None):
@@ -169,13 +170,13 @@ def get_Choropleth(df, geo_data, arg, marker_opacity,
                 zmin = arg['min_value'],
                 zmax = arg['max_value'],
                 text = arg['text_vec'],
+                hoverinfo="text",
                 marker_opacity = marker_opacity,
                 marker_line_width = marker_line_width,
                 marker_line_color = marker_line_color,
                 colorbar_title = arg['title'],
-                hoverinfo="text",
-          ))
-
+          )
+    )
     return fig
 
 #--------------------------------------------#
@@ -214,11 +215,12 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, fig=None):
         arg['title'] = "Avg. Price %Change"
 
     #-------------------------------------------#
+    # Main Choropleth:
     if fig is None:
         fig = get_Choropleth(df, geo_data, arg, marker_opacity=0.4,
                              marker_line_width=1, marker_line_color='#6666cc', fig=None)
 
-    #------------------------------------------#
+        #------------------------------------------#
         """
         mapbox_style options:
         'open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter',
@@ -234,15 +236,17 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, fig=None):
                           margin={"r":0,"t":0,"l":0,"b":0}
                          )
 
+    #-------------------------------------------#
+    # Highlight selections:
     if geo_sectors is not None:
         fig = get_Choropleth(df, geo_sectors, arg, marker_opacity=1.0,
                              marker_line_width=3, marker_line_color='aqua', fig=fig)
 
     return fig
 
-""" ------------------------------------------
+""" ----------------------------------------------------------------------------
  App Settings
------------------------------------------- """
+---------------------------------------------------------------------------- """
 
 regions =  ['Greater London',
             'South East',
@@ -271,12 +275,16 @@ empty_series.rename(columns={0: ''}, inplace=True)
 
 #---------------------------------------------
 
+# The State for figure only holds a dict.
+# To hold a graph_obj, we use a global dictionary here
 state = dict()
 state['figure state'] = None
 
-""" ------------------------------------------
+
+""" ----------------------------------------------------------------------------
  Dash App
------------------------------------------- """
+---------------------------------------------------------------------------- """
+# Select theme from: https://www.bootstrapcdn.com/bootswatch/
 
 app = dash.Dash(
             __name__,
@@ -284,6 +292,7 @@ app = dash.Dash(
                 {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
              ],
              external_stylesheets = [dbc.themes.DARKLY]
+             # external_stylesheets = [dbc.themes.CYBORG]
         )
 
 server = app.server #Needed for gunicorn
@@ -364,7 +373,7 @@ app.layout = html.Div(
             ),
             html.Div([
                 dcc.Dropdown(
-                    id='postcode-sector',
+                    id='postcode',
                     options=[{'label': s, 'value': s} for s in
                              regional_price_data[initial_year][initial_region].Sector.values],
                     value=[initial_sector],
@@ -404,12 +413,8 @@ app.layout = html.Div(
                         html.Div(
                             id="choropleth-container",
                             children=[
-                                html.H5(
-                                    id="choropleth-title",
-                                    children=f"Average house prices (all property types) \
-                                               by postcode sector in \
-                                               {initial_region}, {initial_year}"),
-                                dcc.Graph(id="county-choropleth"),
+                                html.H5(id="choropleth-title"),
+                                dcc.Graph(id="choropleth"),
                             ],
                         ),
                     ], style={'display': 'inline-block',
@@ -425,7 +430,7 @@ app.layout = html.Div(
                         html.Div([
                             html.H6(
                                 dcc.Checklist(
-                                    id='type-checklist',
+                                    id='property-type-checklist',
                                     options=[
                                         {'label': 'F: Flats/Maisonettes', 'value': 'F'},
                                         {'label': 'T: Terraced', 'value': 'T'},
@@ -475,7 +480,16 @@ app.layout = html.Div(
     ]
 )
 
-################################################################
+""" ----------------------------------------------------------------------------
+ Callback functions:
+ Overview:
+ region, year, graph-type -> choropleth-title
+ region, year -> postcode options
+ region, year, graph-type, postcode-value -> choropleth
+ postcode-value, property-type-checklist -> price-time-series
+ choropleth-clickData, choropleth-selectedData, region, postcode-State
+                                                        -> postcode-value
+---------------------------------------------------------------------------- """
 
 """ Update choropleth-title with year and graph-type update
 """
@@ -500,7 +514,7 @@ def update_map_title(region, year, gtype):
 """ Update postcode dropdown options with region selection
 """
 @app.callback(
-    Output('postcode-sector', 'options'),
+    Output('postcode', 'options'),
     [Input('region', 'value'),
      Input('year', 'value')])
 def update_region_postcode(region, year):
@@ -512,12 +526,11 @@ def update_region_postcode(region, year):
 """ Update choropleth-graph with year, region, graph-type update & sectors
 """
 @app.callback(
-    Output('county-choropleth', 'figure'),
+    Output('choropleth', 'figure'),
     [Input('year', 'value'),
      Input('region', 'value'),
      Input('graph-type', 'value'),
-     Input('postcode-sector', 'value')])
-@cache.memoize(timeout=cfg['timeout'])
+     Input('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
 def update_Choropleth(year, region, gtype, sectors):
 
     # Graph type selection------------------------------#
@@ -525,7 +538,6 @@ def update_Choropleth(year, region, gtype, sectors):
         df = regional_price_data[year][region]
     else:
         df = regional_percentage_delta_data[year][region]
-
 
     # For high-lighting mechanism ----------------------#
     geo_sectors = dict()
@@ -538,7 +550,7 @@ def update_Choropleth(year, region, gtype, sectors):
     # Updating figure ----------------------------------#
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
 
-    if 'postcode-sector' in changed_id and len(sectors) > 0:
+    if 'postcode' in changed_id and len(sectors) > 0:
         fig = get_figure(df, regional_geo_data[region],
                           region, gtype, year, geo_sectors, state['figure state'])
     else:
@@ -546,8 +558,9 @@ def update_Choropleth(year, region, gtype, sectors):
                           region, gtype, year, geo_sectors)
         state['figure state'] = fig
 
-    # Make sure to reset state - otherwise traace number increase beyond 1 and cannot unlightlight sectors
-    if len(sectors) == 0 or 'postcode-sector' not in changed_id:
+    # Make sure to reset state - otherwise traace number increase beyond 1
+    # and cannot unhighlight sectors
+    if len(sectors) == 0 or 'postcode' not in changed_id:
         state['figure state'] = None
 
     return fig
@@ -591,13 +604,11 @@ def price_volume_ts(price, volume, sector):
                       autosize=True,
                       barmode='stack',
                       margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
-                      legend=dict(
-                                orientation="h",
-                                yanchor="bottom",
-                                y=1,
-                                xanchor="right",
-                                x=1
-                            ),
+                      legend=dict(orientation="h",
+                                  yanchor="bottom",
+                                  y=1,
+                                  xanchor="right",
+                                  x=1),
                       font_color=colors['text'])
     return fig
 
@@ -628,12 +639,12 @@ def get_average_price_by_year(df, sectors):
 
 #----------------------------------------------------#
 
-""" Update price-time-series with clickData, selectedData or postcode updates
+""" Update price-time-series with postcode updates and graph-type
 """
 @app.callback(
     Output('price-time-series', 'figure'),
-    [Input('postcode-sector', 'value'),
-     Input('type-checklist', 'value')])
+    [Input('postcode', 'value'),
+     Input('property-type-checklist', 'value')])
 @cache.memoize(timeout=cfg['timeout'])
 def update_price_timeseries(sectors, ptypes):
 
@@ -663,11 +674,11 @@ def update_price_timeseries(sectors, ptypes):
 """ Update postcode dropdown values with clickData, selectedData and region
 """
 @app.callback(
-    Output('postcode-sector', 'value'),
-    [Input('county-choropleth', 'clickData'),
-     Input('county-choropleth', 'selectedData'),
+    Output('postcode', 'value'),
+    [Input('choropleth', 'clickData'),
+     Input('choropleth', 'selectedData'),
      Input('region', 'value'),
-     State('postcode-sector', 'value')])
+     State('postcode', 'value')])
 def update_postcode_dropdown(clickData, selectedData, region, postcodes):
 
     # Logic for initialisation
@@ -678,19 +689,16 @@ def update_postcode_dropdown(clickData, selectedData, region, postcodes):
 
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
     if 'region' in changed_id:
-        return []
-
+        postcodes = []
     elif 'selectedData' in changed_id:
-        postcodes = [D['location'] for D in selectedData['points']]
-        return postcodes[:cfg['topN']]
-
+        postcodes = [D['location'] for D in selectedData['points'][:cfg['topN']]]
     else:
         sector = clickData['points'][0]['location']
         if sector in postcodes:
             postcodes.remove(sector)
         elif len(postcodes) < cfg['topN']:
             postcodes.append(sector)
-        return postcodes
+    return postcodes
 
 #----------------------------------------------------#
 
@@ -717,7 +725,7 @@ if __name__ == "__main__":
             host='0.0.0.0'
         )
 
-"""
+""" ----------------------------------------------------------------------------
 Terminal cmd to run:
 gunicorn app:server -b 0.0.0.0:8050
-"""
+---------------------------------------------------------------------------- """
