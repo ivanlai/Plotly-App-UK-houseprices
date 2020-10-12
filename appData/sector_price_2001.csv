@@ -158,7 +158,7 @@ Year,Sector,Price,Volume,Region,text
 2001,B60 1,150000,170,Midlands,B60 1<br>Avg. Price: 150K<br>Sales Volume: 170
 2001,B60 2,154000,372,Midlands,B60 2<br>Avg. Price: 154K<br>Sales Volume: 372
 2001,B60 3,94000,185,Midlands,B60 3<br>Avg. Price: 94K<br>Sales Volume: 185
-2001,B60 4,151000,60,Midlands,B60 4<br>Avg. Price: 151K<br>Sales Volume: 60
+2001,B60 4,154000,61,Midlands,B60 4<br>Avg. Price: 154K<br>Sales Volume: 61
 2001,B61 0,128000,354,Midlands,B61 0<br>Avg. Price: 128K<br>Sales Volume: 354
 2001,B61 7,112000,134,Midlands,B61 7<br>Avg. Price: 112K<br>Sales Volume: 134
 2001,B61 8,94000,101,Midlands,B61 8<br>Avg. Price: 94K<br>Sales Volume: 101
@@ -315,7 +315,7 @@ Year,Sector,Price,Volume,Region,text
 2001,BA3 4,125000,131,South West,BA3 4<br>Avg. Price: 125K<br>Sales Volume: 131
 2001,BA3 5,143000,124,South West,BA3 5<br>Avg. Price: 143K<br>Sales Volume: 124
 2001,BA4 4,149000,132,South West,BA4 4<br>Avg. Price: 149K<br>Sales Volume: 132
-2001,BA4 5,86000,221,South West,BA4 5<br>Avg. Price: 86K<br>Sales Volume: 221
+2001,BA4 5,87000,222,South West,BA4 5<br>Avg. Price: 87K<br>Sales Volume: 222
 2001,BA4 6,162000,97,South West,BA4 6<br>Avg. Price: 162K<br>Sales Volume: 97
 2001,BA5 1,142000,117,South West,BA5 1<br>Avg. Price: 142K<br>Sales Volume: 117
 2001,BA5 2,130000,205,South West,BA5 2<br>Avg. Price: 130K<br>Sales Volume: 205
@@ -447,7 +447,7 @@ Year,Sector,Price,Volume,Region,text
 2001,BD21 3,34000,40,North England,BD21 3<br>Avg. Price: 34K<br>Sales Volume: 40
 2001,BD21 4,52000,159,North England,BD21 4<br>Avg. Price: 52K<br>Sales Volume: 159
 2001,BD21 5,39000,72,North England,BD21 5<br>Avg. Price: 39K<br>Sales Volume: 72
-2001,BD22 0,90000,111,North England,BD22 0<br>Avg. Price: 90K<br>Sales Volume: 111
+2001,BD22 0,91000,112,North England,BD22 0<br>Avg. Price: 91K<br>Sales Volume: 112
 2001,BD22 5,295000,1,North England,BD22 5<br>Avg. Price: 295K<br>Sales Volume: 1
 2001,BD22 6,67000,162,North England,BD22 6<br>Avg. Price: 67K<br>Sales Volume: 162
 2001,BD22 7,65000,217,North England,BD22 7<br>Avg. Price: 65K<br>Sales Volume: 217
@@ -1148,7 +1148,7 @@ Year,Sector,Price,Volume,Region,text
 2001,CF8 9,72000,1,Wales,CF8 9<br>Avg. Price: 72K<br>Sales Volume: 1
 2001,CF81 8,42000,124,Wales,CF81 8<br>Avg. Price: 42K<br>Sales Volume: 124
 2001,CF81 9,33000,84,Wales,CF81 9<br>Avg. Price: 33K<br>Sales Volume: 84
-2001,CF82 7,63000,332,Wales,CF82 7<br>Avg. Price: 63K<br>Sales Volume: 332
+2001,CF82 7,63000,333,Wales,CF82 7<br>Avg. Price: 63K<br>Sales Volume: 333
 2001,CF82 8,52000,106,Wales,CF82 8<br>Avg. Price: 52K<br>Sales Volume: 106
 2001,CF83 1,76000,325,Wales,CF83 1<br>Avg. Price: 76K<br>Sales Volume: 325
 2001,CF83 2,72000,261,Wales,CF83 2<br>Avg. Price: 72K<br>Sales Volume: 261
@@ -1834,7 +1834,7 @@ Year,Sector,Price,Volume,Region,text
 2001,DE6 2,152000,83,Midlands,DE6 2<br>Avg. Price: 152K<br>Sales Volume: 83
 2001,DE6 3,156000,47,Midlands,DE6 3<br>Avg. Price: 156K<br>Sales Volume: 47
 2001,DE6 4,156000,12,Midlands,DE6 4<br>Avg. Price: 156K<br>Sales Volume: 12
-2001,DE6 5,123000,58,Midlands,DE6 5<br>Avg. Price: 123K<br>Sales Volume: 58
+2001,DE6 5,124000,59,Midlands,DE6 5<br>Avg. Price: 124K<br>Sales Volume: 59
 2001,DE65 5,96000,309,Midlands,DE65 5<br>Avg. Price: 96K<br>Sales Volume: 309
 2001,DE65 6,113000,206,Midlands,DE65 6<br>Avg. Price: 113K<br>Sales Volume: 206
 2001,DE7 4,58000,242,Midlands,DE7 4<br>Avg. Price: 58K<br>Sales Volume: 242
@@ -1978,7 +1978,7 @@ Year,Sector,Price,Volume,Region,text
 2001,DN16 2,40000,154,Midlands,DN16 2<br>Avg. Price: 40K<br>Sales Volume: 154
 2001,DN16 3,60000,349,Midlands,DN16 3<br>Avg. Price: 60K<br>Sales Volume: 349
 2001,DN17 1,54000,158,Midlands,DN17 1<br>Avg. Price: 54K<br>Sales Volume: 158
-2001,DN17 2,59000,212,Midlands,DN17 2<br>Avg. Price: 59K<br>Sales Volume: 212
+2001,DN17 2,60000,213,Midlands,DN17 2<br>Avg. Price: 60K<br>Sales Volume: 213
 2001,DN17 3,65000,163,Midlands,DN17 3<br>Avg. Price: 65K<br>Sales Volume: 163
 2001,DN17 4,79000,183,Midlands,DN17 4<br>Avg. Price: 79K<br>Sales Volume: 183
 2001,DN18 5,59000,270,Midlands,DN18 5<br>Avg. Price: 59K<br>Sales Volume: 270
@@ -2381,7 +2381,7 @@ Year,Sector,Price,Volume,Region,text
 2001,EX38 7,94000,99,South West,EX38 7<br>Avg. Price: 94K<br>Sales Volume: 99
 2001,EX38 8,102000,101,South West,EX38 8<br>Avg. Price: 102K<br>Sales Volume: 101
 2001,EX39 0,155000,1,South West,EX39 0<br>Avg. Price: 155K<br>Sales Volume: 1
-2001,EX39 1,98000,402,South West,EX39 1<br>Avg. Price: 98K<br>Sales Volume: 402
+2001,EX39 1,97000,403,South West,EX39 1<br>Avg. Price: 97K<br>Sales Volume: 403
 2001,EX39 2,84000,130,South West,EX39 2<br>Avg. Price: 84K<br>Sales Volume: 130
 2001,EX39 3,90000,241,South West,EX39 3<br>Avg. Price: 90K<br>Sales Volume: 241
 2001,EX39 4,91000,121,South West,EX39 4<br>Avg. Price: 91K<br>Sales Volume: 121
@@ -3537,7 +3537,7 @@ Year,Sector,Price,Volume,Region,text
 2001,LA23 1,195000,84,North England,LA23 1<br>Avg. Price: 195K<br>Sales Volume: 84
 2001,LA23 2,123000,87,North England,LA23 2<br>Avg. Price: 123K<br>Sales Volume: 87
 2001,LA23 3,178000,98,North England,LA23 3<br>Avg. Price: 178K<br>Sales Volume: 98
-2001,LA3 1,42000,257,North England,LA3 1<br>Avg. Price: 42K<br>Sales Volume: 257
+2001,LA3 1,42000,258,North England,LA3 1<br>Avg. Price: 42K<br>Sales Volume: 258
 2001,LA3 2,62000,363,North England,LA3 2<br>Avg. Price: 62K<br>Sales Volume: 363
 2001,LA3 3,67000,230,North England,LA3 3<br>Avg. Price: 67K<br>Sales Volume: 230
 2001,LA4 4,45000,262,North England,LA4 4<br>Avg. Price: 45K<br>Sales Volume: 262
@@ -3712,7 +3712,7 @@ Year,Sector,Price,Volume,Region,text
 2001,LL19 7,55000,228,Wales,LL19 7<br>Avg. Price: 55K<br>Sales Volume: 228
 2001,LL19 8,56000,221,Wales,LL19 8<br>Avg. Price: 56K<br>Sales Volume: 221
 2001,LL19 9,86000,126,Wales,LL19 9<br>Avg. Price: 86K<br>Sales Volume: 126
-2001,LL20 7,82000,58,Wales,LL20 7<br>Avg. Price: 82K<br>Sales Volume: 58
+2001,LL20 7,82000,59,Wales,LL20 7<br>Avg. Price: 82K<br>Sales Volume: 59
 2001,LL20 8,84000,55,Wales,LL20 8<br>Avg. Price: 84K<br>Sales Volume: 55
 2001,LL21 0,66000,33,Wales,LL21 0<br>Avg. Price: 66K<br>Sales Volume: 33
 2001,LL21 9,75000,35,Wales,LL21 9<br>Avg. Price: 75K<br>Sales Volume: 35
@@ -4382,7 +4382,7 @@ Year,Sector,Price,Volume,Region,text
 2001,N6 5,301000,347,Greater London,N6 5<br>Avg. Price: 301K<br>Sales Volume: 347
 2001,N6 6,531000,71,Greater London,N6 6<br>Avg. Price: 531K<br>Sales Volume: 71
 2001,N7 0,199000,193,Greater London,N7 0<br>Avg. Price: 199K<br>Sales Volume: 193
-2001,N7 6,211000,136,Greater London,N7 6<br>Avg. Price: 211K<br>Sales Volume: 136
+2001,N7 6,211000,137,Greater London,N7 6<br>Avg. Price: 211K<br>Sales Volume: 137
 2001,N7 7,147000,48,Greater London,N7 7<br>Avg. Price: 147K<br>Sales Volume: 48
 2001,N7 8,211000,99,Greater London,N7 8<br>Avg. Price: 211K<br>Sales Volume: 99
 2001,N7 9,194000,131,Greater London,N7 9<br>Avg. Price: 194K<br>Sales Volume: 131
@@ -4604,7 +4604,7 @@ Year,Sector,Price,Volume,Region,text
 2001,NG14 6,105000,165,Midlands,NG14 6<br>Avg. Price: 105K<br>Sales Volume: 165
 2001,NG14 7,162000,112,Midlands,NG14 7<br>Avg. Price: 162K<br>Sales Volume: 112
 2001,NG15 0,41000,52,Midlands,NG15 0<br>Avg. Price: 41K<br>Sales Volume: 52
-2001,NG15 6,65000,257,Midlands,NG15 6<br>Avg. Price: 65K<br>Sales Volume: 257
+2001,NG15 6,65000,258,Midlands,NG15 6<br>Avg. Price: 65K<br>Sales Volume: 258
 2001,NG15 7,57000,354,Midlands,NG15 7<br>Avg. Price: 57K<br>Sales Volume: 354
 2001,NG15 8,97000,114,Midlands,NG15 8<br>Avg. Price: 97K<br>Sales Volume: 114
 2001,NG15 9,146000,133,Midlands,NG15 9<br>Avg. Price: 146K<br>Sales Volume: 133
@@ -6048,7 +6048,7 @@ Year,Sector,Price,Volume,Region,text
 2001,SA1 7,39000,78,Wales,SA1 7<br>Avg. Price: 39K<br>Sales Volume: 78
 2001,SA1 8,36000,115,Wales,SA1 8<br>Avg. Price: 36K<br>Sales Volume: 115
 2001,SA10 6,50000,177,Wales,SA10 6<br>Avg. Price: 50K<br>Sales Volume: 177
-2001,SA10 7,72000,269,Wales,SA10 7<br>Avg. Price: 72K<br>Sales Volume: 269
+2001,SA10 7,72000,270,Wales,SA10 7<br>Avg. Price: 72K<br>Sales Volume: 270
 2001,SA10 8,76000,139,Wales,SA10 8<br>Avg. Price: 76K<br>Sales Volume: 139
 2001,SA10 9,38000,45,Wales,SA10 9<br>Avg. Price: 38K<br>Sales Volume: 45
 2001,SA11 1,39000,117,Wales,SA11 1<br>Avg. Price: 39K<br>Sales Volume: 117
@@ -6103,7 +6103,7 @@ Year,Sector,Price,Volume,Region,text
 2001,SA34 0,92000,60,Wales,SA34 0<br>Avg. Price: 92K<br>Sales Volume: 60
 2001,SA35 0,58000,6,Wales,SA35 0<br>Avg. Price: 58K<br>Sales Volume: 6
 2001,SA36 0,54000,9,Wales,SA36 0<br>Avg. Price: 54K<br>Sales Volume: 9
-2001,SA37 0,71000,21,Wales,SA37 0<br>Avg. Price: 71K<br>Sales Volume: 21
+2001,SA37 0,74000,22,Wales,SA37 0<br>Avg. Price: 74K<br>Sales Volume: 22
 2001,SA38 9,82000,79,Wales,SA38 9<br>Avg. Price: 82K<br>Sales Volume: 79
 2001,SA39 9,76000,39,Wales,SA39 9<br>Avg. Price: 76K<br>Sales Volume: 39
 2001,SA4 0,73000,70,Wales,SA4 0<br>Avg. Price: 73K<br>Sales Volume: 70
@@ -6153,7 +6153,7 @@ Year,Sector,Price,Volume,Region,text
 2001,SA69 9,86000,114,Wales,SA69 9<br>Avg. Price: 86K<br>Sales Volume: 114
 2001,SA7 0,90000,28,Wales,SA7 0<br>Avg. Price: 90K<br>Sales Volume: 28
 2001,SA7 9,57000,317,Wales,SA7 9<br>Avg. Price: 57K<br>Sales Volume: 317
-2001,SA70 7,89000,96,Wales,SA70 7<br>Avg. Price: 89K<br>Sales Volume: 96
+2001,SA70 7,90000,99,Wales,SA70 7<br>Avg. Price: 90K<br>Sales Volume: 99
 2001,SA70 8,80000,108,Wales,SA70 8<br>Avg. Price: 80K<br>Sales Volume: 108
 2001,SA71 4,63000,112,Wales,SA71 4<br>Avg. Price: 63K<br>Sales Volume: 112
 2001,SA71 5,78000,85,Wales,SA71 5<br>Avg. Price: 78K<br>Sales Volume: 85
@@ -6687,7 +6687,7 @@ Year,Sector,Price,Volume,Region,text
 2001,SP5 3,153000,155,South West,SP5 3<br>Avg. Price: 153K<br>Sales Volume: 155
 2001,SP5 4,230000,21,South West,SP5 4<br>Avg. Price: 230K<br>Sales Volume: 21
 2001,SP5 5,246000,64,South West,SP5 5<br>Avg. Price: 246K<br>Sales Volume: 64
-2001,SP6 1,148000,180,South West,SP6 1<br>Avg. Price: 148K<br>Sales Volume: 180
+2001,SP6 1,148000,181,South West,SP6 1<br>Avg. Price: 148K<br>Sales Volume: 181
 2001,SP6 2,294000,33,South West,SP6 2<br>Avg. Price: 294K<br>Sales Volume: 33
 2001,SP6 3,182000,97,South West,SP6 3<br>Avg. Price: 182K<br>Sales Volume: 97
 2001,SP7 0,243000,52,South West,SP7 0<br>Avg. Price: 243K<br>Sales Volume: 52
@@ -6953,7 +6953,7 @@ Year,Sector,Price,Volume,Region,text
 2001,SW4 7,223000,210,Greater London,SW4 7<br>Avg. Price: 223K<br>Sales Volume: 210
 2001,SW4 8,217000,111,Greater London,SW4 8<br>Avg. Price: 217K<br>Sales Volume: 111
 2001,SW4 9,359000,221,Greater London,SW4 9<br>Avg. Price: 359K<br>Sales Volume: 221
-2001,SW5 0,479000,228,Greater London,SW5 0<br>Avg. Price: 479K<br>Sales Volume: 228
+2001,SW5 0,478000,229,Greater London,SW5 0<br>Avg. Price: 478K<br>Sales Volume: 229
 2001,SW5 9,335000,239,Greater London,SW5 9<br>Avg. Price: 335K<br>Sales Volume: 239
 2001,SW6 1,256000,144,Greater London,SW6 1<br>Avg. Price: 256K<br>Sales Volume: 144
 2001,SW6 2,335000,239,Greater London,SW6 2<br>Avg. Price: 335K<br>Sales Volume: 239
@@ -7319,7 +7319,7 @@ Year,Sector,Price,Volume,Region,text
 2001,TR17 0,110000,38,South West,TR17 0<br>Avg. Price: 110K<br>Sales Volume: 38
 2001,TR18 2,75000,149,South West,TR18 2<br>Avg. Price: 75K<br>Sales Volume: 149
 2001,TR18 3,83000,139,South West,TR18 3<br>Avg. Price: 83K<br>Sales Volume: 139
-2001,TR18 4,111000,115,South West,TR18 4<br>Avg. Price: 111K<br>Sales Volume: 115
+2001,TR18 4,112000,116,South West,TR18 4<br>Avg. Price: 112K<br>Sales Volume: 116
 2001,TR18 5,85000,114,South West,TR18 5<br>Avg. Price: 85K<br>Sales Volume: 114
 2001,TR19 6,115000,69,South West,TR19 6<br>Avg. Price: 115K<br>Sales Volume: 69
 2001,TR19 7,81000,153,South West,TR19 7<br>Avg. Price: 81K<br>Sales Volume: 153
@@ -7549,7 +7549,7 @@ Year,Sector,Price,Volume,Region,text
 2001,W13 0,236000,187,Greater London,W13 0<br>Avg. Price: 236K<br>Sales Volume: 187
 2001,W13 8,268000,163,Greater London,W13 8<br>Avg. Price: 268K<br>Sales Volume: 163
 2001,W13 9,226000,352,Greater London,W13 9<br>Avg. Price: 226K<br>Sales Volume: 352
-2001,W14 0,277000,310,Greater London,W14 0<br>Avg. Price: 277K<br>Sales Volume: 310
+2001,W14 0,277000,311,Greater London,W14 0<br>Avg. Price: 277K<br>Sales Volume: 311
 2001,W14 7,143000,1,Greater London,W14 7<br>Avg. Price: 143K<br>Sales Volume: 1
 2001,W14 8,472000,311,Greater London,W14 8<br>Avg. Price: 472K<br>Sales Volume: 311
 2001,W14 9,242000,344,Greater London,W14 9<br>Avg. Price: 242K<br>Sales Volume: 344

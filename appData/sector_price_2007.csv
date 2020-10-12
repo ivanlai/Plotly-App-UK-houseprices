@@ -232,7 +232,7 @@ Year,Sector,Price,Volume,Region,text
 2007,B80 7,196000,187,Midlands,B80 7<br>Avg. Price: 196K<br>Sales Volume: 187
 2007,B9 4,111000,65,Midlands,B9 4<br>Avg. Price: 111K<br>Sales Volume: 65
 2007,B9 5,114000,250,Midlands,B9 5<br>Avg. Price: 114K<br>Sales Volume: 250
-2007,B90 1,247000,360,Midlands,B90 1<br>Avg. Price: 247K<br>Sales Volume: 360
+2007,B90 1,247000,361,Midlands,B90 1<br>Avg. Price: 247K<br>Sales Volume: 361
 2007,B90 2,211000,273,Midlands,B90 2<br>Avg. Price: 211K<br>Sales Volume: 273
 2007,B90 3,232000,234,Midlands,B90 3<br>Avg. Price: 232K<br>Sales Volume: 234
 2007,B90 4,228000,266,Midlands,B90 4<br>Avg. Price: 228K<br>Sales Volume: 266
@@ -446,7 +446,7 @@ Year,Sector,Price,Volume,Region,text
 2007,BD21 3,106000,49,North England,BD21 3<br>Avg. Price: 106K<br>Sales Volume: 49
 2007,BD21 4,118000,168,North England,BD21 4<br>Avg. Price: 118K<br>Sales Volume: 168
 2007,BD21 5,116000,77,North England,BD21 5<br>Avg. Price: 116K<br>Sales Volume: 77
-2007,BD22 0,182000,99,North England,BD22 0<br>Avg. Price: 182K<br>Sales Volume: 99
+2007,BD22 0,182000,100,North England,BD22 0<br>Avg. Price: 182K<br>Sales Volume: 100
 2007,BD22 6,125000,154,North England,BD22 6<br>Avg. Price: 125K<br>Sales Volume: 154
 2007,BD22 7,146000,239,North England,BD22 7<br>Avg. Price: 146K<br>Sales Volume: 239
 2007,BD22 8,157000,155,North England,BD22 8<br>Avg. Price: 157K<br>Sales Volume: 155
@@ -814,7 +814,7 @@ Year,Sector,Price,Volume,Region,text
 2007,BS3 1,211000,280,South West,BS3 1<br>Avg. Price: 211K<br>Sales Volume: 280
 2007,BS3 2,209000,119,South West,BS3 2<br>Avg. Price: 209K<br>Sales Volume: 119
 2007,BS3 3,177000,310,South West,BS3 3<br>Avg. Price: 177K<br>Sales Volume: 310
-2007,BS3 4,190000,221,South West,BS3 4<br>Avg. Price: 190K<br>Sales Volume: 221
+2007,BS3 4,190000,219,South West,BS3 4<br>Avg. Price: 190K<br>Sales Volume: 219
 2007,BS3 5,166000,228,South West,BS3 5<br>Avg. Price: 166K<br>Sales Volume: 228
 2007,BS30 5,296000,85,South West,BS30 5<br>Avg. Price: 296K<br>Sales Volume: 85
 2007,BS30 6,249000,61,South West,BS30 6<br>Avg. Price: 249K<br>Sales Volume: 61
@@ -2023,7 +2023,7 @@ Year,Sector,Price,Volume,Region,text
 2007,DN39 6,168000,89,Midlands,DN39 6<br>Avg. Price: 168K<br>Sales Volume: 89
 2007,DN4 0,95000,257,Midlands,DN4 0<br>Avg. Price: 95K<br>Sales Volume: 257
 2007,DN4 5,120000,163,Midlands,DN4 5<br>Avg. Price: 120K<br>Sales Volume: 163
-2007,DN4 6,165000,268,Midlands,DN4 6<br>Avg. Price: 165K<br>Sales Volume: 268
+2007,DN4 6,165000,269,Midlands,DN4 6<br>Avg. Price: 165K<br>Sales Volume: 269
 2007,DN4 7,204000,213,Midlands,DN4 7<br>Avg. Price: 204K<br>Sales Volume: 213
 2007,DN4 8,116000,245,Midlands,DN4 8<br>Avg. Price: 116K<br>Sales Volume: 245
 2007,DN4 9,132000,199,Midlands,DN4 9<br>Avg. Price: 132K<br>Sales Volume: 199
@@ -2073,7 +2073,7 @@ Year,Sector,Price,Volume,Region,text
 2007,DT5 2,181000,141,South West,DT5 2<br>Avg. Price: 181K<br>Sales Volume: 141
 2007,DT6 3,233000,200,South West,DT6 3<br>Avg. Price: 233K<br>Sales Volume: 200
 2007,DT6 4,304000,219,South West,DT6 4<br>Avg. Price: 304K<br>Sales Volume: 219
-2007,DT6 5,219000,126,South West,DT6 5<br>Avg. Price: 219K<br>Sales Volume: 126
+2007,DT6 5,220000,127,South West,DT6 5<br>Avg. Price: 220K<br>Sales Volume: 127
 2007,DT6 6,301000,83,South West,DT6 6<br>Avg. Price: 301K<br>Sales Volume: 83
 2007,DT7 3,307000,205,South West,DT7 3<br>Avg. Price: 307K<br>Sales Volume: 205
 2007,DT8 3,269000,139,South West,DT8 3<br>Avg. Price: 269K<br>Sales Volume: 139
@@ -2738,7 +2738,7 @@ Year,Sector,Price,Volume,Region,text
 2007,HD8 8,225000,246,North England,HD8 8<br>Avg. Price: 225K<br>Sales Volume: 246
 2007,HD8 9,182000,206,North England,HD8 9<br>Avg. Price: 182K<br>Sales Volume: 206
 2007,HD9 1,198000,143,North England,HD9 1<br>Avg. Price: 198K<br>Sales Volume: 143
-2007,HD9 2,205000,131,North England,HD9 2<br>Avg. Price: 205K<br>Sales Volume: 131
+2007,HD9 2,205000,132,North England,HD9 2<br>Avg. Price: 205K<br>Sales Volume: 132
 2007,HD9 3,222000,65,North England,HD9 3<br>Avg. Price: 222K<br>Sales Volume: 65
 2007,HD9 4,200000,79,North England,HD9 4<br>Avg. Price: 200K<br>Sales Volume: 79
 2007,HD9 5,162000,115,North England,HD9 5<br>Avg. Price: 162K<br>Sales Volume: 115
@@ -3570,7 +3570,7 @@ Year,Sector,Price,Volume,Region,text
 2007,LD3 9,185000,94,Wales,LD3 9<br>Avg. Price: 185K<br>Sales Volume: 94
 2007,LD4 4,206000,15,Wales,LD4 4<br>Avg. Price: 206K<br>Sales Volume: 15
 2007,LD5 4,207000,24,Wales,LD5 4<br>Avg. Price: 207K<br>Sales Volume: 24
-2007,LD6 5,169000,49,Wales,LD6 5<br>Avg. Price: 169K<br>Sales Volume: 49
+2007,LD6 5,170000,50,Wales,LD6 5<br>Avg. Price: 170K<br>Sales Volume: 50
 2007,LD7 1,195000,86,Wales,LD7 1<br>Avg. Price: 195K<br>Sales Volume: 86
 2007,LD8 2,221000,81,Wales,LD8 2<br>Avg. Price: 221K<br>Sales Volume: 81
 2007,LE1 1,136000,87,Midlands,LE1 1<br>Avg. Price: 136K<br>Sales Volume: 87
@@ -3720,7 +3720,7 @@ Year,Sector,Price,Volume,Region,text
 2007,LL20 7,195000,104,Wales,LL20 7<br>Avg. Price: 195K<br>Sales Volume: 104
 2007,LL20 8,184000,147,Wales,LL20 8<br>Avg. Price: 184K<br>Sales Volume: 147
 2007,LL21 0,160000,34,Wales,LL21 0<br>Avg. Price: 160K<br>Sales Volume: 34
-2007,LL21 9,204000,39,Wales,LL21 9<br>Avg. Price: 204K<br>Sales Volume: 39
+2007,LL21 9,203000,40,Wales,LL21 9<br>Avg. Price: 203K<br>Sales Volume: 40
 2007,LL22 7,152000,186,Wales,LL22 7<br>Avg. Price: 152K<br>Sales Volume: 186
 2007,LL22 8,206000,83,Wales,LL22 8<br>Avg. Price: 206K<br>Sales Volume: 83
 2007,LL22 9,161000,131,Wales,LL22 9<br>Avg. Price: 161K<br>Sales Volume: 131
@@ -3787,7 +3787,7 @@ Year,Sector,Price,Volume,Region,text
 2007,LL62 5,198000,20,Wales,LL62 5<br>Avg. Price: 198K<br>Sales Volume: 20
 2007,LL63 5,171000,14,Wales,LL63 5<br>Avg. Price: 171K<br>Sales Volume: 14
 2007,LL64 5,234000,45,Wales,LL64 5<br>Avg. Price: 234K<br>Sales Volume: 45
-2007,LL65 1,135000,122,Wales,LL65 1<br>Avg. Price: 135K<br>Sales Volume: 122
+2007,LL65 1,134000,123,Wales,LL65 1<br>Avg. Price: 134K<br>Sales Volume: 123
 2007,LL65 2,153000,160,Wales,LL65 2<br>Avg. Price: 153K<br>Sales Volume: 160
 2007,LL65 3,137000,104,Wales,LL65 3<br>Avg. Price: 137K<br>Sales Volume: 104
 2007,LL65 4,171000,39,Wales,LL65 4<br>Avg. Price: 171K<br>Sales Volume: 39
@@ -4173,7 +4173,7 @@ Year,Sector,Price,Volume,Region,text
 2007,ME12 1,132000,142,South East,ME12 1<br>Avg. Price: 132K<br>Sales Volume: 142
 2007,ME12 2,156000,315,South East,ME12 2<br>Avg. Price: 156K<br>Sales Volume: 315
 2007,ME12 3,195000,304,South East,ME12 3<br>Avg. Price: 195K<br>Sales Volume: 304
-2007,ME12 4,171000,145,South East,ME12 4<br>Avg. Price: 171K<br>Sales Volume: 145
+2007,ME12 4,172000,146,South East,ME12 4<br>Avg. Price: 172K<br>Sales Volume: 146
 2007,ME13 0,257000,42,South East,ME13 0<br>Avg. Price: 257K<br>Sales Volume: 42
 2007,ME13 7,182000,224,South East,ME13 7<br>Avg. Price: 182K<br>Sales Volume: 224
 2007,ME13 8,199000,272,South East,ME13 8<br>Avg. Price: 199K<br>Sales Volume: 272
@@ -4903,7 +4903,7 @@ Year,Sector,Price,Volume,Region,text
 2007,NR14 8,222000,204,Midlands,NR14 8<br>Avg. Price: 222K<br>Sales Volume: 204
 2007,NR15 1,275000,117,Midlands,NR15 1<br>Avg. Price: 275K<br>Sales Volume: 117
 2007,NR15 2,203000,219,Midlands,NR15 2<br>Avg. Price: 203K<br>Sales Volume: 219
-2007,NR16 1,291000,88,Midlands,NR16 1<br>Avg. Price: 291K<br>Sales Volume: 88
+2007,NR16 1,285000,87,Midlands,NR16 1<br>Avg. Price: 285K<br>Sales Volume: 87
 2007,NR16 2,230000,130,Midlands,NR16 2<br>Avg. Price: 230K<br>Sales Volume: 130
 2007,NR17 1,235000,139,Midlands,NR17 1<br>Avg. Price: 235K<br>Sales Volume: 139
 2007,NR17 2,187000,247,Midlands,NR17 2<br>Avg. Price: 187K<br>Sales Volume: 247
@@ -5234,7 +5234,7 @@ Year,Sector,Price,Volume,Region,text
 2007,PE12 6,175000,182,Midlands,PE12 6<br>Avg. Price: 175K<br>Sales Volume: 182
 2007,PE12 7,150000,219,Midlands,PE12 7<br>Avg. Price: 150K<br>Sales Volume: 219
 2007,PE12 8,167000,112,Midlands,PE12 8<br>Avg. Price: 167K<br>Sales Volume: 112
-2007,PE12 9,157000,328,Midlands,PE12 9<br>Avg. Price: 157K<br>Sales Volume: 328
+2007,PE12 9,157000,330,Midlands,PE12 9<br>Avg. Price: 157K<br>Sales Volume: 330
 2007,PE13 1,151000,93,Midlands,PE13 1<br>Avg. Price: 151K<br>Sales Volume: 93
 2007,PE13 2,136000,266,Midlands,PE13 2<br>Avg. Price: 136K<br>Sales Volume: 266
 2007,PE13 3,123000,315,Midlands,PE13 3<br>Avg. Price: 123K<br>Sales Volume: 315
@@ -6061,7 +6061,7 @@ Year,Sector,Price,Volume,Region,text
 2007,SA11 3,126000,164,Wales,SA11 3<br>Avg. Price: 126K<br>Sales Volume: 164
 2007,SA11 4,99000,54,Wales,SA11 4<br>Avg. Price: 99K<br>Sales Volume: 54
 2007,SA11 5,122000,82,Wales,SA11 5<br>Avg. Price: 122K<br>Sales Volume: 82
-2007,SA12 6,97000,218,Wales,SA12 6<br>Avg. Price: 97K<br>Sales Volume: 218
+2007,SA12 6,97000,219,Wales,SA12 6<br>Avg. Price: 97K<br>Sales Volume: 219
 2007,SA12 7,100000,96,Wales,SA12 7<br>Avg. Price: 100K<br>Sales Volume: 96
 2007,SA12 8,137000,136,Wales,SA12 8<br>Avg. Price: 137K<br>Sales Volume: 136
 2007,SA12 9,126000,117,Wales,SA12 9<br>Avg. Price: 126K<br>Sales Volume: 117
@@ -6632,7 +6632,7 @@ Year,Sector,Price,Volume,Region,text
 2007,SO40 7,306000,105,South East,SO40 7<br>Avg. Price: 306K<br>Sales Volume: 105
 2007,SO40 8,194000,204,South East,SO40 8<br>Avg. Price: 194K<br>Sales Volume: 204
 2007,SO40 9,215000,112,South East,SO40 9<br>Avg. Price: 215K<br>Sales Volume: 112
-2007,SO41 0,342000,319,South East,SO41 0<br>Avg. Price: 342K<br>Sales Volume: 319
+2007,SO41 0,343000,320,South East,SO41 0<br>Avg. Price: 343K<br>Sales Volume: 320
 2007,SO41 3,439000,83,South East,SO41 3<br>Avg. Price: 439K<br>Sales Volume: 83
 2007,SO41 5,642000,21,South East,SO41 5<br>Avg. Price: 642K<br>Sales Volume: 21
 2007,SO41 6,444000,71,South East,SO41 6<br>Avg. Price: 444K<br>Sales Volume: 71
@@ -7017,7 +7017,7 @@ Year,Sector,Price,Volume,Region,text
 2007,SY2 5,185000,259,Wales,SY2 5<br>Avg. Price: 185K<br>Sales Volume: 259
 2007,SY2 6,198000,115,Wales,SY2 6<br>Avg. Price: 198K<br>Sales Volume: 115
 2007,SY20 8,174000,63,Wales,SY20 8<br>Avg. Price: 174K<br>Sales Volume: 63
-2007,SY20 9,145000,48,Wales,SY20 9<br>Avg. Price: 145K<br>Sales Volume: 48
+2007,SY20 9,146000,47,Wales,SY20 9<br>Avg. Price: 146K<br>Sales Volume: 47
 2007,SY21 0,213000,36,Wales,SY21 0<br>Avg. Price: 213K<br>Sales Volume: 36
 2007,SY21 7,138000,94,Wales,SY21 7<br>Avg. Price: 138K<br>Sales Volume: 94
 2007,SY21 8,207000,66,Wales,SY21 8<br>Avg. Price: 207K<br>Sales Volume: 66
@@ -7096,7 +7096,7 @@ Year,Sector,Price,Volume,Region,text
 2007,TA3 6,322000,95,South West,TA3 6<br>Avg. Price: 322K<br>Sales Volume: 95
 2007,TA3 7,353000,101,South West,TA3 7<br>Avg. Price: 353K<br>Sales Volume: 101
 2007,TA4 1,261000,124,South West,TA4 1<br>Avg. Price: 261K<br>Sales Volume: 124
-2007,TA4 2,309000,89,South West,TA4 2<br>Avg. Price: 309K<br>Sales Volume: 89
+2007,TA4 2,308000,90,South West,TA4 2<br>Avg. Price: 308K<br>Sales Volume: 90
 2007,TA4 3,301000,91,South West,TA4 3<br>Avg. Price: 301K<br>Sales Volume: 91
 2007,TA4 4,230000,72,South West,TA4 4<br>Avg. Price: 230K<br>Sales Volume: 72
 2007,TA5 1,315000,94,South West,TA5 1<br>Avg. Price: 315K<br>Sales Volume: 94
@@ -7238,7 +7238,7 @@ Year,Sector,Price,Volume,Region,text
 2007,TN36 4,268000,65,South East,TN36 4<br>Avg. Price: 268K<br>Sales Volume: 65
 2007,TN37 6,129000,377,South East,TN37 6<br>Avg. Price: 129K<br>Sales Volume: 377
 2007,TN37 7,196000,298,South East,TN37 7<br>Avg. Price: 196K<br>Sales Volume: 298
-2007,TN38 0,156000,627,South East,TN38 0<br>Avg. Price: 156K<br>Sales Volume: 627
+2007,TN38 0,156000,628,South East,TN38 0<br>Avg. Price: 156K<br>Sales Volume: 628
 2007,TN38 8,183000,146,South East,TN38 8<br>Avg. Price: 183K<br>Sales Volume: 146
 2007,TN38 9,162000,191,South East,TN38 9<br>Avg. Price: 162K<br>Sales Volume: 191
 2007,TN39 3,236000,425,South East,TN39 3<br>Avg. Price: 236K<br>Sales Volume: 425
@@ -7922,7 +7922,7 @@ Year,Sector,Price,Volume,Region,text
 2007,WR11 4,201000,174,Midlands,WR11 4<br>Avg. Price: 201K<br>Sales Volume: 174
 2007,WR11 5,221000,2,Midlands,WR11 5<br>Avg. Price: 221K<br>Sales Volume: 2
 2007,WR11 6,249000,1,Midlands,WR11 6<br>Avg. Price: 249K<br>Sales Volume: 1
-2007,WR11 7,279000,146,Midlands,WR11 7<br>Avg. Price: 279K<br>Sales Volume: 146
+2007,WR11 7,280000,145,Midlands,WR11 7<br>Avg. Price: 280K<br>Sales Volume: 145
 2007,WR11 8,234000,124,Midlands,WR11 8<br>Avg. Price: 234K<br>Sales Volume: 124
 2007,WR12 7,409000,117,Midlands,WR12 7<br>Avg. Price: 409K<br>Sales Volume: 117
 2007,WR13 5,290000,54,Midlands,WR13 5<br>Avg. Price: 290K<br>Sales Volume: 54

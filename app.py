@@ -139,8 +139,57 @@ for k, v in regional_geo_data.items():
 
 
 """ ----------------------------------------------------------------------------
+ School Data
+---------------------------------------------------------------------------- """
+
+schools_top_500 = pd.read_csv(os.path.join(cfg['app_data_dir'], f'schools_top_500.csv'))
+schools_top_500['Best Rank'] *= -1
+
+# schools = dict()
+# for region in cfg['plotly_config'].keys():
+#     schools[region] = pd.read_csv(os.path.join(cfg['app_data_dir'], f'schools_{region}.csv'))
+
+
+""" ----------------------------------------------------------------------------
  Making Graphs
 ---------------------------------------------------------------------------- """
+
+def get_scattergeo(df, fig=None):
+
+    if fig is None:
+        fig = go.Figure()
+
+    fig.update_traces(showscale=False)
+
+    fig.add_trace(
+        px.scatter_mapbox(df,
+                         lat="Latitude", lon="Longitude",
+                         color="Best Rank",
+                         color_continuous_scale=px.colors.diverging.Portland,
+                         color_continuous_midpoint=-250,
+                         size=np.ones(len(df)),
+                         size_max=8,
+                         opacity=1
+        ).data[0]
+    )
+
+    fig.add_trace(
+       px.scatter_mapbox(df,
+                         lat="Latitude", lon="Longitude",
+                         color_discrete_sequence=['White'],
+                         size=np.ones(len(df)),
+                         size_max=4
+       ).data[0]
+    )
+
+    fig.update_traces(hovertemplate=df['Info'])
+    fig.layout.coloraxis.colorbar.title = 'School Ranking'
+    fig.layout.coloraxis.colorscale = px.colors.diverging.Portland
+    fig.layout.coloraxis.colorbar.tickvals= [-1, -100, -200, -300, -400, -500]
+
+    return fig
+
+#--------------------------------------------#
 
 def get_Choropleth(df, geo_data, arg, marker_opacity,
                    marker_line_width, marker_line_color, fig=None):
@@ -169,7 +218,7 @@ def get_Choropleth(df, geo_data, arg, marker_opacity,
 
 #--------------------------------------------#
 
-def get_figure(df, geo_data, region, gtype, year, geo_sectors, fig=None):
+def get_figure(df, geo_data, region, gtype, year, geo_sectors, school):
     """ ref: https://plotly.com/python/builtin-colorscales/
     """
     config = {'doubleClickDelay': 1000} #Set a high delay to make double click easier
@@ -191,7 +240,6 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, fig=None):
         arg['z_vec'] = df['Volume']
         arg['text_vec'] = df['text']
         arg['colorscale'] = "Plasma"
-        # arg['colorscale'] = "Jet"
         arg['title'] = "Sales Volume"
 
     else:
@@ -200,33 +248,38 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, fig=None):
         arg['z_vec'] = df['Percentage Change']
         arg['text_vec'] = df['text']
         arg['colorscale'] = "Picnic"
+        # arg['colorscale'] = "RdBu_r"
         arg['title'] = "Avg. Price %Change"
 
     #-------------------------------------------#
     # Main Choropleth:
-    if fig is None:
-        fig = get_Choropleth(df, geo_data, arg, marker_opacity=0.4,
-                             marker_line_width=1, marker_line_color='#6666cc', fig=None)
+    fig = get_Choropleth(df, geo_data, arg, marker_opacity=0.4,
+                         marker_line_width=1, marker_line_color='#6666cc')
 
-        #------------------------------------------#
-        """
-        mapbox_style options:
-        'open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter',
-        'stamen-terrain', 'stamen-toner', 'stamen-watercolor'
-        """
-        fig.update_layout(mapbox_style="open-street-map",
-                          mapbox_zoom=_cfg['zoom'],
-                          autosize=True,
-                          font=dict(color="#7FDBFF"),
-                          paper_bgcolor="#1f2630",
-                          mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
-                          uirevision=region,
-                          margin={"r":0,"t":0,"l":0,"b":0}
-                         )
+    #-------------------------------------------#
+    # School scatter_geo plot
+    if len(school) > 0:
+        fig = get_scattergeo(schools_top_500, fig=fig)
+
+    #------------------------------------------#
+    """
+    mapbox_style options:
+    'open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter',
+    'stamen-terrain', 'stamen-toner', 'stamen-watercolor'
+    """
+    fig.update_layout(mapbox_style="open-street-map",
+                      mapbox_zoom=_cfg['zoom'],
+                      autosize=True,
+                      font=dict(color="#7FDBFF"),
+                      paper_bgcolor="#1f2630",
+                      mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
+                      uirevision=region,
+                      margin={"r":0,"t":0,"l":0,"b":0}
+                     )
 
     #-------------------------------------------#
     # Highlight selections:
-    if geo_sectors is not None:
+    if geo_sectors is not None and len(school)==0:
         fig = get_Choropleth(df, geo_sectors, arg, marker_opacity=1.0,
                              marker_line_width=3, marker_line_color='aqua', fig=fig)
 
@@ -260,13 +313,6 @@ initial_geo_sector = [regional_geo_sector[initial_region][initial_sector]]
 
 empty_series = pd.DataFrame(np.full(len(cfg['Years']), np.nan), index=cfg['Years'])
 empty_series.rename(columns={0: ''}, inplace=True)
-
-#---------------------------------------------
-
-# The State for figure only holds a dict.
-# To hold a graph_obj, we use a global dictionary here
-state = dict()
-state['figure state'] = None
 
 
 """ ----------------------------------------------------------------------------
@@ -401,7 +447,28 @@ app.layout = html.Div(
                         html.Div(
                             id="choropleth-container",
                             children=[
-                                html.H5(id="choropleth-title"),
+                                html.Div([
+                                    html.Div([
+                                        html.H5(id="choropleth-title"),
+                                        ], style={'display': 'inline-block',
+                                                  'width': '64%'},
+                                           className="eight columns"
+                                    ),
+                                    html.Div([
+                                        dcc.Checklist(
+                                            id='school-checklist',
+                                            options=[
+                                                {'label': 'Show Top 500 Schools', 'value': 'True'},
+                                            ],
+                                            value=[],
+                                            labelStyle={'display': 'inline-block'},
+                                            inputStyle={"margin-left": "10px"})
+                                        ], style={'display': 'inline-block',
+                                                  'textAlign': 'right',
+                                                  'width': '34%'},
+                                           className="four columns"
+                                    ),
+                                ]),
                                 dcc.Graph(id="choropleth"),
                             ],
                         ),
@@ -416,20 +483,18 @@ app.layout = html.Div(
                     id="graph-container",
                     children=[
                         html.Div([
-                            html.H6(
-                                dcc.Checklist(
-                                    id='property-type-checklist',
-                                    options=[
-                                        {'label': 'F: Flats/Maisonettes', 'value': 'F'},
-                                        {'label': 'T: Terraced', 'value': 'T'},
-                                        {'label': 'S: Semi-Detached', 'value': 'S'},
-                                        {'label': 'D: Detached', 'value': 'D'}
-                                    ],
-                                    value=['F', 'T', 'S', 'D'],
-                                    labelStyle={'display': 'inline-block'},
-                                    inputStyle={"margin-left": "10px"}
-                                ),
-                            )
+                            dcc.Checklist(
+                                id='property-type-checklist',
+                                options=[
+                                    {'label': 'F: Flats/Maisonettes', 'value': 'F'},
+                                    {'label': 'T: Terraced', 'value': 'T'},
+                                    {'label': 'S: Semi-Detached', 'value': 'S'},
+                                    {'label': 'D: Detached', 'value': 'D'}
+                                ],
+                                value=['F', 'T', 'S', 'D'],
+                                labelStyle={'display': 'inline-block'},
+                                inputStyle={"margin-left": "10px"}
+                            ),
                         ], style={'textAlign': 'right'}),
 
                         html.Div([dcc.Graph(id='price-time-series')]),
@@ -455,14 +520,21 @@ app.layout = html.Div(
                          - Contains Royal Mail data © Royal Mail copyright and database right 2015
                          - Contains National Statistics data © Crown copyright and database right 2015
                          - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
+                         - [School 2019 performance data](https://www.gov.uk/school-performance-tables).
+                         (Note: [Attainment 8 Score](https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx)
+                         is used in GCSE ranking; and
+                         [Average Point Score](https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf)
+                         is used in A-Level ranking.)
                          '''
                         )
             ], style={'textAlign': 'left',
                       'padding': '10px 0px 5px 20px'}
         ),
 
-        html.H6([
-            dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.uk.2020@gmail.com)")
+        html.H6(
+            id="author",
+            children=[
+                dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.uk.2020@gmail.com)")
             ], style={'padding': '5px 0px 10px 20px'}
         )
     ]
@@ -485,9 +557,12 @@ app.layout = html.Div(
     Output('choropleth-title', 'children'),
     [Input('region', 'value'),
      Input('year', 'value'),
-     Input('graph-type', 'value')])
-def update_map_title(region, year, gtype):
-    if gtype == 'Price':
+     Input('graph-type', 'value'),
+     Input('school-checklist', 'value')])
+def update_map_title(region, year, gtype, school):
+    if len(school) > 0:
+        return "Top 500 schools (Postcode selection disabled)"
+    elif gtype == 'Price':
         return f'Average house prices (all property types) by postcode sector in {region}, {year}'
     elif gtype == 'Volume':
         return f'Sales Volume (all property types) by postcode sector in {region}, {year}'
@@ -518,8 +593,9 @@ def update_region_postcode(region, year):
     [Input('year', 'value'),
      Input('region', 'value'),
      Input('graph-type', 'value'),
-     Input('postcode', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
-def update_Choropleth(year, region, gtype, sectors):
+     Input('postcode', 'value'),
+     Input('school-checklist', 'value')]) #@cache.memoize(timeout=cfg['timeout'])
+def update_Choropleth(year, region, gtype, sectors, school):
 
     # Graph type selection------------------------------#
     if gtype in ['Price', 'Volume']:
@@ -528,28 +604,20 @@ def update_Choropleth(year, region, gtype, sectors):
         df = regional_percentage_delta_data[year][region]
 
     # For high-lighting mechanism ----------------------#
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
     geo_sectors = dict()
-    for k in regional_geo_data[region].keys():
-        if k != 'features':
-            geo_sectors[k] = regional_geo_data[region][k]
-        else:
-            geo_sectors[k] = [regional_geo_sector[region][sector] for sector in sectors]
+
+    if 'region' not in changed_id:
+        for k in regional_geo_data[region].keys():
+            if k != 'features':
+                geo_sectors[k] = regional_geo_data[region][k]
+            else:
+                geo_sectors[k] = [regional_geo_sector[region][sector] for sector in sectors
+                                  if sector in regional_geo_sector[region]]
 
     # Updating figure ----------------------------------#
-    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
-
-    if 'postcode' in changed_id and len(sectors) > 0:
-        fig = get_figure(df, regional_geo_data[region],
-                          region, gtype, year, geo_sectors, state['figure state'])
-    else:
-        fig = get_figure(df, regional_geo_data[region],
-                          region, gtype, year, geo_sectors)
-        state['figure state'] = fig
-
-    # Make sure to reset state - otherwise traace number increase beyond 1
-    # and cannot unhighlight sectors
-    if len(sectors) == 0 or 'postcode' not in changed_id:
-        state['figure state'] = None
+    fig = get_figure(df, regional_geo_data[region], region, gtype, year,
+                     geo_sectors, school)
 
     return fig
 
@@ -666,21 +734,30 @@ def update_price_timeseries(sectors, ptypes):
     [Input('choropleth', 'clickData'),
      Input('choropleth', 'selectedData'),
      Input('region', 'value'),
-     State('postcode', 'value')])
-def update_postcode_dropdown(clickData, selectedData, region, postcodes):
+     Input('school-checklist', 'value'),
+     State('postcode', 'value'),
+     State('choropleth', 'clickData')])
+def update_postcode_dropdown(clickData, selectedData, region, school, postcodes,
+                             clickData_state):
 
-    # Logic for initialisation
-    if dash.callback_context.triggered[0]['value'] is None:
+    # Logic for initialisation or when Schoold sre selected
+    if dash.callback_context.triggered[0]['value'] is None :
         return postcodes
+
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+
+    if len(school) > 0 or 'school' in changed_id:
+        clickData_state = None
+        return []
 
     #--------------------------------------------#
 
-    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
     if 'region' in changed_id:
         postcodes = []
     elif 'selectedData' in changed_id:
         postcodes = [D['location'] for D in selectedData['points'][:cfg['topN']]]
-    else:
+    elif clickData is not None and \
+         'location' in clickData['points'][0]:
         sector = clickData['points'][0]['location']
         if sector in postcodes:
             postcodes.remove(sector)

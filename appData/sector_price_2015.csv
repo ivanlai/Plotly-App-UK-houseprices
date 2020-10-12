@@ -448,7 +448,7 @@ Year,Sector,Price,Volume,Region,text
 2015,BD22 0,179000,78,North England,BD22 0<br>Avg. Price: 179K<br>Sales Volume: 78
 2015,BD22 6,121000,115,North England,BD22 6<br>Avg. Price: 121K<br>Sales Volume: 115
 2015,BD22 7,132000,119,North England,BD22 7<br>Avg. Price: 132K<br>Sales Volume: 119
-2015,BD22 8,140000,108,North England,BD22 8<br>Avg. Price: 140K<br>Sales Volume: 108
+2015,BD22 8,140000,109,North England,BD22 8<br>Avg. Price: 140K<br>Sales Volume: 109
 2015,BD22 9,168000,76,North England,BD22 9<br>Avg. Price: 168K<br>Sales Volume: 76
 2015,BD23 1,199000,159,North England,BD23 1<br>Avg. Price: 199K<br>Sales Volume: 159
 2015,BD23 2,168000,200,North England,BD23 2<br>Avg. Price: 168K<br>Sales Volume: 200
@@ -1036,7 +1036,7 @@ Year,Sector,Price,Volume,Region,text
 2015,CF23 6,313000,133,Wales,CF23 6<br>Avg. Price: 313K<br>Sales Volume: 133
 2015,CF23 7,142000,123,Wales,CF23 7<br>Avg. Price: 142K<br>Sales Volume: 123
 2015,CF23 8,209000,146,Wales,CF23 8<br>Avg. Price: 209K<br>Sales Volume: 146
-2015,CF23 9,200000,175,Wales,CF23 9<br>Avg. Price: 200K<br>Sales Volume: 175
+2015,CF23 9,200000,176,Wales,CF23 9<br>Avg. Price: 200K<br>Sales Volume: 176
 2015,CF24 0,122000,47,Wales,CF24 0<br>Avg. Price: 122K<br>Sales Volume: 47
 2015,CF24 1,135000,94,Wales,CF24 1<br>Avg. Price: 135K<br>Sales Volume: 94
 2015,CF24 2,135000,218,Wales,CF24 2<br>Avg. Price: 135K<br>Sales Volume: 218
@@ -1054,7 +1054,7 @@ Year,Sector,Price,Volume,Region,text
 2015,CF31 3,168000,122,Wales,CF31 3<br>Avg. Price: 168K<br>Sales Volume: 122
 2015,CF31 4,145000,248,Wales,CF31 4<br>Avg. Price: 145K<br>Sales Volume: 248
 2015,CF31 5,188000,124,Wales,CF31 5<br>Avg. Price: 188K<br>Sales Volume: 124
-2015,CF32 0,270000,106,Wales,CF32 0<br>Avg. Price: 270K<br>Sales Volume: 106
+2015,CF32 0,272000,107,Wales,CF32 0<br>Avg. Price: 272K<br>Sales Volume: 107
 2015,CF32 7,72000,115,Wales,CF32 7<br>Avg. Price: 72K<br>Sales Volume: 115
 2015,CF32 8,73000,104,Wales,CF32 8<br>Avg. Price: 73K<br>Sales Volume: 104
 2015,CF32 9,149000,243,Wales,CF32 9<br>Avg. Price: 149K<br>Sales Volume: 243
@@ -1251,7 +1251,7 @@ Year,Sector,Price,Volume,Region,text
 2015,CH6 5,141000,220,North England,CH6 5<br>Avg. Price: 141K<br>Sales Volume: 220
 2015,CH6 6,122000,43,North England,CH6 6<br>Avg. Price: 122K<br>Sales Volume: 43
 2015,CH60 0,251000,24,North England,CH60 0<br>Avg. Price: 251K<br>Sales Volume: 24
-2015,CH60 1,312000,45,North England,CH60 1<br>Avg. Price: 312K<br>Sales Volume: 45
+2015,CH60 1,313000,46,North England,CH60 1<br>Avg. Price: 313K<br>Sales Volume: 46
 2015,CH60 2,350000,22,North England,CH60 2<br>Avg. Price: 350K<br>Sales Volume: 22
 2015,CH60 3,405000,13,North England,CH60 3<br>Avg. Price: 405K<br>Sales Volume: 13
 2015,CH60 4,392000,16,North England,CH60 4<br>Avg. Price: 392K<br>Sales Volume: 16
@@ -1526,7 +1526,7 @@ Year,Sector,Price,Volume,Region,text
 2015,CT16 1,144000,88,South East,CT16 1<br>Avg. Price: 144K<br>Sales Volume: 88
 2015,CT16 2,156000,206,South East,CT16 2<br>Avg. Price: 156K<br>Sales Volume: 206
 2015,CT16 3,250000,145,South East,CT16 3<br>Avg. Price: 250K<br>Sales Volume: 145
-2015,CT17 0,156000,225,South East,CT17 0<br>Avg. Price: 156K<br>Sales Volume: 225
+2015,CT17 0,156000,226,South East,CT17 0<br>Avg. Price: 156K<br>Sales Volume: 226
 2015,CT17 9,136000,203,South East,CT17 9<br>Avg. Price: 136K<br>Sales Volume: 203
 2015,CT18 7,231000,243,South East,CT18 7<br>Avg. Price: 231K<br>Sales Volume: 243
 2015,CT18 8,291000,63,South East,CT18 8<br>Avg. Price: 291K<br>Sales Volume: 63
@@ -2451,7 +2451,7 @@ Year,Sector,Price,Volume,Region,text
 2015,GL14 1,277000,44,South West,GL14 1<br>Avg. Price: 277K<br>Sales Volume: 44
 2015,GL14 2,151000,148,South West,GL14 2<br>Avg. Price: 151K<br>Sales Volume: 148
 2015,GL14 3,166000,71,South West,GL14 3<br>Avg. Price: 166K<br>Sales Volume: 71
-2015,GL15 4,224000,118,South West,GL15 4<br>Avg. Price: 224K<br>Sales Volume: 118
+2015,GL15 4,223000,117,South West,GL15 4<br>Avg. Price: 223K<br>Sales Volume: 117
 2015,GL15 5,161000,199,South West,GL15 5<br>Avg. Price: 161K<br>Sales Volume: 199
 2015,GL15 6,242000,130,South West,GL15 6<br>Avg. Price: 242K<br>Sales Volume: 130
 2015,GL16 7,205000,117,South West,GL16 7<br>Avg. Price: 205K<br>Sales Volume: 117
@@ -3234,7 +3234,7 @@ Year,Sector,Price,Volume,Region,text
 2015,L2 7,81000,1,North England,L2 7<br>Avg. Price: 81K<br>Sales Volume: 1
 2015,L2 9,100000,1,North England,L2 9<br>Avg. Price: 100K<br>Sales Volume: 1
 2015,L20 0,87000,16,North England,L20 0<br>Avg. Price: 87K<br>Sales Volume: 16
-2015,L20 2,57000,45,North England,L20 2<br>Avg. Price: 57K<br>Sales Volume: 45
+2015,L20 2,58000,46,North England,L20 2<br>Avg. Price: 58K<br>Sales Volume: 46
 2015,L20 3,88000,22,North England,L20 3<br>Avg. Price: 88K<br>Sales Volume: 22
 2015,L20 4,66000,84,North England,L20 4<br>Avg. Price: 66K<br>Sales Volume: 84
 2015,L20 5,64000,40,North England,L20 5<br>Avg. Price: 64K<br>Sales Volume: 40
@@ -4006,7 +4006,7 @@ Year,Sector,Price,Volume,Region,text
 2015,M2 7,115000,1,North England,M2 7<br>Avg. Price: 115K<br>Sales Volume: 1
 2015,M20 1,215000,111,North England,M20 1<br>Avg. Price: 215K<br>Sales Volume: 111
 2015,M20 2,289000,311,North England,M20 2<br>Avg. Price: 289K<br>Sales Volume: 311
-2015,M20 3,226000,133,North England,M20 3<br>Avg. Price: 226K<br>Sales Volume: 133
+2015,M20 3,225000,134,North England,M20 3<br>Avg. Price: 225K<br>Sales Volume: 134
 2015,M20 4,203000,139,North England,M20 4<br>Avg. Price: 203K<br>Sales Volume: 139
 2015,M20 5,248000,82,North England,M20 5<br>Avg. Price: 248K<br>Sales Volume: 82
 2015,M20 6,284000,175,North England,M20 6<br>Avg. Price: 284K<br>Sales Volume: 175
@@ -4219,7 +4219,7 @@ Year,Sector,Price,Volume,Region,text
 2015,MK13 7,187000,99,South East,MK13 7<br>Avg. Price: 187K<br>Sales Volume: 99
 2015,MK13 8,251000,38,South East,MK13 8<br>Avg. Price: 251K<br>Sales Volume: 38
 2015,MK13 9,200000,47,South East,MK13 9<br>Avg. Price: 200K<br>Sales Volume: 47
-2015,MK14 5,269000,180,South East,MK14 5<br>Avg. Price: 269K<br>Sales Volume: 180
+2015,MK14 5,270000,181,South East,MK14 5<br>Avg. Price: 270K<br>Sales Volume: 181
 2015,MK14 6,217000,113,South East,MK14 6<br>Avg. Price: 217K<br>Sales Volume: 113
 2015,MK14 7,186000,70,South East,MK14 7<br>Avg. Price: 186K<br>Sales Volume: 70
 2015,MK15 0,446000,10,South East,MK15 0<br>Avg. Price: 446K<br>Sales Volume: 10
@@ -4299,7 +4299,7 @@ Year,Sector,Price,Volume,Region,text
 2015,N1 2,1035000,128,Greater London,"N1 2<br>Avg. Price: 1,035K<br>Sales Volume: 128"
 2015,N1 3,707000,131,Greater London,N1 3<br>Avg. Price: 707K<br>Sales Volume: 131
 2015,N1 4,676000,126,Greater London,N1 4<br>Avg. Price: 676K<br>Sales Volume: 126
-2015,N1 5,574000,95,Greater London,N1 5<br>Avg. Price: 574K<br>Sales Volume: 95
+2015,N1 5,579000,94,Greater London,N1 5<br>Avg. Price: 579K<br>Sales Volume: 94
 2015,N1 6,614000,98,Greater London,N1 6<br>Avg. Price: 614K<br>Sales Volume: 98
 2015,N1 7,716000,193,Greater London,N1 7<br>Avg. Price: 716K<br>Sales Volume: 193
 2015,N1 8,969000,112,Greater London,N1 8<br>Avg. Price: 969K<br>Sales Volume: 112
@@ -4493,7 +4493,7 @@ Year,Sector,Price,Volume,Region,text
 2015,NE4 5,104000,35,North England,NE4 5<br>Avg. Price: 104K<br>Sales Volume: 35
 2015,NE4 6,143000,25,North England,NE4 6<br>Avg. Price: 143K<br>Sales Volume: 25
 2015,NE4 7,90000,17,North England,NE4 7<br>Avg. Price: 90K<br>Sales Volume: 17
-2015,NE4 8,85000,55,North England,NE4 8<br>Avg. Price: 85K<br>Sales Volume: 55
+2015,NE4 8,84000,56,North England,NE4 8<br>Avg. Price: 84K<br>Sales Volume: 56
 2015,NE4 9,161000,157,North England,NE4 9<br>Avg. Price: 161K<br>Sales Volume: 157
 2015,NE40 3,148000,107,North England,NE40 3<br>Avg. Price: 148K<br>Sales Volume: 107
 2015,NE40 4,138000,106,North England,NE40 4<br>Avg. Price: 138K<br>Sales Volume: 106
@@ -5451,7 +5451,7 @@ Year,Sector,Price,Volume,Region,text
 2015,PO22 6,255000,132,South East,PO22 6<br>Avg. Price: 255K<br>Sales Volume: 132
 2015,PO22 7,341000,155,South East,PO22 7<br>Avg. Price: 341K<br>Sales Volume: 155
 2015,PO22 8,279000,222,South East,PO22 8<br>Avg. Price: 279K<br>Sales Volume: 222
-2015,PO22 9,208000,140,South East,PO22 9<br>Avg. Price: 208K<br>Sales Volume: 140
+2015,PO22 9,208000,141,South East,PO22 9<br>Avg. Price: 208K<br>Sales Volume: 141
 2015,PO3 5,170000,166,South East,PO3 5<br>Avg. Price: 170K<br>Sales Volume: 166
 2015,PO3 6,209000,254,South East,PO3 6<br>Avg. Price: 209K<br>Sales Volume: 254
 2015,PO30 1,173000,130,South East,PO30 1<br>Avg. Price: 173K<br>Sales Volume: 130
@@ -5462,7 +5462,7 @@ Year,Sector,Price,Volume,Region,text
 2015,PO31 7,199000,200,South East,PO31 7<br>Avg. Price: 199K<br>Sales Volume: 200
 2015,PO31 8,298000,126,South East,PO31 8<br>Avg. Price: 298K<br>Sales Volume: 126
 2015,PO32 6,177000,211,South East,PO32 6<br>Avg. Price: 177K<br>Sales Volume: 211
-2015,PO33 1,206000,197,South East,PO33 1<br>Avg. Price: 206K<br>Sales Volume: 197
+2015,PO33 1,207000,198,South East,PO33 1<br>Avg. Price: 207K<br>Sales Volume: 198
 2015,PO33 2,154000,228,South East,PO33 2<br>Avg. Price: 154K<br>Sales Volume: 228
 2015,PO33 3,206000,179,South East,PO33 3<br>Avg. Price: 206K<br>Sales Volume: 179
 2015,PO33 4,260000,100,South East,PO33 4<br>Avg. Price: 260K<br>Sales Volume: 100
@@ -5823,7 +5823,7 @@ Year,Sector,Price,Volume,Region,text
 2015,RM9 5,240000,155,Greater London,RM9 5<br>Avg. Price: 240K<br>Sales Volume: 155
 2015,RM9 6,233000,137,Greater London,RM9 6<br>Avg. Price: 233K<br>Sales Volume: 137
 2015,S1 2,116000,94,Midlands,S1 2<br>Avg. Price: 116K<br>Sales Volume: 94
-2015,S1 4,111000,103,Midlands,S1 4<br>Avg. Price: 111K<br>Sales Volume: 103
+2015,S1 4,111000,106,Midlands,S1 4<br>Avg. Price: 111K<br>Sales Volume: 106
 2015,S10 1,177000,269,Midlands,S10 1<br>Avg. Price: 177K<br>Sales Volume: 269
 2015,S10 2,300000,54,Midlands,S10 2<br>Avg. Price: 300K<br>Sales Volume: 54
 2015,S10 3,349000,168,Midlands,S10 3<br>Avg. Price: 349K<br>Sales Volume: 168
@@ -6129,7 +6129,7 @@ Year,Sector,Price,Volume,Region,text
 2015,SA69 9,245000,123,Wales,SA69 9<br>Avg. Price: 245K<br>Sales Volume: 123
 2015,SA7 0,154000,61,Wales,SA7 0<br>Avg. Price: 154K<br>Sales Volume: 61
 2015,SA7 9,135000,198,Wales,SA7 9<br>Avg. Price: 135K<br>Sales Volume: 198
-2015,SA70 7,222000,95,Wales,SA70 7<br>Avg. Price: 222K<br>Sales Volume: 95
+2015,SA70 7,223000,96,Wales,SA70 7<br>Avg. Price: 223K<br>Sales Volume: 96
 2015,SA70 8,212000,108,Wales,SA70 8<br>Avg. Price: 212K<br>Sales Volume: 108
 2015,SA71 4,143000,121,Wales,SA71 4<br>Avg. Price: 143K<br>Sales Volume: 121
 2015,SA71 5,183000,95,Wales,SA71 5<br>Avg. Price: 183K<br>Sales Volume: 95
@@ -6219,7 +6219,7 @@ Year,Sector,Price,Volume,Region,text
 2015,SE3 7,659000,158,Greater London,SE3 7<br>Avg. Price: 659K<br>Sales Volume: 158
 2015,SE3 8,416000,126,Greater London,SE3 8<br>Avg. Price: 416K<br>Sales Volume: 126
 2015,SE3 9,560000,238,Greater London,SE3 9<br>Avg. Price: 560K<br>Sales Volume: 238
-2015,SE4 1,486000,270,Greater London,SE4 1<br>Avg. Price: 486K<br>Sales Volume: 270
+2015,SE4 1,486000,271,Greater London,SE4 1<br>Avg. Price: 486K<br>Sales Volume: 271
 2015,SE4 2,443000,175,Greater London,SE4 2<br>Avg. Price: 443K<br>Sales Volume: 175
 2015,SE5 0,460000,82,Greater London,SE5 0<br>Avg. Price: 460K<br>Sales Volume: 82
 2015,SE5 6,210000,1,Greater London,SE5 6<br>Avg. Price: 210K<br>Sales Volume: 1
@@ -6645,7 +6645,7 @@ Year,Sector,Price,Volume,Region,text
 2015,SP10 4,251000,108,South West,SP10 4<br>Avg. Price: 251K<br>Sales Volume: 108
 2015,SP10 5,179000,71,South West,SP10 5<br>Avg. Price: 179K<br>Sales Volume: 71
 2015,SP11 0,487000,61,South West,SP11 0<br>Avg. Price: 487K<br>Sales Volume: 61
-2015,SP11 6,254000,493,South West,SP11 6<br>Avg. Price: 254K<br>Sales Volume: 493
+2015,SP11 6,253000,495,South West,SP11 6<br>Avg. Price: 253K<br>Sales Volume: 495
 2015,SP11 7,413000,73,South West,SP11 7<br>Avg. Price: 413K<br>Sales Volume: 73
 2015,SP11 8,416000,44,South West,SP11 8<br>Avg. Price: 416K<br>Sales Volume: 44
 2015,SP11 9,247000,110,South West,SP11 9<br>Avg. Price: 247K<br>Sales Volume: 110
@@ -6862,7 +6862,7 @@ Year,Sector,Price,Volume,Region,text
 2015,SW13 9,1776000,89,Greater London,"SW13 9<br>Avg. Price: 1,776K<br>Sales Volume: 89"
 2015,SW14 7,982000,125,Greater London,SW14 7<br>Avg. Price: 982K<br>Sales Volume: 125
 2015,SW14 8,834000,194,Greater London,SW14 8<br>Avg. Price: 834K<br>Sales Volume: 194
-2015,SW15 1,941000,150,Greater London,SW15 1<br>Avg. Price: 941K<br>Sales Volume: 150
+2015,SW15 1,938000,151,Greater London,SW15 1<br>Avg. Price: 938K<br>Sales Volume: 151
 2015,SW15 2,695000,269,Greater London,SW15 2<br>Avg. Price: 695K<br>Sales Volume: 269
 2015,SW15 3,570000,200,Greater London,SW15 3<br>Avg. Price: 570K<br>Sales Volume: 200
 2015,SW15 4,315000,81,Greater London,SW15 4<br>Avg. Price: 315K<br>Sales Volume: 81
@@ -7307,7 +7307,7 @@ Year,Sector,Price,Volume,Region,text
 2015,TR2 4,230000,92,South West,TR2 4<br>Avg. Price: 230K<br>Sales Volume: 92
 2015,TR2 5,472000,93,South West,TR2 5<br>Avg. Price: 472K<br>Sales Volume: 93
 2015,TR20 8,279000,57,South West,TR20 8<br>Avg. Price: 279K<br>Sales Volume: 57
-2015,TR20 9,275000,77,South West,TR20 9<br>Avg. Price: 275K<br>Sales Volume: 77
+2015,TR20 9,280000,78,South West,TR20 9<br>Avg. Price: 280K<br>Sales Volume: 78
 2015,TR21 0,287000,19,South West,TR21 0<br>Avg. Price: 287K<br>Sales Volume: 19
 2015,TR26 1,330000,119,South West,TR26 1<br>Avg. Price: 330K<br>Sales Volume: 119
 2015,TR26 2,345000,182,South West,TR26 2<br>Avg. Price: 345K<br>Sales Volume: 182
@@ -7360,7 +7360,7 @@ Year,Sector,Price,Volume,Region,text
 2015,TS17 9,104000,70,North England,TS17 9<br>Avg. Price: 104K<br>Sales Volume: 70
 2015,TS18 1,64000,19,North England,TS18 1<br>Avg. Price: 64K<br>Sales Volume: 19
 2015,TS18 2,128000,81,North England,TS18 2<br>Avg. Price: 128K<br>Sales Volume: 81
-2015,TS18 3,112000,168,North England,TS18 3<br>Avg. Price: 112K<br>Sales Volume: 168
+2015,TS18 3,112000,169,North England,TS18 3<br>Avg. Price: 112K<br>Sales Volume: 169
 2015,TS18 4,128000,81,North England,TS18 4<br>Avg. Price: 128K<br>Sales Volume: 81
 2015,TS18 5,168000,92,North England,TS18 5<br>Avg. Price: 168K<br>Sales Volume: 92
 2015,TS19 0,106000,146,North England,TS19 0<br>Avg. Price: 106K<br>Sales Volume: 146
@@ -7412,7 +7412,7 @@ Year,Sector,Price,Volume,Region,text
 2015,TS6 7,51000,18,North England,TS6 7<br>Avg. Price: 51K<br>Sales Volume: 18
 2015,TS6 8,84000,49,North England,TS6 8<br>Avg. Price: 84K<br>Sales Volume: 49
 2015,TS6 9,100000,104,North England,TS6 9<br>Avg. Price: 100K<br>Sales Volume: 104
-2015,TS7 0,259000,152,North England,TS7 0<br>Avg. Price: 259K<br>Sales Volume: 152
+2015,TS7 0,258000,151,North England,TS7 0<br>Avg. Price: 258K<br>Sales Volume: 151
 2015,TS7 8,172000,139,North England,TS7 8<br>Avg. Price: 172K<br>Sales Volume: 139
 2015,TS7 9,142000,87,North England,TS7 9<br>Avg. Price: 142K<br>Sales Volume: 87
 2015,TS8 0,159000,131,North England,TS8 0<br>Avg. Price: 159K<br>Sales Volume: 131
@@ -7475,9 +7475,9 @@ Year,Sector,Price,Volume,Region,text
 2015,TW7 5,398000,114,Greater London,TW7 5<br>Avg. Price: 398K<br>Sales Volume: 114
 2015,TW7 6,410000,172,Greater London,TW7 6<br>Avg. Price: 410K<br>Sales Volume: 172
 2015,TW7 7,435000,114,Greater London,TW7 7<br>Avg. Price: 435K<br>Sales Volume: 114
-2015,TW8 0,516000,566,Greater London,TW8 0<br>Avg. Price: 516K<br>Sales Volume: 566
+2015,TW8 0,516000,567,Greater London,TW8 0<br>Avg. Price: 516K<br>Sales Volume: 567
 2015,TW8 8,469000,165,Greater London,TW8 8<br>Avg. Price: 469K<br>Sales Volume: 165
-2015,TW8 9,435000,75,Greater London,TW8 9<br>Avg. Price: 435K<br>Sales Volume: 75
+2015,TW8 9,438000,74,Greater London,TW8 9<br>Avg. Price: 438K<br>Sales Volume: 74
 2015,TW9 1,926000,94,Greater London,TW9 1<br>Avg. Price: 926K<br>Sales Volume: 94
 2015,TW9 2,797000,122,Greater London,TW9 2<br>Avg. Price: 797K<br>Sales Volume: 122
 2015,TW9 3,930000,63,Greater London,TW9 3<br>Avg. Price: 930K<br>Sales Volume: 63
@@ -7752,8 +7752,8 @@ Year,Sector,Price,Volume,Region,text
 2015,WD19 7,270000,54,Greater London,WD19 7<br>Avg. Price: 270K<br>Sales Volume: 54
 2015,WD23 1,557000,153,Greater London,WD23 1<br>Avg. Price: 557K<br>Sales Volume: 153
 2015,WD23 2,476000,169,Greater London,WD23 2<br>Avg. Price: 476K<br>Sales Volume: 169
-2015,WD23 3,446000,89,Greater London,WD23 3<br>Avg. Price: 446K<br>Sales Volume: 89
-2015,WD23 4,474000,113,Greater London,WD23 4<br>Avg. Price: 474K<br>Sales Volume: 113
+2015,WD23 3,447000,90,Greater London,WD23 3<br>Avg. Price: 447K<br>Sales Volume: 90
+2015,WD23 4,474000,112,Greater London,WD23 4<br>Avg. Price: 474K<br>Sales Volume: 112
 2015,WD24 4,306000,73,Greater London,WD24 4<br>Avg. Price: 306K<br>Sales Volume: 73
 2015,WD24 5,294000,187,Greater London,WD24 5<br>Avg. Price: 294K<br>Sales Volume: 187
 2015,WD24 6,284000,70,Greater London,WD24 6<br>Avg. Price: 284K<br>Sales Volume: 70
@@ -7802,7 +7802,7 @@ Year,Sector,Price,Volume,Region,text
 2015,WF13 2,105000,67,North England,WF13 2<br>Avg. Price: 105K<br>Sales Volume: 67
 2015,WF13 3,96000,81,North England,WF13 3<br>Avg. Price: 96K<br>Sales Volume: 81
 2015,WF13 4,114000,119,North England,WF13 4<br>Avg. Price: 114K<br>Sales Volume: 119
-2015,WF14 0,147000,133,North England,WF14 0<br>Avg. Price: 147K<br>Sales Volume: 133
+2015,WF14 0,148000,134,North England,WF14 0<br>Avg. Price: 148K<br>Sales Volume: 134
 2015,WF14 8,178000,64,North England,WF14 8<br>Avg. Price: 178K<br>Sales Volume: 64
 2015,WF14 9,189000,174,North England,WF14 9<br>Avg. Price: 189K<br>Sales Volume: 174
 2015,WF15 6,141000,77,North England,WF15 6<br>Avg. Price: 141K<br>Sales Volume: 77

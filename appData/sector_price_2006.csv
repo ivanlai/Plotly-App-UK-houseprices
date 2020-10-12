@@ -541,7 +541,7 @@ Year,Sector,Price,Volume,Region,text
 2006,BH22 8,285000,319,South West,BH22 8<br>Avg. Price: 285K<br>Sales Volume: 319
 2006,BH22 9,249000,323,South West,BH22 9<br>Avg. Price: 249K<br>Sales Volume: 323
 2006,BH23 1,239000,178,South West,BH23 1<br>Avg. Price: 239K<br>Sales Volume: 178
-2006,BH23 2,259000,337,South West,BH23 2<br>Avg. Price: 259K<br>Sales Volume: 337
+2006,BH23 2,259000,338,South West,BH23 2<br>Avg. Price: 259K<br>Sales Volume: 338
 2006,BH23 3,229000,258,South West,BH23 3<br>Avg. Price: 229K<br>Sales Volume: 258
 2006,BH23 4,281000,305,South West,BH23 4<br>Avg. Price: 281K<br>Sales Volume: 305
 2006,BH23 5,257000,300,South West,BH23 5<br>Avg. Price: 257K<br>Sales Volume: 300
@@ -876,7 +876,7 @@ Year,Sector,Price,Volume,Region,text
 2006,BS6 5,248000,289,South West,BS6 5<br>Avg. Price: 248K<br>Sales Volume: 289
 2006,BS6 6,278000,378,South West,BS6 6<br>Avg. Price: 278K<br>Sales Volume: 378
 2006,BS6 7,319000,240,South West,BS6 7<br>Avg. Price: 319K<br>Sales Volume: 240
-2006,BS7 0,174000,400,South West,BS7 0<br>Avg. Price: 174K<br>Sales Volume: 400
+2006,BS7 0,174000,401,South West,BS7 0<br>Avg. Price: 174K<br>Sales Volume: 401
 2006,BS7 8,241000,289,South West,BS7 8<br>Avg. Price: 241K<br>Sales Volume: 289
 2006,BS7 9,208000,382,South West,BS7 9<br>Avg. Price: 208K<br>Sales Volume: 382
 2006,BS8 1,226000,143,South West,BS8 1<br>Avg. Price: 226K<br>Sales Volume: 143
@@ -1079,7 +1079,7 @@ Year,Sector,Price,Volume,Region,text
 2006,CF35 6,157000,193,Wales,CF35 6<br>Avg. Price: 157K<br>Sales Volume: 193
 2006,CF36 3,224000,201,Wales,CF36 3<br>Avg. Price: 224K<br>Sales Volume: 201
 2006,CF36 5,176000,139,Wales,CF36 5<br>Avg. Price: 176K<br>Sales Volume: 139
-2006,CF37 1,110000,199,Wales,CF37 1<br>Avg. Price: 110K<br>Sales Volume: 199
+2006,CF37 1,110000,200,Wales,CF37 1<br>Avg. Price: 110K<br>Sales Volume: 200
 2006,CF37 2,114000,96,Wales,CF37 2<br>Avg. Price: 114K<br>Sales Volume: 96
 2006,CF37 3,100000,105,Wales,CF37 3<br>Avg. Price: 100K<br>Sales Volume: 105
 2006,CF37 4,107000,153,Wales,CF37 4<br>Avg. Price: 107K<br>Sales Volume: 153
@@ -1525,7 +1525,7 @@ Year,Sector,Price,Volume,Region,text
 2006,CT1 3,215000,327,South East,CT1 3<br>Avg. Price: 215K<br>Sales Volume: 327
 2006,CT10 1,215000,268,South East,CT10 1<br>Avg. Price: 215K<br>Sales Volume: 268
 2006,CT10 2,185000,308,South East,CT10 2<br>Avg. Price: 185K<br>Sales Volume: 308
-2006,CT10 3,222000,188,South East,CT10 3<br>Avg. Price: 222K<br>Sales Volume: 188
+2006,CT10 3,222000,189,South East,CT10 3<br>Avg. Price: 222K<br>Sales Volume: 189
 2006,CT11 0,179000,242,South East,CT11 0<br>Avg. Price: 179K<br>Sales Volume: 242
 2006,CT11 7,147000,302,South East,CT11 7<br>Avg. Price: 147K<br>Sales Volume: 302
 2006,CT11 8,152000,223,South East,CT11 8<br>Avg. Price: 152K<br>Sales Volume: 223
@@ -1792,7 +1792,7 @@ Year,Sector,Price,Volume,Region,text
 2006,DE21 5,263000,56,Midlands,DE21 5<br>Avg. Price: 263K<br>Sales Volume: 56
 2006,DE21 6,114000,318,Midlands,DE21 6<br>Avg. Price: 114K<br>Sales Volume: 318
 2006,DE21 7,141000,299,Midlands,DE21 7<br>Avg. Price: 141K<br>Sales Volume: 299
-2006,DE22 1,229000,208,Midlands,DE22 1<br>Avg. Price: 229K<br>Sales Volume: 208
+2006,DE22 1,229000,209,Midlands,DE22 1<br>Avg. Price: 229K<br>Sales Volume: 209
 2006,DE22 2,214000,298,Midlands,DE22 2<br>Avg. Price: 214K<br>Sales Volume: 298
 2006,DE22 3,125000,487,Midlands,DE22 3<br>Avg. Price: 125K<br>Sales Volume: 487
 2006,DE22 4,125000,101,Midlands,DE22 4<br>Avg. Price: 125K<br>Sales Volume: 101
@@ -2749,7 +2749,7 @@ Year,Sector,Price,Volume,Region,text
 2006,HG1 2,249000,267,North England,HG1 2<br>Avg. Price: 249K<br>Sales Volume: 267
 2006,HG1 3,195000,219,North England,HG1 3<br>Avg. Price: 195K<br>Sales Volume: 219
 2006,HG1 4,163000,417,North England,HG1 4<br>Avg. Price: 163K<br>Sales Volume: 417
-2006,HG1 5,202000,275,North England,HG1 5<br>Avg. Price: 202K<br>Sales Volume: 275
+2006,HG1 5,202000,276,North England,HG1 5<br>Avg. Price: 202K<br>Sales Volume: 276
 2006,HG2 0,260000,290,North England,HG2 0<br>Avg. Price: 260K<br>Sales Volume: 290
 2006,HG2 7,175000,257,North England,HG2 7<br>Avg. Price: 175K<br>Sales Volume: 257
 2006,HG2 8,284000,219,North England,HG2 8<br>Avg. Price: 284K<br>Sales Volume: 219
@@ -3059,7 +3059,7 @@ Year,Sector,Price,Volume,Region,text
 2006,IP5 3,182000,97,Midlands,IP5 3<br>Avg. Price: 182K<br>Sales Volume: 97
 2006,IP5 7,220000,1,Midlands,IP5 7<br>Avg. Price: 220K<br>Sales Volume: 1
 2006,IP6 0,186000,134,Midlands,IP6 0<br>Avg. Price: 186K<br>Sales Volume: 134
-2006,IP6 8,179000,144,Midlands,IP6 8<br>Avg. Price: 179K<br>Sales Volume: 144
+2006,IP6 8,181000,145,Midlands,IP6 8<br>Avg. Price: 181K<br>Sales Volume: 145
 2006,IP6 9,311000,87,Midlands,IP6 9<br>Avg. Price: 311K<br>Sales Volume: 87
 2006,IP7 5,208000,168,Midlands,IP7 5<br>Avg. Price: 208K<br>Sales Volume: 168
 2006,IP7 6,257000,98,Midlands,IP7 6<br>Avg. Price: 257K<br>Sales Volume: 98
@@ -3688,7 +3688,7 @@ Year,Sector,Price,Volume,Region,text
 2006,LL11 4,142000,215,Wales,LL11 4<br>Avg. Price: 142K<br>Sales Volume: 215
 2006,LL11 5,147000,180,Wales,LL11 5<br>Avg. Price: 147K<br>Sales Volume: 180
 2006,LL11 6,120000,149,Wales,LL11 6<br>Avg. Price: 120K<br>Sales Volume: 149
-2006,LL12 0,200000,141,Wales,LL12 0<br>Avg. Price: 200K<br>Sales Volume: 141
+2006,LL12 0,201000,142,Wales,LL12 0<br>Avg. Price: 201K<br>Sales Volume: 142
 2006,LL12 7,150000,119,Wales,LL12 7<br>Avg. Price: 150K<br>Sales Volume: 119
 2006,LL12 8,214000,156,Wales,LL12 8<br>Avg. Price: 214K<br>Sales Volume: 156
 2006,LL12 9,159000,67,Wales,LL12 9<br>Avg. Price: 159K<br>Sales Volume: 67
@@ -4817,10 +4817,10 @@ Year,Sector,Price,Volume,Region,text
 2006,NP13 3,93000,77,Wales,NP13 3<br>Avg. Price: 93K<br>Sales Volume: 77
 2006,NP15 1,275000,90,Wales,NP15 1<br>Avg. Price: 275K<br>Sales Volume: 90
 2006,NP15 2,274000,32,Wales,NP15 2<br>Avg. Price: 274K<br>Sales Volume: 32
-2006,NP16 5,170000,266,Wales,NP16 5<br>Avg. Price: 170K<br>Sales Volume: 266
+2006,NP16 5,171000,267,Wales,NP16 5<br>Avg. Price: 171K<br>Sales Volume: 267
 2006,NP16 6,320000,107,Wales,NP16 6<br>Avg. Price: 320K<br>Sales Volume: 107
 2006,NP16 7,256000,92,Wales,NP16 7<br>Avg. Price: 256K<br>Sales Volume: 92
-2006,NP18 1,218000,76,Wales,NP18 1<br>Avg. Price: 218K<br>Sales Volume: 76
+2006,NP18 1,219000,77,Wales,NP18 1<br>Avg. Price: 219K<br>Sales Volume: 77
 2006,NP18 2,224000,138,Wales,NP18 2<br>Avg. Price: 224K<br>Sales Volume: 138
 2006,NP18 3,170000,125,Wales,NP18 3<br>Avg. Price: 170K<br>Sales Volume: 125
 2006,NP19 0,105000,257,Wales,NP19 0<br>Avg. Price: 105K<br>Sales Volume: 257
@@ -4929,7 +4929,7 @@ Year,Sector,Price,Volume,Region,text
 2006,NR28 0,156000,286,Midlands,NR28 0<br>Avg. Price: 156K<br>Sales Volume: 286
 2006,NR28 9,182000,175,Midlands,NR28 9<br>Avg. Price: 182K<br>Sales Volume: 175
 2006,NR29 3,175000,139,Midlands,NR29 3<br>Avg. Price: 175K<br>Sales Volume: 139
-2006,NR29 4,161000,217,Midlands,NR29 4<br>Avg. Price: 161K<br>Sales Volume: 217
+2006,NR29 4,160000,218,Midlands,NR29 4<br>Avg. Price: 160K<br>Sales Volume: 218
 2006,NR29 5,201000,110,Midlands,NR29 5<br>Avg. Price: 201K<br>Sales Volume: 110
 2006,NR3 1,145000,164,Midlands,NR3 1<br>Avg. Price: 145K<br>Sales Volume: 164
 2006,NR3 2,135000,194,Midlands,NR3 2<br>Avg. Price: 135K<br>Sales Volume: 194
@@ -5271,7 +5271,7 @@ Year,Sector,Price,Volume,Region,text
 2006,PE23 4,214000,50,Midlands,PE23 4<br>Avg. Price: 214K<br>Sales Volume: 50
 2006,PE23 5,153000,194,Midlands,PE23 5<br>Avg. Price: 153K<br>Sales Volume: 194
 2006,PE24 4,145000,66,Midlands,PE24 4<br>Avg. Price: 145K<br>Sales Volume: 66
-2006,PE24 5,132000,205,Midlands,PE24 5<br>Avg. Price: 132K<br>Sales Volume: 205
+2006,PE24 5,132000,206,Midlands,PE24 5<br>Avg. Price: 132K<br>Sales Volume: 206
 2006,PE25 1,140000,170,Midlands,PE25 1<br>Avg. Price: 140K<br>Sales Volume: 170
 2006,PE25 2,130000,176,Midlands,PE25 2<br>Avg. Price: 130K<br>Sales Volume: 176
 2006,PE25 3,155000,144,Midlands,PE25 3<br>Avg. Price: 155K<br>Sales Volume: 144
@@ -5330,7 +5330,7 @@ Year,Sector,Price,Volume,Region,text
 2006,PE7 3,174000,466,Midlands,PE7 3<br>Avg. Price: 174K<br>Sales Volume: 466
 2006,PE7 8,170000,627,Midlands,PE7 8<br>Avg. Price: 170K<br>Sales Volume: 627
 2006,PE8 4,230000,149,Midlands,PE8 4<br>Avg. Price: 230K<br>Sales Volume: 149
-2006,PE8 5,334000,69,Midlands,PE8 5<br>Avg. Price: 334K<br>Sales Volume: 69
+2006,PE8 5,332000,70,Midlands,PE8 5<br>Avg. Price: 332K<br>Sales Volume: 70
 2006,PE8 6,252000,159,Midlands,PE8 6<br>Avg. Price: 252K<br>Sales Volume: 159
 2006,PE9 1,159000,256,Midlands,PE9 1<br>Avg. Price: 159K<br>Sales Volume: 256
 2006,PE9 2,212000,278,Midlands,PE9 2<br>Avg. Price: 212K<br>Sales Volume: 278
@@ -5847,7 +5847,6 @@ Year,Sector,Price,Volume,Region,text
 2006,RM9 4,164000,218,Greater London,RM9 4<br>Avg. Price: 164K<br>Sales Volume: 218
 2006,RM9 5,167000,228,Greater London,RM9 5<br>Avg. Price: 167K<br>Sales Volume: 228
 2006,RM9 6,164000,227,Greater London,RM9 6<br>Avg. Price: 164K<br>Sales Volume: 227
-2006,S032 1,154000,1,Midlands,S032 1<br>Avg. Price: 154K<br>Sales Volume: 1
 2006,S1 2,171000,74,Midlands,S1 2<br>Avg. Price: 171K<br>Sales Volume: 74
 2006,S1 4,129000,239,Midlands,S1 4<br>Avg. Price: 129K<br>Sales Volume: 239
 2006,S10 1,163000,386,Midlands,S10 1<br>Avg. Price: 163K<br>Sales Volume: 386
@@ -6247,7 +6246,7 @@ Year,Sector,Price,Volume,Region,text
 2006,SE3 8,232000,200,Greater London,SE3 8<br>Avg. Price: 232K<br>Sales Volume: 200
 2006,SE3 9,351000,172,Greater London,SE3 9<br>Avg. Price: 351K<br>Sales Volume: 172
 2006,SE4 1,248000,353,Greater London,SE4 1<br>Avg. Price: 248K<br>Sales Volume: 353
-2006,SE4 2,213000,220,Greater London,SE4 2<br>Avg. Price: 213K<br>Sales Volume: 220
+2006,SE4 2,214000,221,Greater London,SE4 2<br>Avg. Price: 214K<br>Sales Volume: 221
 2006,SE5 0,248000,123,Greater London,SE5 0<br>Avg. Price: 248K<br>Sales Volume: 123
 2006,SE5 7,204000,162,Greater London,SE5 7<br>Avg. Price: 204K<br>Sales Volume: 162
 2006,SE5 8,275000,298,Greater London,SE5 8<br>Avg. Price: 275K<br>Sales Volume: 298
@@ -6619,7 +6618,7 @@ Year,Sector,Price,Volume,Region,text
 2006,SO31 7,264000,174,South East,SO31 7<br>Avg. Price: 264K<br>Sales Volume: 174
 2006,SO31 8,239000,151,South East,SO31 8<br>Avg. Price: 239K<br>Sales Volume: 151
 2006,SO31 9,279000,230,South East,SO31 9<br>Avg. Price: 279K<br>Sales Volume: 230
-2006,SO32 1,255000,210,South East,SO32 1<br>Avg. Price: 255K<br>Sales Volume: 210
+2006,SO32 1,255000,211,South East,SO32 1<br>Avg. Price: 255K<br>Sales Volume: 211
 2006,SO32 2,359000,195,South East,SO32 2<br>Avg. Price: 359K<br>Sales Volume: 195
 2006,SO32 3,453000,49,South East,SO32 3<br>Avg. Price: 453K<br>Sales Volume: 49
 2006,SO40 2,217000,202,South East,SO40 2<br>Avg. Price: 217K<br>Sales Volume: 202
@@ -6959,7 +6958,7 @@ Year,Sector,Price,Volume,Region,text
 2006,SW4 8,341000,169,Greater London,SW4 8<br>Avg. Price: 341K<br>Sales Volume: 169
 2006,SW4 9,531000,267,Greater London,SW4 9<br>Avg. Price: 531K<br>Sales Volume: 267
 2006,SW5 0,768000,220,Greater London,SW5 0<br>Avg. Price: 768K<br>Sales Volume: 220
-2006,SW5 9,487000,244,Greater London,SW5 9<br>Avg. Price: 487K<br>Sales Volume: 244
+2006,SW5 9,486000,245,Greater London,SW5 9<br>Avg. Price: 486K<br>Sales Volume: 245
 2006,SW6 1,398000,146,Greater London,SW6 1<br>Avg. Price: 398K<br>Sales Volume: 146
 2006,SW6 2,503000,381,Greater London,SW6 2<br>Avg. Price: 503K<br>Sales Volume: 381
 2006,SW6 3,744000,288,Greater London,SW6 3<br>Avg. Price: 744K<br>Sales Volume: 288
@@ -7013,7 +7012,7 @@ Year,Sector,Price,Volume,Region,text
 2006,SY2 5,168000,266,Wales,SY2 5<br>Avg. Price: 168K<br>Sales Volume: 266
 2006,SY2 6,202000,135,Wales,SY2 6<br>Avg. Price: 202K<br>Sales Volume: 135
 2006,SY20 8,143000,56,Wales,SY20 8<br>Avg. Price: 143K<br>Sales Volume: 56
-2006,SY20 9,145000,44,Wales,SY20 9<br>Avg. Price: 145K<br>Sales Volume: 44
+2006,SY20 9,147000,43,Wales,SY20 9<br>Avg. Price: 147K<br>Sales Volume: 43
 2006,SY21 0,192000,45,Wales,SY21 0<br>Avg. Price: 192K<br>Sales Volume: 45
 2006,SY21 7,142000,100,Wales,SY21 7<br>Avg. Price: 142K<br>Sales Volume: 100
 2006,SY21 8,240000,78,Wales,SY21 8<br>Avg. Price: 240K<br>Sales Volume: 78
@@ -7087,7 +7086,7 @@ Year,Sector,Price,Volume,Region,text
 2006,TA24 5,177000,247,South West,TA24 5<br>Avg. Price: 177K<br>Sales Volume: 247
 2006,TA24 6,200000,147,South West,TA24 6<br>Avg. Price: 200K<br>Sales Volume: 147
 2006,TA24 7,348000,39,South West,TA24 7<br>Avg. Price: 348K<br>Sales Volume: 39
-2006,TA24 8,242000,120,South West,TA24 8<br>Avg. Price: 242K<br>Sales Volume: 120
+2006,TA24 8,242000,121,South West,TA24 8<br>Avg. Price: 242K<br>Sales Volume: 121
 2006,TA3 5,250000,98,South West,TA3 5<br>Avg. Price: 250K<br>Sales Volume: 98
 2006,TA3 6,289000,91,South West,TA3 6<br>Avg. Price: 289K<br>Sales Volume: 91
 2006,TA3 7,320000,90,South West,TA3 7<br>Avg. Price: 320K<br>Sales Volume: 90
@@ -7256,7 +7255,7 @@ Year,Sector,Price,Volume,Region,text
 2006,TN9 1,230000,245,South East,TN9 1<br>Avg. Price: 230K<br>Sales Volume: 245
 2006,TN9 2,217000,260,South East,TN9 2<br>Avg. Price: 217K<br>Sales Volume: 260
 2006,TQ1 1,158000,311,South West,TQ1 1<br>Avg. Price: 158K<br>Sales Volume: 311
-2006,TQ1 2,269000,173,South West,TQ1 2<br>Avg. Price: 269K<br>Sales Volume: 173
+2006,TQ1 2,268000,174,South West,TQ1 2<br>Avg. Price: 268K<br>Sales Volume: 174
 2006,TQ1 3,172000,309,South West,TQ1 3<br>Avg. Price: 172K<br>Sales Volume: 309
 2006,TQ1 4,166000,288,South West,TQ1 4<br>Avg. Price: 166K<br>Sales Volume: 288
 2006,TQ10 9,269000,58,South West,TQ10 9<br>Avg. Price: 269K<br>Sales Volume: 58
@@ -8074,7 +8073,7 @@ Year,Sector,Price,Volume,Region,text
 2006,YO12 5,168000,195,North England,YO12 5<br>Avg. Price: 168K<br>Sales Volume: 195
 2006,YO12 6,157000,205,North England,YO12 6<br>Avg. Price: 157K<br>Sales Volume: 205
 2006,YO12 7,120000,338,North England,YO12 7<br>Avg. Price: 120K<br>Sales Volume: 338
-2006,YO13 0,242000,95,North England,YO13 0<br>Avg. Price: 242K<br>Sales Volume: 95
+2006,YO13 0,242000,96,North England,YO13 0<br>Avg. Price: 242K<br>Sales Volume: 96
 2006,YO13 9,233000,98,North England,YO13 9<br>Avg. Price: 233K<br>Sales Volume: 98
 2006,YO14 0,162000,183,North England,YO14 0<br>Avg. Price: 162K<br>Sales Volume: 183
 2006,YO14 9,141000,233,North England,YO14 9<br>Avg. Price: 141K<br>Sales Volume: 233

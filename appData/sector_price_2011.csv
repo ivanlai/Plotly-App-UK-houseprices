@@ -767,7 +767,7 @@ Year,Sector,Price,Volume,Region,text
 2011,BS15 3,200000,106,South West,BS15 3<br>Avg. Price: 200K<br>Sales Volume: 106
 2011,BS15 4,155000,102,South West,BS15 4<br>Avg. Price: 155K<br>Sales Volume: 102
 2011,BS15 8,158000,97,South West,BS15 8<br>Avg. Price: 158K<br>Sales Volume: 97
-2011,BS15 9,165000,103,South West,BS15 9<br>Avg. Price: 165K<br>Sales Volume: 103
+2011,BS15 9,164000,102,South West,BS15 9<br>Avg. Price: 164K<br>Sales Volume: 102
 2011,BS16 1,204000,228,South West,BS16 1<br>Avg. Price: 204K<br>Sales Volume: 228
 2011,BS16 2,187000,118,South West,BS16 2<br>Avg. Price: 187K<br>Sales Volume: 118
 2011,BS16 3,142000,96,South West,BS16 3<br>Avg. Price: 142K<br>Sales Volume: 96
@@ -838,7 +838,7 @@ Year,Sector,Price,Volume,Region,text
 2011,BS37 6,227000,90,South West,BS37 6<br>Avg. Price: 227K<br>Sales Volume: 90
 2011,BS37 7,226000,72,South West,BS37 7<br>Avg. Price: 226K<br>Sales Volume: 72
 2011,BS37 8,144000,83,South West,BS37 8<br>Avg. Price: 144K<br>Sales Volume: 83
-2011,BS37 9,310000,5,South West,BS37 9<br>Avg. Price: 310K<br>Sales Volume: 5
+2011,BS37 9,310000,6,South West,BS37 9<br>Avg. Price: 310K<br>Sales Volume: 6
 2011,BS39 4,324000,24,South West,BS39 4<br>Avg. Price: 324K<br>Sales Volume: 24
 2011,BS39 5,272000,34,South West,BS39 5<br>Avg. Price: 272K<br>Sales Volume: 34
 2011,BS39 6,244000,35,South West,BS39 6<br>Avg. Price: 244K<br>Sales Volume: 35
@@ -1790,7 +1790,7 @@ Year,Sector,Price,Volume,Region,text
 2011,DE4 2,234000,107,Midlands,DE4 2<br>Avg. Price: 234K<br>Sales Volume: 107
 2011,DE4 3,182000,162,Midlands,DE4 3<br>Avg. Price: 182K<br>Sales Volume: 162
 2011,DE4 4,202000,94,Midlands,DE4 4<br>Avg. Price: 202K<br>Sales Volume: 94
-2011,DE4 5,214000,66,Midlands,DE4 5<br>Avg. Price: 214K<br>Sales Volume: 66
+2011,DE4 5,213000,67,Midlands,DE4 5<br>Avg. Price: 213K<br>Sales Volume: 67
 2011,DE45 1,314000,102,Midlands,DE45 1<br>Avg. Price: 314K<br>Sales Volume: 102
 2011,DE5 3,128000,163,Midlands,DE5 3<br>Avg. Price: 128K<br>Sales Volume: 163
 2011,DE5 8,150000,48,Midlands,DE5 8<br>Avg. Price: 150K<br>Sales Volume: 48
@@ -2408,7 +2408,7 @@ Year,Sector,Price,Volume,Region,text
 2011,FY4 5,155000,66,North England,FY4 5<br>Avg. Price: 155K<br>Sales Volume: 66
 2011,FY5 1,128000,113,North England,FY5 1<br>Avg. Price: 128K<br>Sales Volume: 113
 2011,FY5 2,138000,156,North England,FY5 2<br>Avg. Price: 138K<br>Sales Volume: 156
-2011,FY5 3,121000,152,North England,FY5 3<br>Avg. Price: 121K<br>Sales Volume: 152
+2011,FY5 3,121000,153,North England,FY5 3<br>Avg. Price: 121K<br>Sales Volume: 153
 2011,FY5 4,135000,104,North England,FY5 4<br>Avg. Price: 135K<br>Sales Volume: 104
 2011,FY5 5,154000,85,North England,FY5 5<br>Avg. Price: 154K<br>Sales Volume: 85
 2011,FY6 0,145000,62,North England,FY6 0<br>Avg. Price: 145K<br>Sales Volume: 62
@@ -2654,7 +2654,7 @@ Year,Sector,Price,Volume,Region,text
 2011,HA3 9,291000,69,Greater London,HA3 9<br>Avg. Price: 291K<br>Sales Volume: 69
 2011,HA4 0,281000,152,Greater London,HA4 0<br>Avg. Price: 281K<br>Sales Volume: 152
 2011,HA4 6,273000,157,Greater London,HA4 6<br>Avg. Price: 273K<br>Sales Volume: 157
-2011,HA4 7,371000,153,Greater London,HA4 7<br>Avg. Price: 371K<br>Sales Volume: 153
+2011,HA4 7,371000,154,Greater London,HA4 7<br>Avg. Price: 371K<br>Sales Volume: 154
 2011,HA4 8,382000,187,Greater London,HA4 8<br>Avg. Price: 382K<br>Sales Volume: 187
 2011,HA4 9,295000,143,Greater London,HA4 9<br>Avg. Price: 295K<br>Sales Volume: 143
 2011,HA5 1,440000,102,Greater London,HA5 1<br>Avg. Price: 440K<br>Sales Volume: 102
@@ -4269,7 +4269,7 @@ Year,Sector,Price,Volume,Region,text
 2011,N1 2,665000,143,Greater London,N1 2<br>Avg. Price: 665K<br>Sales Volume: 143
 2011,N1 3,458000,155,Greater London,N1 3<br>Avg. Price: 458K<br>Sales Volume: 155
 2011,N1 4,441000,115,Greater London,N1 4<br>Avg. Price: 441K<br>Sales Volume: 115
-2011,N1 5,360000,81,Greater London,N1 5<br>Avg. Price: 360K<br>Sales Volume: 81
+2011,N1 5,363000,80,Greater London,N1 5<br>Avg. Price: 363K<br>Sales Volume: 80
 2011,N1 6,362000,51,Greater London,N1 6<br>Avg. Price: 362K<br>Sales Volume: 51
 2011,N1 7,486000,102,Greater London,N1 7<br>Avg. Price: 486K<br>Sales Volume: 102
 2011,N1 8,703000,113,Greater London,N1 8<br>Avg. Price: 703K<br>Sales Volume: 113
@@ -6792,7 +6792,7 @@ Year,Sector,Price,Volume,Region,text
 2011,ST5 8,108000,112,Midlands,ST5 8<br>Avg. Price: 108K<br>Sales Volume: 112
 2011,ST5 9,104000,66,Midlands,ST5 9<br>Avg. Price: 104K<br>Sales Volume: 66
 2011,ST6 1,65000,61,Midlands,ST6 1<br>Avg. Price: 65K<br>Sales Volume: 61
-2011,ST6 2,67000,36,Midlands,ST6 2<br>Avg. Price: 67K<br>Sales Volume: 36
+2011,ST6 2,67000,37,Midlands,ST6 2<br>Avg. Price: 67K<br>Sales Volume: 37
 2011,ST6 3,72000,61,Midlands,ST6 3<br>Avg. Price: 72K<br>Sales Volume: 61
 2011,ST6 4,79000,34,Midlands,ST6 4<br>Avg. Price: 79K<br>Sales Volume: 34
 2011,ST6 5,89000,137,Midlands,ST6 5<br>Avg. Price: 89K<br>Sales Volume: 137
@@ -7269,7 +7269,7 @@ Year,Sector,Price,Volume,Region,text
 2011,TR2 4,222000,73,South West,TR2 4<br>Avg. Price: 222K<br>Sales Volume: 73
 2011,TR2 5,358000,87,South West,TR2 5<br>Avg. Price: 358K<br>Sales Volume: 87
 2011,TR20 8,236000,48,South West,TR20 8<br>Avg. Price: 236K<br>Sales Volume: 48
-2011,TR20 9,263000,41,South West,TR20 9<br>Avg. Price: 263K<br>Sales Volume: 41
+2011,TR20 9,271000,42,South West,TR20 9<br>Avg. Price: 271K<br>Sales Volume: 42
 2011,TR21 0,317000,16,South West,TR21 0<br>Avg. Price: 317K<br>Sales Volume: 16
 2011,TR23 0,720000,1,South West,TR23 0<br>Avg. Price: 720K<br>Sales Volume: 1
 2011,TR26 1,284000,82,South West,TR26 1<br>Avg. Price: 284K<br>Sales Volume: 82
@@ -8052,7 +8052,7 @@ Year,Sector,Price,Volume,Region,text
 2011,YO31 0,165000,71,North England,YO31 0<br>Avg. Price: 165K<br>Sales Volume: 71
 2011,YO31 1,207000,61,North England,YO31 1<br>Avg. Price: 207K<br>Sales Volume: 61
 2011,YO31 7,175000,111,North England,YO31 7<br>Avg. Price: 175K<br>Sales Volume: 111
-2011,YO31 8,174000,104,North England,YO31 8<br>Avg. Price: 174K<br>Sales Volume: 104
+2011,YO31 8,173000,105,North England,YO31 8<br>Avg. Price: 173K<br>Sales Volume: 105
 2011,YO31 9,143000,129,North England,YO31 9<br>Avg. Price: 143K<br>Sales Volume: 129
 2011,YO32 2,174000,105,North England,YO32 2<br>Avg. Price: 174K<br>Sales Volume: 105
 2011,YO32 3,244000,62,North England,YO32 3<br>Avg. Price: 244K<br>Sales Volume: 62

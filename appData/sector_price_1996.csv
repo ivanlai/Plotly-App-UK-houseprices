@@ -1409,7 +1409,7 @@ Year,Sector,Price,Volume,Region,text
 1996,CO10 1,54000,187,Midlands,CO10 1<br>Avg. Price: 54K<br>Sales Volume: 187
 1996,CO10 2,50000,112,Midlands,CO10 2<br>Avg. Price: 50K<br>Sales Volume: 112
 1996,CO10 5,98000,32,Midlands,CO10 5<br>Avg. Price: 98K<br>Sales Volume: 32
-1996,CO10 7,67000,144,Midlands,CO10 7<br>Avg. Price: 67K<br>Sales Volume: 144
+1996,CO10 7,68000,145,Midlands,CO10 7<br>Avg. Price: 68K<br>Sales Volume: 145
 1996,CO10 8,99000,125,Midlands,CO10 8<br>Avg. Price: 99K<br>Sales Volume: 125
 1996,CO10 9,90000,142,Midlands,CO10 9<br>Avg. Price: 90K<br>Sales Volume: 142
 1996,CO11 1,62000,158,Midlands,CO11 1<br>Avg. Price: 62K<br>Sales Volume: 158
@@ -2824,8 +2824,8 @@ Year,Sector,Price,Volume,Region,text
 1996,HU16 5,71000,182,North England,HU16 5<br>Avg. Price: 71K<br>Sales Volume: 182
 1996,HU17 0,48000,219,North England,HU17 0<br>Avg. Price: 48K<br>Sales Volume: 219
 1996,HU17 5,56000,46,North England,HU17 5<br>Avg. Price: 56K<br>Sales Volume: 46
-1996,HU17 7,78000,256,North England,HU17 7<br>Avg. Price: 78K<br>Sales Volume: 256
-1996,HU17 8,72000,451,North England,HU17 8<br>Avg. Price: 72K<br>Sales Volume: 451
+1996,HU17 7,78000,255,North England,HU17 7<br>Avg. Price: 78K<br>Sales Volume: 255
+1996,HU17 8,72000,452,North England,HU17 8<br>Avg. Price: 72K<br>Sales Volume: 452
 1996,HU17 9,64000,317,North England,HU17 9<br>Avg. Price: 64K<br>Sales Volume: 317
 1996,HU18 1,51000,180,North England,HU18 1<br>Avg. Price: 51K<br>Sales Volume: 180
 1996,HU19 2,38000,112,North England,HU19 2<br>Avg. Price: 38K<br>Sales Volume: 112
@@ -3507,7 +3507,7 @@ Year,Sector,Price,Volume,Region,text
 1996,LD3 9,62000,73,Wales,LD3 9<br>Avg. Price: 62K<br>Sales Volume: 73
 1996,LD4 4,36000,10,Wales,LD4 4<br>Avg. Price: 36K<br>Sales Volume: 10
 1996,LD5 4,54000,15,Wales,LD5 4<br>Avg. Price: 54K<br>Sales Volume: 15
-1996,LD6 5,48000,36,Wales,LD6 5<br>Avg. Price: 48K<br>Sales Volume: 36
+1996,LD6 5,48000,37,Wales,LD6 5<br>Avg. Price: 48K<br>Sales Volume: 37
 1996,LD7 1,52000,55,Wales,LD7 1<br>Avg. Price: 52K<br>Sales Volume: 55
 1996,LD8 2,67000,50,Wales,LD8 2<br>Avg. Price: 67K<br>Sales Volume: 50
 1996,LE1 1,60000,1,Midlands,LE1 1<br>Avg. Price: 60K<br>Sales Volume: 1
@@ -4513,7 +4513,7 @@ Year,Sector,Price,Volume,Region,text
 1996,NG10 5,45000,171,Midlands,NG10 5<br>Avg. Price: 45K<br>Sales Volume: 171
 1996,NG11 0,87000,26,Midlands,NG11 0<br>Avg. Price: 87K<br>Sales Volume: 26
 1996,NG11 6,69000,148,Midlands,NG11 6<br>Avg. Price: 69K<br>Sales Volume: 148
-1996,NG11 7,59000,61,Midlands,NG11 7<br>Avg. Price: 59K<br>Sales Volume: 61
+1996,NG11 7,59000,62,Midlands,NG11 7<br>Avg. Price: 59K<br>Sales Volume: 62
 1996,NG11 8,41000,105,Midlands,NG11 8<br>Avg. Price: 41K<br>Sales Volume: 105
 1996,NG11 9,34000,63,Midlands,NG11 9<br>Avg. Price: 34K<br>Sales Volume: 63
 1996,NG12 1,91000,38,Midlands,NG12 1<br>Avg. Price: 91K<br>Sales Volume: 38
@@ -5145,7 +5145,7 @@ Year,Sector,Price,Volume,Region,text
 1996,PE11 1,47000,235,Midlands,PE11 1<br>Avg. Price: 47K<br>Sales Volume: 235
 1996,PE11 2,45000,192,Midlands,PE11 2<br>Avg. Price: 45K<br>Sales Volume: 192
 1996,PE11 3,53000,294,Midlands,PE11 3<br>Avg. Price: 53K<br>Sales Volume: 294
-1996,PE11 4,49000,157,Midlands,PE11 4<br>Avg. Price: 49K<br>Sales Volume: 157
+1996,PE11 4,49000,158,Midlands,PE11 4<br>Avg. Price: 49K<br>Sales Volume: 158
 1996,PE12 0,56000,100,Midlands,PE12 0<br>Avg. Price: 56K<br>Sales Volume: 100
 1996,PE12 6,51000,134,Midlands,PE12 6<br>Avg. Price: 51K<br>Sales Volume: 134
 1996,PE12 7,47000,190,Midlands,PE12 7<br>Avg. Price: 47K<br>Sales Volume: 190
@@ -7760,7 +7760,7 @@ Year,Sector,Price,Volume,Region,text
 1996,WF17 8,38000,94,North England,WF17 8<br>Avg. Price: 38K<br>Sales Volume: 94
 1996,WF17 9,44000,91,North England,WF17 9<br>Avg. Price: 44K<br>Sales Volume: 91
 1996,WF2 0,70000,221,North England,WF2 0<br>Avg. Price: 70K<br>Sales Volume: 221
-1996,WF2 6,86000,158,North England,WF2 6<br>Avg. Price: 86K<br>Sales Volume: 158
+1996,WF2 6,85000,159,North England,WF2 6<br>Avg. Price: 85K<br>Sales Volume: 159
 1996,WF2 7,65000,56,North England,WF2 7<br>Avg. Price: 65K<br>Sales Volume: 56
 1996,WF2 8,57000,125,North England,WF2 8<br>Avg. Price: 57K<br>Sales Volume: 125
 1996,WF2 9,48000,142,North England,WF2 9<br>Avg. Price: 48K<br>Sales Volume: 142

@@ -1035,7 +1035,7 @@ Year,Sector,Price,Volume,Region,text
 2009,CF23 9,164000,117,Wales,CF23 9<br>Avg. Price: 164K<br>Sales Volume: 117
 2009,CF24 0,117000,22,Wales,CF24 0<br>Avg. Price: 117K<br>Sales Volume: 22
 2009,CF24 1,118000,65,Wales,CF24 1<br>Avg. Price: 118K<br>Sales Volume: 65
-2009,CF24 2,120000,135,Wales,CF24 2<br>Avg. Price: 120K<br>Sales Volume: 135
+2009,CF24 2,121000,136,Wales,CF24 2<br>Avg. Price: 121K<br>Sales Volume: 136
 2009,CF24 3,162000,108,Wales,CF24 3<br>Avg. Price: 162K<br>Sales Volume: 108
 2009,CF24 4,156000,189,Wales,CF24 4<br>Avg. Price: 156K<br>Sales Volume: 189
 2009,CF24 5,130000,1,Wales,CF24 5<br>Avg. Price: 130K<br>Sales Volume: 1
@@ -3981,7 +3981,7 @@ Year,Sector,Price,Volume,Region,text
 2009,M2 7,171000,8,North England,M2 7<br>Avg. Price: 171K<br>Sales Volume: 8
 2009,M20 1,185000,70,North England,M20 1<br>Avg. Price: 185K<br>Sales Volume: 70
 2009,M20 2,278000,235,North England,M20 2<br>Avg. Price: 278K<br>Sales Volume: 235
-2009,M20 3,216000,58,North England,M20 3<br>Avg. Price: 216K<br>Sales Volume: 58
+2009,M20 3,214000,59,North England,M20 3<br>Avg. Price: 214K<br>Sales Volume: 59
 2009,M20 4,187000,84,North England,M20 4<br>Avg. Price: 187K<br>Sales Volume: 84
 2009,M20 5,239000,55,North England,M20 5<br>Avg. Price: 239K<br>Sales Volume: 55
 2009,M20 6,246000,120,North England,M20 6<br>Avg. Price: 246K<br>Sales Volume: 120
@@ -4273,7 +4273,7 @@ Year,Sector,Price,Volume,Region,text
 2009,N1 2,591000,98,Greater London,N1 2<br>Avg. Price: 591K<br>Sales Volume: 98
 2009,N1 3,374000,172,Greater London,N1 3<br>Avg. Price: 374K<br>Sales Volume: 172
 2009,N1 4,415000,59,Greater London,N1 4<br>Avg. Price: 415K<br>Sales Volume: 59
-2009,N1 5,338000,60,Greater London,N1 5<br>Avg. Price: 338K<br>Sales Volume: 60
+2009,N1 5,342000,59,Greater London,N1 5<br>Avg. Price: 342K<br>Sales Volume: 59
 2009,N1 6,280000,41,Greater London,N1 6<br>Avg. Price: 280K<br>Sales Volume: 41
 2009,N1 7,412000,248,Greater London,N1 7<br>Avg. Price: 412K<br>Sales Volume: 248
 2009,N1 8,525000,118,Greater London,N1 8<br>Avg. Price: 525K<br>Sales Volume: 118
@@ -4293,7 +4293,7 @@ Year,Sector,Price,Volume,Region,text
 2009,N13 5,269000,93,Greater London,N13 5<br>Avg. Price: 269K<br>Sales Volume: 93
 2009,N13 6,209000,79,Greater London,N13 6<br>Avg. Price: 209K<br>Sales Volume: 79
 2009,N14 4,305000,75,Greater London,N14 4<br>Avg. Price: 305K<br>Sales Volume: 75
-2009,N14 5,296000,89,Greater London,N14 5<br>Avg. Price: 296K<br>Sales Volume: 89
+2009,N14 5,295000,90,Greater London,N14 5<br>Avg. Price: 295K<br>Sales Volume: 90
 2009,N14 6,308000,50,Greater London,N14 6<br>Avg. Price: 308K<br>Sales Volume: 50
 2009,N14 7,332000,63,Greater London,N14 7<br>Avg. Price: 332K<br>Sales Volume: 63
 2009,N15 3,238000,62,Greater London,N15 3<br>Avg. Price: 238K<br>Sales Volume: 62
@@ -5790,7 +5790,6 @@ Year,Sector,Price,Volume,Region,text
 2009,RM9 4,156000,84,Greater London,RM9 4<br>Avg. Price: 156K<br>Sales Volume: 84
 2009,RM9 5,155000,76,Greater London,RM9 5<br>Avg. Price: 155K<br>Sales Volume: 76
 2009,RM9 6,155000,74,Greater London,RM9 6<br>Avg. Price: 155K<br>Sales Volume: 74
-2009,S032 1,158000,1,Midlands,S032 1<br>Avg. Price: 158K<br>Sales Volume: 1
 2009,S1 2,151000,7,Midlands,S1 2<br>Avg. Price: 151K<br>Sales Volume: 7
 2009,S1 4,119000,55,Midlands,S1 4<br>Avg. Price: 119K<br>Sales Volume: 55
 2009,S10 1,150000,199,Midlands,S10 1<br>Avg. Price: 150K<br>Sales Volume: 199
@@ -5851,7 +5850,7 @@ Year,Sector,Price,Volume,Region,text
 2009,S3 9,90000,16,Midlands,S3 9<br>Avg. Price: 90K<br>Sales Volume: 16
 2009,S32 1,290000,23,Midlands,S32 1<br>Avg. Price: 290K<br>Sales Volume: 23
 2009,S32 2,379000,12,Midlands,S32 2<br>Avg. Price: 379K<br>Sales Volume: 12
-2009,S32 3,388000,17,Midlands,S32 3<br>Avg. Price: 388K<br>Sales Volume: 17
+2009,S32 3,393000,18,Midlands,S32 3<br>Avg. Price: 393K<br>Sales Volume: 18
 2009,S32 4,152000,4,Midlands,S32 4<br>Avg. Price: 152K<br>Sales Volume: 4
 2009,S32 5,289000,19,Midlands,S32 5<br>Avg. Price: 289K<br>Sales Volume: 19
 2009,S33 0,325000,20,Midlands,S33 0<br>Avg. Price: 325K<br>Sales Volume: 20
@@ -6561,7 +6560,7 @@ Year,Sector,Price,Volume,Region,text
 2009,SO31 7,248000,136,South East,SO31 7<br>Avg. Price: 248K<br>Sales Volume: 136
 2009,SO31 8,252000,102,South East,SO31 8<br>Avg. Price: 252K<br>Sales Volume: 102
 2009,SO31 9,268000,91,South East,SO31 9<br>Avg. Price: 268K<br>Sales Volume: 91
-2009,SO32 1,309000,129,South East,SO32 1<br>Avg. Price: 309K<br>Sales Volume: 129
+2009,SO32 1,307000,130,South East,SO32 1<br>Avg. Price: 307K<br>Sales Volume: 130
 2009,SO32 2,294000,125,South East,SO32 2<br>Avg. Price: 294K<br>Sales Volume: 125
 2009,SO32 3,394000,37,South East,SO32 3<br>Avg. Price: 394K<br>Sales Volume: 37
 2009,SO40 2,224000,99,South East,SO40 2<br>Avg. Price: 224K<br>Sales Volume: 99
@@ -7194,7 +7193,7 @@ Year,Sector,Price,Volume,Region,text
 2009,TN8 7,548000,23,South East,TN8 7<br>Avg. Price: 548K<br>Sales Volume: 23
 2009,TN9 1,239000,128,South East,TN9 1<br>Avg. Price: 239K<br>Sales Volume: 128
 2009,TN9 2,215000,141,South East,TN9 2<br>Avg. Price: 215K<br>Sales Volume: 141
-2009,TQ1 1,154000,146,South West,TQ1 1<br>Avg. Price: 154K<br>Sales Volume: 146
+2009,TQ1 1,153000,147,South West,TQ1 1<br>Avg. Price: 153K<br>Sales Volume: 147
 2009,TQ1 2,262000,100,South West,TQ1 2<br>Avg. Price: 262K<br>Sales Volume: 100
 2009,TQ1 3,159000,129,South West,TQ1 3<br>Avg. Price: 159K<br>Sales Volume: 129
 2009,TQ1 4,171000,140,South West,TQ1 4<br>Avg. Price: 171K<br>Sales Volume: 140

@@ -19,7 +19,7 @@ Year,Sector,Price,Volume,Region,text
 2008,AL4 8,439000,59,South East,AL4 8<br>Avg. Price: 439K<br>Sales Volume: 59
 2008,AL4 9,304000,127,South East,AL4 9<br>Avg. Price: 304K<br>Sales Volume: 127
 2008,AL5 1,414000,75,South East,AL5 1<br>Avg. Price: 414K<br>Sales Volume: 75
-2008,AL5 2,933000,49,South East,AL5 2<br>Avg. Price: 933K<br>Sales Volume: 49
+2008,AL5 2,932000,50,South East,AL5 2<br>Avg. Price: 932K<br>Sales Volume: 50
 2008,AL5 3,545000,65,South East,AL5 3<br>Avg. Price: 545K<br>Sales Volume: 65
 2008,AL5 4,419000,128,South East,AL5 4<br>Avg. Price: 419K<br>Sales Volume: 128
 2008,AL5 5,437000,98,South East,AL5 5<br>Avg. Price: 437K<br>Sales Volume: 98
@@ -624,7 +624,7 @@ Year,Sector,Price,Volume,Region,text
 2008,BN1 3,277000,170,South East,BN1 3<br>Avg. Price: 277K<br>Sales Volume: 170
 2008,BN1 4,276000,144,South East,BN1 4<br>Avg. Price: 276K<br>Sales Volume: 144
 2008,BN1 5,336000,154,South East,BN1 5<br>Avg. Price: 336K<br>Sales Volume: 154
-2008,BN1 6,312000,237,South East,BN1 6<br>Avg. Price: 312K<br>Sales Volume: 237
+2008,BN1 6,311000,238,South East,BN1 6<br>Avg. Price: 311K<br>Sales Volume: 238
 2008,BN1 7,217000,72,South East,BN1 7<br>Avg. Price: 217K<br>Sales Volume: 72
 2008,BN1 8,260000,140,South East,BN1 8<br>Avg. Price: 260K<br>Sales Volume: 140
 2008,BN1 9,208000,42,South East,BN1 9<br>Avg. Price: 208K<br>Sales Volume: 42
@@ -2363,7 +2363,7 @@ Year,Sector,Price,Volume,Region,text
 2008,EX37 9,302000,16,South West,EX37 9<br>Avg. Price: 302K<br>Sales Volume: 16
 2008,EX38 7,198000,76,South West,EX38 7<br>Avg. Price: 198K<br>Sales Volume: 76
 2008,EX38 8,182000,38,South West,EX38 8<br>Avg. Price: 182K<br>Sales Volume: 38
-2008,EX39 1,215000,168,South West,EX39 1<br>Avg. Price: 215K<br>Sales Volume: 168
+2008,EX39 1,214000,169,South West,EX39 1<br>Avg. Price: 214K<br>Sales Volume: 169
 2008,EX39 2,150000,65,South West,EX39 2<br>Avg. Price: 150K<br>Sales Volume: 65
 2008,EX39 3,182000,149,South West,EX39 3<br>Avg. Price: 182K<br>Sales Volume: 149
 2008,EX39 4,199000,120,South West,EX39 4<br>Avg. Price: 199K<br>Sales Volume: 120
@@ -4250,7 +4250,7 @@ Year,Sector,Price,Volume,Region,text
 2008,MK42 6,166000,3,South East,MK42 6<br>Avg. Price: 166K<br>Sales Volume: 3
 2008,MK42 7,160000,76,South East,MK42 7<br>Avg. Price: 160K<br>Sales Volume: 76
 2008,MK42 8,158000,117,South East,MK42 8<br>Avg. Price: 158K<br>Sales Volume: 117
-2008,MK42 9,159000,177,South East,MK42 9<br>Avg. Price: 159K<br>Sales Volume: 177
+2008,MK42 9,159000,176,South East,MK42 9<br>Avg. Price: 159K<br>Sales Volume: 176
 2008,MK43 0,199000,124,South East,MK43 0<br>Avg. Price: 199K<br>Sales Volume: 124
 2008,MK43 7,282000,77,South East,MK43 7<br>Avg. Price: 282K<br>Sales Volume: 77
 2008,MK43 8,319000,69,South East,MK43 8<br>Avg. Price: 319K<br>Sales Volume: 69
@@ -5187,7 +5187,7 @@ Year,Sector,Price,Volume,Region,text
 2008,PE1 5,113000,110,Midlands,PE1 5<br>Avg. Price: 113K<br>Sales Volume: 110
 2008,PE10 0,192000,174,Midlands,PE10 0<br>Avg. Price: 192K<br>Sales Volume: 174
 2008,PE10 9,166000,163,Midlands,PE10 9<br>Avg. Price: 166K<br>Sales Volume: 163
-2008,PE11 1,136000,188,Midlands,PE11 1<br>Avg. Price: 136K<br>Sales Volume: 188
+2008,PE11 1,136000,187,Midlands,PE11 1<br>Avg. Price: 136K<br>Sales Volume: 187
 2008,PE11 2,148000,199,Midlands,PE11 2<br>Avg. Price: 148K<br>Sales Volume: 199
 2008,PE11 3,156000,184,Midlands,PE11 3<br>Avg. Price: 156K<br>Sales Volume: 184
 2008,PE11 4,168000,55,Midlands,PE11 4<br>Avg. Price: 168K<br>Sales Volume: 55
@@ -7046,7 +7046,7 @@ Year,Sector,Price,Volume,Region,text
 2008,TA24 5,208000,116,South West,TA24 5<br>Avg. Price: 208K<br>Sales Volume: 116
 2008,TA24 6,241000,69,South West,TA24 6<br>Avg. Price: 241K<br>Sales Volume: 69
 2008,TA24 7,328000,20,South West,TA24 7<br>Avg. Price: 328K<br>Sales Volume: 20
-2008,TA24 8,332000,58,South West,TA24 8<br>Avg. Price: 332K<br>Sales Volume: 58
+2008,TA24 8,332000,59,South West,TA24 8<br>Avg. Price: 332K<br>Sales Volume: 59
 2008,TA3 5,303000,41,South West,TA3 5<br>Avg. Price: 303K<br>Sales Volume: 41
 2008,TA3 6,326000,51,South West,TA3 6<br>Avg. Price: 326K<br>Sales Volume: 51
 2008,TA3 7,312000,60,South West,TA3 7<br>Avg. Price: 312K<br>Sales Volume: 60
@@ -7184,7 +7184,7 @@ Year,Sector,Price,Volume,Region,text
 2008,TN32 5,332000,52,South East,TN32 5<br>Avg. Price: 332K<br>Sales Volume: 52
 2008,TN33 0,284000,91,South East,TN33 0<br>Avg. Price: 284K<br>Sales Volume: 91
 2008,TN33 9,390000,27,South East,TN33 9<br>Avg. Price: 390K<br>Sales Volume: 27
-2008,TN34 1,151000,129,South East,TN34 1<br>Avg. Price: 151K<br>Sales Volume: 129
+2008,TN34 1,152000,130,South East,TN34 1<br>Avg. Price: 152K<br>Sales Volume: 130
 2008,TN34 2,212000,158,South East,TN34 2<br>Avg. Price: 212K<br>Sales Volume: 158
 2008,TN34 3,154000,194,South East,TN34 3<br>Avg. Price: 154K<br>Sales Volume: 194
 2008,TN35 4,294000,78,South East,TN35 4<br>Avg. Price: 294K<br>Sales Volume: 78

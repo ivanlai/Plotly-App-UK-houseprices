@@ -94,7 +94,7 @@ B29 4,6,Midlands,B29 4<br>Price Change: 6%
 B29 5,5,Midlands,B29 5<br>Price Change: 5%
 B29 6,5,Midlands,B29 6<br>Price Change: 5%
 B29 7,4,Midlands,B29 7<br>Price Change: 4%
-B3 1,42,Midlands,B3 1<br>Price Change: 42%
+B3 1,40,Midlands,B3 1<br>Price Change: 40%
 B30 1,12,Midlands,B30 1<br>Price Change: 12%
 B30 2,6,Midlands,B30 2<br>Price Change: 6%
 B30 3,10,Midlands,B30 3<br>Price Change: 10%
@@ -897,7 +897,7 @@ CA15 7,-2,North England,CA15 7<br>Price Change: -2%
 CA15 8,-8,North England,CA15 8<br>Price Change: -8%
 CA16 6,7,North England,CA16 6<br>Price Change: 7%
 CA17 4,-5,North England,CA17 4<br>Price Change: -5%
-CA19 1,-4,North England,CA19 1<br>Price Change: -4%
+CA19 1,0,North England,CA19 1<br>Price Change: 0%
 CA2 4,7,North England,CA2 4<br>Price Change: 7%
 CA2 5,5,North England,CA2 5<br>Price Change: 5%
 CA2 6,7,North England,CA2 6<br>Price Change: 7%
@@ -1055,7 +1055,7 @@ CF33 6,4,Wales,CF33 6<br>Price Change: 4%
 CF34 0,5,Wales,CF34 0<br>Price Change: 5%
 CF34 9,21,Wales,CF34 9<br>Price Change: 21%
 CF35 5,26,Wales,CF35 5<br>Price Change: 26%
-CF35 6,11,Wales,CF35 6<br>Price Change: 11%
+CF35 6,10,Wales,CF35 6<br>Price Change: 10%
 CF36 3,14,Wales,CF36 3<br>Price Change: 14%
 CF36 5,9,Wales,CF36 5<br>Price Change: 9%
 CF37 1,8,Wales,CF37 1<br>Price Change: 8%
@@ -2317,7 +2317,7 @@ EX20 3,34,South West,EX20 3<br>Price Change: 34%
 EX20 4,29,South West,EX20 4<br>Price Change: 29%
 EX21 5,14,South West,EX21 5<br>Price Change: 14%
 EX22 6,9,South West,EX22 6<br>Price Change: 9%
-EX22 7,7,South West,EX22 7<br>Price Change: 7%
+EX22 7,8,South West,EX22 7<br>Price Change: 8%
 EX23 0,25,South West,EX23 0<br>Price Change: 25%
 EX23 8,8,South West,EX23 8<br>Price Change: 8%
 EX23 9,15,South West,EX23 9<br>Price Change: 15%
@@ -4569,7 +4569,7 @@ NG33 4,-5,Midlands,NG33 4<br>Price Change: -5%
 NG33 5,34,Midlands,NG33 5<br>Price Change: 34%
 NG34 0,16,Midlands,NG34 0<br>Price Change: 16%
 NG34 7,2,Midlands,NG34 7<br>Price Change: 2%
-NG34 8,10,Midlands,NG34 8<br>Price Change: 10%
+NG34 8,8,Midlands,NG34 8<br>Price Change: 8%
 NG34 9,7,Midlands,NG34 9<br>Price Change: 7%
 NG4 1,6,Midlands,NG4 1<br>Price Change: 6%
 NG4 2,4,Midlands,NG4 2<br>Price Change: 4%
@@ -5299,7 +5299,7 @@ PL9 8,-1,South West,PL9 8<br>Price Change: -1%
 PL9 9,15,South West,PL9 9<br>Price Change: 15%
 PO1 1,-84,South East,PO1 1<br>Price Change: -84%
 PO1 2,18,South East,PO1 2<br>Price Change: 18%
-PO1 3,77,South East,PO1 3<br>Price Change: 77%
+PO1 3,74,South East,PO1 3<br>Price Change: 74%
 PO1 4,2,South East,PO1 4<br>Price Change: 2%
 PO1 5,8,South East,PO1 5<br>Price Change: 8%
 PO10 7,7,South East,PO10 7<br>Price Change: 7%
@@ -7466,7 +7466,7 @@ W1P 7,54,Greater London,W1P 7<br>Price Change: 54%
 W1R 7,0,Greater London,W1R 7<br>Price Change: 0%
 W1S 1,479,Greater London,W1S 1<br>Price Change: 479%
 W1S 2,-89,Greater London,W1S 2<br>Price Change: -89%
-W1S 4,-52,Greater London,W1S 4<br>Price Change: -52%
+W1S 4,-56,Greater London,W1S 4<br>Price Change: -56%
 W1T 1,-19,Greater London,W1T 1<br>Price Change: -19%
 W1T 2,90,Greater London,W1T 2<br>Price Change: 90%
 W1T 3,-15,Greater London,W1T 3<br>Price Change: -15%

@@ -319,7 +319,7 @@ BA5 3,3,South West,BA5 3<br>Price Change: 3%
 BA6 8,0,South West,BA6 8<br>Price Change: 0%
 BA6 9,-4,South West,BA6 9<br>Price Change: -4%
 BA7 7,9,South West,BA7 7<br>Price Change: 9%
-BA8 0,-8,South West,BA8 0<br>Price Change: -8%
+BA8 0,-9,South West,BA8 0<br>Price Change: -9%
 BA9 8,2,South West,BA9 8<br>Price Change: 2%
 BA9 9,2,South West,BA9 9<br>Price Change: 2%
 BB1 1,29,North England,BB1 1<br>Price Change: 29%
@@ -3088,7 +3088,7 @@ KT23 3,21,Greater London,KT23 3<br>Price Change: 21%
 KT23 4,-4,Greater London,KT23 4<br>Price Change: -4%
 KT24 5,0,Greater London,KT24 5<br>Price Change: 0%
 KT24 6,25,Greater London,KT24 6<br>Price Change: 25%
-KT3 3,11,Greater London,KT3 3<br>Price Change: 11%
+KT3 3,10,Greater London,KT3 3<br>Price Change: 10%
 KT3 4,17,Greater London,KT3 4<br>Price Change: 17%
 KT3 5,9,Greater London,KT3 5<br>Price Change: 9%
 KT3 6,10,Greater London,KT3 6<br>Price Change: 10%
@@ -3656,7 +3656,7 @@ LL13 7,8,Wales,LL13 7<br>Price Change: 8%
 LL13 8,21,Wales,LL13 8<br>Price Change: 21%
 LL13 9,0,Wales,LL13 9<br>Price Change: 0%
 LL14 1,14,Wales,LL14 1<br>Price Change: 14%
-LL14 2,15,Wales,LL14 2<br>Price Change: 15%
+LL14 2,14,Wales,LL14 2<br>Price Change: 14%
 LL14 3,18,Wales,LL14 3<br>Price Change: 18%
 LL14 4,16,Wales,LL14 4<br>Price Change: 16%
 LL14 5,9,Wales,LL14 5<br>Price Change: 9%
@@ -4477,7 +4477,7 @@ NE46 2,10,North England,NE46 2<br>Price Change: 10%
 NE46 3,6,North England,NE46 3<br>Price Change: 6%
 NE46 4,3,North England,NE46 4<br>Price Change: 3%
 NE47 0,50,North England,NE47 0<br>Price Change: 50%
-NE47 5,-12,North England,NE47 5<br>Price Change: -12%
+NE47 5,-8,North England,NE47 5<br>Price Change: -8%
 NE47 6,45,North England,NE47 6<br>Price Change: 45%
 NE47 7,8,North England,NE47 7<br>Price Change: 8%
 NE47 8,25,North England,NE47 8<br>Price Change: 25%
@@ -6429,7 +6429,7 @@ SN10 4,9,South West,SN10 4<br>Price Change: 9%
 SN10 5,22,South West,SN10 5<br>Price Change: 22%
 SN11 0,-3,South West,SN11 0<br>Price Change: -3%
 SN11 8,4,South West,SN11 8<br>Price Change: 4%
-SN11 9,-8,South West,SN11 9<br>Price Change: -8%
+SN11 9,-9,South West,SN11 9<br>Price Change: -9%
 SN12 6,5,South West,SN12 6<br>Price Change: 5%
 SN12 7,7,South West,SN12 7<br>Price Change: 7%
 SN12 8,5,South West,SN12 8<br>Price Change: 5%
@@ -7476,7 +7476,7 @@ W10 6,8,Greater London,W10 6<br>Price Change: 8%
 W11 1,-15,Greater London,W11 1<br>Price Change: -15%
 W11 2,22,Greater London,W11 2<br>Price Change: 22%
 W11 3,9,Greater London,W11 3<br>Price Change: 9%
-W11 4,-12,Greater London,W11 4<br>Price Change: -12%
+W11 4,-11,Greater London,W11 4<br>Price Change: -11%
 W12 0,11,Greater London,W12 0<br>Price Change: 11%
 W12 7,3,Greater London,W12 7<br>Price Change: 3%
 W12 8,4,Greater London,W12 8<br>Price Change: 4%
@@ -7779,7 +7779,7 @@ WF3 4,1,North England,WF3 4<br>Price Change: 1%
 WF4 1,20,North England,WF4 1<br>Price Change: 20%
 WF4 2,-5,North England,WF4 2<br>Price Change: -5%
 WF4 3,29,North England,WF4 3<br>Price Change: 29%
-WF4 4,2,North England,WF4 4<br>Price Change: 2%
+WF4 4,3,North England,WF4 4<br>Price Change: 3%
 WF4 5,8,North England,WF4 5<br>Price Change: 8%
 WF4 6,9,North England,WF4 6<br>Price Change: 9%
 WF5 0,4,North England,WF5 0<br>Price Change: 4%
@@ -8003,7 +8003,7 @@ YO16 7,7,North England,YO16 7<br>Price Change: 7%
 YO17 0,12,North England,YO17 0<br>Price Change: 12%
 YO17 6,-2,North England,YO17 6<br>Price Change: -2%
 YO17 7,-1,North England,YO17 7<br>Price Change: -1%
-YO17 8,6,North England,YO17 8<br>Price Change: 6%
+YO17 8,2,North England,YO17 8<br>Price Change: 2%
 YO17 9,5,North England,YO17 9<br>Price Change: 5%
 YO18 7,4,North England,YO18 7<br>Price Change: 4%
 YO18 8,-3,North England,YO18 8<br>Price Change: -3%
