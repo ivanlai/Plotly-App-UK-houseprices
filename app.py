@@ -154,38 +154,22 @@ schools_top_500['Best Rank'] *= -1
  Making Graphs
 ---------------------------------------------------------------------------- """
 
-def get_scattergeo(df, fig=None):
+def get_scattergeo(df):
 
-    if fig is None:
-        fig = go.Figure()
-
-    fig.update_traces(showscale=False)
+    fig = go.Figure()
 
     fig.add_trace(
         px.scatter_mapbox(df,
-                         lat="Latitude", lon="Longitude",
-                         color="Best Rank",
-                         color_continuous_scale=px.colors.diverging.Portland,
-                         color_continuous_midpoint=-250,
-                         size=np.ones(len(df)),
-                         size_max=8,
-                         opacity=1
+                          lat="Latitude", lon="Longitude",
+                          color="Best Rank",
+                          # color_discrete_sequence=['White'],
+                          size=np.ones(len(df)),
+                          size_max=8,
+                          opacity=1
         ).data[0]
     )
 
-    fig.add_trace(
-       px.scatter_mapbox(df,
-                         lat="Latitude", lon="Longitude",
-                         color_discrete_sequence=['White'],
-                         size=np.ones(len(df)),
-                         size_max=4
-       ).data[0]
-    )
-
     fig.update_traces(hovertemplate=df['Info'])
-    fig.layout.coloraxis.colorbar.title = 'School Ranking'
-    fig.layout.coloraxis.colorscale = px.colors.diverging.Portland
-    fig.layout.coloraxis.colorbar.tickvals= [-1, -100, -200, -300, -400, -500]
 
     return fig
 
@@ -248,7 +232,6 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, school):
         arg['z_vec'] = df['Percentage Change']
         arg['text_vec'] = df['text']
         arg['colorscale'] = "Picnic"
-        # arg['colorscale'] = "RdBu_r"
         arg['title'] = "Avg. Price %Change"
 
     #-------------------------------------------#
@@ -259,7 +242,14 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, school):
     #-------------------------------------------#
     # School scatter_geo plot
     if len(school) > 0:
-        fig = get_scattergeo(schools_top_500, fig=fig)
+        fig.update_traces(showscale=False)
+        school_fig = get_scattergeo(schools_top_500)
+        fig.add_trace(school_fig.data[0])
+
+        fig.layout.coloraxis.colorbar.title = 'School Ranking'
+        fig.layout.coloraxis.colorscale = px.colors.diverging.Portland
+        fig.layout.coloraxis.colorbar.tickvals = [-10, -100, -200, -300, -400, -500]
+        fig.layout.coloraxis.colorbar.ticktext = [f'Top {i}' for i in [1, 100, 200, 300, 400, 500]]
 
     #------------------------------------------#
     """
@@ -284,6 +274,7 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, school):
                              marker_line_width=3, marker_line_color='aqua', fig=fig)
 
     return fig
+
 
 """ ----------------------------------------------------------------------------
  App Settings
