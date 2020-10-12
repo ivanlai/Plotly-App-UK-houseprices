@@ -341,9 +341,9 @@ app.layout = html.Div(
                 html.Div([
                     html.Div([html.H1(children='England and Wales House Prices')],
                               style={'display': 'inline-block',
-                                     'width': '75%',
+                                     'width': '74%',
                                      'padding': '10px 0px 0px 20px'}), #padding: top, right, bottom, left
-                    html.Div([html.H6(children='Powered by')],
+                    html.Div([html.H6(children='Created with')],
                               style={'display': 'inline-block',
                                      'width': '10%',
                                      'textAlign': 'right',
@@ -355,9 +355,9 @@ app.layout = html.Div(
                                                   'width' : '100%'})
                         ], href='https://plotly.com/', target='_blank')
                         ], style={'display': 'inline-block',
-                                  'width': '15%',
+                                  'width': '14%',
                                   'textAlign': 'right',
-                                  'padding': '0px 25px 0px 0px'}),
+                                  'padding': '0px 10px 0px 0px'}),
                 ]),
             ],
         ),
@@ -419,7 +419,7 @@ app.layout = html.Div(
                 ], style={'display': 'inline-block',
                           'textAlign': 'center',
                           'padding': '5px 0px 10px 10px',
-                          'width': '35%'},
+                          'width': '33%'},
                   className="two columns"
             ),
 
@@ -491,7 +491,7 @@ app.layout = html.Div(
                         html.Div([dcc.Graph(id='price-time-series')]),
 
                     ], style={'display': 'inline-block',
-                              'padding': '20px 10px 10px 10px',
+                              'padding': '20px 20px 10px 10px',
                               'width': '39%'},
                        className="five columns"
                 ),
@@ -501,33 +501,44 @@ app.layout = html.Div(
 
         # Notes and credits --------------------------#
         html.Div([
-            dcc.Markdown('''
-                         **Note:** Property type "Other" have been filtered from the house price data.
+            html.Div([
+                dcc.Markdown('''
+                             **Notes:**
 
-                         **Other data sources:**
-                         - [OpenStreetMap](https://www.openstreetmap.org)
-                         - [Postcode boundary data](https://www.opendoorlogistics.com/data/)
-                         from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
-                         - Contains Royal Mail data © Royal Mail copyright and database right 2015
-                         - Contains National Statistics data © Crown copyright and database right 2015
-                         - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
-                         - [School 2019 performance data](https://www.gov.uk/school-performance-tables).
-                         (Note: [Attainment 8 Score](https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx)
-                         is used in GCSE ranking; and
-                         [Average Point Score](https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf)
-                         is used in A-Level ranking.)
-                         '''
-                        )
-            ], style={'textAlign': 'left',
-                      'padding': '10px 0px 5px 20px'}
-        ),
+                             1. Property type "Other" have been filtered from the house price data.
+                             2. School ranking is the best of GCSE and A-Level rankings.
+                             3. A-Level ranking is a more reliable indicator, as GCSE subjects like Classics, RE
+                             and Latin are not counted towards ranking score.  
+                             Top schools offering such subjects would have been unfairly penalized.
 
-        html.H6(
-            id="author",
-            children=[
-                dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.uk.2020@gmail.com)")
-            ], style={'padding': '5px 0px 10px 20px'}
-        )
+                             **Other data sources:**
+                             - [OpenStreetMap](https://www.openstreetmap.org)
+                             - [Postcode boundary data](https://www.opendoorlogistics.com/data/)
+                             from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
+                             - Contains Royal Mail data © Royal Mail copyright and database right 2015
+                             - Contains National Statistics data © Crown copyright and database right 2015
+                             - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
+                             - [School 2019 performance data](https://www.gov.uk/school-performance-tables).
+                             (Note: [Attainment 8 Score](https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx)
+                             is used in GCSE ranking; and
+                             [Average Point Score](https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf)
+                             is used in A-Level ranking.)
+                             '''
+                            )
+                ], style={'textAlign': 'left',
+                          'padding': '10px 0px 5px 20px',
+                          'width': '69%'},
+                   className="nine columns"
+            ),
+
+            html.Div([
+                    dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.uk.2020@gmail.com)")
+                ], style={'textAlign': 'right',
+                          'padding': '10px 20px 0px 0px',
+                          'width': '29%'},
+                   className="three columns"
+            )
+        ], className="row")
     ]
 )
 
