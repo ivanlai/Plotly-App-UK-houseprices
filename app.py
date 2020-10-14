@@ -145,19 +145,13 @@ for k, v in regional_geo_data.items():
 schools_top_500 = pd.read_csv(os.path.join(cfg['app_data_dir'], f'schools_top_500.csv'))
 schools_top_500['Best Rank'] *= -1
 
-# schools = dict()
-# for region in cfg['plotly_config'].keys():
-#     schools[region] = pd.read_csv(os.path.join(cfg['app_data_dir'], f'schools_{region}.csv'))
-
 
 """ ----------------------------------------------------------------------------
  Making Graphs
 ---------------------------------------------------------------------------- """
 
 def get_scattergeo(df):
-
     fig = go.Figure()
-
     fig.add_trace(
         px.scatter_mapbox(df,
                           lat="Latitude", lon="Longitude",
@@ -168,7 +162,6 @@ def get_scattergeo(df):
                           opacity=1
         ).data[0]
     )
-
     fig.update_traces(hovertemplate=df['Info'])
 
     return fig
@@ -508,7 +501,7 @@ app.layout = html.Div(
                              1. Property type "Other" have been filtered from the house price data.
                              2. School ranking is the best of GCSE and A-Level rankings.
                              3. A-Level ranking is a more reliable indicator, as GCSE subjects like Classics, RE
-                             and Latin are not counted towards ranking score.  
+                             and Latin are not counted towards ranking score.
                              Top schools offering such subjects would have been unfairly penalized.
 
                              **Other data sources:**
