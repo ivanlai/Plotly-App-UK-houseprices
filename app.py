@@ -37,16 +37,20 @@ cfg['end_year']         = 2020
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 cfg['latest date']      = "31 August 2020"
 
+#When running in Pythonanywhere
 appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
 if os.path.isdir(appDataPath):
-    cfg['app_data_dir'] = appDataPath #For Pythonanywhere
+    cfg['app_data_dir'] = appDataPath
+    cfg['cache dir']    = 'cache'
+
+#when running locally
 else:
     cfg['app_data_dir'] = 'appData'
+    cfg['cache dir']    = '/tmp/cache'
 
 cfg['topN']             = 50
 
 cfg['timeout']          = 5*60     # Used in flask_caching
-cfg['cache dir']        = 'cache'
 cfg['cache threshold']  = 10000    # corresponds to ~350MB max
 
 cfg['regions_lookup'] = {
@@ -356,7 +360,7 @@ app.layout = html.Div(
         ),
 
         html.Div([
-            dcc.Link(f"HM Land Reigstry Price Paid Data from 01 Jan 1995 to {cfg['latest date']}",
+            dcc.Link(f"HM Land Registry Price Paid Data from 01 Jan 1995 to {cfg['latest date']}",
                      href='https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads',
                      target='_blank',
                      #style={'color': colors['text']}
