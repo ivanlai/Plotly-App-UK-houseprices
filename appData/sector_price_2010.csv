@@ -1807,10 +1807,10 @@ Year,Sector,Price,Volume,Region,text
 2010,DE5 3,136000,167,Midlands,DE5 3<br>Avg. Price: 136K<br>Sales Volume: 167
 2010,DE5 8,161000,32,Midlands,DE5 8<br>Avg. Price: 161K<br>Sales Volume: 32
 2010,DE5 9,120000,60,Midlands,DE5 9<br>Avg. Price: 120K<br>Sales Volume: 60
-2010,DE55 1,123000,104,Midlands,DE55 1<br>Avg. Price: 123K<br>Sales Volume: 104
+2010,DE55 1,123000,103,Midlands,DE55 1<br>Avg. Price: 123K<br>Sales Volume: 103
 2010,DE55 2,105000,86,Midlands,DE55 2<br>Avg. Price: 105K<br>Sales Volume: 86
 2010,DE55 3,144000,64,Midlands,DE55 3<br>Avg. Price: 144K<br>Sales Volume: 64
-2010,DE55 4,101000,100,Midlands,DE55 4<br>Avg. Price: 101K<br>Sales Volume: 100
+2010,DE55 4,102000,101,Midlands,DE55 4<br>Avg. Price: 102K<br>Sales Volume: 101
 2010,DE55 5,115000,78,Midlands,DE55 5<br>Avg. Price: 115K<br>Sales Volume: 78
 2010,DE55 6,155000,72,Midlands,DE55 6<br>Avg. Price: 155K<br>Sales Volume: 72
 2010,DE55 7,145000,88,Midlands,DE55 7<br>Avg. Price: 145K<br>Sales Volume: 88
@@ -1968,7 +1968,7 @@ Year,Sector,Price,Volume,Region,text
 2010,DN16 2,98000,83,Midlands,DN16 2<br>Avg. Price: 98K<br>Sales Volume: 83
 2010,DN16 3,135000,201,Midlands,DN16 3<br>Avg. Price: 135K<br>Sales Volume: 201
 2010,DN17 1,115000,92,Midlands,DN17 1<br>Avg. Price: 115K<br>Sales Volume: 92
-2010,DN17 2,121000,94,Midlands,DN17 2<br>Avg. Price: 121K<br>Sales Volume: 94
+2010,DN17 2,118000,93,Midlands,DN17 2<br>Avg. Price: 118K<br>Sales Volume: 93
 2010,DN17 3,167000,62,Midlands,DN17 3<br>Avg. Price: 167K<br>Sales Volume: 62
 2010,DN17 4,152000,89,Midlands,DN17 4<br>Avg. Price: 152K<br>Sales Volume: 89
 2010,DN18 5,125000,129,Midlands,DN18 5<br>Avg. Price: 125K<br>Sales Volume: 129
@@ -4193,7 +4193,7 @@ Year,Sector,Price,Volume,Region,text
 2010,ME8 9,171000,142,South East,ME8 9<br>Avg. Price: 171K<br>Sales Volume: 142
 2010,ME9 0,396000,24,South East,ME9 0<br>Avg. Price: 396K<br>Sales Volume: 24
 2010,ME9 7,225000,93,South East,ME9 7<br>Avg. Price: 225K<br>Sales Volume: 93
-2010,ME9 8,264000,71,South East,ME9 8<br>Avg. Price: 264K<br>Sales Volume: 71
+2010,ME9 8,266000,70,South East,ME9 8<br>Avg. Price: 266K<br>Sales Volume: 70
 2010,ME9 9,173000,56,South East,ME9 9<br>Avg. Price: 173K<br>Sales Volume: 56
 2010,MK1 1,190000,3,South East,MK1 1<br>Avg. Price: 190K<br>Sales Volume: 3
 2010,MK10 7,262000,284,South East,MK10 7<br>Avg. Price: 262K<br>Sales Volume: 284
@@ -4861,7 +4861,7 @@ Year,Sector,Price,Volume,Region,text
 2010,NR14 8,238000,114,Midlands,NR14 8<br>Avg. Price: 238K<br>Sales Volume: 114
 2010,NR15 1,291000,86,Midlands,NR15 1<br>Avg. Price: 291K<br>Sales Volume: 86
 2010,NR15 2,192000,138,Midlands,NR15 2<br>Avg. Price: 192K<br>Sales Volume: 138
-2010,NR16 1,297000,60,Midlands,NR16 1<br>Avg. Price: 297K<br>Sales Volume: 60
+2010,NR16 1,292000,59,Midlands,NR16 1<br>Avg. Price: 292K<br>Sales Volume: 59
 2010,NR16 2,220000,99,Midlands,NR16 2<br>Avg. Price: 220K<br>Sales Volume: 99
 2010,NR17 1,225000,81,Midlands,NR17 1<br>Avg. Price: 225K<br>Sales Volume: 81
 2010,NR17 2,171000,128,Midlands,NR17 2<br>Avg. Price: 171K<br>Sales Volume: 128
@@ -4875,7 +4875,7 @@ Year,Sector,Price,Volume,Region,text
 2010,NR2 4,141000,78,Midlands,NR2 4<br>Avg. Price: 141K<br>Sales Volume: 78
 2010,NR20 3,241000,96,Midlands,NR20 3<br>Avg. Price: 241K<br>Sales Volume: 96
 2010,NR20 4,208000,110,Midlands,NR20 4<br>Avg. Price: 208K<br>Sales Volume: 110
-2010,NR20 5,244000,66,Midlands,NR20 5<br>Avg. Price: 244K<br>Sales Volume: 66
+2010,NR20 5,243000,65,Midlands,NR20 5<br>Avg. Price: 243K<br>Sales Volume: 65
 2010,NR21 0,343000,50,Midlands,NR21 0<br>Avg. Price: 343K<br>Sales Volume: 50
 2010,NR21 7,179000,45,Midlands,NR21 7<br>Avg. Price: 179K<br>Sales Volume: 45
 2010,NR21 8,166000,59,Midlands,NR21 8<br>Avg. Price: 166K<br>Sales Volume: 59
@@ -6114,7 +6114,7 @@ Year,Sector,Price,Volume,Region,text
 2010,SA69 9,221000,53,Wales,SA69 9<br>Avg. Price: 221K<br>Sales Volume: 53
 2010,SA7 0,152000,75,Wales,SA7 0<br>Avg. Price: 152K<br>Sales Volume: 75
 2010,SA7 9,120000,113,Wales,SA7 9<br>Avg. Price: 120K<br>Sales Volume: 113
-2010,SA70 7,256000,56,Wales,SA70 7<br>Avg. Price: 256K<br>Sales Volume: 56
+2010,SA70 7,256000,55,Wales,SA70 7<br>Avg. Price: 256K<br>Sales Volume: 55
 2010,SA70 8,213000,65,Wales,SA70 8<br>Avg. Price: 213K<br>Sales Volume: 65
 2010,SA71 4,153000,56,Wales,SA71 4<br>Avg. Price: 153K<br>Sales Volume: 56
 2010,SA71 5,183000,56,Wales,SA71 5<br>Avg. Price: 183K<br>Sales Volume: 56
@@ -6126,7 +6126,7 @@ Year,Sector,Price,Volume,Region,text
 2010,SA8 3,128000,49,Wales,SA8 3<br>Avg. Price: 128K<br>Sales Volume: 49
 2010,SA8 4,131000,79,Wales,SA8 4<br>Avg. Price: 131K<br>Sales Volume: 79
 2010,SA9 1,124000,68,Wales,SA9 1<br>Avg. Price: 124K<br>Sales Volume: 68
-2010,SA9 2,104000,93,Wales,SA9 2<br>Avg. Price: 104K<br>Sales Volume: 93
+2010,SA9 2,104000,92,Wales,SA9 2<br>Avg. Price: 104K<br>Sales Volume: 92
 2010,SE1 0,439000,28,Greater London,SE1 0<br>Avg. Price: 439K<br>Sales Volume: 28
 2010,SE1 1,439000,50,Greater London,SE1 1<br>Avg. Price: 439K<br>Sales Volume: 50
 2010,SE1 2,559000,177,Greater London,SE1 2<br>Avg. Price: 559K<br>Sales Volume: 177
@@ -6587,7 +6587,7 @@ Year,Sector,Price,Volume,Region,text
 2010,SO40 7,330000,74,South East,SO40 7<br>Avg. Price: 330K<br>Sales Volume: 74
 2010,SO40 8,204000,139,South East,SO40 8<br>Avg. Price: 204K<br>Sales Volume: 139
 2010,SO40 9,183000,72,South East,SO40 9<br>Avg. Price: 183K<br>Sales Volume: 72
-2010,SO41 0,334000,235,South East,SO41 0<br>Avg. Price: 334K<br>Sales Volume: 235
+2010,SO41 0,333000,234,South East,SO41 0<br>Avg. Price: 333K<br>Sales Volume: 234
 2010,SO41 3,520000,89,South East,SO41 3<br>Avg. Price: 520K<br>Sales Volume: 89
 2010,SO41 5,406000,16,South East,SO41 5<br>Avg. Price: 406K<br>Sales Volume: 16
 2010,SO41 6,352000,55,South East,SO41 6<br>Avg. Price: 352K<br>Sales Volume: 55

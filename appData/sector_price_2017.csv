@@ -439,7 +439,7 @@ Year,Sector,Price,Volume,Region,text
 2017,BD20 5,190000,203,North England,BD20 5<br>Avg. Price: 190K<br>Sales Volume: 203
 2017,BD20 6,175000,207,North England,BD20 6<br>Avg. Price: 175K<br>Sales Volume: 207
 2017,BD20 7,198000,131,North England,BD20 7<br>Avg. Price: 198K<br>Sales Volume: 131
-2017,BD20 8,213000,154,North England,BD20 8<br>Avg. Price: 213K<br>Sales Volume: 154
+2017,BD20 8,214000,153,North England,BD20 8<br>Avg. Price: 214K<br>Sales Volume: 153
 2017,BD20 9,271000,82,North England,BD20 9<br>Avg. Price: 271K<br>Sales Volume: 82
 2017,BD21 1,83000,76,North England,BD21 1<br>Avg. Price: 83K<br>Sales Volume: 76
 2017,BD21 2,72000,61,North England,BD21 2<br>Avg. Price: 72K<br>Sales Volume: 61
@@ -673,7 +673,7 @@ Year,Sector,Price,Volume,Region,text
 2017,BN21 3,165000,182,South East,BN21 3<br>Avg. Price: 165K<br>Sales Volume: 182
 2017,BN21 4,245000,130,South East,BN21 4<br>Avg. Price: 245K<br>Sales Volume: 130
 2017,BN22 0,264000,164,South East,BN22 0<br>Avg. Price: 264K<br>Sales Volume: 164
-2017,BN22 7,222000,135,South East,BN22 7<br>Avg. Price: 222K<br>Sales Volume: 135
+2017,BN22 7,222000,134,South East,BN22 7<br>Avg. Price: 222K<br>Sales Volume: 134
 2017,BN22 8,229000,194,South East,BN22 8<br>Avg. Price: 229K<br>Sales Volume: 194
 2017,BN22 9,232000,94,South East,BN22 9<br>Avg. Price: 232K<br>Sales Volume: 94
 2017,BN23 5,301000,204,South East,BN23 5<br>Avg. Price: 301K<br>Sales Volume: 204
@@ -767,7 +767,7 @@ Year,Sector,Price,Volume,Region,text
 2017,BS14 8,215000,126,South West,BS14 8<br>Avg. Price: 215K<br>Sales Volume: 126
 2017,BS14 9,243000,207,South West,BS14 9<br>Avg. Price: 243K<br>Sales Volume: 207
 2017,BS15 1,205000,304,South West,BS15 1<br>Avg. Price: 205K<br>Sales Volume: 304
-2017,BS15 3,282000,136,South West,BS15 3<br>Avg. Price: 282K<br>Sales Volume: 136
+2017,BS15 3,282000,135,South West,BS15 3<br>Avg. Price: 282K<br>Sales Volume: 135
 2017,BS15 4,227000,201,South West,BS15 4<br>Avg. Price: 227K<br>Sales Volume: 201
 2017,BS15 8,228000,148,South West,BS15 8<br>Avg. Price: 228K<br>Sales Volume: 148
 2017,BS15 9,243000,148,South West,BS15 9<br>Avg. Price: 243K<br>Sales Volume: 148
@@ -795,7 +795,7 @@ Year,Sector,Price,Volume,Region,text
 2017,BS22 9,259000,166,South West,BS22 9<br>Avg. Price: 259K<br>Sales Volume: 166
 2017,BS23 1,146000,115,South West,BS23 1<br>Avg. Price: 146K<br>Sales Volume: 115
 2017,BS23 2,181000,311,South West,BS23 2<br>Avg. Price: 181K<br>Sales Volume: 311
-2017,BS23 3,155000,164,South West,BS23 3<br>Avg. Price: 155K<br>Sales Volume: 164
+2017,BS23 3,155000,163,South West,BS23 3<br>Avg. Price: 155K<br>Sales Volume: 163
 2017,BS23 4,218000,158,South West,BS23 4<br>Avg. Price: 218K<br>Sales Volume: 158
 2017,BS24 0,368000,27,South West,BS24 0<br>Avg. Price: 368K<br>Sales Volume: 27
 2017,BS24 6,437000,8,South West,BS24 6<br>Avg. Price: 437K<br>Sales Volume: 8
@@ -864,7 +864,7 @@ Year,Sector,Price,Volume,Region,text
 2017,BS48 4,392000,72,South West,BS48 4<br>Avg. Price: 392K<br>Sales Volume: 72
 2017,BS49 4,305000,155,South West,BS49 4<br>Avg. Price: 305K<br>Sales Volume: 155
 2017,BS49 5,324000,42,South West,BS49 5<br>Avg. Price: 324K<br>Sales Volume: 42
-2017,BS5 0,232000,94,South West,BS5 0<br>Avg. Price: 232K<br>Sales Volume: 94
+2017,BS5 0,228000,97,South West,BS5 0<br>Avg. Price: 228K<br>Sales Volume: 97
 2017,BS5 6,250000,239,South West,BS5 6<br>Avg. Price: 250K<br>Sales Volume: 239
 2017,BS5 7,220000,261,South West,BS5 7<br>Avg. Price: 220K<br>Sales Volume: 261
 2017,BS5 8,217000,237,South West,BS5 8<br>Avg. Price: 217K<br>Sales Volume: 237
@@ -884,7 +884,7 @@ Year,Sector,Price,Volume,Region,text
 2017,BS9 3,419000,153,South West,BS9 3<br>Avg. Price: 419K<br>Sales Volume: 153
 2017,BS9 4,481000,144,South West,BS9 4<br>Avg. Price: 481K<br>Sales Volume: 144
 2017,CA1 1,169000,32,North England,CA1 1<br>Avg. Price: 169K<br>Sales Volume: 32
-2017,CA1 2,106000,226,North England,CA1 2<br>Avg. Price: 106K<br>Sales Volume: 226
+2017,CA1 2,106000,225,North England,CA1 2<br>Avg. Price: 106K<br>Sales Volume: 225
 2017,CA1 3,134000,226,North England,CA1 3<br>Avg. Price: 134K<br>Sales Volume: 226
 2017,CA10 1,240000,88,North England,CA10 1<br>Avg. Price: 240K<br>Sales Volume: 88
 2017,CA10 2,237000,79,North England,CA10 2<br>Avg. Price: 237K<br>Sales Volume: 79
@@ -912,7 +912,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CA2 4,123000,194,North England,CA2 4<br>Avg. Price: 123K<br>Sales Volume: 194
 2017,CA2 5,108000,171,North England,CA2 5<br>Avg. Price: 108K<br>Sales Volume: 171
 2017,CA2 6,149000,239,North England,CA2 6<br>Avg. Price: 149K<br>Sales Volume: 239
-2017,CA2 7,123000,249,North England,CA2 7<br>Avg. Price: 123K<br>Sales Volume: 249
+2017,CA2 7,123000,248,North England,CA2 7<br>Avg. Price: 123K<br>Sales Volume: 248
 2017,CA20 1,181000,86,North England,CA20 1<br>Avg. Price: 181K<br>Sales Volume: 86
 2017,CA21 2,211000,10,North England,CA21 2<br>Avg. Price: 211K<br>Sales Volume: 10
 2017,CA22 2,125000,113,North England,CA22 2<br>Avg. Price: 125K<br>Sales Volume: 113
@@ -949,7 +949,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CA8 2,198000,20,North England,CA8 2<br>Avg. Price: 198K<br>Sales Volume: 20
 2017,CA8 7,193000,33,North England,CA8 7<br>Avg. Price: 193K<br>Sales Volume: 33
 2017,CA8 9,262000,39,North England,CA8 9<br>Avg. Price: 262K<br>Sales Volume: 39
-2017,CA9 3,172000,40,North England,CA9 3<br>Avg. Price: 172K<br>Sales Volume: 40
+2017,CA9 3,175000,39,North England,CA9 3<br>Avg. Price: 175K<br>Sales Volume: 39
 2017,CB1 1,502000,38,Midlands,CB1 1<br>Avg. Price: 502K<br>Sales Volume: 38
 2017,CB1 2,595000,96,Midlands,CB1 2<br>Avg. Price: 595K<br>Sales Volume: 96
 2017,CB1 3,450000,306,Midlands,CB1 3<br>Avg. Price: 450K<br>Sales Volume: 306
@@ -1017,7 +1017,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CF10 1,172000,29,Wales,CF10 1<br>Avg. Price: 172K<br>Sales Volume: 29
 2017,CF10 2,231000,53,Wales,CF10 2<br>Avg. Price: 231K<br>Sales Volume: 53
 2017,CF10 3,273000,14,Wales,CF10 3<br>Avg. Price: 273K<br>Sales Volume: 14
-2017,CF10 4,171000,138,Wales,CF10 4<br>Avg. Price: 171K<br>Sales Volume: 138
+2017,CF10 4,172000,137,Wales,CF10 4<br>Avg. Price: 172K<br>Sales Volume: 137
 2017,CF10 5,166000,184,Wales,CF10 5<br>Avg. Price: 166K<br>Sales Volume: 184
 2017,CF11 0,224000,122,Wales,CF11 0<br>Avg. Price: 224K<br>Sales Volume: 122
 2017,CF11 6,154000,145,Wales,CF11 6<br>Avg. Price: 154K<br>Sales Volume: 145
@@ -1029,7 +1029,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CF14 2,222000,169,Wales,CF14 2<br>Avg. Price: 222K<br>Sales Volume: 169
 2017,CF14 3,231000,124,Wales,CF14 3<br>Avg. Price: 231K<br>Sales Volume: 124
 2017,CF14 4,286000,165,Wales,CF14 4<br>Avg. Price: 286K<br>Sales Volume: 165
-2017,CF14 5,197000,170,Wales,CF14 5<br>Avg. Price: 197K<br>Sales Volume: 170
+2017,CF14 5,198000,169,Wales,CF14 5<br>Avg. Price: 198K<br>Sales Volume: 169
 2017,CF14 6,290000,208,Wales,CF14 6<br>Avg. Price: 290K<br>Sales Volume: 208
 2017,CF14 7,282000,55,Wales,CF14 7<br>Avg. Price: 282K<br>Sales Volume: 55
 2017,CF14 9,242000,132,Wales,CF14 9<br>Avg. Price: 242K<br>Sales Volume: 132
@@ -1043,7 +1043,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CF23 9,179000,227,Wales,CF23 9<br>Avg. Price: 179K<br>Sales Volume: 227
 2017,CF24 0,140000,47,Wales,CF24 0<br>Avg. Price: 140K<br>Sales Volume: 47
 2017,CF24 1,145000,102,Wales,CF24 1<br>Avg. Price: 145K<br>Sales Volume: 102
-2017,CF24 2,141000,270,Wales,CF24 2<br>Avg. Price: 141K<br>Sales Volume: 270
+2017,CF24 2,141000,269,Wales,CF24 2<br>Avg. Price: 141K<br>Sales Volume: 269
 2017,CF24 3,206000,182,Wales,CF24 3<br>Avg. Price: 206K<br>Sales Volume: 182
 2017,CF24 4,200000,220,Wales,CF24 4<br>Avg. Price: 200K<br>Sales Volume: 220
 2017,CF3 0,158000,233,Wales,CF3 0<br>Avg. Price: 158K<br>Sales Volume: 233
@@ -1385,7 +1385,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CM3 3,442000,166,South East,CM3 3<br>Avg. Price: 442K<br>Sales Volume: 166
 2017,CM3 4,534000,133,South East,CM3 4<br>Avg. Price: 534K<br>Sales Volume: 133
 2017,CM3 5,301000,288,South East,CM3 5<br>Avg. Price: 301K<br>Sales Volume: 288
-2017,CM3 6,432000,140,South East,CM3 6<br>Avg. Price: 432K<br>Sales Volume: 140
+2017,CM3 6,432000,141,South East,CM3 6<br>Avg. Price: 432K<br>Sales Volume: 141
 2017,CM3 7,388000,26,South East,CM3 7<br>Avg. Price: 388K<br>Sales Volume: 26
 2017,CM3 8,445000,36,South East,CM3 8<br>Avg. Price: 445K<br>Sales Volume: 36
 2017,CM4 0,596000,93,South East,CM4 0<br>Avg. Price: 596K<br>Sales Volume: 93
@@ -1397,7 +1397,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CM6 3,462000,231,South East,CM6 3<br>Avg. Price: 462K<br>Sales Volume: 231
 2017,CM6 4,418000,31,South East,CM6 4<br>Avg. Price: 418K<br>Sales Volume: 31
 2017,CM7 1,245000,150,South East,CM7 1<br>Avg. Price: 245K<br>Sales Volume: 150
-2017,CM7 2,260000,103,South East,CM7 2<br>Avg. Price: 260K<br>Sales Volume: 103
+2017,CM7 2,261000,102,South East,CM7 2<br>Avg. Price: 261K<br>Sales Volume: 102
 2017,CM7 3,221000,216,South East,CM7 3<br>Avg. Price: 221K<br>Sales Volume: 216
 2017,CM7 4,460000,49,South East,CM7 4<br>Avg. Price: 460K<br>Sales Volume: 49
 2017,CM7 5,323000,112,South East,CM7 5<br>Avg. Price: 323K<br>Sales Volume: 112
@@ -1437,7 +1437,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CO15 6,220000,168,Midlands,CO15 6<br>Avg. Price: 220K<br>Sales Volume: 168
 2017,CO16 0,371000,50,Midlands,CO16 0<br>Avg. Price: 371K<br>Sales Volume: 50
 2017,CO16 7,177000,93,Midlands,CO16 7<br>Avg. Price: 177K<br>Sales Volume: 93
-2017,CO16 8,218000,237,Midlands,CO16 8<br>Avg. Price: 218K<br>Sales Volume: 237
+2017,CO16 8,217000,236,Midlands,CO16 8<br>Avg. Price: 217K<br>Sales Volume: 236
 2017,CO16 9,290000,129,Midlands,CO16 9<br>Avg. Price: 290K<br>Sales Volume: 129
 2017,CO2 0,351000,42,Midlands,CO2 0<br>Avg. Price: 351K<br>Sales Volume: 42
 2017,CO2 7,225000,360,Midlands,CO2 7<br>Avg. Price: 225K<br>Sales Volume: 360
@@ -1495,7 +1495,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CR4 2,417000,134,Greater London,CR4 2<br>Avg. Price: 417K<br>Sales Volume: 134
 2017,CR4 3,343000,134,Greater London,CR4 3<br>Avg. Price: 343K<br>Sales Volume: 134
 2017,CR4 4,316000,169,Greater London,CR4 4<br>Avg. Price: 316K<br>Sales Volume: 169
-2017,CR5 1,443000,178,Greater London,CR5 1<br>Avg. Price: 443K<br>Sales Volume: 178
+2017,CR5 1,443000,177,Greater London,CR5 1<br>Avg. Price: 443K<br>Sales Volume: 177
 2017,CR5 2,459000,114,Greater London,CR5 2<br>Avg. Price: 459K<br>Sales Volume: 114
 2017,CR5 3,535000,241,Greater London,CR5 3<br>Avg. Price: 535K<br>Sales Volume: 241
 2017,CR6 9,540000,187,Greater London,CR6 9<br>Avg. Price: 540K<br>Sales Volume: 187
@@ -1603,7 +1603,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CV21 4,225000,112,Midlands,CV21 4<br>Avg. Price: 225K<br>Sales Volume: 112
 2017,CV22 5,286000,164,Midlands,CV22 5<br>Avg. Price: 286K<br>Sales Volume: 164
 2017,CV22 6,275000,167,Midlands,CV22 6<br>Avg. Price: 275K<br>Sales Volume: 167
-2017,CV22 7,254000,356,Midlands,CV22 7<br>Avg. Price: 254K<br>Sales Volume: 356
+2017,CV22 7,254000,355,Midlands,CV22 7<br>Avg. Price: 254K<br>Sales Volume: 355
 2017,CV23 0,292000,203,Midlands,CV23 0<br>Avg. Price: 292K<br>Sales Volume: 203
 2017,CV23 1,141000,9,Midlands,CV23 1<br>Avg. Price: 141K<br>Sales Volume: 9
 2017,CV23 8,385000,43,Midlands,CV23 8<br>Avg. Price: 385K<br>Sales Volume: 43
@@ -1628,7 +1628,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CV34 7,415000,135,Midlands,CV34 7<br>Avg. Price: 415K<br>Sales Volume: 135
 2017,CV35 0,440000,141,Midlands,CV35 0<br>Avg. Price: 440K<br>Sales Volume: 141
 2017,CV35 7,420000,90,Midlands,CV35 7<br>Avg. Price: 420K<br>Sales Volume: 90
-2017,CV35 8,430000,85,Midlands,CV35 8<br>Avg. Price: 430K<br>Sales Volume: 85
+2017,CV35 8,432000,84,Midlands,CV35 8<br>Avg. Price: 432K<br>Sales Volume: 84
 2017,CV35 9,343000,191,Midlands,CV35 9<br>Avg. Price: 343K<br>Sales Volume: 191
 2017,CV36 4,338000,120,Midlands,CV36 4<br>Avg. Price: 338K<br>Sales Volume: 120
 2017,CV36 5,526000,53,Midlands,CV36 5<br>Avg. Price: 526K<br>Sales Volume: 53
@@ -1695,7 +1695,7 @@ Year,Sector,Price,Volume,Region,text
 2017,CW5 8,361000,72,North England,CW5 8<br>Avg. Price: 361K<br>Sales Volume: 72
 2017,CW6 0,374000,163,North England,CW6 0<br>Avg. Price: 374K<br>Sales Volume: 163
 2017,CW6 9,408000,97,North England,CW6 9<br>Avg. Price: 408K<br>Sales Volume: 97
-2017,CW7 1,156000,188,North England,CW7 1<br>Avg. Price: 156K<br>Sales Volume: 188
+2017,CW7 1,156000,187,North England,CW7 1<br>Avg. Price: 156K<br>Sales Volume: 187
 2017,CW7 2,174000,199,North England,CW7 2<br>Avg. Price: 174K<br>Sales Volume: 199
 2017,CW7 3,140000,142,North England,CW7 3<br>Avg. Price: 140K<br>Sales Volume: 142
 2017,CW7 4,207000,95,North England,CW7 4<br>Avg. Price: 207K<br>Sales Volume: 95
@@ -1809,7 +1809,7 @@ Year,Sector,Price,Volume,Region,text
 2017,DE5 9,158000,95,Midlands,DE5 9<br>Avg. Price: 158K<br>Sales Volume: 95
 2017,DE55 1,163000,108,Midlands,DE55 1<br>Avg. Price: 163K<br>Sales Volume: 108
 2017,DE55 2,139000,107,Midlands,DE55 2<br>Avg. Price: 139K<br>Sales Volume: 107
-2017,DE55 3,163000,61,Midlands,DE55 3<br>Avg. Price: 163K<br>Sales Volume: 61
+2017,DE55 3,163000,60,Midlands,DE55 3<br>Avg. Price: 163K<br>Sales Volume: 60
 2017,DE55 4,130000,149,Midlands,DE55 4<br>Avg. Price: 130K<br>Sales Volume: 149
 2017,DE55 5,148000,191,Midlands,DE55 5<br>Avg. Price: 148K<br>Sales Volume: 191
 2017,DE55 6,177000,103,Midlands,DE55 6<br>Avg. Price: 177K<br>Sales Volume: 103
@@ -1823,7 +1823,7 @@ Year,Sector,Price,Volume,Region,text
 2017,DE6 3,346000,75,Midlands,DE6 3<br>Avg. Price: 346K<br>Sales Volume: 75
 2017,DE6 4,354000,9,Midlands,DE6 4<br>Avg. Price: 354K<br>Sales Volume: 9
 2017,DE6 5,308000,43,Midlands,DE6 5<br>Avg. Price: 308K<br>Sales Volume: 43
-2017,DE65 5,206000,315,Midlands,DE65 5<br>Avg. Price: 206K<br>Sales Volume: 315
+2017,DE65 5,206000,314,Midlands,DE65 5<br>Avg. Price: 206K<br>Sales Volume: 314
 2017,DE65 6,299000,266,Midlands,DE65 6<br>Avg. Price: 299K<br>Sales Volume: 266
 2017,DE7 4,152000,214,Midlands,DE7 4<br>Avg. Price: 152K<br>Sales Volume: 214
 2017,DE7 5,131000,233,Midlands,DE7 5<br>Avg. Price: 131K<br>Sales Volume: 233
@@ -1851,7 +1851,7 @@ Year,Sector,Price,Volume,Region,text
 2017,DH3 2,134000,47,North England,DH3 2<br>Avg. Price: 134K<br>Sales Volume: 47
 2017,DH3 3,142000,130,North England,DH3 3<br>Avg. Price: 142K<br>Sales Volume: 130
 2017,DH3 4,190000,85,North England,DH3 4<br>Avg. Price: 190K<br>Sales Volume: 85
-2017,DH4 4,152000,157,North England,DH4 4<br>Avg. Price: 152K<br>Sales Volume: 157
+2017,DH4 4,151000,156,North England,DH4 4<br>Avg. Price: 151K<br>Sales Volume: 156
 2017,DH4 5,133000,117,North England,DH4 5<br>Avg. Price: 133K<br>Sales Volume: 117
 2017,DH4 6,157000,275,North England,DH4 6<br>Avg. Price: 157K<br>Sales Volume: 275
 2017,DH4 7,132000,121,North England,DH4 7<br>Avg. Price: 132K<br>Sales Volume: 121
@@ -1957,7 +1957,7 @@ Year,Sector,Price,Volume,Region,text
 2017,DN14 7,221000,149,Midlands,DN14 7<br>Avg. Price: 221K<br>Sales Volume: 149
 2017,DN14 8,175000,98,Midlands,DN14 8<br>Avg. Price: 175K<br>Sales Volume: 98
 2017,DN14 9,200000,105,Midlands,DN14 9<br>Avg. Price: 200K<br>Sales Volume: 105
-2017,DN15 0,231000,23,Midlands,DN15 0<br>Avg. Price: 231K<br>Sales Volume: 23
+2017,DN15 0,237000,22,Midlands,DN15 0<br>Avg. Price: 237K<br>Sales Volume: 22
 2017,DN15 6,80000,81,Midlands,DN15 6<br>Avg. Price: 80K<br>Sales Volume: 81
 2017,DN15 7,110000,101,Midlands,DN15 7<br>Avg. Price: 110K<br>Sales Volume: 101
 2017,DN15 8,119000,169,Midlands,DN15 8<br>Avg. Price: 119K<br>Sales Volume: 169
@@ -2044,7 +2044,7 @@ Year,Sector,Price,Volume,Region,text
 2017,DN9 3,198000,218,Midlands,DN9 3<br>Avg. Price: 198K<br>Sales Volume: 218
 2017,DT1 1,254000,244,South West,DT1 1<br>Avg. Price: 254K<br>Sales Volume: 244
 2017,DT1 2,304000,179,South West,DT1 2<br>Avg. Price: 304K<br>Sales Volume: 179
-2017,DT1 3,323000,201,South West,DT1 3<br>Avg. Price: 323K<br>Sales Volume: 201
+2017,DT1 3,323000,200,South West,DT1 3<br>Avg. Price: 323K<br>Sales Volume: 200
 2017,DT10 1,299000,126,South West,DT10 1<br>Avg. Price: 299K<br>Sales Volume: 126
 2017,DT10 2,360000,90,South West,DT10 2<br>Avg. Price: 360K<br>Sales Volume: 90
 2017,DT11 0,326000,103,South West,DT11 0<br>Avg. Price: 326K<br>Sales Volume: 103
@@ -2119,7 +2119,7 @@ Year,Sector,Price,Volume,Region,text
 2017,DY8 1,183000,104,Midlands,DY8 1<br>Avg. Price: 183K<br>Sales Volume: 104
 2017,DY8 2,347000,100,Midlands,DY8 2<br>Avg. Price: 347K<br>Sales Volume: 100
 2017,DY8 3,230000,172,Midlands,DY8 3<br>Avg. Price: 230K<br>Sales Volume: 172
-2017,DY8 4,194000,295,Midlands,DY8 4<br>Avg. Price: 194K<br>Sales Volume: 295
+2017,DY8 4,194000,294,Midlands,DY8 4<br>Avg. Price: 194K<br>Sales Volume: 294
 2017,DY8 5,181000,234,Midlands,DY8 5<br>Avg. Price: 181K<br>Sales Volume: 234
 2017,DY9 0,343000,300,Midlands,DY9 0<br>Avg. Price: 343K<br>Sales Volume: 300
 2017,DY9 7,160000,55,Midlands,DY9 7<br>Avg. Price: 160K<br>Sales Volume: 55
@@ -2421,7 +2421,7 @@ Year,Sector,Price,Volume,Region,text
 2017,FY4 4,103000,213,North England,FY4 4<br>Avg. Price: 103K<br>Sales Volume: 213
 2017,FY4 5,185000,189,North England,FY4 5<br>Avg. Price: 185K<br>Sales Volume: 189
 2017,FY5 1,135000,202,North England,FY5 1<br>Avg. Price: 135K<br>Sales Volume: 202
-2017,FY5 2,156000,325,North England,FY5 2<br>Avg. Price: 156K<br>Sales Volume: 325
+2017,FY5 2,156000,324,North England,FY5 2<br>Avg. Price: 156K<br>Sales Volume: 324
 2017,FY5 3,125000,222,North England,FY5 3<br>Avg. Price: 125K<br>Sales Volume: 222
 2017,FY5 4,135000,178,North England,FY5 4<br>Avg. Price: 135K<br>Sales Volume: 178
 2017,FY5 5,175000,125,North England,FY5 5<br>Avg. Price: 175K<br>Sales Volume: 125
@@ -2500,7 +2500,7 @@ Year,Sector,Price,Volume,Region,text
 2017,GL51 4,375000,34,South West,GL51 4<br>Avg. Price: 375K<br>Sales Volume: 34
 2017,GL51 6,303000,136,South West,GL51 6<br>Avg. Price: 303K<br>Sales Volume: 136
 2017,GL51 7,191000,96,South West,GL51 7<br>Avg. Price: 191K<br>Sales Volume: 96
-2017,GL51 8,251000,174,South West,GL51 8<br>Avg. Price: 251K<br>Sales Volume: 174
+2017,GL51 8,251000,173,South West,GL51 8<br>Avg. Price: 251K<br>Sales Volume: 173
 2017,GL51 9,215000,89,South West,GL51 9<br>Avg. Price: 215K<br>Sales Volume: 89
 2017,GL52 2,297000,202,South West,GL52 2<br>Avg. Price: 297K<br>Sales Volume: 202
 2017,GL52 3,426000,177,South West,GL52 3<br>Avg. Price: 426K<br>Sales Volume: 177
@@ -2552,7 +2552,7 @@ Year,Sector,Price,Volume,Region,text
 2017,GU12 5,341000,167,South East,GU12 5<br>Avg. Price: 341K<br>Sales Volume: 167
 2017,GU12 6,366000,176,South East,GU12 6<br>Avg. Price: 366K<br>Sales Volume: 176
 2017,GU14 0,336000,128,South East,GU14 0<br>Avg. Price: 336K<br>Sales Volume: 128
-2017,GU14 6,319000,223,South East,GU14 6<br>Avg. Price: 319K<br>Sales Volume: 223
+2017,GU14 6,319000,222,South East,GU14 6<br>Avg. Price: 319K<br>Sales Volume: 222
 2017,GU14 7,304000,169,South East,GU14 7<br>Avg. Price: 304K<br>Sales Volume: 169
 2017,GU14 8,339000,230,South East,GU14 8<br>Avg. Price: 339K<br>Sales Volume: 230
 2017,GU14 9,346000,278,South East,GU14 9<br>Avg. Price: 346K<br>Sales Volume: 278
@@ -2783,7 +2783,7 @@ Year,Sector,Price,Volume,Region,text
 2017,HP2 7,338000,162,South East,HP2 7<br>Avg. Price: 338K<br>Sales Volume: 162
 2017,HP20 1,292000,177,South East,HP20 1<br>Avg. Price: 292K<br>Sales Volume: 177
 2017,HP20 2,238000,103,South East,HP20 2<br>Avg. Price: 238K<br>Sales Volume: 103
-2017,HP21 7,302000,168,South East,HP21 7<br>Avg. Price: 302K<br>Sales Volume: 168
+2017,HP21 7,302000,167,South East,HP21 7<br>Avg. Price: 302K<br>Sales Volume: 167
 2017,HP21 8,237000,198,South East,HP21 8<br>Avg. Price: 237K<br>Sales Volume: 198
 2017,HP21 9,301000,193,South East,HP21 9<br>Avg. Price: 301K<br>Sales Volume: 193
 2017,HP22 4,503000,85,South East,HP22 4<br>Avg. Price: 503K<br>Sales Volume: 85
@@ -2816,7 +2816,7 @@ Year,Sector,Price,Volume,Region,text
 2017,HR1 3,285000,117,Midlands,HR1 3<br>Avg. Price: 285K<br>Sales Volume: 117
 2017,HR1 4,303000,91,Midlands,HR1 4<br>Avg. Price: 303K<br>Sales Volume: 91
 2017,HR2 0,313000,54,Midlands,HR2 0<br>Avg. Price: 313K<br>Sales Volume: 54
-2017,HR2 6,189000,127,Midlands,HR2 6<br>Avg. Price: 189K<br>Sales Volume: 127
+2017,HR2 6,189000,126,Midlands,HR2 6<br>Avg. Price: 189K<br>Sales Volume: 126
 2017,HR2 7,167000,230,Midlands,HR2 7<br>Avg. Price: 167K<br>Sales Volume: 230
 2017,HR2 8,301000,72,Midlands,HR2 8<br>Avg. Price: 301K<br>Sales Volume: 72
 2017,HR2 9,280000,95,Midlands,HR2 9<br>Avg. Price: 280K<br>Sales Volume: 95
@@ -3092,7 +3092,7 @@ Year,Sector,Price,Volume,Region,text
 2017,KT20 7,633000,58,Greater London,KT20 7<br>Avg. Price: 633K<br>Sales Volume: 58
 2017,KT21 1,684000,82,Greater London,KT21 1<br>Avg. Price: 684K<br>Sales Volume: 82
 2017,KT21 2,613000,96,Greater London,KT21 2<br>Avg. Price: 613K<br>Sales Volume: 96
-2017,KT22 0,1799000,65,Greater London,"KT22 0<br>Avg. Price: 1,799K<br>Sales Volume: 65"
+2017,KT22 0,1822000,64,Greater London,"KT22 0<br>Avg. Price: 1,822K<br>Sales Volume: 64"
 2017,KT22 7,336000,158,Greater London,KT22 7<br>Avg. Price: 336K<br>Sales Volume: 158
 2017,KT22 8,631000,94,Greater London,KT22 8<br>Avg. Price: 631K<br>Sales Volume: 94
 2017,KT22 9,689000,143,Greater London,KT22 9<br>Avg. Price: 689K<br>Sales Volume: 143
@@ -3469,7 +3469,7 @@ Year,Sector,Price,Volume,Region,text
 2017,L7 9,72000,9,North England,L7 9<br>Avg. Price: 72K<br>Sales Volume: 9
 2017,L8 0,87000,59,North England,L8 0<br>Avg. Price: 87K<br>Sales Volume: 59
 2017,L8 1,120000,7,North England,L8 1<br>Avg. Price: 120K<br>Sales Volume: 7
-2017,L8 2,102000,12,North England,L8 2<br>Avg. Price: 102K<br>Sales Volume: 12
+2017,L8 2,102000,11,North England,L8 2<br>Avg. Price: 102K<br>Sales Volume: 11
 2017,L8 3,162000,34,North England,L8 3<br>Avg. Price: 162K<br>Sales Volume: 34
 2017,L8 4,93000,29,North England,L8 4<br>Avg. Price: 93K<br>Sales Volume: 29
 2017,L8 5,101000,25,North England,L8 5<br>Avg. Price: 101K<br>Sales Volume: 25
@@ -3577,7 +3577,7 @@ Year,Sector,Price,Volume,Region,text
 2017,LE12 7,218000,394,Midlands,LE12 7<br>Avg. Price: 218K<br>Sales Volume: 394
 2017,LE12 8,313000,303,Midlands,LE12 8<br>Avg. Price: 313K<br>Sales Volume: 303
 2017,LE12 9,191000,300,Midlands,LE12 9<br>Avg. Price: 191K<br>Sales Volume: 300
-2017,LE13 0,195000,225,Midlands,LE13 0<br>Avg. Price: 195K<br>Sales Volume: 225
+2017,LE13 0,195000,224,Midlands,LE13 0<br>Avg. Price: 195K<br>Sales Volume: 224
 2017,LE13 1,191000,272,Midlands,LE13 1<br>Avg. Price: 191K<br>Sales Volume: 272
 2017,LE14 2,346000,77,Midlands,LE14 2<br>Avg. Price: 346K<br>Sales Volume: 77
 2017,LE14 3,242000,102,Midlands,LE14 3<br>Avg. Price: 242K<br>Sales Volume: 102
@@ -3628,7 +3628,7 @@ Year,Sector,Price,Volume,Region,text
 2017,LE4 8,178000,179,Midlands,LE4 8<br>Avg. Price: 178K<br>Sales Volume: 179
 2017,LE4 9,154000,144,Midlands,LE4 9<br>Avg. Price: 154K<br>Sales Volume: 144
 2017,LE5 0,195000,174,Midlands,LE5 0<br>Avg. Price: 195K<br>Sales Volume: 174
-2017,LE5 1,222000,410,Midlands,LE5 1<br>Avg. Price: 222K<br>Sales Volume: 410
+2017,LE5 1,223000,409,Midlands,LE5 1<br>Avg. Price: 223K<br>Sales Volume: 409
 2017,LE5 2,177000,143,Midlands,LE5 2<br>Avg. Price: 177K<br>Sales Volume: 143
 2017,LE5 3,148000,78,Midlands,LE5 3<br>Avg. Price: 148K<br>Sales Volume: 78
 2017,LE5 4,162000,100,Midlands,LE5 4<br>Avg. Price: 162K<br>Sales Volume: 100
@@ -3715,7 +3715,7 @@ Year,Sector,Price,Volume,Region,text
 2017,LL28 4,188000,252,Wales,LL28 4<br>Avg. Price: 188K<br>Sales Volume: 252
 2017,LL28 5,210000,105,Wales,LL28 5<br>Avg. Price: 210K<br>Sales Volume: 105
 2017,LL29 6,196000,31,Wales,LL29 6<br>Avg. Price: 196K<br>Sales Volume: 31
-2017,LL29 7,154000,123,Wales,LL29 7<br>Avg. Price: 154K<br>Sales Volume: 123
+2017,LL29 7,153000,122,Wales,LL29 7<br>Avg. Price: 153K<br>Sales Volume: 122
 2017,LL29 8,178000,149,Wales,LL29 8<br>Avg. Price: 178K<br>Sales Volume: 149
 2017,LL29 9,151000,129,Wales,LL29 9<br>Avg. Price: 151K<br>Sales Volume: 129
 2017,LL30 1,175000,191,Wales,LL30 1<br>Avg. Price: 175K<br>Sales Volume: 191
@@ -3826,7 +3826,7 @@ Year,Sector,Price,Volume,Region,text
 2017,LN6 9,210000,544,Midlands,LN6 9<br>Avg. Price: 210K<br>Sales Volume: 544
 2017,LN7 6,196000,94,Midlands,LN7 6<br>Avg. Price: 196K<br>Sales Volume: 94
 2017,LN8 2,291000,21,Midlands,LN8 2<br>Avg. Price: 291K<br>Sales Volume: 21
-2017,LN8 3,180000,227,Midlands,LN8 3<br>Avg. Price: 180K<br>Sales Volume: 227
+2017,LN8 3,180000,226,Midlands,LN8 3<br>Avg. Price: 180K<br>Sales Volume: 226
 2017,LN8 5,203000,55,Midlands,LN8 5<br>Avg. Price: 203K<br>Sales Volume: 55
 2017,LN8 6,170000,56,Midlands,LN8 6<br>Avg. Price: 170K<br>Sales Volume: 56
 2017,LN9 5,208000,120,Midlands,LN9 5<br>Avg. Price: 208K<br>Sales Volume: 120
@@ -3961,7 +3961,7 @@ Year,Sector,Price,Volume,Region,text
 2017,LU4 0,241000,214,South East,LU4 0<br>Avg. Price: 241K<br>Sales Volume: 214
 2017,LU4 8,227000,99,South East,LU4 8<br>Avg. Price: 227K<br>Sales Volume: 99
 2017,LU4 9,260000,213,South East,LU4 9<br>Avg. Price: 260K<br>Sales Volume: 213
-2017,LU5 4,248000,266,South East,LU5 4<br>Avg. Price: 248K<br>Sales Volume: 266
+2017,LU5 4,248000,265,South East,LU5 4<br>Avg. Price: 248K<br>Sales Volume: 265
 2017,LU5 5,230000,281,South East,LU5 5<br>Avg. Price: 230K<br>Sales Volume: 281
 2017,LU5 6,331000,176,South East,LU5 6<br>Avg. Price: 331K<br>Sales Volume: 176
 2017,LU6 1,260000,303,South East,LU6 1<br>Avg. Price: 260K<br>Sales Volume: 303
@@ -4009,7 +4009,7 @@ Year,Sector,Price,Volume,Region,text
 2017,M2 4,230000,1,North England,M2 4<br>Avg. Price: 230K<br>Sales Volume: 1
 2017,M2 7,288000,2,North England,M2 7<br>Avg. Price: 288K<br>Sales Volume: 2
 2017,M20 1,255000,109,North England,M20 1<br>Avg. Price: 255K<br>Sales Volume: 109
-2017,M20 2,378000,333,North England,M20 2<br>Avg. Price: 378K<br>Sales Volume: 333
+2017,M20 2,378000,332,North England,M20 2<br>Avg. Price: 378K<br>Sales Volume: 332
 2017,M20 3,288000,119,North England,M20 3<br>Avg. Price: 288K<br>Sales Volume: 119
 2017,M20 4,228000,143,North England,M20 4<br>Avg. Price: 228K<br>Sales Volume: 143
 2017,M20 5,320000,79,North England,M20 5<br>Avg. Price: 320K<br>Sales Volume: 79
@@ -4126,7 +4126,7 @@ Year,Sector,Price,Volume,Region,text
 2017,M7 1,155000,54,North England,M7 1<br>Avg. Price: 155K<br>Sales Volume: 54
 2017,M7 2,197000,65,North England,M7 2<br>Avg. Price: 197K<br>Sales Volume: 65
 2017,M7 3,140000,122,North England,M7 3<br>Avg. Price: 140K<br>Sales Volume: 122
-2017,M7 4,232000,136,North England,M7 4<br>Avg. Price: 232K<br>Sales Volume: 136
+2017,M7 4,233000,135,North England,M7 4<br>Avg. Price: 233K<br>Sales Volume: 135
 2017,M8 0,101000,85,North England,M8 0<br>Avg. Price: 101K<br>Sales Volume: 85
 2017,M8 4,149000,127,North England,M8 4<br>Avg. Price: 149K<br>Sales Volume: 127
 2017,M8 5,142000,59,North England,M8 5<br>Avg. Price: 142K<br>Sales Volume: 59
@@ -4256,7 +4256,7 @@ Year,Sector,Price,Volume,Region,text
 2017,MK40 2,245000,132,South East,MK40 2<br>Avg. Price: 245K<br>Sales Volume: 132
 2017,MK40 3,302000,160,South East,MK40 3<br>Avg. Price: 302K<br>Sales Volume: 160
 2017,MK40 4,329000,467,South East,MK40 4<br>Avg. Price: 329K<br>Sales Volume: 467
-2017,MK41 0,277000,178,South East,MK41 0<br>Avg. Price: 277K<br>Sales Volume: 178
+2017,MK41 0,277000,177,South East,MK41 0<br>Avg. Price: 277K<br>Sales Volume: 177
 2017,MK41 6,262000,70,South East,MK41 6<br>Avg. Price: 262K<br>Sales Volume: 70
 2017,MK41 7,281000,221,South East,MK41 7<br>Avg. Price: 281K<br>Sales Volume: 221
 2017,MK41 8,324000,102,South East,MK41 8<br>Avg. Price: 324K<br>Sales Volume: 102
@@ -4304,7 +4304,7 @@ Year,Sector,Price,Volume,Region,text
 2017,N1 2,999000,111,Greater London,N1 2<br>Avg. Price: 999K<br>Sales Volume: 111
 2017,N1 3,803000,97,Greater London,N1 3<br>Avg. Price: 803K<br>Sales Volume: 97
 2017,N1 4,702000,95,Greater London,N1 4<br>Avg. Price: 702K<br>Sales Volume: 95
-2017,N1 5,596000,79,Greater London,N1 5<br>Avg. Price: 596K<br>Sales Volume: 79
+2017,N1 5,590000,80,Greater London,N1 5<br>Avg. Price: 590K<br>Sales Volume: 80
 2017,N1 6,600000,60,Greater London,N1 6<br>Avg. Price: 600K<br>Sales Volume: 60
 2017,N1 7,675000,146,Greater London,N1 7<br>Avg. Price: 675K<br>Sales Volume: 146
 2017,N1 8,1168000,74,Greater London,"N1 8<br>Avg. Price: 1,168K<br>Sales Volume: 74"
@@ -4571,7 +4571,7 @@ Year,Sector,Price,Volume,Region,text
 2017,NG1 2,248000,4,Midlands,NG1 2<br>Avg. Price: 248K<br>Sales Volume: 4
 2017,NG1 3,159000,37,Midlands,NG1 3<br>Avg. Price: 159K<br>Sales Volume: 37
 2017,NG1 4,173000,18,Midlands,NG1 4<br>Avg. Price: 173K<br>Sales Volume: 18
-2017,NG1 5,189000,49,Midlands,NG1 5<br>Avg. Price: 189K<br>Sales Volume: 49
+2017,NG1 5,183000,48,Midlands,NG1 5<br>Avg. Price: 183K<br>Sales Volume: 48
 2017,NG1 6,182000,28,Midlands,NG1 6<br>Avg. Price: 182K<br>Sales Volume: 28
 2017,NG1 7,168000,22,Midlands,NG1 7<br>Avg. Price: 168K<br>Sales Volume: 22
 2017,NG10 1,136000,157,Midlands,NG10 1<br>Avg. Price: 136K<br>Sales Volume: 157
@@ -4799,7 +4799,7 @@ Year,Sector,Price,Volume,Region,text
 2017,NP12 3,131000,104,Wales,NP12 3<br>Avg. Price: 131K<br>Sales Volume: 104
 2017,NP13 1,71000,121,Wales,NP13 1<br>Avg. Price: 71K<br>Sales Volume: 121
 2017,NP13 2,71000,94,Wales,NP13 2<br>Avg. Price: 71K<br>Sales Volume: 94
-2017,NP13 3,100000,77,Wales,NP13 3<br>Avg. Price: 100K<br>Sales Volume: 77
+2017,NP13 3,101000,76,Wales,NP13 3<br>Avg. Price: 101K<br>Sales Volume: 76
 2017,NP15 1,322000,81,Wales,NP15 1<br>Avg. Price: 322K<br>Sales Volume: 81
 2017,NP15 2,282000,22,Wales,NP15 2<br>Avg. Price: 282K<br>Sales Volume: 22
 2017,NP16 5,224000,200,Wales,NP16 5<br>Avg. Price: 224K<br>Sales Volume: 200
@@ -4830,7 +4830,7 @@ Year,Sector,Price,Volume,Region,text
 2017,NP23 7,63000,32,Wales,NP23 7<br>Avg. Price: 63K<br>Sales Volume: 32
 2017,NP23 8,189000,15,Wales,NP23 8<br>Avg. Price: 189K<br>Sales Volume: 15
 2017,NP24 6,71000,81,Wales,NP24 6<br>Avg. Price: 71K<br>Sales Volume: 81
-2017,NP25 3,277000,115,Wales,NP25 3<br>Avg. Price: 277K<br>Sales Volume: 115
+2017,NP25 3,277000,114,Wales,NP25 3<br>Avg. Price: 277K<br>Sales Volume: 114
 2017,NP25 4,368000,51,Wales,NP25 4<br>Avg. Price: 368K<br>Sales Volume: 51
 2017,NP25 5,260000,178,Wales,NP25 5<br>Avg. Price: 260K<br>Sales Volume: 178
 2017,NP26 3,248000,177,Wales,NP26 3<br>Avg. Price: 248K<br>Sales Volume: 177
@@ -4889,10 +4889,10 @@ Year,Sector,Price,Volume,Region,text
 2017,NR19 1,201000,212,Midlands,NR19 1<br>Avg. Price: 201K<br>Sales Volume: 212
 2017,NR19 2,211000,163,Midlands,NR19 2<br>Avg. Price: 211K<br>Sales Volume: 163
 2017,NR2 1,291000,36,Midlands,NR2 1<br>Avg. Price: 291K<br>Sales Volume: 36
-2017,NR2 2,290000,148,Midlands,NR2 2<br>Avg. Price: 290K<br>Sales Volume: 148
+2017,NR2 2,289000,147,Midlands,NR2 2<br>Avg. Price: 289K<br>Sales Volume: 147
 2017,NR2 3,271000,222,Midlands,NR2 3<br>Avg. Price: 271K<br>Sales Volume: 222
 2017,NR2 4,179000,104,Midlands,NR2 4<br>Avg. Price: 179K<br>Sales Volume: 104
-2017,NR20 3,278000,168,Midlands,NR20 3<br>Avg. Price: 278K<br>Sales Volume: 168
+2017,NR20 3,278000,167,Midlands,NR20 3<br>Avg. Price: 278K<br>Sales Volume: 167
 2017,NR20 4,278000,127,Midlands,NR20 4<br>Avg. Price: 278K<br>Sales Volume: 127
 2017,NR20 5,289000,74,Midlands,NR20 5<br>Avg. Price: 289K<br>Sales Volume: 74
 2017,NR21 0,294000,62,Midlands,NR21 0<br>Avg. Price: 294K<br>Sales Volume: 62
@@ -5111,7 +5111,7 @@ Year,Sector,Price,Volume,Region,text
 2017,OX13 6,444000,173,South East,OX13 6<br>Avg. Price: 444K<br>Sales Volume: 173
 2017,OX14 1,357000,163,South East,OX14 1<br>Avg. Price: 357K<br>Sales Volume: 163
 2017,OX14 2,385000,93,South East,OX14 2<br>Avg. Price: 385K<br>Sales Volume: 93
-2017,OX14 3,355000,126,South East,OX14 3<br>Avg. Price: 355K<br>Sales Volume: 126
+2017,OX14 3,355000,125,South East,OX14 3<br>Avg. Price: 355K<br>Sales Volume: 125
 2017,OX14 4,434000,159,South East,OX14 4<br>Avg. Price: 434K<br>Sales Volume: 159
 2017,OX14 5,305000,220,South East,OX14 5<br>Avg. Price: 305K<br>Sales Volume: 220
 2017,OX15 0,472000,69,South East,OX15 0<br>Avg. Price: 472K<br>Sales Volume: 69
@@ -5139,7 +5139,7 @@ Year,Sector,Price,Volume,Region,text
 2017,OX2 8,751000,70,South East,OX2 8<br>Avg. Price: 751K<br>Sales Volume: 70
 2017,OX2 9,503000,178,South East,OX2 9<br>Avg. Price: 503K<br>Sales Volume: 178
 2017,OX20 1,478000,104,South East,OX20 1<br>Avg. Price: 478K<br>Sales Volume: 104
-2017,OX25 1,453000,25,South East,OX25 1<br>Avg. Price: 453K<br>Sales Volume: 25
+2017,OX25 1,450000,25,South East,OX25 1<br>Avg. Price: 450K<br>Sales Volume: 25
 2017,OX25 2,374000,65,South East,OX25 2<br>Avg. Price: 374K<br>Sales Volume: 65
 2017,OX25 3,599000,5,South East,OX25 3<br>Avg. Price: 599K<br>Sales Volume: 5
 2017,OX25 4,379000,15,South East,OX25 4<br>Avg. Price: 379K<br>Sales Volume: 15
@@ -5195,7 +5195,7 @@ Year,Sector,Price,Volume,Region,text
 2017,OX9 3,435000,200,South East,OX9 3<br>Avg. Price: 435K<br>Sales Volume: 200
 2017,OX9 7,582000,13,South East,OX9 7<br>Avg. Price: 582K<br>Sales Volume: 13
 2017,PE1 1,149000,61,Midlands,PE1 1<br>Avg. Price: 149K<br>Sales Volume: 61
-2017,PE1 2,142000,162,Midlands,PE1 2<br>Avg. Price: 142K<br>Sales Volume: 162
+2017,PE1 2,143000,161,Midlands,PE1 2<br>Avg. Price: 143K<br>Sales Volume: 161
 2017,PE1 3,143000,177,Midlands,PE1 3<br>Avg. Price: 143K<br>Sales Volume: 177
 2017,PE1 4,169000,243,Midlands,PE1 4<br>Avg. Price: 169K<br>Sales Volume: 243
 2017,PE1 5,129000,242,Midlands,PE1 5<br>Avg. Price: 129K<br>Sales Volume: 242
@@ -5266,7 +5266,7 @@ Year,Sector,Price,Volume,Region,text
 2017,PE28 5,288000,140,Midlands,PE28 5<br>Avg. Price: 288K<br>Sales Volume: 140
 2017,PE28 9,396000,114,Midlands,PE28 9<br>Avg. Price: 396K<br>Sales Volume: 114
 2017,PE29 1,240000,166,Midlands,PE29 1<br>Avg. Price: 240K<br>Sales Volume: 166
-2017,PE29 2,305000,194,Midlands,PE29 2<br>Avg. Price: 305K<br>Sales Volume: 194
+2017,PE29 2,303000,193,Midlands,PE29 2<br>Avg. Price: 303K<br>Sales Volume: 193
 2017,PE29 3,186000,90,Midlands,PE29 3<br>Avg. Price: 186K<br>Sales Volume: 90
 2017,PE29 6,263000,111,Midlands,PE29 6<br>Avg. Price: 263K<br>Sales Volume: 111
 2017,PE29 7,184000,46,Midlands,PE29 7<br>Avg. Price: 184K<br>Sales Volume: 46
@@ -5373,7 +5373,7 @@ Year,Sector,Price,Volume,Region,text
 2017,PL33 9,218000,45,South West,PL33 9<br>Avg. Price: 218K<br>Sales Volume: 45
 2017,PL34 0,288000,40,South West,PL34 0<br>Avg. Price: 288K<br>Sales Volume: 40
 2017,PL35 0,275000,28,South West,PL35 0<br>Avg. Price: 275K<br>Sales Volume: 28
-2017,PL4 0,152000,84,South West,PL4 0<br>Avg. Price: 152K<br>Sales Volume: 84
+2017,PL4 0,153000,83,South West,PL4 0<br>Avg. Price: 153K<br>Sales Volume: 83
 2017,PL4 6,163000,89,South West,PL4 6<br>Avg. Price: 163K<br>Sales Volume: 89
 2017,PL4 7,162000,185,South West,PL4 7<br>Avg. Price: 162K<br>Sales Volume: 185
 2017,PL4 8,161000,131,South West,PL4 8<br>Avg. Price: 161K<br>Sales Volume: 131
@@ -5465,7 +5465,7 @@ Year,Sector,Price,Volume,Region,text
 2017,PO30 5,189000,223,South East,PO30 5<br>Avg. Price: 189K<br>Sales Volume: 223
 2017,PO31 7,225000,240,South East,PO31 7<br>Avg. Price: 225K<br>Sales Volume: 240
 2017,PO31 8,337000,117,South East,PO31 8<br>Avg. Price: 337K<br>Sales Volume: 117
-2017,PO32 6,188000,260,South East,PO32 6<br>Avg. Price: 188K<br>Sales Volume: 260
+2017,PO32 6,188000,259,South East,PO32 6<br>Avg. Price: 188K<br>Sales Volume: 259
 2017,PO33 1,215000,202,South East,PO33 1<br>Avg. Price: 215K<br>Sales Volume: 202
 2017,PO33 2,155000,214,South East,PO33 2<br>Avg. Price: 155K<br>Sales Volume: 214
 2017,PO33 3,221000,188,South East,PO33 3<br>Avg. Price: 221K<br>Sales Volume: 188
@@ -5827,6 +5827,7 @@ Year,Sector,Price,Volume,Region,text
 2017,RM9 4,298000,146,Greater London,RM9 4<br>Avg. Price: 298K<br>Sales Volume: 146
 2017,RM9 5,288000,129,Greater London,RM9 5<br>Avg. Price: 288K<br>Sales Volume: 129
 2017,RM9 6,288000,128,Greater London,RM9 6<br>Avg. Price: 288K<br>Sales Volume: 128
+2017,S032 1,229000,1,Midlands,S032 1<br>Avg. Price: 229K<br>Sales Volume: 1
 2017,S1 2,143000,55,Midlands,S1 2<br>Avg. Price: 143K<br>Sales Volume: 55
 2017,S1 4,113000,145,Midlands,S1 4<br>Avg. Price: 113K<br>Sales Volume: 145
 2017,S10 1,209000,255,Midlands,S10 1<br>Avg. Price: 209K<br>Sales Volume: 255
@@ -5871,7 +5872,7 @@ Year,Sector,Price,Volume,Region,text
 2017,S21 4,163000,105,Midlands,S21 4<br>Avg. Price: 163K<br>Sales Volume: 105
 2017,S21 5,254000,16,Midlands,S21 5<br>Avg. Price: 254K<br>Sales Volume: 16
 2017,S25 1,192000,22,Midlands,S25 1<br>Avg. Price: 192K<br>Sales Volume: 22
-2017,S25 2,131000,142,Midlands,S25 2<br>Avg. Price: 131K<br>Sales Volume: 142
+2017,S25 2,130000,141,Midlands,S25 2<br>Avg. Price: 130K<br>Sales Volume: 141
 2017,S25 3,132000,87,Midlands,S25 3<br>Avg. Price: 132K<br>Sales Volume: 87
 2017,S25 4,146000,79,Midlands,S25 4<br>Avg. Price: 146K<br>Sales Volume: 79
 2017,S25 5,200000,41,Midlands,S25 5<br>Avg. Price: 200K<br>Sales Volume: 41
@@ -5962,7 +5963,7 @@ Year,Sector,Price,Volume,Region,text
 2017,S63 7,140000,133,Midlands,S63 7<br>Avg. Price: 140K<br>Sales Volume: 133
 2017,S63 8,104000,134,Midlands,S63 8<br>Avg. Price: 104K<br>Sales Volume: 134
 2017,S63 9,99000,199,Midlands,S63 9<br>Avg. Price: 99K<br>Sales Volume: 199
-2017,S64 0,141000,140,Midlands,S64 0<br>Avg. Price: 141K<br>Sales Volume: 140
+2017,S64 0,141000,139,Midlands,S64 0<br>Avg. Price: 141K<br>Sales Volume: 139
 2017,S64 5,122000,33,Midlands,S64 5<br>Avg. Price: 122K<br>Sales Volume: 33
 2017,S64 8,135000,234,Midlands,S64 8<br>Avg. Price: 135K<br>Sales Volume: 234
 2017,S64 9,71000,98,Midlands,S64 9<br>Avg. Price: 71K<br>Sales Volume: 98
@@ -6023,7 +6024,7 @@ Year,Sector,Price,Volume,Region,text
 2017,S9 5,87000,21,Midlands,S9 5<br>Avg. Price: 87K<br>Sales Volume: 21
 2017,SA1 1,158000,91,Wales,SA1 1<br>Avg. Price: 158K<br>Sales Volume: 91
 2017,SA1 2,114000,111,Wales,SA1 2<br>Avg. Price: 114K<br>Sales Volume: 111
-2017,SA1 3,125000,69,Wales,SA1 3<br>Avg. Price: 125K<br>Sales Volume: 69
+2017,SA1 3,126000,68,Wales,SA1 3<br>Avg. Price: 126K<br>Sales Volume: 68
 2017,SA1 4,137000,38,Wales,SA1 4<br>Avg. Price: 137K<br>Sales Volume: 38
 2017,SA1 5,119000,13,Wales,SA1 5<br>Avg. Price: 119K<br>Sales Volume: 13
 2017,SA1 6,102000,177,Wales,SA1 6<br>Avg. Price: 102K<br>Sales Volume: 177
@@ -6052,7 +6053,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SA15 1,94000,150,Wales,SA15 1<br>Avg. Price: 94K<br>Sales Volume: 150
 2017,SA15 2,136000,179,Wales,SA15 2<br>Avg. Price: 136K<br>Sales Volume: 179
 2017,SA15 3,119000,113,Wales,SA15 3<br>Avg. Price: 119K<br>Sales Volume: 113
-2017,SA15 4,145000,145,Wales,SA15 4<br>Avg. Price: 145K<br>Sales Volume: 145
+2017,SA15 4,145000,144,Wales,SA15 4<br>Avg. Price: 145K<br>Sales Volume: 144
 2017,SA15 5,128000,101,Wales,SA15 5<br>Avg. Price: 128K<br>Sales Volume: 101
 2017,SA16 0,148000,160,Wales,SA16 0<br>Avg. Price: 148K<br>Sales Volume: 160
 2017,SA17 4,135000,119,Wales,SA17 4<br>Avg. Price: 135K<br>Sales Volume: 119
@@ -6235,7 +6236,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SE6 3,348000,127,Greater London,SE6 3<br>Avg. Price: 348K<br>Sales Volume: 127
 2017,SE6 4,448000,324,Greater London,SE6 4<br>Avg. Price: 448K<br>Sales Volume: 324
 2017,SE7 7,438000,115,Greater London,SE7 7<br>Avg. Price: 438K<br>Sales Volume: 115
-2017,SE7 8,466000,56,Greater London,SE7 8<br>Avg. Price: 466K<br>Sales Volume: 56
+2017,SE7 8,463000,55,Greater London,SE7 8<br>Avg. Price: 463K<br>Sales Volume: 55
 2017,SE8 3,465000,127,Greater London,SE8 3<br>Avg. Price: 465K<br>Sales Volume: 127
 2017,SE8 4,450000,101,Greater London,SE8 4<br>Avg. Price: 450K<br>Sales Volume: 101
 2017,SE8 5,487000,223,Greater London,SE8 5<br>Avg. Price: 487K<br>Sales Volume: 223
@@ -6304,7 +6305,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SK1 2,123000,37,North England,SK1 2<br>Avg. Price: 123K<br>Sales Volume: 37
 2017,SK1 3,89000,154,North England,SK1 3<br>Avg. Price: 89K<br>Sales Volume: 154
 2017,SK1 4,139000,170,North England,SK1 4<br>Avg. Price: 139K<br>Sales Volume: 170
-2017,SK10 1,199000,67,North England,SK10 1<br>Avg. Price: 199K<br>Sales Volume: 67
+2017,SK10 1,200000,66,North England,SK10 1<br>Avg. Price: 200K<br>Sales Volume: 66
 2017,SK10 2,288000,265,North England,SK10 2<br>Avg. Price: 288K<br>Sales Volume: 265
 2017,SK10 3,241000,181,North England,SK10 3<br>Avg. Price: 241K<br>Sales Volume: 181
 2017,SK10 4,917000,144,North England,SK10 4<br>Avg. Price: 917K<br>Sales Volume: 144
@@ -6314,7 +6315,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SK11 7,171000,201,North England,SK11 7<br>Avg. Price: 171K<br>Sales Volume: 201
 2017,SK11 8,197000,228,North England,SK11 8<br>Avg. Price: 197K<br>Sales Volume: 228
 2017,SK11 9,431000,59,North England,SK11 9<br>Avg. Price: 431K<br>Sales Volume: 59
-2017,SK12 1,334000,245,North England,SK12 1<br>Avg. Price: 334K<br>Sales Volume: 245
+2017,SK12 1,333000,244,North England,SK12 1<br>Avg. Price: 333K<br>Sales Volume: 244
 2017,SK12 2,308000,97,North England,SK12 2<br>Avg. Price: 308K<br>Sales Volume: 97
 2017,SK13 0,86000,14,North England,SK13 0<br>Avg. Price: 86K<br>Sales Volume: 14
 2017,SK13 1,161000,109,North England,SK13 1<br>Avg. Price: 161K<br>Sales Volume: 109
@@ -6336,7 +6337,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SK16 4,108000,111,North England,SK16 4<br>Avg. Price: 108K<br>Sales Volume: 111
 2017,SK16 5,154000,168,North England,SK16 5<br>Avg. Price: 154K<br>Sales Volume: 168
 2017,SK17 0,256000,30,North England,SK17 0<br>Avg. Price: 256K<br>Sales Volume: 30
-2017,SK17 6,208000,170,North England,SK17 6<br>Avg. Price: 208K<br>Sales Volume: 170
+2017,SK17 6,207000,169,North England,SK17 6<br>Avg. Price: 207K<br>Sales Volume: 169
 2017,SK17 7,156000,104,North England,SK17 7<br>Avg. Price: 156K<br>Sales Volume: 104
 2017,SK17 8,219000,92,North England,SK17 8<br>Avg. Price: 219K<br>Sales Volume: 92
 2017,SK17 9,242000,131,North England,SK17 9<br>Avg. Price: 242K<br>Sales Volume: 131
@@ -6380,7 +6381,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SK8 2,219000,209,North England,SK8 2<br>Avg. Price: 219K<br>Sales Volume: 209
 2017,SK8 3,253000,224,North England,SK8 3<br>Avg. Price: 253K<br>Sales Volume: 224
 2017,SK8 4,261000,142,North England,SK8 4<br>Avg. Price: 261K<br>Sales Volume: 142
-2017,SK8 5,263000,137,North England,SK8 5<br>Avg. Price: 263K<br>Sales Volume: 137
+2017,SK8 5,261000,136,North England,SK8 5<br>Avg. Price: 261K<br>Sales Volume: 136
 2017,SK8 6,292000,152,North England,SK8 6<br>Avg. Price: 292K<br>Sales Volume: 152
 2017,SK8 7,366000,124,North England,SK8 7<br>Avg. Price: 366K<br>Sales Volume: 124
 2017,SK9 1,417000,126,North England,SK9 1<br>Avg. Price: 417K<br>Sales Volume: 126
@@ -6599,7 +6600,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SO31 7,382000,169,South East,SO31 7<br>Avg. Price: 382K<br>Sales Volume: 169
 2017,SO31 8,336000,167,South East,SO31 8<br>Avg. Price: 336K<br>Sales Volume: 167
 2017,SO31 9,443000,114,South East,SO31 9<br>Avg. Price: 443K<br>Sales Volume: 114
-2017,SO32 1,440000,152,South East,SO32 1<br>Avg. Price: 440K<br>Sales Volume: 152
+2017,SO32 1,441000,151,South East,SO32 1<br>Avg. Price: 441K<br>Sales Volume: 151
 2017,SO32 2,461000,269,South East,SO32 2<br>Avg. Price: 461K<br>Sales Volume: 269
 2017,SO32 3,566000,40,South East,SO32 3<br>Avg. Price: 566K<br>Sales Volume: 40
 2017,SO40 2,325000,121,South East,SO40 2<br>Avg. Price: 325K<br>Sales Volume: 121
@@ -6883,7 +6884,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SW17 7,788000,167,Greater London,SW17 7<br>Avg. Price: 788K<br>Sales Volume: 167
 2017,SW17 8,711000,212,Greater London,SW17 8<br>Avg. Price: 711K<br>Sales Volume: 212
 2017,SW17 9,539000,210,Greater London,SW17 9<br>Avg. Price: 539K<br>Sales Volume: 210
-2017,SW18 1,758000,304,Greater London,SW18 1<br>Avg. Price: 758K<br>Sales Volume: 304
+2017,SW18 1,759000,303,Greater London,SW18 1<br>Avg. Price: 759K<br>Sales Volume: 303
 2017,SW18 2,830000,127,Greater London,SW18 2<br>Avg. Price: 830K<br>Sales Volume: 127
 2017,SW18 3,840000,217,Greater London,SW18 3<br>Avg. Price: 840K<br>Sales Volume: 217
 2017,SW18 4,575000,244,Greater London,SW18 4<br>Avg. Price: 575K<br>Sales Volume: 244
@@ -6972,7 +6973,7 @@ Year,Sector,Price,Volume,Region,text
 2017,SY10 8,296000,54,Wales,SY10 8<br>Avg. Price: 296K<br>Sales Volume: 54
 2017,SY10 9,234000,100,Wales,SY10 9<br>Avg. Price: 234K<br>Sales Volume: 100
 2017,SY11 1,163000,106,Wales,SY11 1<br>Avg. Price: 163K<br>Sales Volume: 106
-2017,SY11 2,171000,180,Wales,SY11 2<br>Avg. Price: 171K<br>Sales Volume: 180
+2017,SY11 2,171000,179,Wales,SY11 2<br>Avg. Price: 171K<br>Sales Volume: 179
 2017,SY11 3,175000,107,Wales,SY11 3<br>Avg. Price: 175K<br>Sales Volume: 107
 2017,SY11 4,258000,70,Wales,SY11 4<br>Avg. Price: 258K<br>Sales Volume: 70
 2017,SY12 0,193000,113,Wales,SY12 0<br>Avg. Price: 193K<br>Sales Volume: 113
@@ -7276,7 +7277,7 @@ Year,Sector,Price,Volume,Region,text
 2017,TQ9 5,317000,205,South West,TQ9 5<br>Avg. Price: 317K<br>Sales Volume: 205
 2017,TQ9 6,419000,107,South West,TQ9 6<br>Avg. Price: 419K<br>Sales Volume: 107
 2017,TQ9 7,336000,71,South West,TQ9 7<br>Avg. Price: 336K<br>Sales Volume: 71
-2017,TR1 1,291000,205,South West,TR1 1<br>Avg. Price: 291K<br>Sales Volume: 205
+2017,TR1 1,291000,204,South West,TR1 1<br>Avg. Price: 291K<br>Sales Volume: 204
 2017,TR1 2,263000,95,South West,TR1 2<br>Avg. Price: 263K<br>Sales Volume: 95
 2017,TR1 3,242000,218,South West,TR1 3<br>Avg. Price: 242K<br>Sales Volume: 218
 2017,TR10 8,210000,132,South West,TR10 8<br>Avg. Price: 210K<br>Sales Volume: 132
@@ -7477,7 +7478,7 @@ Year,Sector,Price,Volume,Region,text
 2017,TW5 9,404000,86,Greater London,TW5 9<br>Avg. Price: 404K<br>Sales Volume: 86
 2017,TW7 4,464000,140,Greater London,TW7 4<br>Avg. Price: 464K<br>Sales Volume: 140
 2017,TW7 5,424000,206,Greater London,TW7 5<br>Avg. Price: 424K<br>Sales Volume: 206
-2017,TW7 6,442000,137,Greater London,TW7 6<br>Avg. Price: 442K<br>Sales Volume: 137
+2017,TW7 6,443000,135,Greater London,TW7 6<br>Avg. Price: 443K<br>Sales Volume: 135
 2017,TW7 7,673000,108,Greater London,TW7 7<br>Avg. Price: 673K<br>Sales Volume: 108
 2017,TW8 0,542000,221,Greater London,TW8 0<br>Avg. Price: 542K<br>Sales Volume: 221
 2017,TW8 8,508000,103,Greater London,TW8 8<br>Avg. Price: 508K<br>Sales Volume: 103
@@ -7793,7 +7794,7 @@ Year,Sector,Price,Volume,Region,text
 2017,WF1 4,144000,173,North England,WF1 4<br>Avg. Price: 144K<br>Sales Volume: 173
 2017,WF1 5,124000,116,North England,WF1 5<br>Avg. Price: 124K<br>Sales Volume: 116
 2017,WF10 1,150000,118,North England,WF10 1<br>Avg. Price: 150K<br>Sales Volume: 118
-2017,WF10 2,145000,206,North England,WF10 2<br>Avg. Price: 145K<br>Sales Volume: 206
+2017,WF10 2,144000,205,North England,WF10 2<br>Avg. Price: 144K<br>Sales Volume: 205
 2017,WF10 3,135000,151,North England,WF10 3<br>Avg. Price: 135K<br>Sales Volume: 151
 2017,WF10 4,118000,227,North England,WF10 4<br>Avg. Price: 118K<br>Sales Volume: 227
 2017,WF10 5,158000,387,North England,WF10 5<br>Avg. Price: 158K<br>Sales Volume: 387
@@ -7919,7 +7920,7 @@ Year,Sector,Price,Volume,Region,text
 2017,WR6 5,305000,95,Midlands,WR6 5<br>Avg. Price: 305K<br>Sales Volume: 95
 2017,WR6 6,357000,88,Midlands,WR6 6<br>Avg. Price: 357K<br>Sales Volume: 88
 2017,WR7 4,392000,97,Midlands,WR7 4<br>Avg. Price: 392K<br>Sales Volume: 97
-2017,WR8 0,283000,118,Midlands,WR8 0<br>Avg. Price: 283K<br>Sales Volume: 118
+2017,WR8 0,283000,117,Midlands,WR8 0<br>Avg. Price: 283K<br>Sales Volume: 117
 2017,WR8 9,384000,45,Midlands,WR8 9<br>Avg. Price: 384K<br>Sales Volume: 45
 2017,WR9 0,362000,62,Midlands,WR9 0<br>Avg. Price: 362K<br>Sales Volume: 62
 2017,WR9 7,292000,332,Midlands,WR9 7<br>Avg. Price: 292K<br>Sales Volume: 332

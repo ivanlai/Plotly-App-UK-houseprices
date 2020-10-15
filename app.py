@@ -529,7 +529,9 @@ app.layout = html.Div(
             ),
 
             html.Div([
-                    dcc.Markdown("© 2020 Ivan Lai [[Email]](mailto:ivanlai.uk.2020@gmail.com)")
+                    dcc.Markdown("© 2020 Ivan Lai " + \
+                                 "[[Blog]](https://www.ivanlai.project-ds.net/) " + \
+                                 "[[Email]](mailto:ivanlai.uk.2020@gmail.com)")
                 ], style={'textAlign': 'right',
                           'padding': '10px 20px 0px 0px',
                           'width': '29%'},

@@ -768,7 +768,7 @@ Year,Sector,Price,Volume,Region,text
 2012,BS15 3,224000,138,South West,BS15 3<br>Avg. Price: 224K<br>Sales Volume: 138
 2012,BS15 4,157000,110,South West,BS15 4<br>Avg. Price: 157K<br>Sales Volume: 110
 2012,BS15 8,156000,108,South West,BS15 8<br>Avg. Price: 156K<br>Sales Volume: 108
-2012,BS15 9,173000,105,South West,BS15 9<br>Avg. Price: 173K<br>Sales Volume: 105
+2012,BS15 9,173000,106,South West,BS15 9<br>Avg. Price: 173K<br>Sales Volume: 106
 2012,BS16 1,231000,280,South West,BS16 1<br>Avg. Price: 231K<br>Sales Volume: 280
 2012,BS16 2,188000,116,South West,BS16 2<br>Avg. Price: 188K<br>Sales Volume: 116
 2012,BS16 3,149000,82,South West,BS16 3<br>Avg. Price: 149K<br>Sales Volume: 82
@@ -1244,7 +1244,7 @@ Year,Sector,Price,Volume,Region,text
 2012,CH49 9,94000,10,North England,CH49 9<br>Avg. Price: 94K<br>Sales Volume: 10
 2012,CH5 1,110000,50,North England,CH5 1<br>Avg. Price: 110K<br>Sales Volume: 50
 2012,CH5 2,121000,41,North England,CH5 2<br>Avg. Price: 121K<br>Sales Volume: 41
-2012,CH5 3,192000,129,North England,CH5 3<br>Avg. Price: 192K<br>Sales Volume: 129
+2012,CH5 3,193000,128,North England,CH5 3<br>Avg. Price: 193K<br>Sales Volume: 128
 2012,CH5 4,135000,120,North England,CH5 4<br>Avg. Price: 135K<br>Sales Volume: 120
 2012,CH6 5,124000,85,North England,CH6 5<br>Avg. Price: 124K<br>Sales Volume: 85
 2012,CH6 6,121000,23,North England,CH6 6<br>Avg. Price: 121K<br>Sales Volume: 23
@@ -1769,7 +1769,7 @@ Year,Sector,Price,Volume,Region,text
 2012,DE21 5,256000,48,Midlands,DE21 5<br>Avg. Price: 256K<br>Sales Volume: 48
 2012,DE21 6,110000,133,Midlands,DE21 6<br>Avg. Price: 110K<br>Sales Volume: 133
 2012,DE21 7,134000,142,Midlands,DE21 7<br>Avg. Price: 134K<br>Sales Volume: 142
-2012,DE22 1,212000,95,Midlands,DE22 1<br>Avg. Price: 212K<br>Sales Volume: 95
+2012,DE22 1,210000,94,Midlands,DE22 1<br>Avg. Price: 210K<br>Sales Volume: 94
 2012,DE22 2,213000,197,Midlands,DE22 2<br>Avg. Price: 213K<br>Sales Volume: 197
 2012,DE22 3,105000,175,Midlands,DE22 3<br>Avg. Price: 105K<br>Sales Volume: 175
 2012,DE22 4,125000,95,Midlands,DE22 4<br>Avg. Price: 125K<br>Sales Volume: 95
@@ -2539,7 +2539,7 @@ Year,Sector,Price,Volume,Region,text
 2012,GU11 1,150000,82,South East,GU11 1<br>Avg. Price: 150K<br>Sales Volume: 82
 2012,GU11 2,155000,1,South East,GU11 2<br>Avg. Price: 155K<br>Sales Volume: 1
 2012,GU11 3,239000,168,South East,GU11 3<br>Avg. Price: 239K<br>Sales Volume: 168
-2012,GU12 4,189000,201,South East,GU12 4<br>Avg. Price: 189K<br>Sales Volume: 201
+2012,GU12 4,189000,200,South East,GU12 4<br>Avg. Price: 189K<br>Sales Volume: 200
 2012,GU12 5,241000,134,South East,GU12 5<br>Avg. Price: 241K<br>Sales Volume: 134
 2012,GU12 6,238000,106,South East,GU12 6<br>Avg. Price: 238K<br>Sales Volume: 106
 2012,GU14 0,221000,85,South East,GU14 0<br>Avg. Price: 221K<br>Sales Volume: 85
@@ -3441,7 +3441,7 @@ Year,Sector,Price,Volume,Region,text
 2012,L6 7,110000,7,North England,L6 7<br>Avg. Price: 110K<br>Sales Volume: 7
 2012,L6 8,97000,16,North England,L6 8<br>Avg. Price: 97K<br>Sales Volume: 16
 2012,L6 9,59000,14,North England,L6 9<br>Avg. Price: 59K<br>Sales Volume: 14
-2012,L7 0,71000,21,North England,L7 0<br>Avg. Price: 71K<br>Sales Volume: 21
+2012,L7 0,69000,20,North England,L7 0<br>Avg. Price: 69K<br>Sales Volume: 20
 2012,L7 1,130000,25,North England,L7 1<br>Avg. Price: 130K<br>Sales Volume: 25
 2012,L7 2,86000,12,North England,L7 2<br>Avg. Price: 86K<br>Sales Volume: 12
 2012,L7 3,77000,11,North England,L7 3<br>Avg. Price: 77K<br>Sales Volume: 11
@@ -5737,7 +5737,7 @@ Year,Sector,Price,Volume,Region,text
 2012,RH6 7,235000,89,South East,RH6 7<br>Avg. Price: 235K<br>Sales Volume: 89
 2012,RH6 8,232000,127,South East,RH6 8<br>Avg. Price: 232K<br>Sales Volume: 127
 2012,RH6 9,292000,213,South East,RH6 9<br>Avg. Price: 292K<br>Sales Volume: 213
-2012,RH7 6,383000,106,South East,RH7 6<br>Avg. Price: 383K<br>Sales Volume: 106
+2012,RH7 6,383000,105,South East,RH7 6<br>Avg. Price: 383K<br>Sales Volume: 105
 2012,RH8 0,551000,125,South East,RH8 0<br>Avg. Price: 551K<br>Sales Volume: 125
 2012,RH8 9,429000,94,South East,RH8 9<br>Avg. Price: 429K<br>Sales Volume: 94
 2012,RH9 8,316000,83,South East,RH9 8<br>Avg. Price: 316K<br>Sales Volume: 83
@@ -6330,7 +6330,7 @@ Year,Sector,Price,Volume,Region,text
 2012,SK4 3,245000,114,North England,SK4 3<br>Avg. Price: 245K<br>Sales Volume: 114
 2012,SK4 4,270000,111,North England,SK4 4<br>Avg. Price: 270K<br>Sales Volume: 111
 2012,SK4 5,201000,70,North England,SK4 5<br>Avg. Price: 201K<br>Sales Volume: 70
-2012,SK5 6,106000,150,North England,SK5 6<br>Avg. Price: 106K<br>Sales Volume: 150
+2012,SK5 6,106000,149,North England,SK5 6<br>Avg. Price: 106K<br>Sales Volume: 149
 2012,SK5 7,112000,95,North England,SK5 7<br>Avg. Price: 112K<br>Sales Volume: 95
 2012,SK5 8,70000,19,North England,SK5 8<br>Avg. Price: 70K<br>Sales Volume: 19
 2012,SK6 1,152000,115,North England,SK6 1<br>Avg. Price: 152K<br>Sales Volume: 115
@@ -6927,7 +6927,7 @@ Year,Sector,Price,Volume,Region,text
 2012,SW7 5,1647000,82,Greater London,"SW7 5<br>Avg. Price: 1,647K<br>Sales Volume: 82"
 2012,SW8 1,429000,97,Greater London,SW8 1<br>Avg. Price: 429K<br>Sales Volume: 97
 2012,SW8 2,458000,121,Greater London,SW8 2<br>Avg. Price: 458K<br>Sales Volume: 121
-2012,SW8 3,376000,121,Greater London,SW8 3<br>Avg. Price: 376K<br>Sales Volume: 121
+2012,SW8 3,375000,121,Greater London,SW8 3<br>Avg. Price: 375K<br>Sales Volume: 121
 2012,SW8 4,432000,106,Greater London,SW8 4<br>Avg. Price: 432K<br>Sales Volume: 106
 2012,SW8 5,679000,6,Greater London,SW8 5<br>Avg. Price: 679K<br>Sales Volume: 6
 2012,SW9 0,431000,119,Greater London,SW9 0<br>Avg. Price: 431K<br>Sales Volume: 119

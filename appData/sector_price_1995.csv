@@ -1716,7 +1716,7 @@ Year,Sector,Price,Volume,Region,text
 1995,DA15 7,79000,110,Greater London,DA15 7<br>Avg. Price: 79K<br>Sales Volume: 110
 1995,DA15 8,76000,255,Greater London,DA15 8<br>Avg. Price: 76K<br>Sales Volume: 255
 1995,DA15 9,74000,138,Greater London,DA15 9<br>Avg. Price: 74K<br>Sales Volume: 138
-1995,DA16 1,70000,174,Greater London,DA16 1<br>Avg. Price: 70K<br>Sales Volume: 174
+1995,DA16 1,70000,175,Greater London,DA16 1<br>Avg. Price: 70K<br>Sales Volume: 175
 1995,DA16 2,74000,185,Greater London,DA16 2<br>Avg. Price: 74K<br>Sales Volume: 185
 1995,DA16 3,64000,120,Greater London,DA16 3<br>Avg. Price: 64K<br>Sales Volume: 120
 1995,DA17 5,48000,238,Greater London,DA17 5<br>Avg. Price: 48K<br>Sales Volume: 238
@@ -2452,7 +2452,7 @@ Year,Sector,Price,Volume,Region,text
 1995,GL4 4,50000,137,South West,GL4 4<br>Avg. Price: 50K<br>Sales Volume: 137
 1995,GL4 5,67000,198,South West,GL4 5<br>Avg. Price: 67K<br>Sales Volume: 198
 1995,GL4 6,43000,66,South West,GL4 6<br>Avg. Price: 43K<br>Sales Volume: 66
-1995,GL4 8,109000,36,South West,GL4 8<br>Avg. Price: 109K<br>Sales Volume: 36
+1995,GL4 8,105000,35,South West,GL4 8<br>Avg. Price: 105K<br>Sales Volume: 35
 1995,GL5 1,54000,139,South West,GL5 1<br>Avg. Price: 54K<br>Sales Volume: 139
 1995,GL5 2,76000,61,South West,GL5 2<br>Avg. Price: 76K<br>Sales Volume: 61
 1995,GL5 3,56000,83,South West,GL5 3<br>Avg. Price: 56K<br>Sales Volume: 83
@@ -2690,7 +2690,7 @@ Year,Sector,Price,Volume,Region,text
 1995,HD8 8,69000,156,North England,HD8 8<br>Avg. Price: 69K<br>Sales Volume: 156
 1995,HD8 9,57000,164,North England,HD8 9<br>Avg. Price: 57K<br>Sales Volume: 164
 1995,HD9 1,65000,118,North England,HD9 1<br>Avg. Price: 65K<br>Sales Volume: 118
-1995,HD9 2,62000,70,North England,HD9 2<br>Avg. Price: 62K<br>Sales Volume: 70
+1995,HD9 2,62000,69,North England,HD9 2<br>Avg. Price: 62K<br>Sales Volume: 69
 1995,HD9 3,77000,53,North England,HD9 3<br>Avg. Price: 77K<br>Sales Volume: 53
 1995,HD9 4,72000,44,North England,HD9 4<br>Avg. Price: 72K<br>Sales Volume: 44
 1995,HD9 5,58000,51,North England,HD9 5<br>Avg. Price: 58K<br>Sales Volume: 51
@@ -3509,7 +3509,7 @@ Year,Sector,Price,Volume,Region,text
 1995,LD3 9,64000,68,Wales,LD3 9<br>Avg. Price: 64K<br>Sales Volume: 68
 1995,LD4 4,41000,4,Wales,LD4 4<br>Avg. Price: 41K<br>Sales Volume: 4
 1995,LD5 4,54000,16,Wales,LD5 4<br>Avg. Price: 54K<br>Sales Volume: 16
-1995,LD6 5,56000,31,Wales,LD6 5<br>Avg. Price: 56K<br>Sales Volume: 31
+1995,LD6 5,54000,30,Wales,LD6 5<br>Avg. Price: 54K<br>Sales Volume: 30
 1995,LD7 1,53000,43,Wales,LD7 1<br>Avg. Price: 53K<br>Sales Volume: 43
 1995,LD8 2,54000,28,Wales,LD8 2<br>Avg. Price: 54K<br>Sales Volume: 28
 1995,LE1 1,77000,3,Midlands,LE1 1<br>Avg. Price: 77K<br>Sales Volume: 3
@@ -4727,7 +4727,7 @@ Year,Sector,Price,Volume,Region,text
 1995,NP15 1,92000,51,Wales,NP15 1<br>Avg. Price: 92K<br>Sales Volume: 51
 1995,NP15 2,79000,34,Wales,NP15 2<br>Avg. Price: 79K<br>Sales Volume: 34
 1995,NP16 5,54000,197,Wales,NP16 5<br>Avg. Price: 54K<br>Sales Volume: 197
-1995,NP16 6,122000,63,Wales,NP16 6<br>Avg. Price: 122K<br>Sales Volume: 63
+1995,NP16 6,122000,62,Wales,NP16 6<br>Avg. Price: 122K<br>Sales Volume: 62
 1995,NP16 7,71000,90,Wales,NP16 7<br>Avg. Price: 71K<br>Sales Volume: 90
 1995,NP18 1,88000,118,Wales,NP18 1<br>Avg. Price: 88K<br>Sales Volume: 118
 1995,NP18 2,79000,109,Wales,NP18 2<br>Avg. Price: 79K<br>Sales Volume: 109
@@ -4840,7 +4840,7 @@ Year,Sector,Price,Volume,Region,text
 1995,NR28 9,55000,147,Midlands,NR28 9<br>Avg. Price: 55K<br>Sales Volume: 147
 1995,NR29 3,56000,104,Midlands,NR29 3<br>Avg. Price: 56K<br>Sales Volume: 104
 1995,NR29 4,50000,115,Midlands,NR29 4<br>Avg. Price: 50K<br>Sales Volume: 115
-1995,NR29 5,60000,70,Midlands,NR29 5<br>Avg. Price: 60K<br>Sales Volume: 70
+1995,NR29 5,60000,69,Midlands,NR29 5<br>Avg. Price: 60K<br>Sales Volume: 69
 1995,NR3 1,35000,82,Midlands,NR3 1<br>Avg. Price: 35K<br>Sales Volume: 82
 1995,NR3 2,37000,60,Midlands,NR3 2<br>Avg. Price: 37K<br>Sales Volume: 60
 1995,NR3 3,39000,112,Midlands,NR3 3<br>Avg. Price: 39K<br>Sales Volume: 112
@@ -4913,7 +4913,7 @@ Year,Sector,Price,Volume,Region,text
 1995,NW11 9,122000,85,Greater London,NW11 9<br>Avg. Price: 122K<br>Sales Volume: 85
 1995,NW2 1,87000,79,Greater London,NW2 1<br>Avg. Price: 87K<br>Sales Volume: 79
 1995,NW2 2,114000,89,Greater London,NW2 2<br>Avg. Price: 114K<br>Sales Volume: 89
-1995,NW2 3,102000,139,Greater London,NW2 3<br>Avg. Price: 102K<br>Sales Volume: 139
+1995,NW2 3,102000,138,Greater London,NW2 3<br>Avg. Price: 102K<br>Sales Volume: 138
 1995,NW2 4,119000,128,Greater London,NW2 4<br>Avg. Price: 119K<br>Sales Volume: 128
 1995,NW2 5,76000,168,Greater London,NW2 5<br>Avg. Price: 76K<br>Sales Volume: 168
 1995,NW2 6,77000,198,Greater London,NW2 6<br>Avg. Price: 77K<br>Sales Volume: 198
@@ -5215,7 +5215,7 @@ Year,Sector,Price,Volume,Region,text
 1995,PE32 1,58000,141,Midlands,PE32 1<br>Avg. Price: 58K<br>Sales Volume: 141
 1995,PE32 2,64000,81,Midlands,PE32 2<br>Avg. Price: 64K<br>Sales Volume: 81
 1995,PE33 0,59000,173,Midlands,PE33 0<br>Avg. Price: 59K<br>Sales Volume: 173
-1995,PE33 9,51000,72,Midlands,PE33 9<br>Avg. Price: 51K<br>Sales Volume: 72
+1995,PE33 9,52000,71,Midlands,PE33 9<br>Avg. Price: 52K<br>Sales Volume: 71
 1995,PE34 3,47000,52,Midlands,PE34 3<br>Avg. Price: 47K<br>Sales Volume: 52
 1995,PE34 4,50000,113,Midlands,PE34 4<br>Avg. Price: 50K<br>Sales Volume: 113
 1995,PE36 5,49000,88,Midlands,PE36 5<br>Avg. Price: 49K<br>Sales Volume: 88
@@ -5843,7 +5843,7 @@ Year,Sector,Price,Volume,Region,text
 1995,S36 6,55000,101,Midlands,S36 6<br>Avg. Price: 55K<br>Sales Volume: 101
 1995,S36 7,71000,23,Midlands,S36 7<br>Avg. Price: 71K<br>Sales Volume: 23
 1995,S36 8,59000,22,Midlands,S36 8<br>Avg. Price: 59K<br>Sales Volume: 22
-1995,S36 9,50000,38,Midlands,S36 9<br>Avg. Price: 50K<br>Sales Volume: 38
+1995,S36 9,49000,39,Midlands,S36 9<br>Avg. Price: 49K<br>Sales Volume: 39
 1995,S4 7,30000,36,Midlands,S4 7<br>Avg. Price: 30K<br>Sales Volume: 36
 1995,S4 8,25000,77,Midlands,S4 8<br>Avg. Price: 25K<br>Sales Volume: 77
 1995,S40 1,32000,59,Midlands,S40 1<br>Avg. Price: 32K<br>Sales Volume: 59
@@ -6979,7 +6979,7 @@ Year,Sector,Price,Volume,Region,text
 1995,TA19 9,87000,59,South West,TA19 9<br>Avg. Price: 87K<br>Sales Volume: 59
 1995,TA2 6,60000,188,South West,TA2 6<br>Avg. Price: 60K<br>Sales Volume: 188
 1995,TA2 7,58000,119,South West,TA2 7<br>Avg. Price: 58K<br>Sales Volume: 119
-1995,TA2 8,82000,112,South West,TA2 8<br>Avg. Price: 82K<br>Sales Volume: 112
+1995,TA2 8,82000,111,South West,TA2 8<br>Avg. Price: 82K<br>Sales Volume: 111
 1995,TA20 1,56000,162,South West,TA20 1<br>Avg. Price: 56K<br>Sales Volume: 162
 1995,TA20 2,57000,125,South West,TA20 2<br>Avg. Price: 57K<br>Sales Volume: 125
 1995,TA20 3,94000,33,South West,TA20 3<br>Avg. Price: 94K<br>Sales Volume: 33
@@ -6997,7 +6997,7 @@ Year,Sector,Price,Volume,Region,text
 1995,TA3 6,89000,64,South West,TA3 6<br>Avg. Price: 89K<br>Sales Volume: 64
 1995,TA3 7,96000,52,South West,TA3 7<br>Avg. Price: 96K<br>Sales Volume: 52
 1995,TA4 1,109000,43,South West,TA4 1<br>Avg. Price: 109K<br>Sales Volume: 43
-1995,TA4 2,55000,62,South West,TA4 2<br>Avg. Price: 55K<br>Sales Volume: 62
+1995,TA4 2,55000,61,South West,TA4 2<br>Avg. Price: 55K<br>Sales Volume: 61
 1995,TA4 3,82000,76,South West,TA4 3<br>Avg. Price: 82K<br>Sales Volume: 76
 1995,TA4 4,74000,52,South West,TA4 4<br>Avg. Price: 74K<br>Sales Volume: 52
 1995,TA5 1,71000,77,South West,TA5 1<br>Avg. Price: 71K<br>Sales Volume: 77

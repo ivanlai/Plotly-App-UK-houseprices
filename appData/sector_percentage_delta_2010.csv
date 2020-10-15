@@ -1032,7 +1032,7 @@ CF23 8,7,Wales,CF23 8<br>Price Change: 7%
 CF23 9,12,Wales,CF23 9<br>Price Change: 12%
 CF24 0,-3,Wales,CF24 0<br>Price Change: -3%
 CF24 1,8,Wales,CF24 1<br>Price Change: 8%
-CF24 2,4,Wales,CF24 2<br>Price Change: 4%
+CF24 2,5,Wales,CF24 2<br>Price Change: 5%
 CF24 3,4,Wales,CF24 3<br>Price Change: 4%
 CF24 4,6,Wales,CF24 4<br>Price Change: 6%
 CF24 5,-15,Wales,CF24 5<br>Price Change: -15%
@@ -1794,7 +1794,7 @@ DE5 9,3,Midlands,DE5 9<br>Price Change: 3%
 DE55 1,-1,Midlands,DE55 1<br>Price Change: -1%
 DE55 2,-1,Midlands,DE55 2<br>Price Change: -1%
 DE55 3,14,Midlands,DE55 3<br>Price Change: 14%
-DE55 4,2,Midlands,DE55 4<br>Price Change: 2%
+DE55 4,3,Midlands,DE55 4<br>Price Change: 3%
 DE55 5,-15,Midlands,DE55 5<br>Price Change: -15%
 DE55 6,13,Midlands,DE55 6<br>Price Change: 13%
 DE55 7,27,Midlands,DE55 7<br>Price Change: 27%
@@ -1951,7 +1951,7 @@ DN16 1,-1,Midlands,DN16 1<br>Price Change: -1%
 DN16 2,-6,Midlands,DN16 2<br>Price Change: -6%
 DN16 3,12,Midlands,DN16 3<br>Price Change: 12%
 DN17 1,10,Midlands,DN17 1<br>Price Change: 10%
-DN17 2,5,Midlands,DN17 2<br>Price Change: 5%
+DN17 2,3,Midlands,DN17 2<br>Price Change: 3%
 DN17 3,43,Midlands,DN17 3<br>Price Change: 43%
 DN17 4,9,Midlands,DN17 4<br>Price Change: 9%
 DN18 5,4,Midlands,DN18 5<br>Price Change: 4%
@@ -3943,7 +3943,7 @@ M19 3,1,North England,M19 3<br>Price Change: 1%
 M2 4,43,North England,M2 4<br>Price Change: 43%
 M20 1,4,North England,M20 1<br>Price Change: 4%
 M20 2,-13,North England,M20 2<br>Price Change: -13%
-M20 3,7,North England,M20 3<br>Price Change: 7%
+M20 3,6,North England,M20 3<br>Price Change: 6%
 M20 4,-1,North England,M20 4<br>Price Change: -1%
 M20 5,1,North England,M20 5<br>Price Change: 1%
 M20 6,2,North England,M20 6<br>Price Change: 2%
@@ -4142,7 +4142,7 @@ ME8 8,4,South East,ME8 8<br>Price Change: 4%
 ME8 9,6,South East,ME8 9<br>Price Change: 6%
 ME9 0,38,South East,ME9 0<br>Price Change: 38%
 ME9 7,-2,South East,ME9 7<br>Price Change: -2%
-ME9 8,12,South East,ME9 8<br>Price Change: 12%
+ME9 8,13,South East,ME9 8<br>Price Change: 13%
 ME9 9,-4,South East,ME9 9<br>Price Change: -4%
 MK1 1,17,South East,MK1 1<br>Price Change: 17%
 MK10 7,9,South East,MK10 7<br>Price Change: 9%
@@ -4233,7 +4233,7 @@ N1 1,8,Greater London,N1 1<br>Price Change: 8%
 N1 2,7,Greater London,N1 2<br>Price Change: 7%
 N1 3,24,Greater London,N1 3<br>Price Change: 24%
 N1 4,7,Greater London,N1 4<br>Price Change: 7%
-N1 5,5,Greater London,N1 5<br>Price Change: 5%
+N1 5,7,Greater London,N1 5<br>Price Change: 7%
 N1 6,25,Greater London,N1 6<br>Price Change: 25%
 N1 7,23,Greater London,N1 7<br>Price Change: 23%
 N1 8,33,Greater London,N1 8<br>Price Change: 33%
@@ -4252,7 +4252,7 @@ N13 4,1,Greater London,N13 4<br>Price Change: 1%
 N13 5,16,Greater London,N13 5<br>Price Change: 16%
 N13 6,6,Greater London,N13 6<br>Price Change: 6%
 N14 4,3,Greater London,N14 4<br>Price Change: 3%
-N14 5,33,Greater London,N14 5<br>Price Change: 33%
+N14 5,32,Greater London,N14 5<br>Price Change: 32%
 N14 6,25,Greater London,N14 6<br>Price Change: 25%
 N14 7,24,Greater London,N14 7<br>Price Change: 24%
 N15 3,11,Greater London,N15 3<br>Price Change: 11%
@@ -4804,7 +4804,7 @@ NR14 7,9,Midlands,NR14 7<br>Price Change: 9%
 NR14 8,18,Midlands,NR14 8<br>Price Change: 18%
 NR15 1,32,Midlands,NR15 1<br>Price Change: 32%
 NR15 2,-19,Midlands,NR15 2<br>Price Change: -19%
-NR16 1,23,Midlands,NR16 1<br>Price Change: 23%
+NR16 1,21,Midlands,NR16 1<br>Price Change: 21%
 NR16 2,12,Midlands,NR16 2<br>Price Change: 12%
 NR17 1,0,Midlands,NR17 1<br>Price Change: 0%
 NR17 2,1,Midlands,NR17 2<br>Price Change: 1%
@@ -4818,7 +4818,7 @@ NR2 3,13,Midlands,NR2 3<br>Price Change: 13%
 NR2 4,13,Midlands,NR2 4<br>Price Change: 13%
 NR20 3,18,Midlands,NR20 3<br>Price Change: 18%
 NR20 4,14,Midlands,NR20 4<br>Price Change: 14%
-NR20 5,5,Midlands,NR20 5<br>Price Change: 5%
+NR20 5,4,Midlands,NR20 5<br>Price Change: 4%
 NR21 0,50,Midlands,NR21 0<br>Price Change: 50%
 NR21 7,3,Midlands,NR21 7<br>Price Change: 3%
 NR21 8,1,Midlands,NR21 8<br>Price Change: 1%
@@ -5801,7 +5801,7 @@ S3 8,-1,Midlands,S3 8<br>Price Change: -1%
 S3 9,13,Midlands,S3 9<br>Price Change: 13%
 S32 1,15,Midlands,S32 1<br>Price Change: 15%
 S32 2,19,Midlands,S32 2<br>Price Change: 19%
-S32 3,15,Midlands,S32 3<br>Price Change: 15%
+S32 3,16,Midlands,S32 3<br>Price Change: 16%
 S32 4,42,Midlands,S32 4<br>Price Change: 42%
 S32 5,8,Midlands,S32 5<br>Price Change: 8%
 S33 0,-8,Midlands,S33 0<br>Price Change: -8%
@@ -6509,7 +6509,7 @@ SO31 6,8,South East,SO31 6<br>Price Change: 8%
 SO31 7,10,South East,SO31 7<br>Price Change: 10%
 SO31 8,-13,South East,SO31 8<br>Price Change: -13%
 SO31 9,17,South East,SO31 9<br>Price Change: 17%
-SO32 1,-11,South East,SO32 1<br>Price Change: -11%
+SO32 1,-12,South East,SO32 1<br>Price Change: -12%
 SO32 2,28,South East,SO32 2<br>Price Change: 28%
 SO32 3,47,South East,SO32 3<br>Price Change: 47%
 SO40 2,8,South East,SO40 2<br>Price Change: 8%
@@ -7139,7 +7139,7 @@ TN8 6,2,South East,TN8 6<br>Price Change: 2%
 TN8 7,34,South East,TN8 7<br>Price Change: 34%
 TN9 1,10,South East,TN9 1<br>Price Change: 10%
 TN9 2,12,South East,TN9 2<br>Price Change: 12%
-TQ1 1,7,South West,TQ1 1<br>Price Change: 7%
+TQ1 1,6,South West,TQ1 1<br>Price Change: 6%
 TQ1 2,8,South West,TQ1 2<br>Price Change: 8%
 TQ1 3,3,South West,TQ1 3<br>Price Change: 3%
 TQ1 4,10,South West,TQ1 4<br>Price Change: 10%

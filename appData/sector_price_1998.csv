@@ -94,7 +94,7 @@ Year,Sector,Price,Volume,Region,text
 1998,B29 5,44000,115,Midlands,B29 5<br>Avg. Price: 44K<br>Sales Volume: 115
 1998,B29 6,57000,243,Midlands,B29 6<br>Avg. Price: 57K<br>Sales Volume: 243
 1998,B29 7,71000,242,Midlands,B29 7<br>Avg. Price: 71K<br>Sales Volume: 242
-1998,B3 1,73000,52,Midlands,B3 1<br>Avg. Price: 73K<br>Sales Volume: 52
+1998,B3 1,72000,51,Midlands,B3 1<br>Avg. Price: 72K<br>Sales Volume: 51
 1998,B30 1,76000,146,Midlands,B30 1<br>Avg. Price: 76K<br>Sales Volume: 146
 1998,B30 2,53000,287,Midlands,B30 2<br>Avg. Price: 53K<br>Sales Volume: 287
 1998,B30 3,48000,138,Midlands,B30 3<br>Avg. Price: 48K<br>Sales Volume: 138
@@ -513,7 +513,7 @@ Year,Sector,Price,Volume,Region,text
 1998,BH17 9,83000,202,South West,BH17 9<br>Avg. Price: 83K<br>Sales Volume: 202
 1998,BH18 8,124000,117,South West,BH18 8<br>Avg. Price: 124K<br>Sales Volume: 117
 1998,BH18 9,128000,168,South West,BH18 9<br>Avg. Price: 128K<br>Sales Volume: 168
-1998,BH19 1,96000,172,South West,BH19 1<br>Avg. Price: 96K<br>Sales Volume: 172
+1998,BH19 1,96000,171,South West,BH19 1<br>Avg. Price: 96K<br>Sales Volume: 171
 1998,BH19 2,82000,186,South West,BH19 2<br>Avg. Price: 82K<br>Sales Volume: 186
 1998,BH19 3,157000,39,South West,BH19 3<br>Avg. Price: 157K<br>Sales Volume: 39
 1998,BH2 5,63000,175,South West,BH2 5<br>Avg. Price: 63K<br>Sales Volume: 175
@@ -1069,7 +1069,7 @@ Year,Sector,Price,Volume,Region,text
 1998,CF34 0,38000,103,Wales,CF34 0<br>Avg. Price: 38K<br>Sales Volume: 103
 1998,CF34 9,47000,134,Wales,CF34 9<br>Avg. Price: 47K<br>Sales Volume: 134
 1998,CF35 5,70000,66,Wales,CF35 5<br>Avg. Price: 70K<br>Sales Volume: 66
-1998,CF35 6,63000,140,Wales,CF35 6<br>Avg. Price: 63K<br>Sales Volume: 140
+1998,CF35 6,62000,139,Wales,CF35 6<br>Avg. Price: 62K<br>Sales Volume: 139
 1998,CF36 3,77000,139,Wales,CF36 3<br>Avg. Price: 77K<br>Sales Volume: 139
 1998,CF36 5,70000,113,Wales,CF36 5<br>Avg. Price: 70K<br>Sales Volume: 113
 1998,CF37 1,38000,210,Wales,CF37 1<br>Avg. Price: 38K<br>Sales Volume: 210
@@ -1942,7 +1942,7 @@ Year,Sector,Price,Volume,Region,text
 1998,DN1 1,59000,8,Midlands,DN1 1<br>Avg. Price: 59K<br>Sales Volume: 8
 1998,DN1 2,34000,114,Midlands,DN1 2<br>Avg. Price: 34K<br>Sales Volume: 114
 1998,DN1 3,38000,7,Midlands,DN1 3<br>Avg. Price: 38K<br>Sales Volume: 7
-1998,DN10 4,68000,95,Midlands,DN10 4<br>Avg. Price: 68K<br>Sales Volume: 95
+1998,DN10 4,68000,94,Midlands,DN10 4<br>Avg. Price: 68K<br>Sales Volume: 94
 1998,DN10 5,76000,27,Midlands,DN10 5<br>Avg. Price: 76K<br>Sales Volume: 27
 1998,DN10 6,89000,107,Midlands,DN10 6<br>Avg. Price: 89K<br>Sales Volume: 107
 1998,DN11 0,49000,223,Midlands,DN11 0<br>Avg. Price: 49K<br>Sales Volume: 223
@@ -2370,7 +2370,7 @@ Year,Sector,Price,Volume,Region,text
 1998,EX37 9,104000,57,South West,EX37 9<br>Avg. Price: 104K<br>Sales Volume: 57
 1998,EX38 7,66000,107,South West,EX38 7<br>Avg. Price: 66K<br>Sales Volume: 107
 1998,EX38 8,62000,94,South West,EX38 8<br>Avg. Price: 62K<br>Sales Volume: 94
-1998,EX39 1,66000,334,South West,EX39 1<br>Avg. Price: 66K<br>Sales Volume: 334
+1998,EX39 1,66000,333,South West,EX39 1<br>Avg. Price: 66K<br>Sales Volume: 333
 1998,EX39 2,57000,111,South West,EX39 2<br>Avg. Price: 57K<br>Sales Volume: 111
 1998,EX39 3,59000,178,South West,EX39 3<br>Avg. Price: 59K<br>Sales Volume: 178
 1998,EX39 4,63000,106,South West,EX39 4<br>Avg. Price: 63K<br>Sales Volume: 106
@@ -3894,7 +3894,7 @@ Year,Sector,Price,Volume,Region,text
 1998,LS29 6,108000,110,North England,LS29 6<br>Avg. Price: 108K<br>Sales Volume: 110
 1998,LS29 7,101000,131,North England,LS29 7<br>Avg. Price: 101K<br>Sales Volume: 131
 1998,LS29 8,92000,171,North England,LS29 8<br>Avg. Price: 92K<br>Sales Volume: 171
-1998,LS29 9,121000,138,North England,LS29 9<br>Avg. Price: 121K<br>Sales Volume: 138
+1998,LS29 9,121000,137,North England,LS29 9<br>Avg. Price: 121K<br>Sales Volume: 137
 1998,LS3 1,48000,26,North England,LS3 1<br>Avg. Price: 48K<br>Sales Volume: 26
 1998,LS4 2,47000,232,North England,LS4 2<br>Avg. Price: 47K<br>Sales Volume: 232
 1998,LS5 3,50000,165,North England,LS5 3<br>Avg. Price: 50K<br>Sales Volume: 165
@@ -4116,7 +4116,7 @@ Year,Sector,Price,Volume,Region,text
 1998,ME12 1,41000,61,South East,ME12 1<br>Avg. Price: 41K<br>Sales Volume: 61
 1998,ME12 2,62000,293,South East,ME12 2<br>Avg. Price: 62K<br>Sales Volume: 293
 1998,ME12 3,67000,223,South East,ME12 3<br>Avg. Price: 67K<br>Sales Volume: 223
-1998,ME12 4,51000,101,South East,ME12 4<br>Avg. Price: 51K<br>Sales Volume: 101
+1998,ME12 4,51000,100,South East,ME12 4<br>Avg. Price: 51K<br>Sales Volume: 100
 1998,ME13 0,120000,44,South East,ME13 0<br>Avg. Price: 120K<br>Sales Volume: 44
 1998,ME13 7,67000,160,South East,ME13 7<br>Avg. Price: 67K<br>Sales Volume: 160
 1998,ME13 8,67000,227,South East,ME13 8<br>Avg. Price: 67K<br>Sales Volume: 227
@@ -4623,7 +4623,7 @@ Year,Sector,Price,Volume,Region,text
 1998,NG33 5,62000,89,Midlands,NG33 5<br>Avg. Price: 62K<br>Sales Volume: 89
 1998,NG34 0,69000,104,Midlands,NG34 0<br>Avg. Price: 69K<br>Sales Volume: 104
 1998,NG34 7,54000,413,Midlands,NG34 7<br>Avg. Price: 54K<br>Sales Volume: 413
-1998,NG34 8,63000,226,Midlands,NG34 8<br>Avg. Price: 63K<br>Sales Volume: 226
+1998,NG34 8,62000,225,Midlands,NG34 8<br>Avg. Price: 62K<br>Sales Volume: 225
 1998,NG34 9,59000,258,Midlands,NG34 9<br>Avg. Price: 59K<br>Sales Volume: 258
 1998,NG4 1,52000,218,Midlands,NG4 1<br>Avg. Price: 52K<br>Sales Volume: 218
 1998,NG4 2,51000,285,Midlands,NG4 2<br>Avg. Price: 51K<br>Sales Volume: 285
@@ -4763,7 +4763,7 @@ Year,Sector,Price,Volume,Region,text
 1998,NP16 5,70000,238,Wales,NP16 5<br>Avg. Price: 70K<br>Sales Volume: 238
 1998,NP16 6,142000,85,Wales,NP16 6<br>Avg. Price: 142K<br>Sales Volume: 85
 1998,NP16 7,90000,93,Wales,NP16 7<br>Avg. Price: 90K<br>Sales Volume: 93
-1998,NP18 1,95000,123,Wales,NP18 1<br>Avg. Price: 95K<br>Sales Volume: 123
+1998,NP18 1,95000,122,Wales,NP18 1<br>Avg. Price: 95K<br>Sales Volume: 122
 1998,NP18 2,88000,115,Wales,NP18 2<br>Avg. Price: 88K<br>Sales Volume: 115
 1998,NP18 3,66000,92,Wales,NP18 3<br>Avg. Price: 66K<br>Sales Volume: 92
 1998,NP19 0,35000,173,Wales,NP19 0<br>Avg. Price: 35K<br>Sales Volume: 173
@@ -5356,7 +5356,7 @@ Year,Sector,Price,Volume,Region,text
 1998,PL9 9,65000,255,South West,PL9 9<br>Avg. Price: 65K<br>Sales Volume: 255
 1998,PO1 1,297000,15,South East,PO1 1<br>Avg. Price: 297K<br>Sales Volume: 15
 1998,PO1 2,104000,109,South East,PO1 2<br>Avg. Price: 104K<br>Sales Volume: 109
-1998,PO1 3,53000,10,South East,PO1 3<br>Avg. Price: 53K<br>Sales Volume: 10
+1998,PO1 3,52000,9,South East,PO1 3<br>Avg. Price: 52K<br>Sales Volume: 9
 1998,PO1 4,50000,20,South East,PO1 4<br>Avg. Price: 50K<br>Sales Volume: 20
 1998,PO1 5,48000,321,South East,PO1 5<br>Avg. Price: 48K<br>Sales Volume: 321
 1998,PO10 7,115000,224,South East,PO10 7<br>Avg. Price: 115K<br>Sales Volume: 224
@@ -6898,8 +6898,8 @@ Year,Sector,Price,Volume,Region,text
 1998,SW4 7,157000,179,Greater London,SW4 7<br>Avg. Price: 157K<br>Sales Volume: 179
 1998,SW4 8,141000,86,Greater London,SW4 8<br>Avg. Price: 141K<br>Sales Volume: 86
 1998,SW4 9,219000,247,Greater London,SW4 9<br>Avg. Price: 219K<br>Sales Volume: 247
-1998,SW5 0,344000,272,Greater London,SW5 0<br>Avg. Price: 344K<br>Sales Volume: 272
-1998,SW5 9,229000,231,Greater London,SW5 9<br>Avg. Price: 229K<br>Sales Volume: 231
+1998,SW5 0,344000,271,Greater London,SW5 0<br>Avg. Price: 344K<br>Sales Volume: 271
+1998,SW5 9,229000,230,Greater London,SW5 9<br>Avg. Price: 229K<br>Sales Volume: 230
 1998,SW6 1,195000,181,Greater London,SW6 1<br>Avg. Price: 195K<br>Sales Volume: 181
 1998,SW6 2,212000,216,Greater London,SW6 2<br>Avg. Price: 212K<br>Sales Volume: 216
 1998,SW6 3,354000,209,Greater London,SW6 3<br>Avg. Price: 354K<br>Sales Volume: 209
@@ -7051,7 +7051,7 @@ Year,Sector,Price,Volume,Region,text
 1998,TA9 4,120000,111,South West,TA9 4<br>Avg. Price: 120K<br>Sales Volume: 111
 1998,TD12 4,49000,15,Scotland,TD12 4<br>Avg. Price: 49K<br>Sales Volume: 15
 1998,TD15 1,59000,91,Scotland,TD15 1<br>Avg. Price: 59K<br>Sales Volume: 91
-1998,TD15 2,57000,187,Scotland,TD15 2<br>Avg. Price: 57K<br>Sales Volume: 187
+1998,TD15 2,57000,186,Scotland,TD15 2<br>Avg. Price: 57K<br>Sales Volume: 186
 1998,TD9 0,56000,4,Scotland,TD9 0<br>Avg. Price: 56K<br>Sales Volume: 4
 1998,TF1 1,53000,69,Midlands,TF1 1<br>Avg. Price: 53K<br>Sales Volume: 69
 1998,TF1 2,69000,97,Midlands,TF1 2<br>Avg. Price: 69K<br>Sales Volume: 97
@@ -7230,7 +7230,7 @@ Year,Sector,Price,Volume,Region,text
 1998,TQ6 9,90000,198,South West,TQ6 9<br>Avg. Price: 90K<br>Sales Volume: 198
 1998,TQ7 1,77000,172,South West,TQ7 1<br>Avg. Price: 77K<br>Sales Volume: 172
 1998,TQ7 2,121000,109,South West,TQ7 2<br>Avg. Price: 121K<br>Sales Volume: 109
-1998,TQ7 3,112000,120,South West,TQ7 3<br>Avg. Price: 112K<br>Sales Volume: 120
+1998,TQ7 3,112000,119,South West,TQ7 3<br>Avg. Price: 112K<br>Sales Volume: 119
 1998,TQ7 4,108000,109,South West,TQ7 4<br>Avg. Price: 108K<br>Sales Volume: 109
 1998,TQ8 8,118000,97,South West,TQ8 8<br>Avg. Price: 118K<br>Sales Volume: 97
 1998,TQ9 5,74000,206,South West,TQ9 5<br>Avg. Price: 74K<br>Sales Volume: 206
@@ -7248,7 +7248,7 @@ Year,Sector,Price,Volume,Region,text
 1998,TR12 6,118000,68,South West,TR12 6<br>Avg. Price: 118K<br>Sales Volume: 68
 1998,TR12 7,82000,68,South West,TR12 7<br>Avg. Price: 82K<br>Sales Volume: 68
 1998,TR13 0,71000,105,South West,TR13 0<br>Avg. Price: 71K<br>Sales Volume: 105
-1998,TR13 8,54000,253,South West,TR13 8<br>Avg. Price: 54K<br>Sales Volume: 253
+1998,TR13 8,54000,252,South West,TR13 8<br>Avg. Price: 54K<br>Sales Volume: 252
 1998,TR13 9,72000,130,South West,TR13 9<br>Avg. Price: 72K<br>Sales Volume: 130
 1998,TR14 0,65000,122,South West,TR14 0<br>Avg. Price: 65K<br>Sales Volume: 122
 1998,TR14 7,57000,145,South West,TR14 7<br>Avg. Price: 57K<br>Sales Volume: 145
@@ -7317,7 +7317,7 @@ Year,Sector,Price,Volume,Region,text
 1998,TS16 9,68000,50,North England,TS16 9<br>Avg. Price: 68K<br>Sales Volume: 50
 1998,TS17 0,66000,380,North England,TS17 0<br>Avg. Price: 66K<br>Sales Volume: 380
 1998,TS17 5,80000,287,North England,TS17 5<br>Avg. Price: 80K<br>Sales Volume: 287
-1998,TS17 6,30000,52,North England,TS17 6<br>Avg. Price: 30K<br>Sales Volume: 52
+1998,TS17 6,30000,51,North England,TS17 6<br>Avg. Price: 30K<br>Sales Volume: 51
 1998,TS17 7,29000,34,North England,TS17 7<br>Avg. Price: 29K<br>Sales Volume: 34
 1998,TS17 8,40000,54,North England,TS17 8<br>Avg. Price: 40K<br>Sales Volume: 54
 1998,TS17 9,41000,87,North England,TS17 9<br>Avg. Price: 41K<br>Sales Volume: 87
@@ -7492,7 +7492,7 @@ Year,Sector,Price,Volume,Region,text
 1998,W13 0,146000,129,Greater London,W13 0<br>Avg. Price: 146K<br>Sales Volume: 129
 1998,W13 8,175000,226,Greater London,W13 8<br>Avg. Price: 175K<br>Sales Volume: 226
 1998,W13 9,153000,369,Greater London,W13 9<br>Avg. Price: 153K<br>Sales Volume: 369
-1998,W14 0,179000,343,Greater London,W14 0<br>Avg. Price: 179K<br>Sales Volume: 343
+1998,W14 0,179000,342,Greater London,W14 0<br>Avg. Price: 179K<br>Sales Volume: 342
 1998,W14 8,344000,274,Greater London,W14 8<br>Avg. Price: 344K<br>Sales Volume: 274
 1998,W14 9,152000,343,Greater London,W14 9<br>Avg. Price: 152K<br>Sales Volume: 343
 1998,W1B 1,170000,29,Greater London,W1B 1<br>Avg. Price: 170K<br>Sales Volume: 29
@@ -7540,7 +7540,7 @@ Year,Sector,Price,Volume,Region,text
 1998,W1R 7,250000,1,Greater London,W1R 7<br>Avg. Price: 250K<br>Sales Volume: 1
 1998,W1S 1,100000,1,Greater London,W1S 1<br>Avg. Price: 100K<br>Sales Volume: 1
 1998,W1S 2,1137000,3,Greater London,"W1S 2<br>Avg. Price: 1,137K<br>Sales Volume: 3"
-1998,W1S 4,1382000,4,Greater London,"W1S 4<br>Avg. Price: 1,382K<br>Sales Volume: 4"
+1998,W1S 4,1266000,3,Greater London,"W1S 4<br>Avg. Price: 1,266K<br>Sales Volume: 3"
 1998,W1T 1,222000,24,Greater London,W1T 1<br>Avg. Price: 222K<br>Sales Volume: 24
 1998,W1T 2,198000,6,Greater London,W1T 2<br>Avg. Price: 198K<br>Sales Volume: 6
 1998,W1T 3,299000,20,Greater London,W1T 3<br>Avg. Price: 299K<br>Sales Volume: 20

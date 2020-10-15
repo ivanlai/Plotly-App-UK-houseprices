@@ -155,7 +155,7 @@ Year,Sector,Price,Volume,Region,text
 1999,B60 1,159000,165,Midlands,B60 1<br>Avg. Price: 159K<br>Sales Volume: 165
 1999,B60 2,91000,126,Midlands,B60 2<br>Avg. Price: 91K<br>Sales Volume: 126
 1999,B60 3,92000,157,Midlands,B60 3<br>Avg. Price: 92K<br>Sales Volume: 157
-1999,B60 4,139000,56,Midlands,B60 4<br>Avg. Price: 139K<br>Sales Volume: 56
+1999,B60 4,139000,55,Midlands,B60 4<br>Avg. Price: 139K<br>Sales Volume: 55
 1999,B61 0,96000,247,Midlands,B61 0<br>Avg. Price: 96K<br>Sales Volume: 247
 1999,B61 7,92000,142,Midlands,B61 7<br>Avg. Price: 92K<br>Sales Volume: 142
 1999,B61 8,72000,108,Midlands,B61 8<br>Avg. Price: 72K<br>Sales Volume: 108
@@ -533,7 +533,7 @@ Year,Sector,Price,Volume,Region,text
 1999,BH22 8,134000,242,South West,BH22 8<br>Avg. Price: 134K<br>Sales Volume: 242
 1999,BH22 9,118000,269,South West,BH22 9<br>Avg. Price: 118K<br>Sales Volume: 269
 1999,BH23 1,123000,217,South West,BH23 1<br>Avg. Price: 123K<br>Sales Volume: 217
-1999,BH23 2,106000,410,South West,BH23 2<br>Avg. Price: 106K<br>Sales Volume: 410
+1999,BH23 2,106000,409,South West,BH23 2<br>Avg. Price: 106K<br>Sales Volume: 409
 1999,BH23 3,102000,199,South West,BH23 3<br>Avg. Price: 102K<br>Sales Volume: 199
 1999,BH23 4,130000,360,South West,BH23 4<br>Avg. Price: 130K<br>Sales Volume: 360
 1999,BH23 5,125000,272,South West,BH23 5<br>Avg. Price: 125K<br>Sales Volume: 272
@@ -903,7 +903,7 @@ Year,Sector,Price,Volume,Region,text
 1999,CA16 6,75000,137,North England,CA16 6<br>Avg. Price: 75K<br>Sales Volume: 137
 1999,CA17 4,73000,93,North England,CA17 4<br>Avg. Price: 73K<br>Sales Volume: 93
 1999,CA18 1,72000,6,North England,CA18 1<br>Avg. Price: 72K<br>Sales Volume: 6
-1999,CA19 1,84000,27,North England,CA19 1<br>Avg. Price: 84K<br>Sales Volume: 27
+1999,CA19 1,81000,26,North England,CA19 1<br>Avg. Price: 81K<br>Sales Volume: 26
 1999,CA2 4,46000,193,North England,CA2 4<br>Avg. Price: 46K<br>Sales Volume: 193
 1999,CA2 5,40000,223,North England,CA2 5<br>Avg. Price: 40K<br>Sales Volume: 223
 1999,CA2 6,48000,138,North England,CA2 6<br>Avg. Price: 48K<br>Sales Volume: 138
@@ -1128,7 +1128,7 @@ Year,Sector,Price,Volume,Region,text
 1999,CF64 1,83000,293,Wales,CF64 1<br>Avg. Price: 83K<br>Sales Volume: 293
 1999,CF64 2,81000,191,Wales,CF64 2<br>Avg. Price: 81K<br>Sales Volume: 191
 1999,CF64 3,115000,154,Wales,CF64 3<br>Avg. Price: 115K<br>Sales Volume: 154
-1999,CF64 4,105000,154,Wales,CF64 4<br>Avg. Price: 105K<br>Sales Volume: 154
+1999,CF64 4,105000,153,Wales,CF64 4<br>Avg. Price: 105K<br>Sales Volume: 153
 1999,CF64 5,113000,146,Wales,CF64 5<br>Avg. Price: 113K<br>Sales Volume: 146
 1999,CF7 7,49000,1,Wales,CF7 7<br>Avg. Price: 49K<br>Sales Volume: 1
 1999,CF71 7,142000,237,Wales,CF71 7<br>Avg. Price: 142K<br>Sales Volume: 237
@@ -2347,7 +2347,7 @@ Year,Sector,Price,Volume,Region,text
 1999,EX20 4,139000,65,South West,EX20 4<br>Avg. Price: 139K<br>Sales Volume: 65
 1999,EX21 5,95000,107,South West,EX21 5<br>Avg. Price: 95K<br>Sales Volume: 107
 1999,EX22 6,76000,100,South West,EX22 6<br>Avg. Price: 76K<br>Sales Volume: 100
-1999,EX22 7,98000,74,South West,EX22 7<br>Avg. Price: 98K<br>Sales Volume: 74
+1999,EX22 7,97000,73,South West,EX22 7<br>Avg. Price: 97K<br>Sales Volume: 73
 1999,EX23 0,106000,103,South West,EX23 0<br>Avg. Price: 106K<br>Sales Volume: 103
 1999,EX23 8,78000,174,South West,EX23 8<br>Avg. Price: 78K<br>Sales Volume: 174
 1999,EX23 9,86000,114,South West,EX23 9<br>Avg. Price: 86K<br>Sales Volume: 114
@@ -3544,7 +3544,7 @@ Year,Sector,Price,Volume,Region,text
 1999,LD3 9,76000,75,Wales,LD3 9<br>Avg. Price: 76K<br>Sales Volume: 75
 1999,LD4 4,86000,6,Wales,LD4 4<br>Avg. Price: 86K<br>Sales Volume: 6
 1999,LD5 4,76000,15,Wales,LD5 4<br>Avg. Price: 76K<br>Sales Volume: 15
-1999,LD6 5,63000,37,Wales,LD6 5<br>Avg. Price: 63K<br>Sales Volume: 37
+1999,LD6 5,63000,36,Wales,LD6 5<br>Avg. Price: 63K<br>Sales Volume: 36
 1999,LD7 1,62000,71,Wales,LD7 1<br>Avg. Price: 62K<br>Sales Volume: 71
 1999,LD8 2,78000,67,Wales,LD8 2<br>Avg. Price: 78K<br>Sales Volume: 67
 1999,LE1 1,250000,2,Midlands,LE1 1<br>Avg. Price: 250K<br>Sales Volume: 2
@@ -3788,7 +3788,7 @@ Year,Sector,Price,Volume,Region,text
 1999,LN10 5,63000,11,Midlands,LN10 5<br>Avg. Price: 63K<br>Sales Volume: 11
 1999,LN10 6,83000,127,Midlands,LN10 6<br>Avg. Price: 83K<br>Sales Volume: 127
 1999,LN11 0,60000,218,Midlands,LN11 0<br>Avg. Price: 60K<br>Sales Volume: 218
-1999,LN11 7,63000,112,Midlands,LN11 7<br>Avg. Price: 63K<br>Sales Volume: 112
+1999,LN11 7,63000,111,Midlands,LN11 7<br>Avg. Price: 63K<br>Sales Volume: 111
 1999,LN11 8,65000,205,Midlands,LN11 8<br>Avg. Price: 65K<br>Sales Volume: 205
 1999,LN11 9,68000,187,Midlands,LN11 9<br>Avg. Price: 68K<br>Sales Volume: 187
 1999,LN12 1,43000,124,Midlands,LN12 1<br>Avg. Price: 43K<br>Sales Volume: 124
@@ -3966,7 +3966,7 @@ Year,Sector,Price,Volume,Region,text
 1999,LU7 8,75000,4,South East,LU7 8<br>Avg. Price: 75K<br>Sales Volume: 4
 1999,LU7 9,146000,181,South East,LU7 9<br>Avg. Price: 146K<br>Sales Volume: 181
 1999,M1 1,110000,3,North England,M1 1<br>Avg. Price: 110K<br>Sales Volume: 3
-1999,M1 2,71000,30,North England,M1 2<br>Avg. Price: 71K<br>Sales Volume: 30
+1999,M1 2,71000,29,North England,M1 2<br>Avg. Price: 71K<br>Sales Volume: 29
 1999,M1 3,109000,132,North England,M1 3<br>Avg. Price: 109K<br>Sales Volume: 132
 1999,M1 4,120000,18,North England,M1 4<br>Avg. Price: 120K<br>Sales Volume: 18
 1999,M1 5,96000,44,North England,M1 5<br>Avg. Price: 96K<br>Sales Volume: 44
@@ -4139,7 +4139,7 @@ Year,Sector,Price,Volume,Region,text
 1999,ME12 1,46000,79,South East,ME12 1<br>Avg. Price: 46K<br>Sales Volume: 79
 1999,ME12 2,63000,300,South East,ME12 2<br>Avg. Price: 63K<br>Sales Volume: 300
 1999,ME12 3,73000,299,South East,ME12 3<br>Avg. Price: 73K<br>Sales Volume: 299
-1999,ME12 4,63000,145,South East,ME12 4<br>Avg. Price: 63K<br>Sales Volume: 145
+1999,ME12 4,63000,144,South East,ME12 4<br>Avg. Price: 63K<br>Sales Volume: 144
 1999,ME13 0,153000,55,South East,ME13 0<br>Avg. Price: 153K<br>Sales Volume: 55
 1999,ME13 7,75000,213,South East,ME13 7<br>Avg. Price: 75K<br>Sales Volume: 213
 1999,ME13 8,73000,226,South East,ME13 8<br>Avg. Price: 73K<br>Sales Volume: 226
@@ -4644,7 +4644,7 @@ Year,Sector,Price,Volume,Region,text
 1999,NG33 5,83000,121,Midlands,NG33 5<br>Avg. Price: 83K<br>Sales Volume: 121
 1999,NG34 0,80000,151,Midlands,NG34 0<br>Avg. Price: 80K<br>Sales Volume: 151
 1999,NG34 7,55000,448,Midlands,NG34 7<br>Avg. Price: 55K<br>Sales Volume: 448
-1999,NG34 8,68000,350,Midlands,NG34 8<br>Avg. Price: 68K<br>Sales Volume: 350
+1999,NG34 8,68000,349,Midlands,NG34 8<br>Avg. Price: 68K<br>Sales Volume: 349
 1999,NG34 9,63000,326,Midlands,NG34 9<br>Avg. Price: 63K<br>Sales Volume: 326
 1999,NG4 1,55000,274,Midlands,NG4 1<br>Avg. Price: 55K<br>Sales Volume: 274
 1999,NG4 2,53000,312,Midlands,NG4 2<br>Avg. Price: 53K<br>Sales Volume: 312
@@ -5915,7 +5915,7 @@ Year,Sector,Price,Volume,Region,text
 1999,S42 6,80000,186,Midlands,S42 6<br>Avg. Price: 80K<br>Sales Volume: 186
 1999,S42 7,102000,133,Midlands,S42 7<br>Avg. Price: 102K<br>Sales Volume: 133
 1999,S43 1,43000,186,Midlands,S43 1<br>Avg. Price: 43K<br>Sales Volume: 186
-1999,S43 2,41000,135,Midlands,S43 2<br>Avg. Price: 41K<br>Sales Volume: 135
+1999,S43 2,41000,134,Midlands,S43 2<br>Avg. Price: 41K<br>Sales Volume: 134
 1999,S43 3,52000,177,Midlands,S43 3<br>Avg. Price: 52K<br>Sales Volume: 177
 1999,S43 4,67000,260,Midlands,S43 4<br>Avg. Price: 67K<br>Sales Volume: 260
 1999,S44 5,66000,142,Midlands,S44 5<br>Avg. Price: 66K<br>Sales Volume: 142
@@ -7203,7 +7203,7 @@ Year,Sector,Price,Volume,Region,text
 1999,TN36 4,106000,72,South East,TN36 4<br>Avg. Price: 106K<br>Sales Volume: 72
 1999,TN37 6,45000,312,South East,TN37 6<br>Avg. Price: 45K<br>Sales Volume: 312
 1999,TN37 7,77000,334,South East,TN37 7<br>Avg. Price: 77K<br>Sales Volume: 334
-1999,TN38 0,58000,491,South East,TN38 0<br>Avg. Price: 58K<br>Sales Volume: 491
+1999,TN38 0,58000,490,South East,TN38 0<br>Avg. Price: 58K<br>Sales Volume: 490
 1999,TN38 8,66000,152,South East,TN38 8<br>Avg. Price: 66K<br>Sales Volume: 152
 1999,TN38 9,66000,167,South East,TN38 9<br>Avg. Price: 66K<br>Sales Volume: 167
 1999,TN39 3,95000,438,South East,TN39 3<br>Avg. Price: 95K<br>Sales Volume: 438
@@ -7288,13 +7288,13 @@ Year,Sector,Price,Volume,Region,text
 1999,TR15 1,48000,146,South West,TR15 1<br>Avg. Price: 48K<br>Sales Volume: 146
 1999,TR15 2,52000,150,South West,TR15 2<br>Avg. Price: 52K<br>Sales Volume: 150
 1999,TR15 3,57000,201,South West,TR15 3<br>Avg. Price: 57K<br>Sales Volume: 201
-1999,TR16 4,65000,123,South West,TR16 4<br>Avg. Price: 65K<br>Sales Volume: 123
+1999,TR16 4,65000,122,South West,TR16 4<br>Avg. Price: 65K<br>Sales Volume: 122
 1999,TR16 5,73000,105,South West,TR16 5<br>Avg. Price: 73K<br>Sales Volume: 105
 1999,TR16 6,62000,91,South West,TR16 6<br>Avg. Price: 62K<br>Sales Volume: 91
 1999,TR17 0,89000,50,South West,TR17 0<br>Avg. Price: 89K<br>Sales Volume: 50
 1999,TR18 2,56000,154,South West,TR18 2<br>Avg. Price: 56K<br>Sales Volume: 154
 1999,TR18 3,60000,113,South West,TR18 3<br>Avg. Price: 60K<br>Sales Volume: 113
-1999,TR18 4,80000,104,South West,TR18 4<br>Avg. Price: 80K<br>Sales Volume: 104
+1999,TR18 4,80000,103,South West,TR18 4<br>Avg. Price: 80K<br>Sales Volume: 103
 1999,TR18 5,64000,96,South West,TR18 5<br>Avg. Price: 64K<br>Sales Volume: 96
 1999,TR19 6,92000,81,South West,TR19 6<br>Avg. Price: 92K<br>Sales Volume: 81
 1999,TR19 7,63000,160,South West,TR19 7<br>Avg. Price: 63K<br>Sales Volume: 160
@@ -7524,7 +7524,7 @@ Year,Sector,Price,Volume,Region,text
 1999,W13 0,162000,173,Greater London,W13 0<br>Avg. Price: 162K<br>Sales Volume: 173
 1999,W13 8,213000,167,Greater London,W13 8<br>Avg. Price: 213K<br>Sales Volume: 167
 1999,W13 9,175000,363,Greater London,W13 9<br>Avg. Price: 175K<br>Sales Volume: 363
-1999,W14 0,206000,375,Greater London,W14 0<br>Avg. Price: 206K<br>Sales Volume: 375
+1999,W14 0,206000,374,Greater London,W14 0<br>Avg. Price: 206K<br>Sales Volume: 374
 1999,W14 8,363000,401,Greater London,W14 8<br>Avg. Price: 363K<br>Sales Volume: 401
 1999,W14 9,172000,362,Greater London,W14 9<br>Avg. Price: 172K<br>Sales Volume: 362
 1999,W1B 1,378000,22,Greater London,W1B 1<br>Avg. Price: 378K<br>Sales Volume: 22
@@ -7874,7 +7874,7 @@ Year,Sector,Price,Volume,Region,text
 1999,WN5 8,59000,216,North England,WN5 8<br>Avg. Price: 59K<br>Sales Volume: 216
 1999,WN5 9,35000,99,North England,WN5 9<br>Avg. Price: 35K<br>Sales Volume: 99
 1999,WN6 0,82000,249,North England,WN6 0<br>Avg. Price: 82K<br>Sales Volume: 249
-1999,WN6 7,39000,189,North England,WN6 7<br>Avg. Price: 39K<br>Sales Volume: 189
+1999,WN6 7,39000,188,North England,WN6 7<br>Avg. Price: 39K<br>Sales Volume: 188
 1999,WN6 8,55000,160,North England,WN6 8<br>Avg. Price: 55K<br>Sales Volume: 160
 1999,WN6 9,81000,77,North England,WN6 9<br>Avg. Price: 81K<br>Sales Volume: 77
 1999,WN7 1,43000,181,North England,WN7 1<br>Avg. Price: 43K<br>Sales Volume: 181
@@ -7882,7 +7882,7 @@ Year,Sector,Price,Volume,Region,text
 1999,WN7 3,56000,167,North England,WN7 3<br>Avg. Price: 56K<br>Sales Volume: 167
 1999,WN7 4,32000,156,North England,WN7 4<br>Avg. Price: 32K<br>Sales Volume: 156
 1999,WN7 5,32000,120,North England,WN7 5<br>Avg. Price: 32K<br>Sales Volume: 120
-1999,WN8 0,80000,105,North England,WN8 0<br>Avg. Price: 80K<br>Sales Volume: 105
+1999,WN8 0,80000,104,North England,WN8 0<br>Avg. Price: 80K<br>Sales Volume: 104
 1999,WN8 6,55000,242,North England,WN8 6<br>Avg. Price: 55K<br>Sales Volume: 242
 1999,WN8 7,99000,86,North England,WN8 7<br>Avg. Price: 99K<br>Sales Volume: 86
 1999,WN8 8,51000,134,North England,WN8 8<br>Avg. Price: 51K<br>Sales Volume: 134

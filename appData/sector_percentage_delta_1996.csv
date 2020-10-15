@@ -1391,7 +1391,7 @@ CO10 0,2,Midlands,CO10 0<br>Price Change: 2%
 CO10 1,10,Midlands,CO10 1<br>Price Change: 10%
 CO10 2,-9,Midlands,CO10 2<br>Price Change: -9%
 CO10 5,-6,Midlands,CO10 5<br>Price Change: -6%
-CO10 7,-7,Midlands,CO10 7<br>Price Change: -7%
+CO10 7,-8,Midlands,CO10 7<br>Price Change: -8%
 CO10 8,34,Midlands,CO10 8<br>Price Change: 34%
 CO10 9,3,Midlands,CO10 9<br>Price Change: 3%
 CO11 1,11,Midlands,CO11 1<br>Price Change: 11%
@@ -2426,7 +2426,7 @@ GL4 3,-21,South West,GL4 3<br>Price Change: -21%
 GL4 4,8,South West,GL4 4<br>Price Change: 8%
 GL4 5,4,South West,GL4 5<br>Price Change: 4%
 GL4 6,7,South West,GL4 6<br>Price Change: 7%
-GL4 8,23,South West,GL4 8<br>Price Change: 23%
+GL4 8,28,South West,GL4 8<br>Price Change: 28%
 GL5 1,-2,South West,GL5 1<br>Price Change: -2%
 GL5 2,3,South West,GL5 2<br>Price Change: 3%
 GL5 3,0,South West,GL5 3<br>Price Change: 0%
@@ -3459,7 +3459,7 @@ LD3 8,6,Wales,LD3 8<br>Price Change: 6%
 LD3 9,-3,Wales,LD3 9<br>Price Change: -3%
 LD4 4,-12,Wales,LD4 4<br>Price Change: -12%
 LD5 4,0,Wales,LD5 4<br>Price Change: 0%
-LD6 5,-14,Wales,LD6 5<br>Price Change: -14%
+LD6 5,-11,Wales,LD6 5<br>Price Change: -11%
 LD7 1,-2,Wales,LD7 1<br>Price Change: -2%
 LD8 2,24,Wales,LD8 2<br>Price Change: 24%
 LE1 1,-22,Midlands,LE1 1<br>Price Change: -22%
@@ -5147,7 +5147,7 @@ PE31 8,15,Midlands,PE31 8<br>Price Change: 15%
 PE32 1,3,Midlands,PE32 1<br>Price Change: 3%
 PE32 2,3,Midlands,PE32 2<br>Price Change: 3%
 PE33 0,-5,Midlands,PE33 0<br>Price Change: -5%
-PE33 9,22,Midlands,PE33 9<br>Price Change: 22%
+PE33 9,19,Midlands,PE33 9<br>Price Change: 19%
 PE34 3,0,Midlands,PE34 3<br>Price Change: 0%
 PE34 4,2,Midlands,PE34 4<br>Price Change: 2%
 PE36 5,10,Midlands,PE36 5<br>Price Change: 10%
@@ -5766,7 +5766,7 @@ S36 4,30,Midlands,S36 4<br>Price Change: 30%
 S36 6,-4,Midlands,S36 6<br>Price Change: -4%
 S36 7,10,Midlands,S36 7<br>Price Change: 10%
 S36 8,0,Midlands,S36 8<br>Price Change: 0%
-S36 9,16,Midlands,S36 9<br>Price Change: 16%
+S36 9,18,Midlands,S36 9<br>Price Change: 18%
 S4 7,-13,Midlands,S4 7<br>Price Change: -13%
 S4 8,-4,Midlands,S4 8<br>Price Change: -4%
 S40 1,12,Midlands,S40 1<br>Price Change: 12%
@@ -7650,7 +7650,7 @@ WF17 7,-2,North England,WF17 7<br>Price Change: -2%
 WF17 8,-7,North England,WF17 8<br>Price Change: -7%
 WF17 9,5,North England,WF17 9<br>Price Change: 5%
 WF2 0,32,North England,WF2 0<br>Price Change: 32%
-WF2 6,2,North England,WF2 6<br>Price Change: 2%
+WF2 6,4,North England,WF2 6<br>Price Change: 4%
 WF2 7,8,North England,WF2 7<br>Price Change: 8%
 WF2 8,12,North England,WF2 8<br>Price Change: 12%
 WF2 9,0,North England,WF2 9<br>Price Change: 0%

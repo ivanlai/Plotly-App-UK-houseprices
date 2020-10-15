@@ -1074,7 +1074,7 @@ Year,Sector,Price,Volume,Region,text
 2002,CF34 0,39000,183,Wales,CF34 0<br>Avg. Price: 39K<br>Sales Volume: 183
 2002,CF34 9,63000,228,Wales,CF34 9<br>Avg. Price: 63K<br>Sales Volume: 228
 2002,CF35 5,99000,82,Wales,CF35 5<br>Avg. Price: 99K<br>Sales Volume: 82
-2002,CF35 6,85000,175,Wales,CF35 6<br>Avg. Price: 85K<br>Sales Volume: 175
+2002,CF35 6,85000,174,Wales,CF35 6<br>Avg. Price: 85K<br>Sales Volume: 174
 2002,CF36 3,112000,241,Wales,CF36 3<br>Avg. Price: 112K<br>Sales Volume: 241
 2002,CF36 5,91000,192,Wales,CF36 5<br>Avg. Price: 91K<br>Sales Volume: 192
 2002,CF37 1,51000,333,Wales,CF37 1<br>Avg. Price: 51K<br>Sales Volume: 333
@@ -1200,7 +1200,7 @@ Year,Sector,Price,Volume,Region,text
 2002,CH43 9,141000,163,North England,CH43 9<br>Avg. Price: 141K<br>Sales Volume: 163
 2002,CH44 0,43000,82,North England,CH44 0<br>Avg. Price: 43K<br>Sales Volume: 82
 2002,CH44 1,49000,75,North England,CH44 1<br>Avg. Price: 49K<br>Sales Volume: 75
-2002,CH44 2,81000,57,North England,CH44 2<br>Avg. Price: 81K<br>Sales Volume: 57
+2002,CH44 2,82000,56,North England,CH44 2<br>Avg. Price: 82K<br>Sales Volume: 56
 2002,CH44 3,77000,53,North England,CH44 3<br>Avg. Price: 77K<br>Sales Volume: 53
 2002,CH44 4,36000,101,North England,CH44 4<br>Avg. Price: 36K<br>Sales Volume: 101
 2002,CH44 5,48000,79,North England,CH44 5<br>Avg. Price: 48K<br>Sales Volume: 79
@@ -1818,7 +1818,7 @@ Year,Sector,Price,Volume,Region,text
 2002,DE4 2,143000,167,Midlands,DE4 2<br>Avg. Price: 143K<br>Sales Volume: 167
 2002,DE4 3,104000,271,Midlands,DE4 3<br>Avg. Price: 104K<br>Sales Volume: 271
 2002,DE4 4,127000,180,Midlands,DE4 4<br>Avg. Price: 127K<br>Sales Volume: 180
-2002,DE4 5,138000,124,Midlands,DE4 5<br>Avg. Price: 138K<br>Sales Volume: 124
+2002,DE4 5,139000,123,Midlands,DE4 5<br>Avg. Price: 139K<br>Sales Volume: 123
 2002,DE45 1,187000,170,Midlands,DE45 1<br>Avg. Price: 187K<br>Sales Volume: 170
 2002,DE5 3,77000,272,Midlands,DE5 3<br>Avg. Price: 77K<br>Sales Volume: 272
 2002,DE5 8,116000,106,Midlands,DE5 8<br>Avg. Price: 116K<br>Sales Volume: 106
@@ -3534,7 +3534,7 @@ Year,Sector,Price,Volume,Region,text
 2002,LA18 4,46000,155,North England,LA18 4<br>Avg. Price: 46K<br>Sales Volume: 155
 2002,LA18 5,66000,70,North England,LA18 5<br>Avg. Price: 66K<br>Sales Volume: 70
 2002,LA19 5,108000,11,North England,LA19 5<br>Avg. Price: 108K<br>Sales Volume: 11
-2002,LA2 0,96000,119,North England,LA2 0<br>Avg. Price: 96K<br>Sales Volume: 119
+2002,LA2 0,97000,118,North England,LA2 0<br>Avg. Price: 97K<br>Sales Volume: 118
 2002,LA2 6,134000,111,North England,LA2 6<br>Avg. Price: 134K<br>Sales Volume: 111
 2002,LA2 7,106000,100,North England,LA2 7<br>Avg. Price: 106K<br>Sales Volume: 100
 2002,LA2 8,149000,49,North England,LA2 8<br>Avg. Price: 149K<br>Sales Volume: 49
@@ -3546,7 +3546,7 @@ Year,Sector,Price,Volume,Region,text
 2002,LA23 1,174000,115,North England,LA23 1<br>Avg. Price: 174K<br>Sales Volume: 115
 2002,LA23 2,140000,124,North England,LA23 2<br>Avg. Price: 140K<br>Sales Volume: 124
 2002,LA23 3,170000,116,North England,LA23 3<br>Avg. Price: 170K<br>Sales Volume: 116
-2002,LA3 1,48000,343,North England,LA3 1<br>Avg. Price: 48K<br>Sales Volume: 343
+2002,LA3 1,48000,342,North England,LA3 1<br>Avg. Price: 48K<br>Sales Volume: 342
 2002,LA3 2,69000,280,North England,LA3 2<br>Avg. Price: 69K<br>Sales Volume: 280
 2002,LA3 3,78000,216,North England,LA3 3<br>Avg. Price: 78K<br>Sales Volume: 216
 2002,LA4 4,52000,297,North England,LA4 4<br>Avg. Price: 52K<br>Sales Volume: 297
@@ -3576,7 +3576,7 @@ Year,Sector,Price,Volume,Region,text
 2002,LD4 1,120000,1,Wales,LD4 1<br>Avg. Price: 120K<br>Sales Volume: 1
 2002,LD4 4,109000,14,Wales,LD4 4<br>Avg. Price: 109K<br>Sales Volume: 14
 2002,LD5 4,92000,25,Wales,LD5 4<br>Avg. Price: 92K<br>Sales Volume: 25
-2002,LD6 5,84000,30,Wales,LD6 5<br>Avg. Price: 84K<br>Sales Volume: 30
+2002,LD6 5,83000,29,Wales,LD6 5<br>Avg. Price: 83K<br>Sales Volume: 29
 2002,LD7 1,133000,84,Wales,LD7 1<br>Avg. Price: 133K<br>Sales Volume: 84
 2002,LD8 2,127000,70,Wales,LD8 2<br>Avg. Price: 127K<br>Sales Volume: 70
 2002,LE1 1,109000,31,Midlands,LE1 1<br>Avg. Price: 109K<br>Sales Volume: 31
@@ -3983,7 +3983,7 @@ Year,Sector,Price,Volume,Region,text
 2002,LU2 9,114000,311,South East,LU2 9<br>Avg. Price: 114K<br>Sales Volume: 311
 2002,LU3 1,104000,575,South East,LU3 1<br>Avg. Price: 104K<br>Sales Volume: 575
 2002,LU3 2,116000,401,South East,LU3 2<br>Avg. Price: 116K<br>Sales Volume: 401
-2002,LU3 3,104000,436,South East,LU3 3<br>Avg. Price: 104K<br>Sales Volume: 436
+2002,LU3 3,104000,435,South East,LU3 3<br>Avg. Price: 104K<br>Sales Volume: 435
 2002,LU3 4,131000,254,South East,LU3 4<br>Avg. Price: 131K<br>Sales Volume: 254
 2002,LU4 0,101000,408,South East,LU4 0<br>Avg. Price: 101K<br>Sales Volume: 408
 2002,LU4 8,93000,273,South East,LU4 8<br>Avg. Price: 93K<br>Sales Volume: 273
@@ -4296,7 +4296,7 @@ Year,Sector,Price,Volume,Region,text
 2002,MK44 2,221000,50,South East,MK44 2<br>Avg. Price: 221K<br>Sales Volume: 50
 2002,MK44 3,173000,126,South East,MK44 3<br>Avg. Price: 173K<br>Sales Volume: 126
 2002,MK45 1,131000,397,South East,MK45 1<br>Avg. Price: 131K<br>Sales Volume: 397
-2002,MK45 2,178000,266,South East,MK45 2<br>Avg. Price: 178K<br>Sales Volume: 266
+2002,MK45 2,179000,265,South East,MK45 2<br>Avg. Price: 179K<br>Sales Volume: 265
 2002,MK45 3,186000,139,South East,MK45 3<br>Avg. Price: 186K<br>Sales Volume: 139
 2002,MK45 4,187000,269,South East,MK45 4<br>Avg. Price: 187K<br>Sales Volume: 269
 2002,MK45 5,224000,130,South East,MK45 5<br>Avg. Price: 224K<br>Sales Volume: 130
@@ -4902,7 +4902,7 @@ Year,Sector,Price,Volume,Region,text
 2002,NR11 8,136000,181,Midlands,NR11 8<br>Avg. Price: 136K<br>Sales Volume: 181
 2002,NR12 0,104000,163,Midlands,NR12 0<br>Avg. Price: 104K<br>Sales Volume: 163
 2002,NR12 7,179000,54,Midlands,NR12 7<br>Avg. Price: 179K<br>Sales Volume: 54
-2002,NR12 8,182000,162,Midlands,NR12 8<br>Avg. Price: 182K<br>Sales Volume: 162
+2002,NR12 8,182000,161,Midlands,NR12 8<br>Avg. Price: 182K<br>Sales Volume: 161
 2002,NR12 9,106000,145,Midlands,NR12 9<br>Avg. Price: 106K<br>Sales Volume: 145
 2002,NR13 3,128000,188,Midlands,NR13 3<br>Avg. Price: 128K<br>Sales Volume: 188
 2002,NR13 4,141000,135,Midlands,NR13 4<br>Avg. Price: 141K<br>Sales Volume: 135
@@ -5242,7 +5242,7 @@ Year,Sector,Price,Volume,Region,text
 2002,PE12 6,118000,237,Midlands,PE12 6<br>Avg. Price: 118K<br>Sales Volume: 237
 2002,PE12 7,84000,210,Midlands,PE12 7<br>Avg. Price: 84K<br>Sales Volume: 210
 2002,PE12 8,105000,129,Midlands,PE12 8<br>Avg. Price: 105K<br>Sales Volume: 129
-2002,PE12 9,94000,435,Midlands,PE12 9<br>Avg. Price: 94K<br>Sales Volume: 435
+2002,PE12 9,94000,434,Midlands,PE12 9<br>Avg. Price: 94K<br>Sales Volume: 434
 2002,PE13 1,79000,105,Midlands,PE13 1<br>Avg. Price: 79K<br>Sales Volume: 105
 2002,PE13 2,88000,255,Midlands,PE13 2<br>Avg. Price: 88K<br>Sales Volume: 255
 2002,PE13 3,71000,377,Midlands,PE13 3<br>Avg. Price: 71K<br>Sales Volume: 377
@@ -5318,7 +5318,7 @@ Year,Sector,Price,Volume,Region,text
 2002,PE31 8,180000,145,Midlands,PE31 8<br>Avg. Price: 180K<br>Sales Volume: 145
 2002,PE32 1,143000,190,Midlands,PE32 1<br>Avg. Price: 143K<br>Sales Volume: 190
 2002,PE32 2,142000,120,Midlands,PE32 2<br>Avg. Price: 142K<br>Sales Volume: 120
-2002,PE33 0,117000,201,Midlands,PE33 0<br>Avg. Price: 117K<br>Sales Volume: 201
+2002,PE33 0,117000,200,Midlands,PE33 0<br>Avg. Price: 117K<br>Sales Volume: 200
 2002,PE33 9,135000,140,Midlands,PE33 9<br>Avg. Price: 135K<br>Sales Volume: 140
 2002,PE34 3,107000,111,Midlands,PE34 3<br>Avg. Price: 107K<br>Sales Volume: 111
 2002,PE34 4,115000,199,Midlands,PE34 4<br>Avg. Price: 115K<br>Sales Volume: 199
@@ -5431,7 +5431,7 @@ Year,Sector,Price,Volume,Region,text
 2002,PL9 9,111000,278,South West,PL9 9<br>Avg. Price: 111K<br>Sales Volume: 278
 2002,PO1 1,110000,47,South East,PO1 1<br>Avg. Price: 110K<br>Sales Volume: 47
 2002,PO1 2,178000,128,South East,PO1 2<br>Avg. Price: 178K<br>Sales Volume: 128
-2002,PO1 3,217000,156,South East,PO1 3<br>Avg. Price: 217K<br>Sales Volume: 156
+2002,PO1 3,217000,155,South East,PO1 3<br>Avg. Price: 217K<br>Sales Volume: 155
 2002,PO1 4,69000,22,South East,PO1 4<br>Avg. Price: 69K<br>Sales Volume: 22
 2002,PO1 5,87000,346,South East,PO1 5<br>Avg. Price: 87K<br>Sales Volume: 346
 2002,PO10 7,186000,215,South East,PO10 7<br>Avg. Price: 186K<br>Sales Volume: 215
@@ -5861,6 +5861,7 @@ Year,Sector,Price,Volume,Region,text
 2002,RM9 4,112000,202,Greater London,RM9 4<br>Avg. Price: 112K<br>Sales Volume: 202
 2002,RM9 5,111000,247,Greater London,RM9 5<br>Avg. Price: 111K<br>Sales Volume: 247
 2002,RM9 6,106000,202,Greater London,RM9 6<br>Avg. Price: 106K<br>Sales Volume: 202
+2002,S032 1,150000,1,Midlands,S032 1<br>Avg. Price: 150K<br>Sales Volume: 1
 2002,S1 2,137000,11,Midlands,S1 2<br>Avg. Price: 137K<br>Sales Volume: 11
 2002,S1 4,110000,166,Midlands,S1 4<br>Avg. Price: 110K<br>Sales Volume: 166
 2002,S10 1,98000,357,Midlands,S10 1<br>Avg. Price: 98K<br>Sales Volume: 357
@@ -6636,7 +6637,7 @@ Year,Sector,Price,Volume,Region,text
 2002,SO31 7,214000,150,South East,SO31 7<br>Avg. Price: 214K<br>Sales Volume: 150
 2002,SO31 8,178000,157,South East,SO31 8<br>Avg. Price: 178K<br>Sales Volume: 157
 2002,SO31 9,216000,189,South East,SO31 9<br>Avg. Price: 216K<br>Sales Volume: 189
-2002,SO32 1,194000,209,South East,SO32 1<br>Avg. Price: 194K<br>Sales Volume: 209
+2002,SO32 1,194000,208,South East,SO32 1<br>Avg. Price: 194K<br>Sales Volume: 208
 2002,SO32 2,274000,187,South East,SO32 2<br>Avg. Price: 274K<br>Sales Volume: 187
 2002,SO32 3,349000,44,South East,SO32 3<br>Avg. Price: 349K<br>Sales Volume: 44
 2002,SO40 2,174000,200,South East,SO40 2<br>Avg. Price: 174K<br>Sales Volume: 200
@@ -7346,7 +7347,7 @@ Year,Sector,Price,Volume,Region,text
 2002,TR17 0,129000,60,South West,TR17 0<br>Avg. Price: 129K<br>Sales Volume: 60
 2002,TR18 2,92000,148,South West,TR18 2<br>Avg. Price: 92K<br>Sales Volume: 148
 2002,TR18 3,102000,128,South West,TR18 3<br>Avg. Price: 102K<br>Sales Volume: 128
-2002,TR18 4,143000,113,South West,TR18 4<br>Avg. Price: 143K<br>Sales Volume: 113
+2002,TR18 4,142000,112,South West,TR18 4<br>Avg. Price: 142K<br>Sales Volume: 112
 2002,TR18 5,127000,77,South West,TR18 5<br>Avg. Price: 127K<br>Sales Volume: 77
 2002,TR19 6,153000,114,South West,TR19 6<br>Avg. Price: 153K<br>Sales Volume: 114
 2002,TR19 7,113000,135,South West,TR19 7<br>Avg. Price: 113K<br>Sales Volume: 135

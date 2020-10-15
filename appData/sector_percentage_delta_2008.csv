@@ -621,7 +621,7 @@ BN1 2,-6,South East,BN1 2<br>Price Change: -6%
 BN1 3,7,South East,BN1 3<br>Price Change: 7%
 BN1 4,13,South East,BN1 4<br>Price Change: 13%
 BN1 5,11,South East,BN1 5<br>Price Change: 11%
-BN1 6,10,South East,BN1 6<br>Price Change: 10%
+BN1 6,11,South East,BN1 6<br>Price Change: 11%
 BN1 7,-8,South East,BN1 7<br>Price Change: -8%
 BN1 8,-6,South East,BN1 8<br>Price Change: -6%
 BN1 9,-2,South East,BN1 9<br>Price Change: -2%
@@ -3666,7 +3666,7 @@ LL19 9,-5,Wales,LL19 9<br>Price Change: -5%
 LL20 7,4,Wales,LL20 7<br>Price Change: 4%
 LL20 8,5,Wales,LL20 8<br>Price Change: 5%
 LL21 0,6,Wales,LL21 0<br>Price Change: 6%
-LL21 9,-19,Wales,LL21 9<br>Price Change: -19%
+LL21 9,-20,Wales,LL21 9<br>Price Change: -20%
 LL22 7,-5,Wales,LL22 7<br>Price Change: -5%
 LL22 8,4,Wales,LL22 8<br>Price Change: 4%
 LL22 9,-8,Wales,LL22 9<br>Price Change: -8%
@@ -3733,7 +3733,7 @@ LL61 9,11,Wales,LL61 9<br>Price Change: 11%
 LL62 5,6,Wales,LL62 5<br>Price Change: 6%
 LL63 5,-2,Wales,LL63 5<br>Price Change: -2%
 LL64 5,-15,Wales,LL64 5<br>Price Change: -15%
-LL65 1,-9,Wales,LL65 1<br>Price Change: -9%
+LL65 1,-10,Wales,LL65 1<br>Price Change: -10%
 LL65 2,16,Wales,LL65 2<br>Price Change: 16%
 LL65 3,5,Wales,LL65 3<br>Price Change: 5%
 LL65 4,19,Wales,LL65 4<br>Price Change: 19%
@@ -4110,7 +4110,7 @@ ME11 5,-5,South East,ME11 5<br>Price Change: -5%
 ME12 1,-2,South East,ME12 1<br>Price Change: -2%
 ME12 2,4,South East,ME12 2<br>Price Change: 4%
 ME12 3,-12,South East,ME12 3<br>Price Change: -12%
-ME12 4,6,South East,ME12 4<br>Price Change: 6%
+ME12 4,7,South East,ME12 4<br>Price Change: 7%
 ME13 0,49,South East,ME13 0<br>Price Change: 49%
 ME13 7,19,South East,ME13 7<br>Price Change: 19%
 ME13 8,-9,South East,ME13 8<br>Price Change: -9%
@@ -4832,7 +4832,7 @@ NR14 7,-17,Midlands,NR14 7<br>Price Change: -17%
 NR14 8,5,Midlands,NR14 8<br>Price Change: 5%
 NR15 1,13,Midlands,NR15 1<br>Price Change: 13%
 NR15 2,-7,Midlands,NR15 2<br>Price Change: -7%
-NR16 1,-13,Midlands,NR16 1<br>Price Change: -13%
+NR16 1,-15,Midlands,NR16 1<br>Price Change: -15%
 NR16 2,-1,Midlands,NR16 2<br>Price Change: -1%
 NR17 1,11,Midlands,NR17 1<br>Price Change: 11%
 NR17 2,-2,Midlands,NR17 2<br>Price Change: -2%
@@ -6932,7 +6932,7 @@ SY19 7,-3,Wales,SY19 7<br>Price Change: -3%
 SY2 5,-4,Wales,SY2 5<br>Price Change: -4%
 SY2 6,4,Wales,SY2 6<br>Price Change: 4%
 SY20 8,-9,Wales,SY20 8<br>Price Change: -9%
-SY20 9,2,Wales,SY20 9<br>Price Change: 2%
+SY20 9,3,Wales,SY20 9<br>Price Change: 3%
 SY21 0,-5,Wales,SY21 0<br>Price Change: -5%
 SY21 7,-4,Wales,SY21 7<br>Price Change: -4%
 SY21 8,17,Wales,SY21 8<br>Price Change: 17%
@@ -7011,7 +7011,7 @@ TA3 5,8,South West,TA3 5<br>Price Change: 8%
 TA3 6,1,South West,TA3 6<br>Price Change: 1%
 TA3 7,-12,South West,TA3 7<br>Price Change: -12%
 TA4 1,-12,South West,TA4 1<br>Price Change: -12%
-TA4 2,-22,South West,TA4 2<br>Price Change: -22%
+TA4 2,-23,South West,TA4 2<br>Price Change: -23%
 TA4 3,18,South West,TA4 3<br>Price Change: 18%
 TA4 4,52,South West,TA4 4<br>Price Change: 52%
 TA5 1,-17,South West,TA5 1<br>Price Change: -17%
@@ -7822,7 +7822,7 @@ WR11 1,-10,Midlands,WR11 1<br>Price Change: -10%
 WR11 2,-7,Midlands,WR11 2<br>Price Change: -7%
 WR11 3,-1,Midlands,WR11 3<br>Price Change: -1%
 WR11 4,-1,Midlands,WR11 4<br>Price Change: -1%
-WR11 7,-7,Midlands,WR11 7<br>Price Change: -7%
+WR11 7,-6,Midlands,WR11 7<br>Price Change: -6%
 WR11 8,5,Midlands,WR11 8<br>Price Change: 5%
 WR12 7,6,Midlands,WR12 7<br>Price Change: 6%
 WR13 5,1,Midlands,WR13 5<br>Price Change: 1%

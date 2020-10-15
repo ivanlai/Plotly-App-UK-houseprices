@@ -232,7 +232,7 @@ Year,Sector,Price,Volume,Region,text
 2005,B80 7,195000,97,Midlands,B80 7<br>Avg. Price: 195K<br>Sales Volume: 97
 2005,B9 4,105000,72,Midlands,B9 4<br>Avg. Price: 105K<br>Sales Volume: 72
 2005,B9 5,112000,244,Midlands,B9 5<br>Avg. Price: 112K<br>Sales Volume: 244
-2005,B90 1,208000,410,Midlands,B90 1<br>Avg. Price: 208K<br>Sales Volume: 410
+2005,B90 1,208000,409,Midlands,B90 1<br>Avg. Price: 208K<br>Sales Volume: 409
 2005,B90 2,214000,203,Midlands,B90 2<br>Avg. Price: 214K<br>Sales Volume: 203
 2005,B90 3,209000,169,Midlands,B90 3<br>Avg. Price: 209K<br>Sales Volume: 169
 2005,B90 4,222000,203,Midlands,B90 4<br>Avg. Price: 222K<br>Sales Volume: 203
@@ -263,7 +263,7 @@ Year,Sector,Price,Volume,Region,text
 2005,BA1 3,251000,159,South West,BA1 3<br>Avg. Price: 251K<br>Sales Volume: 159
 2005,BA1 4,226000,102,South West,BA1 4<br>Avg. Price: 226K<br>Sales Volume: 102
 2005,BA1 5,362000,125,South West,BA1 5<br>Avg. Price: 362K<br>Sales Volume: 125
-2005,BA1 6,228000,192,South West,BA1 6<br>Avg. Price: 228K<br>Sales Volume: 192
+2005,BA1 6,228000,193,South West,BA1 6<br>Avg. Price: 228K<br>Sales Volume: 193
 2005,BA1 7,299000,87,South West,BA1 7<br>Avg. Price: 299K<br>Sales Volume: 87
 2005,BA1 8,239000,8,South West,BA1 8<br>Avg. Price: 239K<br>Sales Volume: 8
 2005,BA1 9,750000,4,South West,BA1 9<br>Avg. Price: 750K<br>Sales Volume: 4
@@ -322,7 +322,7 @@ Year,Sector,Price,Volume,Region,text
 2005,BA6 8,217000,111,South West,BA6 8<br>Avg. Price: 217K<br>Sales Volume: 111
 2005,BA6 9,153000,139,South West,BA6 9<br>Avg. Price: 153K<br>Sales Volume: 139
 2005,BA7 7,203000,68,South West,BA7 7<br>Avg. Price: 203K<br>Sales Volume: 68
-2005,BA8 0,219000,98,South West,BA8 0<br>Avg. Price: 219K<br>Sales Volume: 98
+2005,BA8 0,221000,96,South West,BA8 0<br>Avg. Price: 221K<br>Sales Volume: 96
 2005,BA9 8,337000,25,South West,BA9 8<br>Avg. Price: 337K<br>Sales Volume: 25
 2005,BA9 9,167000,124,South West,BA9 9<br>Avg. Price: 167K<br>Sales Volume: 124
 2005,BB1 1,71000,114,North England,BB1 1<br>Avg. Price: 71K<br>Sales Volume: 114
@@ -772,7 +772,7 @@ Year,Sector,Price,Volume,Region,text
 2005,BS15 3,182000,121,South West,BS15 3<br>Avg. Price: 182K<br>Sales Volume: 121
 2005,BS15 4,141000,168,South West,BS15 4<br>Avg. Price: 141K<br>Sales Volume: 168
 2005,BS15 8,145000,121,South West,BS15 8<br>Avg. Price: 145K<br>Sales Volume: 121
-2005,BS15 9,137000,125,South West,BS15 9<br>Avg. Price: 137K<br>Sales Volume: 125
+2005,BS15 9,137000,124,South West,BS15 9<br>Avg. Price: 137K<br>Sales Volume: 124
 2005,BS16 1,196000,230,South West,BS16 1<br>Avg. Price: 196K<br>Sales Volume: 230
 2005,BS16 2,176000,170,South West,BS16 2<br>Avg. Price: 176K<br>Sales Volume: 170
 2005,BS16 3,142000,198,South West,BS16 3<br>Avg. Price: 142K<br>Sales Volume: 198
@@ -1061,7 +1061,7 @@ Year,Sector,Price,Volume,Region,text
 2005,CF3 5,136000,132,Wales,CF3 5<br>Avg. Price: 136K<br>Sales Volume: 132
 2005,CF3 6,536000,8,Wales,CF3 6<br>Avg. Price: 536K<br>Sales Volume: 8
 2005,CF31 1,125000,104,Wales,CF31 1<br>Avg. Price: 125K<br>Sales Volume: 104
-2005,CF31 2,132000,243,Wales,CF31 2<br>Avg. Price: 132K<br>Sales Volume: 243
+2005,CF31 2,132000,242,Wales,CF31 2<br>Avg. Price: 132K<br>Sales Volume: 242
 2005,CF31 3,191000,89,Wales,CF31 3<br>Avg. Price: 191K<br>Sales Volume: 89
 2005,CF31 4,126000,144,Wales,CF31 4<br>Avg. Price: 126K<br>Sales Volume: 144
 2005,CF31 5,180000,181,Wales,CF31 5<br>Avg. Price: 180K<br>Sales Volume: 181
@@ -3123,7 +3123,7 @@ Year,Sector,Price,Volume,Region,text
 2005,KT23 4,319000,91,Greater London,KT23 4<br>Avg. Price: 319K<br>Sales Volume: 91
 2005,KT24 5,572000,63,Greater London,KT24 5<br>Avg. Price: 572K<br>Sales Volume: 63
 2005,KT24 6,530000,54,Greater London,KT24 6<br>Avg. Price: 530K<br>Sales Volume: 54
-2005,KT3 3,283000,213,Greater London,KT3 3<br>Avg. Price: 283K<br>Sales Volume: 213
+2005,KT3 3,284000,212,Greater London,KT3 3<br>Avg. Price: 284K<br>Sales Volume: 212
 2005,KT3 4,354000,90,Greater London,KT3 4<br>Avg. Price: 354K<br>Sales Volume: 90
 2005,KT3 5,304000,164,Greater London,KT3 5<br>Avg. Price: 304K<br>Sales Volume: 164
 2005,KT3 6,276000,171,Greater London,KT3 6<br>Avg. Price: 276K<br>Sales Volume: 171
@@ -3571,7 +3571,7 @@ Year,Sector,Price,Volume,Region,text
 2005,LD3 9,171000,52,Wales,LD3 9<br>Avg. Price: 171K<br>Sales Volume: 52
 2005,LD4 4,136000,13,Wales,LD4 4<br>Avg. Price: 136K<br>Sales Volume: 13
 2005,LD5 4,187000,14,Wales,LD5 4<br>Avg. Price: 187K<br>Sales Volume: 14
-2005,LD6 5,156000,36,Wales,LD6 5<br>Avg. Price: 156K<br>Sales Volume: 36
+2005,LD6 5,156000,35,Wales,LD6 5<br>Avg. Price: 156K<br>Sales Volume: 35
 2005,LD7 1,166000,74,Wales,LD7 1<br>Avg. Price: 166K<br>Sales Volume: 74
 2005,LD8 2,197000,68,Wales,LD8 2<br>Avg. Price: 197K<br>Sales Volume: 68
 2005,LE1 1,130000,82,Midlands,LE1 1<br>Avg. Price: 130K<br>Sales Volume: 82
@@ -3699,7 +3699,7 @@ Year,Sector,Price,Volume,Region,text
 2005,LL13 8,104000,74,Wales,LL13 8<br>Avg. Price: 104K<br>Sales Volume: 74
 2005,LL13 9,160000,127,Wales,LL13 9<br>Avg. Price: 160K<br>Sales Volume: 127
 2005,LL14 1,112000,88,Wales,LL14 1<br>Avg. Price: 112K<br>Sales Volume: 88
-2005,LL14 2,104000,104,Wales,LL14 2<br>Avg. Price: 104K<br>Sales Volume: 104
+2005,LL14 2,105000,103,Wales,LL14 2<br>Avg. Price: 105K<br>Sales Volume: 103
 2005,LL14 3,105000,63,Wales,LL14 3<br>Avg. Price: 105K<br>Sales Volume: 63
 2005,LL14 4,146000,45,Wales,LL14 4<br>Avg. Price: 146K<br>Sales Volume: 45
 2005,LL14 5,146000,99,Wales,LL14 5<br>Avg. Price: 146K<br>Sales Volume: 99
@@ -4039,7 +4039,7 @@ Year,Sector,Price,Volume,Region,text
 2005,M21 9,190000,224,North England,M21 9<br>Avg. Price: 190K<br>Sales Volume: 224
 2005,M22 0,96000,44,North England,M22 0<br>Avg. Price: 96K<br>Sales Volume: 44
 2005,M22 1,104000,99,North England,M22 1<br>Avg. Price: 104K<br>Sales Volume: 99
-2005,M22 4,157000,288,North England,M22 4<br>Avg. Price: 157K<br>Sales Volume: 288
+2005,M22 4,157000,287,North England,M22 4<br>Avg. Price: 157K<br>Sales Volume: 287
 2005,M22 5,115000,77,North England,M22 5<br>Avg. Price: 115K<br>Sales Volume: 77
 2005,M22 8,104000,88,North England,M22 8<br>Avg. Price: 104K<br>Sales Volume: 88
 2005,M22 9,121000,142,North England,M22 9<br>Avg. Price: 121K<br>Sales Volume: 142
@@ -4117,7 +4117,7 @@ Year,Sector,Price,Volume,Region,text
 2005,M40 3,102000,97,North England,M40 3<br>Avg. Price: 102K<br>Sales Volume: 97
 2005,M40 5,86000,63,North England,M40 5<br>Avg. Price: 86K<br>Sales Volume: 63
 2005,M40 7,61000,20,North England,M40 7<br>Avg. Price: 61K<br>Sales Volume: 20
-2005,M40 8,77000,51,North England,M40 8<br>Avg. Price: 77K<br>Sales Volume: 51
+2005,M40 8,77000,50,North England,M40 8<br>Avg. Price: 77K<br>Sales Volume: 50
 2005,M40 9,50000,238,North England,M40 9<br>Avg. Price: 50K<br>Sales Volume: 238
 2005,M41 0,167000,93,North England,M41 0<br>Avg. Price: 167K<br>Sales Volume: 93
 2005,M41 5,175000,115,North England,M41 5<br>Avg. Price: 175K<br>Sales Volume: 115
@@ -4750,7 +4750,7 @@ Year,Sector,Price,Volume,Region,text
 2005,NN14 4,184000,300,Midlands,NN14 4<br>Avg. Price: 184K<br>Sales Volume: 300
 2005,NN14 6,129000,189,Midlands,NN14 6<br>Avg. Price: 129K<br>Sales Volume: 189
 2005,NN15 5,150000,330,Midlands,NN15 5<br>Avg. Price: 150K<br>Sales Volume: 330
-2005,NN15 6,154000,281,Midlands,NN15 6<br>Avg. Price: 154K<br>Sales Volume: 281
+2005,NN15 6,154000,280,Midlands,NN15 6<br>Avg. Price: 154K<br>Sales Volume: 280
 2005,NN15 7,152000,143,Midlands,NN15 7<br>Avg. Price: 152K<br>Sales Volume: 143
 2005,NN16 0,104000,186,Midlands,NN16 0<br>Avg. Price: 104K<br>Sales Volume: 186
 2005,NN16 8,113000,228,Midlands,NN16 8<br>Avg. Price: 113K<br>Sales Volume: 228
@@ -4926,7 +4926,7 @@ Year,Sector,Price,Volume,Region,text
 2005,NR28 0,149000,192,Midlands,NR28 0<br>Avg. Price: 149K<br>Sales Volume: 192
 2005,NR28 9,165000,146,Midlands,NR28 9<br>Avg. Price: 165K<br>Sales Volume: 146
 2005,NR29 3,175000,116,Midlands,NR29 3<br>Avg. Price: 175K<br>Sales Volume: 116
-2005,NR29 4,141000,175,Midlands,NR29 4<br>Avg. Price: 141K<br>Sales Volume: 175
+2005,NR29 4,142000,174,Midlands,NR29 4<br>Avg. Price: 142K<br>Sales Volume: 174
 2005,NR29 5,188000,81,Midlands,NR29 5<br>Avg. Price: 188K<br>Sales Volume: 81
 2005,NR3 1,148000,158,Midlands,NR3 1<br>Avg. Price: 148K<br>Sales Volume: 158
 2005,NR3 2,138000,228,Midlands,NR3 2<br>Avg. Price: 138K<br>Sales Volume: 228
@@ -7553,7 +7553,7 @@ Year,Sector,Price,Volume,Region,text
 2005,W13 0,273000,184,Greater London,W13 0<br>Avg. Price: 273K<br>Sales Volume: 184
 2005,W13 8,405000,90,Greater London,W13 8<br>Avg. Price: 405K<br>Sales Volume: 90
 2005,W13 9,302000,293,Greater London,W13 9<br>Avg. Price: 302K<br>Sales Volume: 293
-2005,W14 0,398000,246,Greater London,W14 0<br>Avg. Price: 398K<br>Sales Volume: 246
+2005,W14 0,398000,244,Greater London,W14 0<br>Avg. Price: 398K<br>Sales Volume: 244
 2005,W14 8,611000,243,Greater London,W14 8<br>Avg. Price: 611K<br>Sales Volume: 243
 2005,W14 9,279000,233,Greater London,W14 9<br>Avg. Price: 279K<br>Sales Volume: 233
 2005,W1B 1,1157000,11,Greater London,"W1B 1<br>Avg. Price: 1,157K<br>Sales Volume: 11"
@@ -7855,7 +7855,7 @@ Year,Sector,Price,Volume,Region,text
 2005,WF4 1,144000,137,North England,WF4 1<br>Avg. Price: 144K<br>Sales Volume: 137
 2005,WF4 2,122000,142,North England,WF4 2<br>Avg. Price: 122K<br>Sales Volume: 142
 2005,WF4 3,162000,167,North England,WF4 3<br>Avg. Price: 162K<br>Sales Volume: 167
-2005,WF4 4,182000,137,North England,WF4 4<br>Avg. Price: 182K<br>Sales Volume: 137
+2005,WF4 4,180000,136,North England,WF4 4<br>Avg. Price: 180K<br>Sales Volume: 136
 2005,WF4 5,143000,136,North England,WF4 5<br>Avg. Price: 143K<br>Sales Volume: 136
 2005,WF4 6,138000,66,North England,WF4 6<br>Avg. Price: 138K<br>Sales Volume: 66
 2005,WF5 0,137000,136,North England,WF5 0<br>Avg. Price: 137K<br>Sales Volume: 136
@@ -8010,7 +8010,7 @@ Year,Sector,Price,Volume,Region,text
 2005,WV1 2,85000,91,Midlands,WV1 2<br>Avg. Price: 85K<br>Sales Volume: 91
 2005,WV1 3,151000,135,Midlands,WV1 3<br>Avg. Price: 151K<br>Sales Volume: 135
 2005,WV1 4,147000,46,Midlands,WV1 4<br>Avg. Price: 147K<br>Sales Volume: 46
-2005,WV10 0,97000,131,Midlands,WV10 0<br>Avg. Price: 97K<br>Sales Volume: 131
+2005,WV10 0,97000,130,Midlands,WV10 0<br>Avg. Price: 97K<br>Sales Volume: 130
 2005,WV10 6,122000,179,Midlands,WV10 6<br>Avg. Price: 122K<br>Sales Volume: 179
 2005,WV10 7,157000,88,Midlands,WV10 7<br>Avg. Price: 157K<br>Sales Volume: 88
 2005,WV10 8,113000,115,Midlands,WV10 8<br>Avg. Price: 113K<br>Sales Volume: 115
