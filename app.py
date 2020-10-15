@@ -504,9 +504,9 @@ app.layout = html.Div(
 
                              1. Property type "Other" have been filtered from the house price data.
                              2. School ranking is the best of GCSE and A-Level rankings.
-                             3. A-Level ranking more reliable, as GCSE subjects like Classics,
-                             and Latin are excluded from ranking score.
-                             Schools offering such subjects would have been unfairly penalized.
+                             3. GCSE ranking can be misleading. Subjects like
+                             Classics and Latin are excluded from contribution,
+                             leading to some schools being unfairly penalized.
 
                              **Other data sources:**
                              - [OpenStreetMap](https://www.openstreetmap.org)
