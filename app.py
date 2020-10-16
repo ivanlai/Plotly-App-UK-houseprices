@@ -571,7 +571,7 @@ def update_map_title(region, year, gtype, school):
         if year == 1995:
             return f'Data from {year-1} to {year} not available'
         else:
-            return f'Year-to-year price % change by postcode sector in {region}, from {year-1} to {year}'
+            return f'Yr-to-yr price % change in {region}, from {year-1} to {year}'
 
 #----------------------------------------------------#
 
