@@ -147,7 +147,7 @@ for k, v in regional_geo_data.items():
 ---------------------------------------------------------------------------- """
 
 schools_top_500 = pd.read_csv(os.path.join(cfg['app_data_dir'], f'schools_top_500.csv'))
-schools_top_500['Best Rank'] *= -1
+schools_top_500['Best Rank'] *= -1 #reverse the rankings solely for display purpose
 
 
 """ ----------------------------------------------------------------------------
@@ -544,9 +544,9 @@ app.layout = html.Div(
 """ ----------------------------------------------------------------------------
  Callback functions:
  Overview:
- region, year, graph-type -> choropleth-title
+ region, year, graph-type, school -> choropleth-title
  region, year -> postcode options
- region, year, graph-type, postcode-value -> choropleth
+ region, year, graph-type, postcode-value, school -> choropleth
  postcode-value, property-type-checklist -> price-time-series
  choropleth-clickData, choropleth-selectedData, region, postcode-State
                                                         -> postcode-value
