@@ -624,7 +624,7 @@ def update_Choropleth(year, region, gtype, sectors, school):
                                   if sector in regional_geo_sector[region]]
 
     # Updating figure ----------------------------------#
-    fig = get_figure(df, regional_geo_data_paths[region], region, gtype, year,
+    fig = get_figure(df, regional_geo_data[region], region, gtype, year,
                      geo_sectors, school)
 
     return fig
