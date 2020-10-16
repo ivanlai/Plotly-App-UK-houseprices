@@ -37,11 +37,9 @@ cfg['end_year']         = 2020
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 cfg['latest date']      = "31 August 2020"
 
-cfg['assets dir']       = 'assets'
-
 #When running in Pythonanywhere
 appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
-assetsPath = '/home/ivanlai/apps-UK_houseprice/assets'
+assetsPath  = '/home/ivanlai/apps-UK_houseprice/assets'
 
 if os.path.isdir(appDataPath):
     cfg['app_data_dir'] = appDataPath
