@@ -37,6 +37,8 @@ cfg['end_year']         = 2020
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
 cfg['latest date']      = "31 August 2020"
 
+cfg['assets dir']       = 'assets'
+
 #When running in Pythonanywhere
 appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
 if os.path.isdir(appDataPath):
@@ -123,8 +125,11 @@ regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
  Geo Data
 ---------------------------------------------------------------------------- """
 regional_geo_data = dict()
+regional_geo_data_paths = dict()
 for region in cfg['plotly_config']:
-    infile = os.path.join(cfg['app_data_dir'], f'geodata_{region}.csv')
+    infile = os.path.join(cfg['assets dir'], f'geodata_{region}.csv')
+    regional_geo_data_paths[region] = infile
+
     with open(infile, "r") as read_file:
         regional_geo_data[region] = json.load(read_file)
 
@@ -617,7 +622,7 @@ def update_Choropleth(year, region, gtype, sectors, school):
                                   if sector in regional_geo_sector[region]]
 
     # Updating figure ----------------------------------#
-    fig = get_figure(df, regional_geo_data[region], region, gtype, year,
+    fig = get_figure(df, regional_geo_data_paths[region], region, gtype, year,
                      geo_sectors, school)
 
     return fig
