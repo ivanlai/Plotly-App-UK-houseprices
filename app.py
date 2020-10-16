@@ -130,7 +130,8 @@ regional_geo_data = dict()
 regional_geo_data_paths = dict()
 for region in cfg['plotly_config']:
     infile = os.path.join(cfg['assets dir'], f'geodata_{region}.json')
-    regional_geo_data_paths[region] = infile
+    # infile = app.get_asset_url(f'geodata_{region}.json')
+    regional_geo_data_paths[region] = f'geodata_{region}.json'
 
     with open(infile, "r") as read_file:
         regional_geo_data[region] = json.load(read_file)
@@ -624,11 +625,11 @@ def update_Choropleth(year, region, gtype, sectors, school):
                                   if sector in regional_geo_sector[region]]
 
     # Updating figure ----------------------------------#
-    fig = get_figure(df, regional_geo_data[region], region, gtype, year,
-                     geo_sectors, school)
+    # fig = get_figure(df, regional_geo_data[region], region, gtype, year,
+                     # geo_sectors, school)
 
-    # fig = get_figure(df, regional_geo_data_paths[region], region, gtype, year,
-    #                  geo_sectors, school)
+    fig = get_figure(df, app.get_asset_url(regional_geo_data_paths[region]),
+                     region, gtype, year, geo_sectors, school)
 
     return fig
 
