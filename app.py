@@ -41,13 +41,17 @@ cfg['assets dir']       = 'assets'
 
 #When running in Pythonanywhere
 appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
+assetsPath = '/home/ivanlai/apps-UK_houseprice/assets'
+
 if os.path.isdir(appDataPath):
     cfg['app_data_dir'] = appDataPath
+    cfg['assets dir']   = assetsPath
     cfg['cache dir']    = 'cache'
 
 #when running locally
 else:
     cfg['app_data_dir'] = 'appData'
+    cfg['assets dir']   = 'assets'
     cfg['cache dir']    = '/tmp/cache'
 
 cfg['topN']             = 50
