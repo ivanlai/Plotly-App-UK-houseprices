@@ -502,19 +502,19 @@ app.layout = html.Div(
                 dcc.Markdown('''
                              **Notes:**
 
-                             1. Property type "Other" have been filtered from the house price data.
+                             1. Property type "Other" is filtered from the house price data.
                              2. School ranking is the best of GCSE and A-Level rankings.
-                             3. GCSE ranking can be misleading. Subjects like
-                             Classics and Latin are excluded from contribution,
-                             leading to some schools being unfairly penalized.
+                             3. GCSE ranking can be misleading - subjects like
+                             Classics and Latin are excluded from scoring and hence
+                             unfairly penalising some schools.
 
                              **Other data sources:**
                              - [OpenStreetMap](https://www.openstreetmap.org)
+                             - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
                              - [Postcode boundary data](https://www.opendoorlogistics.com/data/)
                              from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
                              - Contains Royal Mail data © Royal Mail copyright and database right 2015
                              - Contains National Statistics data © Crown copyright and database right 2015
-                             - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
                              - [School 2019 performance data](https://www.gov.uk/school-performance-tables).
                              (Note: [Attainment 8 Score](https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx)
                              is used in GCSE ranking; and
