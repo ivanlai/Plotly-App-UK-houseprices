@@ -515,11 +515,11 @@ app.layout = html.Div(
                              from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
                              - Contains Royal Mail data © Royal Mail copyright and database right 2015
                              - Contains National Statistics data © Crown copyright and database right 2015
-                             - [School 2019 performance data](https://www.gov.uk/school-performance-tables).
-                             (Note: [Attainment 8 Score](https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx)
-                             is used in GCSE ranking; and
+                             - [School 2019 performance data](https://www.gov.uk/school-performance-tables)
+                             (Ranking scores: [Attainment 8 Score](https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx)
+                             for GCSE and
                              [Average Point Score](https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf)
-                             is used in A-Level ranking.)
+                             for A-Level)
                              '''
                             )
                 ], style={'textAlign': 'left',
