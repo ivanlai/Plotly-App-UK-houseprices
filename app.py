@@ -129,7 +129,7 @@ regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
 regional_geo_data = dict()
 regional_geo_data_paths = dict()
 for region in cfg['plotly_config']:
-    infile = os.path.join(cfg['assets dir'], f'geodata_{region}.csv')
+    infile = os.path.join(cfg['assets dir'], f'geodata_{region}.json')
     regional_geo_data_paths[region] = infile
 
     with open(infile, "r") as read_file:
@@ -626,6 +626,9 @@ def update_Choropleth(year, region, gtype, sectors, school):
     # Updating figure ----------------------------------#
     fig = get_figure(df, regional_geo_data[region], region, gtype, year,
                      geo_sectors, school)
+
+    # fig = get_figure(df, regional_geo_data_paths[region], region, gtype, year,
+    #                  geo_sectors, school)
 
     return fig
 
