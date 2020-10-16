@@ -129,10 +129,10 @@ regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
 regional_geo_data = dict()
 regional_geo_data_paths = dict()
 for region in cfg['plotly_config']:
-    infile = os.path.join(cfg['assets dir'], f'geodata_{region}.json')
-    # infile = app.get_asset_url(f'geodata_{region}.json')
-    regional_geo_data_paths[region] = f'geodata_{region}.json'
+    fname = f'geodata_{region}.json'
+    regional_geo_data_paths[region] = fname
 
+    infile = os.path.join(cfg['assets dir'], fname)        
     with open(infile, "r") as read_file:
         regional_geo_data[region] = json.load(read_file)
 
