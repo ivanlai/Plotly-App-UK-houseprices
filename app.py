@@ -35,7 +35,7 @@ cfg['start_year']       = 1995
 cfg['end_year']         = 2020
 
 cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
-cfg['latest date']      = "31 August 2020"
+cfg['latest date']      = "30 September 2020"
 
 #When running in Pythonanywhere
 appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
