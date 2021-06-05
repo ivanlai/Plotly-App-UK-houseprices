@@ -511,7 +511,7 @@ app.layout = html.Div(
                              **Notes:**
 
                              1. Property type "Other" is filtered from the house price data.
-                             2. School ranking is the best of GCSE and A-Level rankings.
+                             2. School ranking (2018-2019) is the best of GCSE and A-Level rankings.
                              3. GCSE ranking can be misleading - subjects like
                              Classics and Latin are excluded from scoring,
                              unfairly penalising some schools.
