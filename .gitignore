@@ -1,1 +1,6 @@
 .ipynb_checkpoints/
+
+__pycache__/
+images/
+HousePriceData/
+tubeData/

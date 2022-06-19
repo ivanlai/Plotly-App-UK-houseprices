@@ -46,6 +46,13 @@ def get_regional_geo_data():
     return regional_geo_data, regional_geo_data_paths
 
 
+def get_regional_geo_sector(regional_geo_data):
+    regional_geo_sector = dict()
+    for k, v in regional_geo_data.items():
+        regional_geo_sector[k] = get_geo_sector(v)
+    return regional_geo_sector
+
+
 def get_geo_sector(geo_data):
     Y = dict()
     for feature in geo_data['features']:

@@ -25,7 +25,7 @@ from utils import (
     get_price_volume_df,
     get_regional_data,
     get_regional_geo_data,
-    get_geo_sector,
+    get_regional_geo_sector,
     get_schools_data
 )
 from figures_utils import (
@@ -38,43 +38,13 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-#------------------------------------------------------------------------------#
-#------------------------------------------------------------------------------#
 logging.basicConfig(format=cfg['logging format'], level=logging.INFO)
 logging.info(f"System: {sys.version}")
 
-t0 = time.time()
-
-""" ----------------------------------------------------------------------------
- House Price Data
----------------------------------------------------------------------------- """
-price_volume_df = get_price_volume_df()
-
-""" ----------------------------------------------------------------------------
- Regional Price, percentage delta and Volume Data
----------------------------------------------------------------------------- """
-regional_price_data = get_regional_data('sector_price')
-regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
-
-""" ----------------------------------------------------------------------------
- Geo Data
----------------------------------------------------------------------------- """
-regional_geo_data, regional_geo_data_paths = get_regional_geo_data()
-
-#------------------------------------------------#
-regional_geo_sector = dict()
-for k, v in regional_geo_data.items():
-    regional_geo_sector[k] = get_geo_sector(v)
-
-""" ----------------------------------------------------------------------------
- School Data
----------------------------------------------------------------------------- """
-schools_top_500 = get_schools_data()
 
 """ ----------------------------------------------------------------------------
  App Settings
 ---------------------------------------------------------------------------- """
-
 regions =  ['Greater London',
             'South East',
             'South West',
@@ -86,6 +56,18 @@ colors = {
     'background': '#1F2630',
     'text': '#7FDBFF'
 }
+
+t0 = time.time()
+
+""" ----------------------------------------------------------------------------
+Data Pre-processing
+---------------------------------------------------------------------------- """
+price_volume_df = get_price_volume_df()
+regional_price_data = get_regional_data('sector_price')
+regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
+regional_geo_data, regional_geo_data_paths = get_regional_geo_data()
+regional_geo_sector = get_regional_geo_sector(regional_geo_data)
+schools_top_500 = get_schools_data()
 
 #---------------------------------------------
 
