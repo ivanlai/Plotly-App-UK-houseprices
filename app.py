@@ -1,7 +1,6 @@
 import os
 import sys
 import time
-import json
 import random
 import logging
 from copy import copy, deepcopy
@@ -12,7 +11,6 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
 
-import plotly
 import plotly.graph_objs as go
 import plotly.express as px
 from plotly.graph_objs import Scatter, Figure, Layout
@@ -22,65 +20,23 @@ from flask_caching import Cache
 import numpy as np
 import pandas as pd
 
+from config import config as cfg
+from utils import (
+    get_price_volume_df,
+    get_regional_data,
+    get_regional_geo_data,
+    get_geo_sector,
+    get_schools_data
+)
+from figures_utils import (
+    get_figure,
+    price_volume_ts,
+    price_ts,
+    get_average_price_by_year
+)
 import warnings
 warnings.filterwarnings("ignore")
 
-
-""" ----------------------------------------------------------------------------
- Configurations
----------------------------------------------------------------------------- """
-cfg = dict()
-
-cfg['start_year']       = 1995
-cfg['end_year']         = 2021
-
-cfg['Years']            = list(range(cfg['start_year'], cfg['end_year']+1))
-cfg['latest date']      = "31 December 2021"
-
-#When running in Pythonanywhere
-appDataPath = '/home/ivanlai/apps-UK_houseprice/appData'
-assetsPath  = '/home/ivanlai/apps-UK_houseprice/assets'
-
-if os.path.isdir(appDataPath):
-    cfg['app_data_dir'] = appDataPath
-    cfg['assets dir']   = assetsPath
-    cfg['cache dir']    = 'cache'
-
-#when running locally
-else:
-    cfg['app_data_dir'] = 'appData'
-    cfg['assets dir']   = 'assets'
-    cfg['cache dir']    = '/tmp/cache'
-
-cfg['topN']             = 50
-
-cfg['timeout']          = 5*60     # Used in flask_caching
-cfg['cache threshold']  = 10000    # corresponds to ~350MB max
-
-cfg['regions_lookup'] = {
-        'North East'      : 'North England',
-        'North West'      : 'North England',
-        'East Midlands'   : 'Midlands',
-        'West Midlands'   : 'Midlands',
-        'Greater London'  : 'Greater London',
-        'South East'      : 'South East',
-        'South West'      : 'South West',
-        'Wales'           : 'Wales',
-        'Scotland'        : 'Scotland',
-        'Northern Ireland': 'Northern Ireland'
-}
-
-cfg['plotly_config'] = {
-         'North England':  {'centre': [54.3, -2.0], 'maxp': 99, 'zoom': 6.5},
-         'Wales':          {'centre': [52.4, -3.3], 'maxp': 99, 'zoom': 6.9},
-         'Midlands':       {'centre': [52.8, -1.0], 'maxp': 99, 'zoom': 7},
-         'South West':     {'centre': [51.1, -3.7], 'maxp': 99, 'zoom': 6.9},
-         'South East':     {'centre': [51.5, -0.1], 'maxp': 90, 'zoom': 7.3},
-         'Greater London': {'centre': [51.5, -0.1], 'maxp': 80, 'zoom': 8.9},
-}
-
-cfg['logging format'] = 'pid %(process)5s [%(asctime)s] ' + \
-                        '%(levelname)8s: %(message)s'
 
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
@@ -89,197 +45,31 @@ logging.info(f"System: {sys.version}")
 
 t0 = time.time()
 
-
 """ ----------------------------------------------------------------------------
  House Price Data
 ---------------------------------------------------------------------------- """
-price_volume_df = pd.read_csv(os.path.join(cfg['app_data_dir'], 'price_volume.csv'))
-price_volume_df = price_volume_df.set_index(['Year', 'Property Type', 'Sector']).unstack(level=-1)
-price_volume_df.fillna(value=0, inplace=True)
-
+price_volume_df = get_price_volume_df()
 
 """ ----------------------------------------------------------------------------
  Regional Price, percentage delta and Volume Data
 ---------------------------------------------------------------------------- """
-
-def get_regional_data(fname):
-    regiona_data = dict()
-    for year in cfg['Years']:
-        df = pd.read_csv(os.path.join(cfg['app_data_dir'], f'{fname}_{year}.csv'))
-
-        tmp = dict()
-        for region in cfg['plotly_config']:
-            if region == 'South East': #Include Greater London in South East graph
-                mask = (df.Region==region) | (df.Region=='Greater London')
-            else:
-                mask = (df.Region==region)
-            tmp[region] = df[mask]
-
-        regiona_data[year] = deepcopy(tmp)
-
-    return regiona_data
-
 regional_price_data = get_regional_data('sector_price')
 regional_percentage_delta_data = get_regional_data('sector_percentage_delta')
-
 
 """ ----------------------------------------------------------------------------
  Geo Data
 ---------------------------------------------------------------------------- """
-regional_geo_data = dict()
-regional_geo_data_paths = dict()
-for region in cfg['plotly_config']:
-    fname = f'geodata_{region}.json'
-    regional_geo_data_paths[region] = fname
-
-    infile = os.path.join(cfg['assets dir'], fname)
-    with open(infile, "r") as read_file:
-        regional_geo_data[region] = json.load(read_file)
+regional_geo_data, regional_geo_data_paths = get_regional_geo_data()
 
 #------------------------------------------------#
-
-def get_geo_sector(geo_data):
-    Y = dict()
-    for feature in geo_data['features']:
-        sector = feature['properties']['name']
-        Y[sector] = feature
-    return Y
-
 regional_geo_sector = dict()
 for k, v in regional_geo_data.items():
     regional_geo_sector[k] = get_geo_sector(v)
 
-
 """ ----------------------------------------------------------------------------
  School Data
 ---------------------------------------------------------------------------- """
-
-schools_top_500 = pd.read_csv(os.path.join(cfg['app_data_dir'], f'schools_top_500.csv'))
-schools_top_500['Best Rank'] *= -1 #reverse the rankings solely for display purpose
-
-
-""" ----------------------------------------------------------------------------
- Making Graphs
----------------------------------------------------------------------------- """
-
-def get_scattergeo(df):
-    fig = go.Figure()
-    fig.add_trace(
-        px.scatter_mapbox(df,
-                          lat="Latitude", lon="Longitude",
-                          color="Best Rank",
-                          # color_discrete_sequence=['White'],
-                          size=np.ones(len(df)),
-                          size_max=8,
-                          opacity=1
-        ).data[0]
-    )
-    fig.update_traces(hovertemplate=df['Info'])
-
-    return fig
-
-#--------------------------------------------#
-
-def get_Choropleth(df, geo_data, arg, marker_opacity,
-                   marker_line_width, marker_line_color, fig=None):
-
-    if fig is None:
-        fig = go.Figure()
-
-    fig.add_trace(
-            go.Choroplethmapbox(
-                geojson = geo_data,
-                locations = df['Sector'],
-                featureidkey = "properties.name",
-                colorscale = arg['colorscale'],
-                z = arg['z_vec'],
-                zmin = arg['min_value'],
-                zmax = arg['max_value'],
-                text = arg['text_vec'],
-                hoverinfo="text",
-                marker_opacity = marker_opacity,
-                marker_line_width = marker_line_width,
-                marker_line_color = marker_line_color,
-                colorbar_title = arg['title'],
-          )
-    )
-    return fig
-
-#--------------------------------------------#
-
-def get_figure(df, geo_data, region, gtype, year, geo_sectors, school):
-    """ ref: https://plotly.com/python/builtin-colorscales/
-    """
-    config = {'doubleClickDelay': 1000} #Set a high delay to make double click easier
-
-    _cfg = cfg['plotly_config'][region]
-
-    arg = dict()
-    if gtype == 'Price':
-        arg['min_value'] = np.percentile(np.array(df.Price), 5)
-        arg['max_value'] = np.percentile(np.array(df.Price), _cfg['maxp'])
-        arg['z_vec'] = df['Price']
-        arg['text_vec'] = df['text']
-        arg['colorscale'] = "YlOrRd"
-        arg['title'] = "Avg Price (£)"
-
-    elif gtype == 'Volume':
-        arg['min_value'] = np.percentile(np.array(df.Volume), 5)
-        arg['max_value'] = np.percentile(np.array(df.Volume), 95)
-        arg['z_vec'] = df['Volume']
-        arg['text_vec'] = df['text']
-        arg['colorscale'] = "Plasma"
-        arg['title'] = "Sales Volume"
-
-    else:
-        arg['min_value'] = np.percentile(np.array(df['Percentage Change']), 10)
-        arg['max_value'] = np.percentile(np.array(df['Percentage Change']), 90)
-        arg['z_vec'] = df['Percentage Change']
-        arg['text_vec'] = df['text']
-        arg['colorscale'] = "Picnic"
-        arg['title'] = "Avg. Price %Change"
-
-    #-------------------------------------------#
-    # Main Choropleth:
-    fig = get_Choropleth(df, geo_data, arg, marker_opacity=0.4,
-                         marker_line_width=1, marker_line_color='#6666cc')
-
-    #-------------------------------------------#
-    # School scatter_geo plot
-    if len(school) > 0:
-        fig.update_traces(showscale=False)
-        school_fig = get_scattergeo(schools_top_500)
-        fig.add_trace(school_fig.data[0])
-
-        fig.layout.coloraxis.colorbar.title = 'School Ranking'
-        fig.layout.coloraxis.colorscale = px.colors.diverging.Portland
-        fig.layout.coloraxis.colorbar.tickvals = [-10, -100, -200, -300, -400, -500]
-        fig.layout.coloraxis.colorbar.ticktext = [f'Top {i}' for i in [1, 100, 200, 300, 400, 500]]
-
-    #------------------------------------------#
-    """
-    mapbox_style options:
-    'open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter',
-    'stamen-terrain', 'stamen-toner', 'stamen-watercolor'
-    """
-    fig.update_layout(mapbox_style="open-street-map",
-                      mapbox_zoom=_cfg['zoom'],
-                      autosize=True,
-                      font=dict(color="#7FDBFF"),
-                      paper_bgcolor="#1f2630",
-                      mapbox_center = {"lat": _cfg['centre'][0] , "lon": _cfg['centre'][1]},
-                      uirevision=region,
-                      margin={"r":0,"t":0,"l":0,"b":0}
-                     )
-
-    #-------------------------------------------#
-    # Highlight selections:
-    if geo_sectors is not None and len(school)==0:
-        fig = get_Choropleth(df, geo_sectors, arg, marker_opacity=1.0,
-                             marker_line_width=3, marker_line_color='aqua', fig=fig)
-
-    return fig
-
+schools_top_500 = get_schools_data()
 
 """ ----------------------------------------------------------------------------
  App Settings
@@ -581,8 +371,6 @@ def update_map_title(region, year, gtype, school):
         else:
             return f'Yr-to-yr average price % change in {region}, from {year-1} to {year}'
 
-#----------------------------------------------------#
-
 """ Update postcode dropdown options with region selection
 """
 @app.callback(
@@ -592,8 +380,6 @@ def update_map_title(region, year, gtype, school):
 def update_region_postcode(region, year):
     return [{'label': s, 'value': s} for s in
              regional_price_data[year][region].Sector.values]
-
-#----------------------------------------------------#
 
 """ Update choropleth-graph with year, region, graph-type update & sectors
 """
@@ -626,83 +412,10 @@ def update_Choropleth(year, region, gtype, sectors, school):
 
     # Updating figure ----------------------------------#
     fig = get_figure(df, app.get_asset_url(regional_geo_data_paths[region]),
-                     region, gtype, year, geo_sectors, school)
+                     region, gtype, year, geo_sectors, school, schools_top_500)
 
     return fig
 
-#----------------------------------------------------#
-
-def price_volume_ts(price, volume, sector):
-
-    fig = make_subplots(specs=[[{"secondary_y": True}]])
-
-    #- Volume bar graph -------------------------#
-    colorsDict = {'D':'#957DAD', 'S':'#AAC5E2', 'T':'#FDFD95', 'F':'#F4ADC6'}
-    #colorsDict = {'D':'#4D4BA7', 'S':'#B156B8', 'T':'#E77B42', 'F':'#ECF560'}
-
-    for ptype in ['D', 'S', 'T', 'F']:
-        fig.add_trace(
-            go.Bar(x=cfg['Years'],
-                   y=volume.loc[volume['Property Type']==ptype, 'Count'],
-                   marker_color=colorsDict[ptype],
-                   name=ptype
-                  ),
-            secondary_y=False
-        )
-
-    #- Price time series ------------------------#
-    fig.add_trace(
-        go.Scatter(x=price.index, y=[p[0] for p in price[sector].values],
-                   marker_color='cyan', mode='lines+markers', name=f"Avg. Price"),
-        secondary_y=True,
-    )
-
-    #- Set Axes ---------------------------------#
-    fig.update_xaxes(showgrid=False)
-    fig.update_yaxes(title_text="Sales Volume (Bar Chart)", secondary_y=False, showgrid=False)
-    fig.update_yaxes(title_text="Avg. Price (£)", secondary_y=True)
-
-    #- Layout------------------------------------#
-    fig.update_layout(title=f'{sector[0]}',
-                      plot_bgcolor=colors['background'],
-                      paper_bgcolor=colors['background'],
-                      autosize=True,
-                      barmode='stack',
-                      margin={'l': 20, 'b': 30, 'r': 10, 't': 40},
-                      legend=dict(orientation="h",
-                                  yanchor="bottom",
-                                  y=1,
-                                  xanchor="right",
-                                  x=1),
-                      font_color=colors['text'])
-    return fig
-
-#----------------------------------------------------#
-
-def price_ts(df, title):
-    fig = px.scatter(df, labels=dict(value="Average Price (£)", variable="PostCodes"),
-                     title=title)
-    fig.update_traces(mode='lines+markers')
-    fig.update_xaxes(showgrid=False)
-    fig.update_layout(margin={'l': 20, 'b': 30, 'r': 10, 't': 60},
-                      plot_bgcolor=colors['background'],
-                      paper_bgcolor=colors['background'],
-                      autosize=True,
-                      font_color=colors['text'])
-    return fig
-
-#----------------------------------------------------#
-
-def get_average_price_by_year(df, sectors):
-    avg_price_df = pd.DataFrame()
-    for sector in sectors:
-        dot_product = (df[('Count', sector)]*df[('Average Price', sector)]).groupby(df.Year).sum()
-        _sum = df[('Count', sector)].groupby(df.Year).sum()
-        avg_price_df[sector] =  np.round((dot_product / _sum)/1000) * 1000
-
-    return avg_price_df
-
-#----------------------------------------------------#
 
 """ Update price-time-series with postcode updates and graph-type
 """
@@ -714,10 +427,10 @@ def get_average_price_by_year(df, sectors):
 def update_price_timeseries(sectors, ptypes):
 
     if len(sectors) == 0:
-        return price_ts(empty_series, 'Please select postcodes')
+        return price_ts(empty_series, 'Please select postcodes', colors)
 
     if len(ptypes)==0:
-        return price_ts(empty_series, 'Please select at least one property type')
+        return price_ts(empty_series, 'Please select at least one property type', colors)
 
     #--------------------------------------------------#
     df = price_volume_df.iloc[np.isin(price_volume_df.index.get_level_values('Property Type'), ptypes),
@@ -729,10 +442,10 @@ def update_price_timeseries(sectors, ptypes):
         index = [(a, b) for (a, b) in df.columns if a != 'Average Price']
         volume_df = df[index]
         volume_df.columns = volume_df.columns.get_level_values(0)
-        return price_volume_ts(avg_price_df, volume_df, sectors)
+        return price_volume_ts(avg_price_df, volume_df, sectors, colors)
     else:
         title = f"Average prices for {len(sectors)} sectors"
-        return price_ts(avg_price_df, title)
+        return price_ts(avg_price_df, title, colors)
 
 #----------------------------------------------------#
 
