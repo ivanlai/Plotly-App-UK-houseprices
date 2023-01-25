@@ -2,7 +2,7 @@ import os
 import json
 import pandas as pd
 import logging
-from copy import copy, deepcopy
+from copy import deepcopy
 
 from config import config as cfg
 
