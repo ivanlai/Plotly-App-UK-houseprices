@@ -571,7 +571,7 @@ def update_postcode_dropdown(
 
 # ----------------------------------------------------#
 
-# app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
+app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
 
 logging.info(f"Data Preparation completed in {time.time()-t0 :.1f} seconds")
 
