@@ -7,3 +7,4 @@ numpy==1.24.4
 geopandas==0.8.2
 dash_core_components==2.0.0
 dash_bootstrap_components==0.10.7
+gunicorn==20.1.0
