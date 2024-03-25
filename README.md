@@ -21,7 +21,7 @@ In Pythonanywhere bash console:
         mkvirtualenv py38 --python=/usr/bin/python3.8
         pip install -r requirements.txt
 
-In the "Web" tab in the Pythonanywhere webpage after login:
+In the "Web" tab in the Pythonanywhere webpage:
 
 - Update the wsgi file in the Code section (to be the same as wsgi.py in repo).
 
