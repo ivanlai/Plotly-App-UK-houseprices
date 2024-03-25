@@ -1,4 +1,4 @@
-Flask_Caching==1.7.1
+Flask_Caching==2.1.0
 dash==2.16.1
 pandas==1.5.3
 plotly==5.20.0

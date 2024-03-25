@@ -15,7 +15,7 @@ dash = "^2.16.0"
 dash_html_components = "^2.0.0"
 dash_core_components = "^2.0.0"
 dash_bootstrap_components = "^0.10.6"
-Flask_Caching = "^1.7.1"
+Flask_Caching = "^2.1.0"
 convertbng = "^0.6.32"
 gunicorn = "^20.1.0"
 

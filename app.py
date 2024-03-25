@@ -581,7 +581,7 @@ logging.info(f"Data Preparation completed in {time.time()-t0 :.1f} seconds")
 if __name__ == "__main__":
     logging.info(sys.version)
 
-    # If running locally in Anaconda env:
+    # If running locally in Anaconda env:app
     if "conda-forge" in sys.version:
         app.run_server(debug=True)
 
@@ -592,4 +592,6 @@ if __name__ == "__main__":
 """ ----------------------------------------------------------------------------
 Terminal cmd to run:
 gunicorn app:server -b 0.0.0.0:8050
+or
+python app.py
 ---------------------------------------------------------------------------- """
