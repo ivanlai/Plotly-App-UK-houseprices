@@ -1,26 +1,25 @@
-[tool.poetry]
-name = "uk_house_price"
+[project]
+name = "plotly-app-uk-houseprices"
 version = "0.1.0"
-description = ""
-authors = ["ivanlai <ivan.ch.lai@gmail.com>"]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "convertbng>=0.7.5",
+    "dash>=2.18.2",
+    "dash-bootstrap-components>=1.7.1",
+    "dash-core-components>=2.0.0",
+    "dash-html-components>=2.0.0",
+    "flask-caching>=2.3.1",
+    "geopandas>=1.0.1",
+    "gunicorn>=23.0.0",
+    "nbformat>=5.10.4",
+    "numpy>=2.2.4",
+    "pandas>=2.2.3",
+    "plotly>=6.0.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-
-numpy = "^1.19.1"
-pandas = "^1.1.1"
-geopandas = "^0.8.1"
-plotly = "^5.0.0"
-dash = "^2.16.0"
-dash_html_components = "^2.0.0"
-dash_core_components = "^2.0.0"
-dash_bootstrap_components = "^0.10.6"
-Flask_Caching = "^2.1.0"
-convertbng = "^0.6.32"
-gunicorn = "^20.1.0"
-
-[tool.poetry.dev-dependencies]
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
