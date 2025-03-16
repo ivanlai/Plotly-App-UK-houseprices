@@ -3,21 +3,25 @@ name = "plotly-app-uk-houseprices"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 dependencies = [
-    "convertbng>=0.7.5",
+    "convertbng>=0.7.4",
     "dash>=2.18.2",
-    "dash-bootstrap-components>=1.7.1",
+    "dash-bootstrap-components>=1.6.0",
     "dash-core-components>=2.0.0",
     "dash-html-components>=2.0.0",
     "flask-caching>=2.3.1",
-    "geopandas>=1.0.1",
+    "geopandas>=0.13.2",
     "gunicorn>=23.0.0",
-    "ipykernel>=6.29.5",
     "nbformat>=5.10.4",
-    "numpy>=2.2.4",
-    "pandas>=2.2.3",
+    "numpy>=1.24.4",
+    "pandas>=2.0.3",
     "plotly>=6.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
 ]
 
 [tool.ruff]
@@ -27,8 +31,3 @@ line-length = 88
 quote-style = "double"
 indent-style = "tab"
 docstring-code-format = true
-
-[dependency-groups]
-dev = [
-    "ipykernel>=6.29.5",
-]
