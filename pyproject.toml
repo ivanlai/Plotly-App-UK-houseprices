@@ -23,3 +23,11 @@ dependencies = [
 dev = [
     "ipykernel>=6.29.5",
 ]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"
+docstring-code-format = true
