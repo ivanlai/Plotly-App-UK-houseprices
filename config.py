@@ -22,7 +22,7 @@ config = {
 	"cache dir": cache_dir,
 	"topN": 50,
 	"timeout": 5 * 60,  # Used in flask_caching
-	"cache threshold": 10_000,  # corresponds to ~350MB max
+	"cache threshold": 5_000,  # corresponds to ~350MB max
 	"regions_lookup": {
 		"North East": "North England",
 		"North West": "North England",
