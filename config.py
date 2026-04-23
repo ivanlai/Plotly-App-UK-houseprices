@@ -15,8 +15,8 @@ else:
 
 config = {
 	"start_year": 1995,
-	"end_year": 2024,
-	"latest date": "31 December 2024",
+	"end_year": 2025,
+	"latest date": "31 December 2025",
 	"app_data_dir": app_data_dir,
 	"assets dir": assets_dir,
 	"cache dir": cache_dir,
