@@ -1,12 +1,22 @@
 import os
 
+_pa_path = "/home/ivanlai/apps-UK_houseprice"
+if os.path.isdir(f"{_pa_path}/appData"):
+	_app_data_dir = f"{_pa_path}/appData"
+	_assets_dir = f"{_pa_path}/assets"
+	_cache_dir = "cache"
+else:
+	_app_data_dir = "appData"
+	_assets_dir = "assets"
+	_cache_dir = "/tmp/cache"
+
 config = {
 	"start_year": 1995,
 	"end_year": 2025,
 	"latest_date": "31 December 2025",
-	"app_data_dir": os.environ.get("APP_DATA_DIR", "appData"),
-	"assets_dir": os.environ.get("ASSETS_DIR", "assets"),
-	"cache_dir": os.environ.get("CACHE_DIR", "/tmp/cache"),
+	"app_data_dir": _app_data_dir,
+	"assets_dir": _assets_dir,
+	"cache_dir": _cache_dir,
 	"topN": 50,
 	"timeout": 5 * 60,  # Used in flask_caching
 	"cache_threshold": 3_000,  # (Number of memoized callbacks) × (Number of concurrent users).
