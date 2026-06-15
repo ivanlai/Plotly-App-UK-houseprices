@@ -54,11 +54,6 @@ def get_Choropleth(
 
 def get_figure(df, geo_data, region, gtype, year, geo_sectors, school, schools_top_500):
 	"""ref: https://plotly.com/python/builtin-colorscales/"""
-	config = {
-		"doubleClickDelay": 1000,  # Set a high delay to make double click easier
-		# "scrollZoom": True,
-	}
-
 	_cfg = cfg["plotly_config"][region]
 
 	arg = dict()

@@ -336,7 +336,6 @@ app.layout = html.Div(
 										),
 									]
 								),
-								# dcc.Graph(id="choropleth", config={"scrollZoom": True}),
 								dcc.Graph(id="choropleth", style={"flex": "1", "minHeight": "0"}),
 							],
 						),
