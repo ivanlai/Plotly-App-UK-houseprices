@@ -20,6 +20,7 @@ dependencies = [
 dev = [
     "ipykernel>=6.29.5",
     "pytest>=7.0",
+    "ruff>=0.4.0",
     {include-group = "pipeline"},
 ]
 pipeline = [
