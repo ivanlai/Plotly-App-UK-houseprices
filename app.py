@@ -473,7 +473,7 @@ def update_map_title(region, year, gtype, school):
 			f"Sales Volume (all property types) by postcode sector in {region}, {year}"
 		)
 	else:
-		if year == 1995:
+		if year == cfg["start_year"]:
 			return f"Data from {year - 1} to {year} not available"
 		else:
 			return f"Yr-to-yr average price % change in {region}, from {year - 1} to {year}"

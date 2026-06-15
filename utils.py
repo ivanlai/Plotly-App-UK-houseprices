@@ -2,7 +2,6 @@ import os
 import json
 import pandas as pd
 import logging
-from copy import deepcopy
 
 from config import config as cfg
 
@@ -17,7 +16,7 @@ def get_price_volume_df():
 
 
 def get_regional_data(fname):
-	regiona_data = dict()
+	regional_data = dict()
 	for year in cfg["Years"]:
 		df = pd.read_csv(os.path.join(cfg["app_data_dir"], f"{fname}_{year}.csv"))
 
@@ -29,9 +28,9 @@ def get_regional_data(fname):
 				mask = df.Region == region
 			tmp[region] = df[mask]
 
-		regiona_data[year] = deepcopy(tmp)
+		regional_data[year] = tmp
 
-	return regiona_data
+	return regional_data
 
 
 def get_regional_geo_data():
