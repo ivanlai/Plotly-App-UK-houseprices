@@ -121,6 +121,7 @@ def get_figure(df, geo_data, region, gtype, year, geo_sectors, school, schools_t
 		mapbox_style="open-street-map",
 		mapbox_zoom=_cfg["zoom"],
 		autosize=True,
+		height=None,
 		font=dict(color="#7FDBFF"),
 		paper_bgcolor="#1f2630",
 		mapbox_center={"lat": _cfg["centre"][0], "lon": _cfg["centre"][1]},
@@ -187,9 +188,18 @@ def price_volume_ts(price, volume, sector, colors):
 		plot_bgcolor=colors["background"],
 		paper_bgcolor=colors["background"],
 		autosize=True,
+		height=None,
 		barmode="stack",
 		margin={"l": 20, "b": 30, "r": 10, "t": 40},
-		legend=dict(orientation="h", yanchor="bottom", y=1, xanchor="right", x=1),
+		legend=dict(
+			orientation="h",
+			yanchor="bottom",
+			y=1,
+			xanchor="right",
+			x=1,
+			itemclick=False,
+			itemdoubleclick=False,
+		),
 		font_color=colors["text"],
 	)
 	return fig
@@ -206,6 +216,7 @@ def price_ts(df, title, colors):
 		plot_bgcolor=colors["background"],
 		paper_bgcolor=colors["background"],
 		autosize=True,
+		height=None,
 		font_color=colors["text"],
 	)
 	return fig

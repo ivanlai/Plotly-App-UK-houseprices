@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
+    "convertbng>=0.7.4",
     "dash==2.16.1",
     "dash-bootstrap-components==0.10.7",
     "dash-core-components==2.0.0",
@@ -12,6 +13,7 @@ dependencies = [
     "flask-caching==2.1.0",
     "geopandas==0.8.2",
     "gunicorn==20.1.0",
+    "nbformat>=5.10.4",
     "numpy==1.24.4",
     "pandas==1.5.3",
     "plotly==5.20.0",

@@ -126,6 +126,7 @@ app.config.suppress_callback_exceptions = True
 
 app.layout = html.Div(
 	id="root",
+	style={"height": "100vh", "display": "flex", "flexDirection": "column", "overflow": "hidden"},
 	children=[
 		# Header -------------------------------------------------#
 		html.Div(
@@ -272,6 +273,7 @@ app.layout = html.Div(
 		# App Container ------------------------------------------#
 		html.Div(
 			id="app-container",
+			style={"flex": "1", "minHeight": "0", "overflow": "hidden"},
 			children=[
 				# Left Column ------------------------------------#
 				html.Div(
@@ -279,12 +281,13 @@ app.layout = html.Div(
 					children=[
 						html.Div(
 							id="choropleth-container",
+							style={"height": "100%"},
 							children=[
 								html.Div(
 									[
 										html.Div(
 											[
-												html.H5(id="choropleth-title"),
+												html.H5(id="choropleth-title", style={"whiteSpace": "nowrap"}),
 											],
 											style={
 												"display": "inline-block",
@@ -319,7 +322,7 @@ app.layout = html.Div(
 									]
 								),
 								# dcc.Graph(id="choropleth", config={"scrollZoom": True}),
-								dcc.Graph(id="choropleth"),
+								dcc.Graph(id="choropleth", style={"height": "100%"}),
 							],
 						),
 					],
@@ -327,6 +330,7 @@ app.layout = html.Div(
 						"display": "inline-block",
 						"padding": "20px 10px 10px 40px",
 						"width": "59%",
+						"height": "100%",
 					},
 					className="seven columns",
 				),
@@ -351,12 +355,16 @@ app.layout = html.Div(
 							],
 							style={"textAlign": "right"},
 						),
-						html.Div([dcc.Graph(id="price-time-series")]),
+						html.Div(
+							[dcc.Graph(id="price-time-series", style={"height": "100%"})],
+							style={"height": "calc(100% - 30px)"},
+						),
 					],
 					style={
 						"display": "inline-block",
 						"padding": "20px 20px 10px 10px",
 						"width": "39%",
+						"height": "100%",
 					},
 					className="five columns",
 				),
