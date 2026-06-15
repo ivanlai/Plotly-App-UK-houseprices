@@ -121,7 +121,6 @@ app = dash.Dash(
 	meta_tags=[
 		{"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
 	],
-	# external_stylesheets=[dbc.themes.DARKLY]
 	external_stylesheets=[dbc.themes.SUPERHERO],
 )
 
@@ -614,6 +613,7 @@ def update_postcode_dropdown(
 
 
 # ----------------------------------------------------#
+
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
 
