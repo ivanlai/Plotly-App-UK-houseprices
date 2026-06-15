@@ -22,7 +22,7 @@ All settings live in `config.py`. For a new year, edit these values:
 ```python
 # config.py
 "end_year": 2026,
-"latest date": "31 December 2026",
+"latest_date": "31 December 2026",
 
 # pipeline section:
 "raw_price_files": ["pp-2026.csv"],

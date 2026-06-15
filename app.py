@@ -30,7 +30,7 @@ from utils import (
 warnings.filterwarnings("ignore")
 
 
-logging.basicConfig(format=cfg["logging format"], level=logging.INFO)
+logging.basicConfig(format=cfg["logging_format"], level=logging.INFO)
 logging.info(f"System: {sys.version}")
 
 
@@ -100,14 +100,14 @@ schools_top_500 = get_schools_data()
 # ---------------------------------------------
 
 # initial values:
-initial_year = max(cfg["Years"])
+initial_year = max(cfg["years"])
 initial_region = "Greater London"
 
 sectors = regional_price_data[initial_year][initial_region]["Sector"].values
 initial_sector = random.choice(sectors)
 initial_geo_sector = [regional_geo_sector[initial_region][initial_sector]]
 
-empty_series = pd.DataFrame(np.full(len(cfg["Years"]), np.nan), index=cfg["Years"])
+empty_series = pd.DataFrame(np.full(len(cfg["years"]), np.nan), index=cfg["years"])
 empty_series.rename(columns={0: ""}, inplace=True)
 
 
@@ -129,8 +129,8 @@ cache = Cache(
 	server,
 	config={
 		"CACHE_TYPE": "filesystem",
-		"CACHE_DIR": cfg["cache dir"],
-		"CACHE_THRESHOLD": cfg["cache threshold"],
+		"CACHE_DIR": cfg["cache_dir"],
+		"CACHE_THRESHOLD": cfg["cache_threshold"],
 	},
 )
 app.config.suppress_callback_exceptions = True
@@ -191,7 +191,7 @@ app.layout = html.Div(
 		html.Div(
 			[
 				dcc.Link(
-					f"HM Land Registry Price Paid Data from 01 Jan 1995 to {cfg['latest date']}",  # noqa: E501
+					f"HM Land Registry Price Paid Data from 01 Jan 1995 to {cfg['latest_date']}",  # noqa: E501
 					href="https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads",  # noqa: E501
 					target="_blank",
 					# style={'color': colors['text']}
@@ -223,7 +223,7 @@ app.layout = html.Div(
 					[
 						dcc.Dropdown(
 							id="year",
-							options=[{"label": y, "value": y} for y in cfg["Years"]],
+							options=[{"label": y, "value": y} for y in cfg["years"]],
 							value=initial_year,
 							clearable=False,
 							style={"color": "black"},

@@ -150,7 +150,7 @@ def price_volume_ts(price, volume, sector, colors):
 	for ptype in ["D", "S", "T", "F"]:
 		fig.add_trace(
 			go.Bar(
-				x=cfg["Years"],
+				x=cfg["years"],
 				y=volume.loc[volume["Property Type"] == ptype, "Count"],
 				marker_color=colorsDict[ptype],
 				name=ptype,

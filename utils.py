@@ -1,7 +1,6 @@
 import os
 import json
 import pandas as pd
-import logging
 
 from config import config as cfg
 
@@ -17,7 +16,7 @@ def get_price_volume_df():
 
 def get_regional_data(fname):
 	regional_data = dict()
-	for year in cfg["Years"]:
+	for year in cfg["years"]:
 		df = pd.read_csv(os.path.join(cfg["app_data_dir"], f"{fname}_{year}.csv"))
 
 		tmp = dict()
@@ -40,7 +39,7 @@ def get_regional_geo_data():
 		fname = f"geodata_{region}.json"
 		regional_geo_data_paths[region] = fname
 
-		infile = os.path.join(cfg["assets dir"], fname)
+		infile = os.path.join(cfg["assets_dir"], fname)
 		with open(infile, "r") as read_file:
 			regional_geo_data[region] = json.load(read_file)
 
@@ -64,7 +63,7 @@ def get_geo_sector(geo_data):
 
 def get_schools_data():
 	schools_top_500 = pd.read_csv(
-		os.path.join(cfg["app_data_dir"], f"schools_top_500.csv")
+		os.path.join(cfg["app_data_dir"], "schools_top_500.csv")
 	)
 	schools_top_500[
 		"Best Rank"

@@ -7,7 +7,7 @@ in output/ for reference.
 
 Usage:
     1. Download raw PP files to input/HousePriceData/Raw/
-    2. Edit config.py: end_year, latest date, pipeline.raw_price_files, pipeline.years_to_process
+    2. Edit config.py: end_year, latest_date, pipeline.raw_price_files, pipeline.years_to_process
     3. Run: uv run python scripts/preprocess.py
 """
 
@@ -147,7 +147,7 @@ def _load_one_year(year):
 def load_processed_data():
 	print("Loading processed house price data...")
 	with Pool(max(1, cpu_count() - 1)) as p:
-		results = p.map(_load_one_year, cfg["Years"])
+		results = p.map(_load_one_year, cfg["years"])
 
 	results = [r for r in results if r is not None]
 	house_price_df = pd.concat(results, ignore_index=True)
@@ -188,7 +188,7 @@ def get_sector_df(house_price_df, postcode_region):
 def save_sector_prices(sector_df):
 	print("Saving sector prices by year...")
 	sector_by_year = {}
-	for year in cfg["Years"]:
+	for year in cfg["years"]:
 		sector_by_year[year] = sector_df[sector_df.Year == year].reset_index(drop=True)
 		if pipe["save_output"]:
 			fname = os.path.join(cfg["app_data_dir"], f"sector_price_{year}.csv")
@@ -205,7 +205,7 @@ def save_sector_prices(sector_df):
 def save_percentage_deltas(sector_by_year):
 	print("Saving percentage deltas by year...")
 	sector_price = {}
-	for year in cfg["Years"]:
+	for year in cfg["years"]:
 		sector_price[year] = {}
 		for sector, region, price in sector_by_year[year][["Sector", "Region", "Price"]].values:
 			sector_price[year][sector] = [region, price]
@@ -215,7 +215,7 @@ def save_percentage_deltas(sector_by_year):
 		sector: [0, region] for sector, [region, _] in sector_price[cfg["start_year"]].items()
 	}
 
-	for y1, y2 in zip(cfg["Years"][1:], cfg["Years"][:-1]):
+	for y1, y2 in zip(cfg["years"][1:], cfg["years"][:-1]):
 		sector_delta[y1] = {}
 		for sector, [region, price] in sector_price[y1].items():
 			if sector in sector_price[y2]:
@@ -223,7 +223,7 @@ def save_percentage_deltas(sector_by_year):
 				delta = int(np.round(100 * (price - last_year_price) / last_year_price))
 				sector_delta[y1][sector] = [delta, region]
 
-	for year in cfg["Years"]:
+	for year in cfg["years"]:
 		tmp = pd.DataFrame.from_dict(
 			sector_delta[year], orient="index", columns=["Percentage Change", "Region"]
 		)

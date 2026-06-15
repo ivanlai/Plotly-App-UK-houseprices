@@ -1,28 +1,15 @@
 import os
 
-appDataPath = "/home/ivanlai/apps-UK_houseprice/appData"
-assetsPath = "/home/ivanlai/apps-UK_houseprice/assets"
-
-if os.path.isdir(appDataPath):
-	app_data_dir = appDataPath
-	assets_dir = assetsPath
-	cache_dir = "cache"
-else:
-	app_data_dir = "appData"
-	assets_dir = "assets"
-	cache_dir = "/tmp/cache"
-
-
 config = {
 	"start_year": 1995,
 	"end_year": 2025,
-	"latest date": "31 December 2025",
-	"app_data_dir": app_data_dir,
-	"assets dir": assets_dir,
-	"cache dir": cache_dir,
+	"latest_date": "31 December 2025",
+	"app_data_dir": os.environ.get("APP_DATA_DIR", "appData"),
+	"assets_dir": os.environ.get("ASSETS_DIR", "assets"),
+	"cache_dir": os.environ.get("CACHE_DIR", "/tmp/cache"),
 	"topN": 50,
 	"timeout": 5 * 60,  # Used in flask_caching
-	"cache threshold": 3_000,  # (Number of memoized callbacks) × (Number of concurrent users).
+	"cache_threshold": 3_000,  # (Number of memoized callbacks) × (Number of concurrent users).
 	"regions_lookup": {
 		"North East": "North England",
 		"North West": "North England",
@@ -43,10 +30,10 @@ config = {
 		"South East": {"centre": [51.5, -0.1], "maxp": 90, "zoom": 7.3},
 		"Greater London": {"centre": [51.5, -0.1], "maxp": 80, "zoom": 8.9},
 	},
-	"logging format": "pid %(process)5s [%(asctime)s] %(levelname)8s: %(message)s",
+	"logging_format": "pid %(process)5s [%(asctime)s] %(levelname)8s: %(message)s",
 }
 
-config["Years"] = list(range(config["start_year"], config["end_year"] + 1))
+config["years"] = list(range(config["start_year"], config["end_year"] + 1))
 
 # --- Pipeline settings (for scripts/preprocess.py) ---
 config["pipeline"] = {
