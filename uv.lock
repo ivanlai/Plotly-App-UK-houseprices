@@ -541,15 +541,15 @@ wheels = [
 
 [[package]]
 name = "flask-caching"
-version = "2.1.0"
+version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cachelib" },
     { name = "flask" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/eb/70/09b3254474c0a9085f5faa2fd4da9bbd5318b370e30c4489067db1ead842/Flask-Caching-2.1.0.tar.gz", hash = "sha256:b7500c145135836a952e3de3a80881d9654e327a29c852c9265607f5c449235c", size = 67277 }
+sdist = { url = "https://files.pythonhosted.org/packages/ba/33/cfaac045b5e3b39cbeee075f52b69932a47b24cc4e6d123457bc9961be76/flask_caching-2.3.0.tar.gz", hash = "sha256:d7e4ca64a33b49feb339fcdd17e6ba25f5e01168cf885e53790e885f83a4d2cf", size = 67668 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/49/99/e279e06a1a0147763bda92359b3fa5eab8566e032407e539eb851cdfb4bc/Flask_Caching-2.1.0-py3-none-any.whl", hash = "sha256:f02645a629a8c89800d96dc8f690a574a0d49dcd66c7536badc6d362ba46b716", size = 28768 },
+    { url = "https://files.pythonhosted.org/packages/aa/da/8e3ba9735253c6ba440358fcfda89cf5e199467b6ed2baaf6b1e1022b15f/Flask_Caching-2.3.0-py3-none-any.whl", hash = "sha256:51771c75682e5abc1483b78b96d9131d7941dc669b073852edfa319dd4e29b6e", size = 28918 },
 ]
 
 [[package]]
@@ -1316,7 +1316,7 @@ requires-dist = [
     { name = "dash-bootstrap-components", specifier = "==0.10.7" },
     { name = "dash-core-components", specifier = "==2.0.0" },
     { name = "dash-html-components", specifier = "==2.0.0" },
-    { name = "flask-caching", specifier = "==2.1.0" },
+    { name = "flask-caching", specifier = "==2.3.0" },
     { name = "gunicorn", specifier = "==22.0.0" },
     { name = "numpy", specifier = "==1.24.4" },
     { name = "pandas", specifier = "==1.5.3" },
