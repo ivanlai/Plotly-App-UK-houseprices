@@ -1,5 +1,6 @@
 import os
 
+# PythonAnywhere uses absolute paths; locally we use relative paths
 _pa_path = "/home/ivanlai/apps-UK_houseprice"
 if os.path.isdir(f"{_pa_path}/appData"):
 	_app_data_dir = f"{_pa_path}/appData"
