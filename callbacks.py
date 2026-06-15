@@ -111,7 +111,7 @@ def register_callbacks(app, cache, data):
 				empty_series, "Please select at least one property type", COLORS
 			)
 
-		df = price_volume_df.iloc[
+		df = price_volume_df.loc[
 			np.isin(price_volume_df.index.get_level_values("Property Type"), ptypes),
 			np.isin(price_volume_df.columns.get_level_values("Sector"), sectors),
 		]
