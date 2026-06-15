@@ -1,4 +1,3 @@
-import random
 import time
 import logging
 
@@ -27,8 +26,6 @@ def load_all_data():
 
 	initial_year = max(cfg["years"])
 	initial_region = "Greater London"
-	sectors = regional_price_data[initial_year][initial_region]["Sector"].values
-	initial_sector = random.choice(sectors)
 
 	empty_series = pd.DataFrame(np.full(len(cfg["years"]), np.nan), index=cfg["years"])
 	empty_series.rename(columns={0: ""}, inplace=True)
@@ -45,6 +42,5 @@ def load_all_data():
 		"schools_top_500": schools_top_500,
 		"initial_year": initial_year,
 		"initial_region": initial_region,
-		"initial_sector": initial_sector,
 		"empty_series": empty_series,
 	}

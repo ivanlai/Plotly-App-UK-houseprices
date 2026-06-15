@@ -37,7 +37,7 @@ cache = Cache(
 )
 app.config.suppress_callback_exceptions = True
 
-app.layout = create_layout(app, data)
+app.layout = lambda: create_layout(app, data)
 register_callbacks(app, cache, data)
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})

@@ -1,3 +1,5 @@
+import random
+
 import dash_bootstrap_components as dbc
 from dash import dcc, html
 
@@ -92,8 +94,9 @@ DATA_SOURCES = html.Div(
 def create_layout(app, data):
 	initial_year = data["initial_year"]
 	initial_region = data["initial_region"]
-	initial_sector = data["initial_sector"]
 	regional_price_data = data["regional_price_data"]
+	sectors = regional_price_data[initial_year][initial_region]["Sector"].values
+	initial_sector = random.choice(sectors)
 
 	return html.Div(
 		id="root",
