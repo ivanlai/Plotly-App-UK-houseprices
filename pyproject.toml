@@ -10,7 +10,7 @@ dependencies = [
     "dash-core-components==2.0.0",
     "dash-html-components==2.0.0",
     "flask-caching==2.1.0",
-    "gunicorn==20.1.0",
+    "gunicorn==22.0.0",
     "numpy==1.24.4",
     "pandas==1.5.3",
     "plotly==5.20.0",
