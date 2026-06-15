@@ -193,7 +193,7 @@ def save_sector_prices(sector_df):
 		if pipe["save_output"]:
 			fname = os.path.join(cfg["app_data_dir"], f"sector_price_{year}.csv")
 			sector_by_year[year].to_csv(fname, index=False)
-	print(f"  Saved {len(cfg['Years'])} files")
+	print(f"  Saved {len(cfg['years'])} files")
 	return sector_by_year
 
 
@@ -240,7 +240,7 @@ def save_percentage_deltas(sector_by_year):
 			fname = os.path.join(cfg["app_data_dir"], f"sector_percentage_delta_{year}.csv")
 			tmp.to_csv(fname, index=False)
 
-	print(f"  Saved {len(cfg['Years'])} files")
+	print(f"  Saved {len(cfg['years'])} files")
 
 
 # ---------------------------------------------------------------------------

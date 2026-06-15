@@ -19,6 +19,8 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ipykernel>=6.29.5",
+    "pytest>=7.0",
+    {include-group = "pipeline"},
 ]
 pipeline = [
     "convertbng>=0.7.4",
