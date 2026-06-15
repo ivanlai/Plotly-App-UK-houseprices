@@ -52,6 +52,7 @@ scripts/
 appData/            Generated CSVs read by the app
 assets/             GeoJSON boundary files
 output/             HTML summary plots from preprocessing
+intermediate_data/  Preprocessing byproducts (not in git)
 input/              Raw data (not in git)
 notebooks/          Legacy preprocessing notebook (reference only)
 ```

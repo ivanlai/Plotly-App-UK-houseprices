@@ -1257,15 +1257,12 @@ name = "plotly-app-uk-houseprices"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "convertbng" },
     { name = "dash" },
     { name = "dash-bootstrap-components" },
     { name = "dash-core-components" },
     { name = "dash-html-components" },
     { name = "flask-caching" },
-    { name = "geopandas" },
     { name = "gunicorn" },
-    { name = "nbformat" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "plotly" },
@@ -1275,18 +1272,20 @@ dependencies = [
 dev = [
     { name = "ipykernel" },
 ]
+pipeline = [
+    { name = "convertbng" },
+    { name = "geopandas" },
+    { name = "nbformat" },
+]
 
 [package.metadata]
 requires-dist = [
-    { name = "convertbng", specifier = ">=0.7.4" },
     { name = "dash", specifier = "==2.16.1" },
     { name = "dash-bootstrap-components", specifier = "==0.10.7" },
     { name = "dash-core-components", specifier = "==2.0.0" },
     { name = "dash-html-components", specifier = "==2.0.0" },
     { name = "flask-caching", specifier = "==2.1.0" },
-    { name = "geopandas", specifier = "==0.8.2" },
     { name = "gunicorn", specifier = "==20.1.0" },
-    { name = "nbformat", specifier = ">=5.10.4" },
     { name = "numpy", specifier = "==1.24.4" },
     { name = "pandas", specifier = "==1.5.3" },
     { name = "plotly", specifier = "==5.20.0" },
@@ -1294,6 +1293,11 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [{ name = "ipykernel", specifier = ">=6.29.5" }]
+pipeline = [
+    { name = "convertbng", specifier = ">=0.7.4" },
+    { name = "geopandas", specifier = "==0.8.2" },
+    { name = "nbformat", specifier = ">=5.10.4" },
+]
 
 [[package]]
 name = "prompt-toolkit"

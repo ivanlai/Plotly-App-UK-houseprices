@@ -395,13 +395,15 @@ def process_school_data(postcode_region):
 	school_topN.to_csv(fname, index=False)
 	print(f"  Saved {fname} ({len(school_topN)} schools)")
 
+	intermediate_dir = "intermediate_data"
+	os.makedirs(intermediate_dir, exist_ok=True)
 	regions = ["South East", "North England", "Midlands", "South West", "Greater London", "Wales"]
 	for region in regions:
 		if region != "South East":
 			mask = school_topN.Region == region
 		else:
 			mask = (school_topN.Region == "South East") | (school_topN.Region == "Greater London")
-		fname = os.path.join(cfg["app_data_dir"], f"schools_{region}.csv")
+		fname = os.path.join(intermediate_dir, f"schools_{region}.csv")
 		school_topN[mask].to_csv(fname, index=False)
 
 	print(f"  Saved {len(regions)} regional school files")
