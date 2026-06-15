@@ -47,3 +47,19 @@ config = {
 }
 
 config["Years"] = list(range(config["start_year"], config["end_year"] + 1))
+
+# --- Pipeline settings (for scripts/preprocess.py) ---
+config["pipeline"] = {
+	"raw_price_files": ["pp-2024.csv", "pp-2025.csv"],
+	"years_to_process": [2024, 2025],
+	"process_raw_pp": True,
+	"process_geodata": False,
+	"save_output": True,
+	"price_threshold": 10000,
+	"tolerance": 0.001,
+	"max_discrepancy": 5,
+	"geodata_dir": "input/geoData",
+	"distribution_dir": "input/Distribution",
+	"houseprice_dir": "input/HousePriceData",
+	"school_dir": "input/SchoolData",
+}

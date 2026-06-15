@@ -1,29 +1,72 @@
-# Plotly App: UK houseprices
+# Plotly App: UK House Prices
 
-- Visualize average England and Wales house prices and sales volume by postcode (sector) from 1995 to 2020
-- Show average house price and sales volume trends.
-- Show top 500 schools in UK.
+Visualise average England and Wales house prices and sales volume by postcode sector (1995–2025), with top 500 school rankings overlay.
 
-Plotly web app ([https://ukhouseprice.project-ds.net/](https://ukhouseprice.project-ds.net/))
+**Live app:** [https://ukhouseprice.project-ds.net/](https://ukhouseprice.project-ds.net/)
 
 ![Screenshot](https://github.com/ivanlai/apps-UK_houseprice/blob/master/images/Screenshot-plotly-app.png)
 
-## Deployment on Pythonanywhere
+## Running locally
 
-In Pythonanywhere bash console:
+```bash
+uv sync
+uv run python app.py
+# or production-style:
+uv run gunicorn app:server -b 0.0.0.0:8050
+```
 
-- Run setup_ubuntu.sh to setup base environment 
+## Annual data update
 
-        ./setup_ubuntu.sh
+All settings live in `config.py`. For a new year, edit these values:
 
-- Setup virtualenv and install libraries:
+```python
+# config.py
+"end_year": 2026,
+"latest date": "31 December 2026",
 
-        mkvirtualenv py38 --python=/usr/bin/python3.8
-        pip install -r requirements.txt
+# pipeline section:
+"raw_price_files": ["pp-2026.csv"],
+"years_to_process": [2026],
+```
 
-In the "Web" tab in the Pythonanywhere webpage:
+Then:
 
-- Update the wsgi file in the Code section (to be the same as wsgi.py in repo).
+1. Download raw price-paid CSV from [Land Registry](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) into `input/HousePriceData/Raw/`
+2. Run the preprocessing script:
+   ```bash
+   uv run python scripts/preprocess.py
+   ```
+   This produces all `appData/` CSVs and summary HTML plots in `output/<year>/`.
+3. Verify locally: `uv run python app.py`
+4. Deploy to PythonAnywhere.
 
-- Make sure the virtualenv path is set in the Virtualenv section.
-- For debugging, inspect the log files in the Log files section.
+## Project structure
+
+```
+app.py              Dash app layout and callbacks
+config.py           Central config (shared by app and pipeline)
+figures_utils.py    Plotly figure builders
+utils.py            Data loading for the app
+scripts/
+  preprocess.py     Data preprocessing pipeline (replaces notebook)
+appData/            Generated CSVs read by the app
+assets/             GeoJSON boundary files
+output/             HTML summary plots from preprocessing
+input/              Raw data (not in git)
+notebooks/          Legacy preprocessing notebook (reference only)
+```
+
+## Deployment on PythonAnywhere
+
+In PythonAnywhere bash console:
+
+```bash
+mkvirtualenv py38 --python=/usr/bin/python3.8
+pip install -r requirements.txt
+```
+
+In the "Web" tab:
+
+- Update the WSGI file in the Code section (match `wsgi.py` in repo).
+- Set the virtualenv path in the Virtualenv section.
+- Inspect log files for debugging.
