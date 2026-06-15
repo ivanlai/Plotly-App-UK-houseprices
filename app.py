@@ -49,27 +49,42 @@ regions = [
 
 colors = {"background": "#1F2630", "text": "#7FDBFF"}
 
-NOTES = """
-    **Notes:**
-    1. Property type "Other" is filtered from the house price data.
-    2. School ranking (2018-2019) is the best of GCSE and A-Level rankings.
-    3. GCSE ranking can be misleading - subjects like
-    Classics and Latin are excluded from scoring,
-    unfairly penalising some schools.
+NOTES_TOOLTIP = dcc.Markdown(
+	"""
+1. Property type "Other" is filtered from the house price data.
+2. School ranking (2018-2019) is the best of GCSE and A-Level rankings.
+3. GCSE ranking can be misleading — subjects like Classics and Latin are excluded from scoring, unfairly penalising some schools.
+""",
+	style={"fontSize": "0.75rem", "lineHeight": "1.3"},
+)
 
-    **Other data sources:**
-    - [OpenStreetMap](https://www.openstreetmap.org)
-    - [Postcode regions mapping](https://www.whichlist2.com/knowledgebase/uk-postcode-map/)
-    - [Postcode boundary data](https://www.opendoorlogistics.com/data/)
-    from [www.opendoorlogistics.com](https://www.opendoorlogistics.com)
-    - Contains Royal Mail data © Royal Mail copyright and database right 2015
-    - Contains National Statistics data © Crown copyright and database right 2015
-    - [School 2019 performance data](https://www.gov.uk/school-performance-tables)
-    (Ranking scores: [Attainment 8 Score](https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx)
-    for GCSE and
-    [Average Point Score](https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf)
-    for A-Level)
-"""
+DATA_SOURCES = html.Div(
+	[
+		html.Span("Other data sources:", style={"fontWeight": "bold"}),
+		html.Ul(
+			[
+				html.Li(dcc.Link("OpenStreetMap", href="https://www.openstreetmap.org", target="_blank")),
+				html.Li(dcc.Link("Postcode regions mapping", href="https://www.whichlist2.com/knowledgebase/uk-postcode-map/", target="_blank")),  # noqa: E501
+				html.Li([
+					dcc.Link("Postcode boundary data", href="https://www.opendoorlogistics.com/data/", target="_blank"),  # noqa: E501
+					" from ",
+					dcc.Link("opendoorlogistics.com", href="https://www.opendoorlogistics.com", target="_blank"),
+					" — contains Royal Mail data © Royal Mail copyright and database right 2015; contains National Statistics data © Crown copyright and database right 2015",  # noqa: E501
+				]),
+				html.Li([
+					dcc.Link("School 2019 performance data", href="https://www.gov.uk/school-performance-tables", target="_blank"),  # noqa: E501
+					" (",
+					dcc.Link("Attainment 8", href="https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx", target="_blank"),  # noqa: E501
+					" for GCSE, ",
+					dcc.Link("Average Point Score", href="https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf", target="_blank"),  # noqa: E501
+					" for A-Level)",
+				]),
+			],
+			style={"margin": "0", "paddingLeft": "20px"},
+		),
+	],
+	style={"fontSize": "0.75rem", "lineHeight": "1.3"},
+)
 
 t0 = time.time()
 
@@ -281,7 +296,7 @@ app.layout = html.Div(
 					children=[
 						html.Div(
 							id="choropleth-container",
-							style={"height": "100%"},
+							style={"flex": "1", "minHeight": "0", "display": "flex", "flexDirection": "column"},
 							children=[
 								html.Div(
 									[
@@ -322,12 +337,13 @@ app.layout = html.Div(
 									]
 								),
 								# dcc.Graph(id="choropleth", config={"scrollZoom": True}),
-								dcc.Graph(id="choropleth", style={"height": "100%"}),
+								dcc.Graph(id="choropleth", style={"flex": "1", "minHeight": "0"}),
 							],
 						),
 					],
 					style={
-						"display": "inline-block",
+						"display": "inline-flex",
+						"flexDirection": "column",
 						"padding": "20px 10px 10px 40px",
 						"width": "59%",
 						"height": "100%",
@@ -357,11 +373,12 @@ app.layout = html.Div(
 						),
 						html.Div(
 							[dcc.Graph(id="price-time-series", style={"height": "100%"})],
-							style={"height": "calc(100% - 30px)"},
+							style={"flex": "1", "minHeight": "0"},
 						),
 					],
 					style={
-						"display": "inline-block",
+						"display": "inline-flex",
+						"flexDirection": "column",
 						"padding": "20px 20px 10px 10px",
 						"width": "39%",
 						"height": "100%",
@@ -375,11 +392,32 @@ app.layout = html.Div(
 		html.Div(
 			[
 				html.Div(
-					[dcc.Markdown(NOTES)],
+					[
+						html.Span(
+							"Notes ⓘ",
+							id="notes-trigger",
+							style={
+								"cursor": "pointer",
+								"textDecoration": "underline",
+								"fontSize": "0.8rem",
+								"marginRight": "30px",
+							},
+						),
+						dbc.Tooltip(
+							NOTES_TOOLTIP,
+							target="notes-trigger",
+							placement="top",
+							style={
+								"maxWidth": "500px",
+								"textAlign": "left",
+							},
+						),
+						DATA_SOURCES,
+					],
 					style={
-						"textAlign": "left",
-						"padding": "0px 0px 5px 40px",
+						"padding": "5px 0px 5px 40px",
 						"width": "69%",
+						"display": "inline-block",
 					},
 					className="nine columns",
 				),
@@ -393,8 +431,9 @@ app.layout = html.Div(
 					],
 					style={
 						"textAlign": "right",
-						"padding": "10px 20px 0px 0px",
+						"padding": "5px 20px 0px 0px",
 						"width": "29%",
+						"display": "inline-block",
 					},
 					className="three columns",
 				),
