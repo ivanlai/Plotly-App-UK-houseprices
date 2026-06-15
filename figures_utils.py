@@ -165,7 +165,7 @@ def price_volume_ts(price, volume, sector, colors):
 			y=[p[0] for p in price[sector].values],
 			marker_color="cyan",
 			mode="lines+markers",
-			name=f"Avg. Price",
+			name="Avg. Price",
 		),
 		secondary_y=True,
 	)

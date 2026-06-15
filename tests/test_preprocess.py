@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 
 from scripts.preprocess import (
@@ -63,19 +62,23 @@ class TestCleanPpDf:
 		assert result.iloc[0]["Year-Month"] == "2024-06"
 
 	def test_property_type_O_filtered(self, postcode_region):
-		df = self._make_raw_df([
-			(250000, "2024-06-15", "SW1A 1AA", "D"),
-			(300000, "2024-06-15", "SW1A 1AB", "O"),
-		])
+		df = self._make_raw_df(
+			[
+				(250000, "2024-06-15", "SW1A 1AA", "D"),
+				(300000, "2024-06-15", "SW1A 1AB", "O"),
+			]
+		)
 		result = clean_pp_df(df, {}, postcode_region)
 		assert len(result) == 1
 		assert result.iloc[0]["Property Type"] == "D"
 
 	def test_low_price_filtered(self, postcode_region):
-		df = self._make_raw_df([
-			(5000, "2024-06-15", "SW1A 1AA", "D"),
-			(250000, "2024-06-15", "SW1A 1AB", "D"),
-		])
+		df = self._make_raw_df(
+			[
+				(5000, "2024-06-15", "SW1A 1AA", "D"),
+				(250000, "2024-06-15", "SW1A 1AB", "D"),
+			]
+		)
 		result = clean_pp_df(df, {}, postcode_region)
 		assert len(result) == 1
 		assert result.iloc[0]["Price"] == 250000

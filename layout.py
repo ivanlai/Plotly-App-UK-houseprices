@@ -29,22 +29,58 @@ DATA_SOURCES = html.Div(
 		html.Span("Other data sources:", style={"fontWeight": "bold"}),
 		html.Ul(
 			[
-				html.Li(dcc.Link("OpenStreetMap", href="https://www.openstreetmap.org", target="_blank")),
-				html.Li(dcc.Link("Postcode regions mapping", href="https://www.whichlist2.com/knowledgebase/uk-postcode-map/", target="_blank")),  # noqa: E501
-				html.Li([
-					dcc.Link("Postcode boundary data", href="https://www.opendoorlogistics.com/data/", target="_blank"),  # noqa: E501
-					" from ",
-					dcc.Link("opendoorlogistics.com", href="https://www.opendoorlogistics.com", target="_blank"),
-					" — contains Royal Mail data © Royal Mail copyright and database right 2015; contains National Statistics data © Crown copyright and database right 2015",  # noqa: E501
-				]),
-				html.Li([
-					dcc.Link("School 2019 performance data", href="https://www.gov.uk/school-performance-tables", target="_blank"),  # noqa: E501
-					" (",
-					dcc.Link("Attainment 8", href="https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx", target="_blank"),  # noqa: E501
-					" for GCSE, ",
-					dcc.Link("Average Point Score", href="https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf", target="_blank"),  # noqa: E501
-					" for A-Level)",
-				]),
+				html.Li(
+					dcc.Link(
+						"OpenStreetMap",
+						href="https://www.openstreetmap.org",
+						target="_blank",
+					)
+				),
+				html.Li(
+					dcc.Link(
+						"Postcode regions mapping",
+						href="https://www.whichlist2.com/knowledgebase/uk-postcode-map/",
+						target="_blank",
+					)
+				),  # noqa: E501
+				html.Li(
+					[
+						dcc.Link(
+							"Postcode boundary data",
+							href="https://www.opendoorlogistics.com/data/",
+							target="_blank",
+						),  # noqa: E501
+						" from ",
+						dcc.Link(
+							"opendoorlogistics.com",
+							href="https://www.opendoorlogistics.com",
+							target="_blank",
+						),
+						" — contains Royal Mail data © Royal Mail copyright and database right 2015; contains National Statistics data © Crown copyright and database right 2015",  # noqa: E501
+					]
+				),
+				html.Li(
+					[
+						dcc.Link(
+							"School 2019 performance data",
+							href="https://www.gov.uk/school-performance-tables",
+							target="_blank",
+						),  # noqa: E501
+						" (",
+						dcc.Link(
+							"Attainment 8",
+							href="https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx",
+							target="_blank",
+						),  # noqa: E501
+						" for GCSE, ",
+						dcc.Link(
+							"Average Point Score",
+							href="https://dera.ioe.ac.uk/26476/3/16_to_18_calculating_the_average_point_scores_2015.pdf",
+							target="_blank",
+						),  # noqa: E501
+						" for A-Level)",
+					]
+				),
 			],
 			style={"margin": "0", "paddingLeft": "20px"},
 		),
@@ -61,7 +97,12 @@ def create_layout(app, data):
 
 	return html.Div(
 		id="root",
-		style={"height": "100vh", "display": "flex", "flexDirection": "column", "overflow": "hidden"},
+		style={
+			"height": "100vh",
+			"display": "flex",
+			"flexDirection": "column",
+			"overflow": "hidden",
+		},
 		children=[
 			# Header -------------------------------------------------#
 			html.Div(
@@ -92,7 +133,10 @@ def create_layout(app, data):
 										[
 											html.Img(
 												src=app.get_asset_url("dash-logo.png"),
-												style={"height": "100%", "width": "100%"},
+												style={
+													"height": "100%",
+													"width": "100%",
+												},
 											)
 										],
 										href="https://plotly.com/",
@@ -144,7 +188,9 @@ def create_layout(app, data):
 						[
 							dcc.Dropdown(
 								id="year",
-								options=[{"label": y, "value": y} for y in cfg["years"]],
+								options=[
+									{"label": y, "value": y} for y in cfg["years"]
+								],
 								value=initial_year,
 								clearable=False,
 								style={"color": "black"},
@@ -215,13 +261,21 @@ def create_layout(app, data):
 						children=[
 							html.Div(
 								id="choropleth-container",
-								style={"flex": "1", "minHeight": "0", "display": "flex", "flexDirection": "column"},
+								style={
+									"flex": "1",
+									"minHeight": "0",
+									"display": "flex",
+									"flexDirection": "column",
+								},
 								children=[
 									html.Div(
 										[
 											html.Div(
 												[
-													html.H5(id="choropleth-title", style={"whiteSpace": "nowrap"}),
+													html.H5(
+														id="choropleth-title",
+														style={"whiteSpace": "nowrap"},
+													),
 												],
 												style={
 													"display": "inline-block",
@@ -243,7 +297,9 @@ def create_layout(app, data):
 														labelStyle={
 															"display": "inline-block"
 														},
-														inputStyle={"margin-left": "10px"},
+														inputStyle={
+															"margin-left": "10px"
+														},
 													)
 												],
 												style={
@@ -255,7 +311,10 @@ def create_layout(app, data):
 											),
 										]
 									),
-									dcc.Graph(id="choropleth", style={"flex": "1", "minHeight": "0"}),
+									dcc.Graph(
+										id="choropleth",
+										style={"flex": "1", "minHeight": "0"},
+									),
 								],
 							),
 						],
@@ -277,7 +336,10 @@ def create_layout(app, data):
 									dcc.Checklist(
 										id="property-type-checklist",
 										options=[
-											{"label": "F: Flats/Maisonettes", "value": "F"},
+											{
+												"label": "F: Flats/Maisonettes",
+												"value": "F",
+											},
 											{"label": "T: Terraced", "value": "T"},
 											{"label": "S: Semi-Detached", "value": "S"},
 											{"label": "D: Detached", "value": "D"},
@@ -290,7 +352,11 @@ def create_layout(app, data):
 								style={"textAlign": "right"},
 							),
 							html.Div(
-								[dcc.Graph(id="price-time-series", style={"height": "100%"})],
+								[
+									dcc.Graph(
+										id="price-time-series", style={"height": "100%"}
+									)
+								],
 								style={"flex": "1", "minHeight": "0"},
 							),
 						],

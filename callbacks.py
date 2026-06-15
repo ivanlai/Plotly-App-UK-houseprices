@@ -37,9 +37,7 @@ def register_callbacks(app, cache, data):
 		elif gtype == "Price":
 			return f"Avg house price (all property types) by postcode sector in {region}, {year}"  # noqa: E501
 		elif gtype == "Volume":
-			return (
-				f"Sales Volume (all property types) by postcode sector in {region}, {year}"
-			)
+			return f"Sales Volume (all property types) by postcode sector in {region}, {year}"
 		else:
 			if year == cfg["start_year"]:
 				return f"Data from {year - 1} to {year} not available"

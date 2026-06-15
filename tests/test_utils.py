@@ -1,7 +1,5 @@
 import pandas as pd
 
-from config import config as cfg
-
 
 class TestSouthEastMasking:
 	"""The South East region includes Greater London data in the choropleth.

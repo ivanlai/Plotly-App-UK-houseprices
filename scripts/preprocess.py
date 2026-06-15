@@ -58,8 +58,7 @@ def lookup_region(postcode_region, x):
 def load_postcode_lookups():
 	postcodes_df = pd.read_csv(os.path.join(pipe["geodata_dir"], "ukpostcodes.csv"))
 	postcodes = {
-		row.postcode: [row.latitude, row.longitude]
-		for row in postcodes_df.itertuples()
+		row.postcode: [row.latitude, row.longitude] for row in postcodes_df.itertuples()
 	}
 
 	postcode_region_df = pd.read_csv(
@@ -89,7 +88,19 @@ def clean_pp_df(df, postcodes, postcode_region):
 	df.rename(columns=col, inplace=True)
 	df.fillna("", inplace=True)
 	df["Address"] = (
-		df[7] + " " + df[8] + " " + df[9] + " " + df[10] + " " + df[11] + " " + df[12] + " " + df[13]
+		df[7]
+		+ " "
+		+ df[8]
+		+ " "
+		+ df[9]
+		+ " "
+		+ df[10]
+		+ " "
+		+ df[11]
+		+ " "
+		+ df[12]
+		+ " "
+		+ df[13]
 	)
 	df["Address"] = df["Address"].apply(lambda x: " ".join(x.split()))
 
@@ -100,7 +111,9 @@ def clean_pp_df(df, postcodes, postcode_region):
 	df = df.loc[df["Property Type"] != "O"]
 	df.sort_values(by=["Date"], inplace=True, ignore_index=True)
 
-	df["Post Code Coords"] = df["Post Code"].apply(lambda x: lookup_postcode(postcodes, x))
+	df["Post Code Coords"] = df["Post Code"].apply(
+		lambda x: lookup_postcode(postcodes, x)
+	)
 	df["Year-Month"] = df["Date"].apply(lambda s: s[:7])
 	df["Year"] = df["Date"].apply(lambda s: s[:4])
 	df["Month"] = df["Date"].apply(lambda s: s[5:7])
@@ -207,12 +220,15 @@ def save_percentage_deltas(sector_by_year):
 	sector_price = {}
 	for year in cfg["years"]:
 		sector_price[year] = {}
-		for sector, region, price in sector_by_year[year][["Sector", "Region", "Price"]].values:
+		for sector, region, price in sector_by_year[year][
+			["Sector", "Region", "Price"]
+		].values:
 			sector_price[year][sector] = [region, price]
 
 	sector_delta = {}
 	sector_delta[cfg["start_year"]] = {
-		sector: [0, region] for sector, [region, _] in sector_price[cfg["start_year"]].items()
+		sector: [0, region]
+		for sector, [region, _] in sector_price[cfg["start_year"]].items()
 	}
 
 	for y1, y2 in zip(cfg["years"][1:], cfg["years"][:-1]):
@@ -237,7 +253,9 @@ def save_percentage_deltas(sector_by_year):
 			+ "%"
 		)
 		if pipe["save_output"]:
-			fname = os.path.join(cfg["app_data_dir"], f"sector_percentage_delta_{year}.csv")
+			fname = os.path.join(
+				cfg["app_data_dir"], f"sector_percentage_delta_{year}.csv"
+			)
 			tmp.to_csv(fname, index=False)
 
 	print(f"  Saved {len(cfg['years'])} files")
@@ -306,7 +324,9 @@ def process_school_data(postcode_region):
 	gcse_df.dropna(inplace=True)
 	gcse_df["ATT8SCR"] = gcse_df["ATT8SCR"].apply(num_2_str)
 	gcse_df = gcse_df[gcse_df["ATT8SCR"] > 0]
-	gcse_df.sort_values(by=["ATT8SCR"], ascending=False, ignore_index=True, inplace=True)
+	gcse_df.sort_values(
+		by=["ATT8SCR"], ascending=False, ignore_index=True, inplace=True
+	)
 	gcse_df["GCSE rank"] = gcse_df.index + 1
 	gcse_df.rename(columns={"EGENDER": "GENDER"}, inplace=True)
 
@@ -362,8 +382,14 @@ def process_school_data(postcode_region):
 	# Hover text
 	tmp = []
 	info_cols = [
-		"SCHNAME", "AGERANGE", "GENDER", "Status",
-		"ATT8SCR", "GCSE rank", "TALLPPE_ALEV_1618", "A-Level rank",
+		"SCHNAME",
+		"AGERANGE",
+		"GENDER",
+		"Status",
+		"ATT8SCR",
+		"GCSE rank",
+		"TALLPPE_ALEV_1618",
+		"A-Level rank",
 	]
 	for row in school_df[info_cols].values:
 		text = row[0] + "<br>" + row[1] + " " + row[2] + " " + row[3] + " "
@@ -375,13 +401,22 @@ def process_school_data(postcode_region):
 
 	school_df["Info"] = tmp
 	school_df.drop(
-		columns=["SCHNAME", "AGERANGE", "GENDER", "Status", "GCSE rank", "A-Level rank"],
+		columns=[
+			"SCHNAME",
+			"AGERANGE",
+			"GENDER",
+			"Status",
+			"GCSE rank",
+			"A-Level rank",
+		],
 		inplace=True,
 	)
 
 	# Save top 500 and regional files
 	n = 500
-	gcse_top = school_df.sort_values(by=["ATT8SCR"], ascending=False, ignore_index=True)[:n]
+	gcse_top = school_df.sort_values(
+		by=["ATT8SCR"], ascending=False, ignore_index=True
+	)[:n]
 	alevel_top = school_df.sort_values(
 		by=["TALLPPE_ALEV_1618"], ascending=False, ignore_index=True
 	)[:n]
@@ -397,12 +432,21 @@ def process_school_data(postcode_region):
 
 	intermediate_dir = "intermediate_data"
 	os.makedirs(intermediate_dir, exist_ok=True)
-	regions = ["South East", "North England", "Midlands", "South West", "Greater London", "Wales"]
+	regions = [
+		"South East",
+		"North England",
+		"Midlands",
+		"South West",
+		"Greater London",
+		"Wales",
+	]
 	for region in regions:
 		if region != "South East":
 			mask = school_topN.Region == region
 		else:
-			mask = (school_topN.Region == "South East") | (school_topN.Region == "Greater London")
+			mask = (school_topN.Region == "South East") | (
+				school_topN.Region == "Greater London"
+			)
 		fname = os.path.join(intermediate_dir, f"schools_{region}.csv")
 		school_topN[mask].to_csv(fname, index=False)
 
@@ -430,17 +474,25 @@ def save_summary_plots(house_price_df):
 
 	fig = make_subplots(specs=[[{"secondary_y": True}]])
 	fig.add_trace(
-		px.line(P, x="Year-Month", y="Price", color_discrete_sequence=["cornflowerblue"]).data[0],
+		px.line(
+			P, x="Year-Month", y="Price", color_discrete_sequence=["cornflowerblue"]
+		).data[0],
 		secondary_y=True,
 	)
 	fig.add_trace(
-		px.bar(P, x="Year-Month", y="Volume", color_discrete_sequence=["violet"]).data[0],
+		px.bar(P, x="Year-Month", y="Volume", color_discrete_sequence=["violet"]).data[
+			0
+		],
 		secondary_y=False,
 	)
 	fig.update_xaxes(showgrid=False)
 	fig.update_yaxes(title_text="Avg. Price (£)", secondary_y=True)
-	fig.update_yaxes(title_text="Sales Volume (Bar Chart)", secondary_y=False, showgrid=False)
-	fig.update_layout(title="England & Wales average house price and sales volume from 1995")
+	fig.update_yaxes(
+		title_text="Sales Volume (Bar Chart)", secondary_y=False, showgrid=False
+	)
+	fig.update_layout(
+		title="England & Wales average house price and sales volume from 1995"
+	)
 	path1 = os.path.join(output_dir, "price_volume_by_month.html")
 	pio.write_html(fig, path1)
 	print(f"  Saved {path1}")
