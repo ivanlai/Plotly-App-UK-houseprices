@@ -43,10 +43,13 @@ Then:
 ## Project structure
 
 ```
-app.py              Dash app layout and callbacks
+app.py              Dash app setup, cache init, wires layout and callbacks
+layout.py           Dash layout (dropdowns, map, charts, checklists)
+callbacks.py        All Dash callback functions
+data.py             Data loading orchestrator (calls utils.py)
+utils.py            Data loading helpers (CSVs, GeoJSON)
 config.py           Central config (shared by app and pipeline)
 figures_utils.py    Plotly figure builders
-utils.py            Data loading for the app
 scripts/
   preprocess.py     Data preprocessing pipeline (replaces notebook)
 appData/            Generated CSVs read by the app

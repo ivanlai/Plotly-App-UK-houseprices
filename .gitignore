@@ -16,7 +16,6 @@ notebooks/*
 !notebooks/Data Pre-processing.ipynb
 
 # IDE / local config
-CLAUDE.md
 .claude/
 
 # Legacy / unused dirs
