@@ -59,5 +59,5 @@ config["pipeline"] = {
 	"geodata_dir": "input/geoData",
 	"distribution_dir": "input/Distribution",
 	"houseprice_dir": "input/HousePriceData",
-	"school_dir": "input/SchoolData",
+	"school_dir": "input/SchoolData/2024-2025",
 }

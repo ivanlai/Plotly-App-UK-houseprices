@@ -20,7 +20,7 @@ COLORS = {"background": "#1F2630", "text": "#7FDBFF"}
 NOTES_TOOLTIP = dcc.Markdown(
 	"""
 1. Property type "Other" is filtered from the house price data.
-2. School ranking (2018-2019) is the best of GCSE and A-Level rankings.
+2. School ranking (2024-2025) is the best of GCSE and A-Level rankings.
 3. GCSE ranking can be misleading — subjects like Classics and Latin are excluded from scoring, unfairly penalising some schools.
 """,
 	style={"fontSize": "0.75rem", "lineHeight": "1.3"},
@@ -64,14 +64,14 @@ DATA_SOURCES = html.Div(
 				html.Li(
 					[
 						dcc.Link(
-							"School 2019 performance data",
-							href="https://www.gov.uk/school-performance-tables",
+							"School 2024-2025 (England only) performance data",
+							href="https://www.compare-school-performance.service.gov.uk/",
 							target="_blank",
 						),  # noqa: E501
 						" (",
 						dcc.Link(
 							"Attainment 8",
-							href="https://www.locrating.com/Blog/attainment-8-and-progress-8-explained.aspx",
+							href="https://www.gov.uk/government/publications/progress-8-school-performance-measure",
 							target="_blank",
 						),  # noqa: E501
 						" for GCSE, ",

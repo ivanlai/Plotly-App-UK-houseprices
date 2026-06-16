@@ -1,4 +1,7 @@
+import re
+
 import pandas as pd
+import pytest
 
 from scripts.preprocess import (
 	lookup_region,
@@ -129,3 +132,41 @@ class TestGetSectorDf:
 		text = result.iloc[0]["text"]
 		assert "SW1A 1" in text
 		assert "250K" in text
+
+
+@pytest.mark.slow
+class TestSchoolData:
+	@pytest.fixture
+	def school_df(self):
+		return pd.read_csv("appData/schools_top_500.csv")
+
+	def _parse_ranks(self, df):
+		gcse_ranks = []
+		alevel_ranks = []
+		for info in df["Info"]:
+			gcse = re.search(r"GCSE:.*?#([\d,]+)", str(info))
+			alevel = re.search(r"A-level:.*?#([\d,]+)", str(info))
+			gcse_ranks.append(
+				int(gcse.group(1).replace(",", "")) if gcse else None
+			)
+			alevel_ranks.append(
+				int(alevel.group(1).replace(",", "")) if alevel else None
+			)
+		return gcse_ranks, alevel_ranks
+
+	def test_no_school_outside_top_500_in_both(self, school_df):
+		gcse_ranks, alevel_ranks = self._parse_ranks(school_df)
+		for i, (gr, ar) in enumerate(zip(gcse_ranks, alevel_ranks)):
+			gr = gr or 0
+			ar = ar or 0
+			assert gr <= 500 or ar <= 500, (
+				f"School URN={school_df.iloc[i]['URN']} has GCSE#{gr} and "
+				f"A-level#{ar}, neither is top 500"
+			)
+
+	def test_best_rank_within_500(self, school_df):
+		assert school_df["Best Rank"].max() <= 500
+
+	def test_all_schools_have_coordinates(self, school_df):
+		assert school_df["Latitude"].notna().all()
+		assert school_df["Longitude"].notna().all()

@@ -364,7 +364,7 @@ def process_school_data(postcode_region):
 
 	fields = ["URN", "Easting", "Northing"]
 	school_loc_df = pd.read_csv(
-		os.path.join(pipe["geodata_dir"], "EduBase Extract - 2016-0005414.csv"),
+		os.path.join(pipe["school_dir"], "edubasealldata20260616.csv"),
 		usecols=fields,
 		encoding="ISO-8859-1",
 		dtype={"URN": str},

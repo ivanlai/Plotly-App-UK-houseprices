@@ -29,6 +29,9 @@ pipeline = [
     "nbformat>=5.10.4",
 ]
 
+[tool.pytest.ini_options]
+markers = ["slow: tests that load real data files"]
+
 [tool.ruff]
 line-length = 88
 extend-exclude = ["notebooks"]
