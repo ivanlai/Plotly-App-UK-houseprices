@@ -47,6 +47,7 @@ def get_Choropleth(
 			marker_line_width=marker_line_width,
 			marker_line_color=marker_line_color,
 			colorbar_title=arg["title"],
+			unselected=dict(marker=dict(opacity=marker_opacity)),
 		)
 	)
 	return fig
