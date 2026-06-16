@@ -115,7 +115,7 @@ def register_callbacks(app, cache, data):
 			np.isin(price_volume_df.index.get_level_values("Property Type"), ptypes),
 			np.isin(price_volume_df.columns.get_level_values("Sector"), sectors),
 		]
-		df.reset_index(inplace=True)
+		df = df.reset_index()
 		avg_price_df = get_average_price_by_year(df, sectors)
 
 		if len(sectors) == 1:
