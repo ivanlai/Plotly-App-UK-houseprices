@@ -146,9 +146,7 @@ class TestSchoolData:
 		for info in df["Info"]:
 			gcse = re.search(r"GCSE:.*?#([\d,]+)", str(info))
 			alevel = re.search(r"A-level:.*?#([\d,]+)", str(info))
-			gcse_ranks.append(
-				int(gcse.group(1).replace(",", "")) if gcse else None
-			)
+			gcse_ranks.append(int(gcse.group(1).replace(",", "")) if gcse else None)
 			alevel_ranks.append(
 				int(alevel.group(1).replace(",", "")) if alevel else None
 			)
